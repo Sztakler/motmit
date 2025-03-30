@@ -9,6 +9,12 @@ class OrbitingPair:
         self.initial_angle = initial_angle
         self.direction = direction
         self.angle = 0
+        self.line_width = 8
+        self.target_color = "lightgreen"
+        self.mirrow_color = "lightblue"
+        self.target_border = visual.Circle(win, radius=0.025, fillColor=None, lineColor=self.target_color, lineWidth=self.line_width)
+        self.mirror_border = visual.Circle(win, radius=0.025, fillColor=None, lineColor=self.mirrow_color, lineWidth=self.line_width)
+        self.objects = []
 
     def draw_static(self):
         x1 = self.orbit_radius * np.cos(self.angle + self.initial_angle) + self.offset[0]
@@ -16,11 +22,11 @@ class OrbitingPair:
         x2 = self.orbit_radius * np.cos(self.angle + np.pi + self.initial_angle) + self.offset[0]
         y2 = self.orbit_radius * np.sin(self.angle + np.pi + self.initial_angle) + self.offset[1]
         
-        self.object1.pos = (x1, y1)
-        self.object2.pos = (x2, y2)
+        self.objects[0].pos = (x1, y1)
+        self.objects[1].pos = (x2, y2)
         
-        self.object1.draw()
-        self.object2.draw()
+        self.objects[0].draw()
+        self.objects[1].draw()
 
     def update_angle(self, t, speed):
         self.angle = self.direction * t * speed
@@ -32,33 +38,26 @@ class OrbitingPair:
         x2 = self.orbit_radius * np.cos(self.angle + np.pi + self.initial_angle) + self.offset[0]
         y2 = self.orbit_radius * np.sin(self.angle + np.pi + self.initial_angle) + self.offset[1]
         
-        self.object1.pos = (x1, y1)
-        self.object2.pos = (x2, y2)
+        self.objects[0].pos = (x1, y1)
+        self.objects[1].pos = (x2, y2)
         
-        self.object1.draw()
-        self.object2.draw()
+        self.objects[0].draw()
+        self.objects[1].draw()
 
     def highlight_target(self, index):
-        if index == 0:
-            self.object1.lineColor = 'red'
-        else:
-            self.object2.lineColor = 'red'
+        self.target_border.lineWidth = self.line_width
+        self.target_border.pos = self.objects[index].pos
+        self.target_border.draw()
+
 
     def highlight_mirror(self, index):
-        if index == 0:
-            self.object1.lineColor = 'red'
-            self.object1.lineWidth = 2
-        else:
-            self.object2.lineColor = 'red'
-            self.object2.lineWidth = 2
+        self.mirror_border.lineWidth = self.line_width
+        self.mirror_border.pos = self.objects[index].pos
+        self.mirror_border.draw()
 
-    def reset_highlight(self, index):
-        if index == 0:
-            self.object1.lineColor = 'black'
-            self.object1.lineWidth = 4
-        else:
-            self.object2.lineColor = 'black'
-            self.object2.lineWidth = 4
+    def reset_highlight(self):
+        self.target_border.lineWidth = 0
+        self.mirror_border.lineWidth = 0
 
     def change_direction(self):
         self.direction *= -1

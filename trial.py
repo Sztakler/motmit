@@ -1,11 +1,14 @@
 from psychopy import core, visual, event
 import random
-from orbiting_circles import OrbitingCircles
-from orbiting_images import OrbitingImages
 import csv
+from fixation_cross import FixationCross
+
+class Form():
+    def __init__(self):
+        pass
 
 class Trial:
-    def __init__(self, win, trial_number, target_set_size, targets, targets_side, form, trial_type, images_paths=None):
+    def __init__(self, win, trial_number, target_set_size, targets, targets_side, form, trial_type, highlight_target):
         self.win = win
         self.trial_number = trial_number
         self.orbit_radius = 0.1
@@ -17,226 +20,128 @@ class Trial:
         self.trial_type = trial_type
         self.cross = FixationCross(win, size=0.05)
         self.interrupted = False
-        if trial_type == 'mot':
-            self.orbiting_circles = OrbitingCircles(win, self.target_set_size, self.targets, self.targets_side)
-        elif trial_type == 'mit':
-            self.orbiting_images = OrbitingImages(win, self.target_set_size, self.targets, self.targets_side, images_paths)
+        self.highlight_target = highlight_target
+        self.response_handler = None
+        self.highlighted_indices = None
+      
+    def split_time(self, time, n):
+        cuts = sorted([random.uniform(0, time) for _ in range(n - 1)])
+        intervals = [cuts[0]] + [cuts[i] - cuts[i-1] for i in range(1, n-1)] + [time - cuts[-1]]
+        return intervals
 
-    def run(self):
-        # Tworzenie krzyżyka na środku ekranu
+    def draw_fixation_cross(self):
         self.cross.draw()
+
+    def draw_fixation(self):
+        self.draw_fixation_cross()
         self.win.flip()
         core.wait(0.5)
 
-        if self.trial_type == 'mot':
-            # Rysowanie statycznych kółek przez 750 ms
-            self.orbiting_circles.highlight_target()
-            self.orbiting_circles.draw_static(core.getTime())
-            # Rysowanie krzyżyka
-            self.cross.draw()
-
-            self.win.flip()
-            core.wait(0.75)
-
-            # Animacja kółek
-            start_time = core.getTime()
-            random_delay = 0.75 + random.uniform(0.0, 1.0)
-            while core.getTime() - start_time < random_delay:
-                current_time = core.getTime() - start_time
-                self.orbiting_circles.animate(start_time)
-
-                # Rysowanie krzyżyka
-                self.cross.draw()
-                
-                self.win.flip()
-
-            self.orbiting_circles.change_direction(current_time)
-            start_time = core.getTime()
-            delay = 2.5 - random_delay
-            while core.getTime() - start_time < delay:
-                current_time = core.getTime() - start_time
-                self.orbiting_circles.animate(start_time)
-
-                # Rysowanie krzyżyka
-                self.cross.draw()
-                
-                self.win.flip()
-
-            self.orbiting_circles.draw_static(current_time)
-            self.cross.draw()
-            self.win.flip()
-            core.wait(0.5)
-
-            # Podświetlenie losowego elementu (cel lub dystraktor)
-            self.orbiting_circles.highlight_random_element()
-            self.orbiting_circles.draw_static(current_time)
-            self.cross.draw()
-            self.win.flip()
-            core.wait(0.75)
-
-            # Resetowanie podświetlenia
-            self.orbiting_circles.reset_target()
-            self.win.flip()
-
-            green_circle = visual.Circle(self.win, radius=0.2, fillColor='green', pos=(-0.4, 0))
-            red_circle = visual.Circle(self.win, radius=0.2, fillColor='red', pos=(0.4, 0))
-
-            green_circle.draw()
-            red_circle.draw()
-            self.win.flip()
-
-            # Czekanie na kliknięcie w kółko
-            mouse = event.Mouse(win=self.win)
-            clicked_circle = None
-
-            while not clicked_circle:
-                if mouse.isPressedIn(green_circle):
-                    clicked_circle = 'green'
-                elif mouse.isPressedIn(red_circle):
-                    clicked_circle = 'red'
-
-            # Sprawdzanie poprawności odpowiedzi
-            if clicked_circle == 'green':
-                if self.orbiting_circles.is_target_highlighted():
-                    feedback = "Poprawnie! Podświetlono cel."
-                    correct = True
-                else:
-                    feedback = "Niepoprawnie. Podświetlono dystraktor."
-                    correct = False
-            elif clicked_circle == 'red':
-                if not self.orbiting_circles.is_target_highlighted():
-                    feedback = "Poprawnie! Podświetlono dystraktor."
-                    correct = True
-                else:
-                    feedback = "Niepoprawnie. Podświetlono cel."
-                    correct = False
-
-            #Wyswietlenie feedbacku
-            feedback_message = visual.TextStim(self.win, text=feedback, color='black')
-            feedback_message.draw()
-            self.win.flip()
-            core.wait(2)
-
-            # Zapisz dane do pliku CSV 
-            self.save_data(clicked_circle, correct)
-
-        elif self.trial_type == 'mit':
-             # Rysowanie statycznych kółek przez 750 ms
-            self.orbiting_images.draw_static()
-            self.orbiting_images.highlight_target()
-            # Rysowanie krzyżyka
-            self.cross.draw()
-
-            self.win.flip()
-            core.wait(2.75)
-
-            # Animacja obrazków
-            start_time = core.getTime()
-            random_delay = 0.75 + random.uniform(0.0, 1.0)
-            while core.getTime() - start_time < random_delay:
-                current_time = core.getTime() - start_time
-                self.orbiting_images.animate(start_time)
-
-                # Rysowanie krzyżyka
-                self.cross.draw()
-                
-                self.win.flip()
-
-            self.orbiting_images.change_direction(current_time)
-            start_time = core.getTime()
-            delay = 2.5 - random_delay
-            while core.getTime() - start_time < delay:
-                self.orbiting_images.animate(start_time)
-
-                # Rysowanie krzyżyka
-                self.cross.draw()
-                
-                self.win.flip()
-
-            self.orbiting_images.draw_static()
-            self.cross.draw()
-            self.win.flip()
-            core.wait(0.5)
-
-            # Podświetlenie losowego elementu (cel lub dystraktor)
-            self.orbiting_images.draw_static()
-            self.orbiting_images.cover_elements()
-            self.orbiting_images.highlight_random_element()
-            self.cross.draw()
-            self.win.flip()
-            core.wait(0.75)
-
-            # Resetowanie podświetlenia
-            self.orbiting_images.reset_target()
-
-            clicked_image = None
-            images = self.orbiting_images.draw_carousel()
-            images.sort(key=lambda image: int(image.image.split('/')[1].split('.')[0]))
-            mouse = event.Mouse(self.win)
-
-            while not clicked_image:
-                for image in images:
-                    if mouse.isPressedIn(image):
-                        highlight_circle = visual.Circle(self.win, radius=0.08, fillColor=None, lineColor='red', lineWidth=4)
-                        highlight_circle.pos = image.pos
-                        clicked_image = image.image
-                        image.draw()
-                        highlight_circle.draw()
-                        self.win.flip()  # Odświeżenie okna, aby wyświetlić highlight_circle natychmiast
-                        core.wait(0.5)
-                        break
-                if clicked_image:
-                    break
-
-            clicked_target = False
-            for target in self.targets:
-                if clicked_image == self.orbiting_images.images_paths[target.orbit_index]:
-                    clicked_target = True
-                    break
-
-            correct = False
-
-            feedback = ""
-            if clicked_image:
-                if clicked_target:
-                    if self.orbiting_images.is_target_highlighted():
-                        feedback = "Poprawnie! Podświetlono cel."
-                        correct = True
-                    else:
-                        feedback = "Niepoprawnie. Podświetlono dystraktor."
-                        correct = False
-                    print("Freedback1 : ", feedback)
-                else:
-                    if not self.orbiting_images.is_target_highlighted():
-                        feedback = "Poprawnie! Podświetlono dystraktor."
-                        correct = True
-                    else:
-                        feedback = "Niepoprawnie. Podświetlono cel."
-                        correct = False
-                    print("Freedback2 : ", feedback)
-                    
-            else:
-                correct = False
-
-            self.win.flip()
-            #Wyswietlenie feedbacku
-            feedback_message = visual.TextStim(self.win, text=feedback, color='black')
-            feedback_message.draw()
-            self.win.flip()
-            core.wait(2)
-
-            # Zapisanie danych do pliku CSV
-            image_name = clicked_image.split('/')[1]
-            self.save_data(image_name, correct)           
-
+    def draw_cue(self):
+        delay = 0.75
+        start_time = core.getTime()
+        self.objects.draw_static(start_time)
+        self.objects.highlight_target()
         self.win.flip()
+        core.wait(delay)
 
+    def draw_stop(self):
+        delay = 0.5
+        self.objects.draw_static(core.getTime())
+        self.draw_fixation_cross()
+        self.win.flip()
+        core.wait(delay)
+
+    def draw_probe(self):
+        delay = 0.5
+        self.draw_fixation_cross()
+        self.objects.draw_static(core.getTime())
+        self.highlighted_indices = self.objects.highlight_object(self.highlight_target)
+        self.win.flip()
+        core.wait(delay)
+
+    def draw_tracking(self):
+        initial_direction_movement_time = 1.0
+        change_direction_time = 0.75
+        new_direction_movement_time = 0.75
+
+        start_time = core.getTime()
+        while core.getTime() - start_time < initial_direction_movement_time:
+            self.objects.animate(start_time)
+            self.draw_fixation_cross()      
+            self.win.flip()
+            if 'escape' in event.getKeys():
+                core.quit()
+
+        current_time = core.getTime() - start_time
+        self.objects.update_initial_angles(current_time)
+        intervals = self.split_time(change_direction_time, self.objects.number_of_pairs)
+        indexes = list(range(self.objects.number_of_pairs))
+        random.shuffle(indexes)
+        clock = core.Clock()
+        for interval, index in zip(intervals, indexes):
+            start_time = core.getTime()
+            clock.reset()
+            while clock.getTime() < interval:
+                self.objects.animate(start_time)
+                self.draw_fixation_cross()      
+                self.win.flip()
+                if 'escape' in event.getKeys():
+                    core.quit()
+            current_time = core.getTime() - start_time
+            self.objects.update_initial_angles(current_time)
+            self.objects.orbits[index].change_direction()
+        
+        start_time = core.getTime()
+        while core.getTime() - start_time < new_direction_movement_time:
+            self.objects.animate(start_time)
+            self.draw_fixation_cross()     
+            self.win.flip()
+            if 'escape' in event.getKeys():
+                core.quit()
+
+    def run(self):
+        t1 = core.getTime()
+        self.draw_fixation_cross()
+        self.draw_cue()
+        self.draw_tracking()
+        self.draw_stop()
+        self.draw_probe()
+
+        self.response_handler.get_response()
+        is_correct = self.response_handler.check_correctness(self.highlight_target)
+        self.response_handler.display_feedback()
+        
+        self.save_data(self.response_handler.clicked_circle, is_correct)
+    
+        t2 = core.getTime()
+
+        print("Time:", t2 - t1)
+
+        self.wait_for_input()
+
+    def wait_for_input(self):   
+        while True:
+            keys = event.getKeys()
+            if 'escape' in keys:
+                core.quit()
+            if keys:
+                break
 
     def save_data(self, response, correct):
         with open('experiment_data.csv', mode='a', newline='') as file:
             writer = csv.writer(file)
-            # TODO zapisywac tylko wybrany target, a nie wszystkie
-            writer.writerow([self.trial_number, self.trial_type, self.target_set_size, self.targets[0].orbit_index, response, correct, self.form.email, self.form.gender, self.form.first_name, self.form.last_name])
+            self.form = Form()
+            self.form.email = "mail",
+            self.form.gender= "gender",
+            self.form.first_name= "name",
+            self.form.last_name=  "surname"
+            
+
+            orbit_index = self.highlighted_indices[0]
+            circle_index = self.highlighted_indices[1]
+
+            writer.writerow([self.trial_number, self.trial_type, self.target_set_size, orbit_index, circle_index, correct, self.form.email, self.form.gender, self.form.first_name, self.form.last_name])
 
 class FixationCross:
     def __init__(self, win, size):
