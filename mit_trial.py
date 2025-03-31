@@ -10,8 +10,8 @@ class Form():
         pass
 
 class MITTrial(Trial):
-    def __init__(self, win, trial_number, target_set_size, targets, targets_side, form, trial_type, highlight_target, images_paths=None):
-        super().__init__(win, trial_number, target_set_size, targets, targets_side, form, trial_type, highlight_target)
+    def __init__(self, win, trial_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, images_paths=None):
+        super().__init__(win, trial_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target)
         self.objects = OrbitingImages(win, self.target_set_size, self.targets, self.targets_side, images_paths=images_paths)
         self.response_handler = MITResponseHandler(win, images_paths=images_paths)
 
@@ -40,21 +40,15 @@ class MITTrial(Trial):
         self.draw_probe()
 
         self.response_handler.get_response()
-        is_correct = self.response_handler.check_correctness(self.highlight_target, self.targets, self.objects)
+        is_correct = self.response_handler.check_correctness(self.highlight_target, self.targets, self.highlighted_indices, self.objects)
         self.response_handler.display_feedback()
         
-        self.save_data(self.response_handler.clicked_item, is_correct)
+        correct_response = self.objects.images_paths[self.highlighted_indices[0]]
+
+        self.save_data(self.response_handler.clicked_object, correct_response, is_correct)
 
         t2 = core.getTime()
 
         print("Time:", t2 - t1)
 
         self.wait_for_input()
-
-    def wait_for_input(self):   
-        while True:
-            keys = event.getKeys()
-            if 'escape' in keys:
-                core.quit()
-            if keys:
-                break

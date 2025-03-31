@@ -2,13 +2,15 @@ from psychopy import core, visual, event
 import random
 import csv
 from fixation_cross import FixationCross
+import uuid
+from config import filename
 
 class Form():
     def __init__(self):
         pass
 
 class Trial:
-    def __init__(self, win, trial_number, target_set_size, targets, targets_side, form, trial_type, highlight_target):
+    def __init__(self, win, trial_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target):
         self.win = win
         self.trial_number = trial_number
         self.orbit_radius = 0.1
@@ -23,6 +25,8 @@ class Trial:
         self.highlight_target = highlight_target
         self.response_handler = None
         self.highlighted_indices = None
+        self.layout = layout
+        self.id = uuid.uuid4()
       
     def split_time(self, time, n):
         cuts = sorted([random.uniform(0, time) for _ in range(n - 1)])
@@ -112,7 +116,7 @@ class Trial:
         is_correct = self.response_handler.check_correctness(self.highlight_target)
         self.response_handler.display_feedback()
         
-        self.save_data(self.response_handler.clicked_circle, is_correct)
+        self.save_data(self.response_handler.clicked_object, is_correct)
     
         t2 = core.getTime()
 
@@ -128,20 +132,75 @@ class Trial:
             if keys:
                 break
 
-    def save_data(self, response, correct):
-        with open('experiment_data.csv', mode='a', newline='') as file:
+    def save_data(self, response, correct_response, correctness):
+        with open(filename, mode='a', newline='') as file:
             writer = csv.writer(file)
-            self.form = Form()
-            self.form.email = "mail",
-            self.form.gender= "gender",
-            self.form.first_name= "name",
-            self.form.last_name=  "surname"
-            
+            condition_id = self.generate_condition_id()
+            #                'ID',         'First Name',         'Last Name',         'Age',         'Sex',         'Handedness',         'E-mail',        'Trial Number',    'Trial Type',     'Target Set Size',  'Target Side',      "Layout",       "Probing",         "Response", "Correct Response", "Correctness", "TrialID", "ConditionID"])
+            writer.writerow([self.form.id, self.form.first_name, self.form.last_name, self.form.age, self.form.sex, self.form.handedness, self.form.email, self.trial_number, self.trial_type, self.target_set_size, self.targets_side, self.layout, self.highlight_target, response, correct_response, correctness, self.id, condition_id])
 
-            orbit_index = self.highlighted_indices[0]
-            circle_index = self.highlighted_indices[1]
+    def generate_condition_id(self):
+        """
+        Generates a unique condition ID based on the attributes of the object.
+        The method encodes various attributes into a binary string representation
+        to uniquely identify a condition. The encoding is based on predefined mappings
+        for trial type, target side, probing, set size, and layout.
+        Returns:
+            str: A string representing the condition ID, or an error message
+                 if any input is invalid.
+        Attributes:
+            self.trial_type (str): The type of trial, expected values are "mot" or "mit".
+            self.targets_side (str): The side of the targets, expected values are "l" (left) or "r" (right).
+            self.target_set_size (str): The size of the target set, expected values are "2" or "3".
+            self.highlight_target (bool): Whether the target or distractor is highlighted, expected values are True or False.
+            self.layout (list): The layout configuration, expected values are [0, 1, 2], [0, 1], [1, 2], or [0, 2].
+        Encoding:
+            - trial_type_map: {"mot": "0", "mit": "1"}
+            - target_side_map: {"l": "0", "r": "1"}
+            - probing_map: {False: "0", True: "1"}
+            - set_size_map: {"2": "0", "3": "1"}
+            - layout_map:
+                [0, 1, 2] -> "0"
+                [0, 1] -> "1"
+                [1, 2] -> "2"
+                [0, 2] -> "3"
+        Example:
+            ("mit", "r", "3", False, [1, 2]) -> Output: 11102
+        Notes:
+            If any of the attributes have an invalid value, the method returns
+            "Error: Invalid input".
+        """
+        trial_type_map = {"mot": "0", "mit": "1"}
+        target_side_map = {0: "0", 1: "1"}
+        probing_map = {False: "0", True: "1"}
+        set_size_map = {2: "0", 3: "1"}
 
-            writer.writerow([self.trial_number, self.trial_type, self.target_set_size, orbit_index, circle_index, correct, self.form.email, self.form.gender, self.form.first_name, self.form.last_name])
+        # Encode layout
+        if self.layout == [0, 1, 2]:
+            layout_encoded = "0"
+        elif self.layout == [0, 1]:
+            layout_encoded = "1"
+        elif self.layout == [1, 2]:
+            layout_encoded = "2"
+        elif self.layout == [0, 2]:
+            layout_encoded = "3"
+        else:
+            layout_encoded = "Invalid"
+
+        # Encode each condition
+        trial_type_encoded = trial_type_map.get(self.trial_type, "Invalid")
+        target_side_encoded = target_side_map.get(self.targets_side, "Invalid")
+        set_size_encoded = set_size_map.get(self.target_set_size, "Invalid")
+        probing_encoded = probing_map.get(self.highlight_target, "Invalid")
+
+        print("ENCODED", trial_type_encoded, target_side_encoded, set_size_encoded, probing_encoded, layout_encoded)
+
+        # Check for invalid inputs
+        if "Invalid" in (trial_type_encoded, target_side_encoded, set_size_encoded, layout_encoded):
+            return "Error: Invalid input"
+
+        # Combine the binary encoding
+        return trial_type_encoded + target_side_encoded + set_size_encoded + probing_encoded + layout_encoded
 
 class FixationCross:
     def __init__(self, win, size):

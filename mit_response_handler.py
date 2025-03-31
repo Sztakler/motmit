@@ -1,16 +1,13 @@
 from psychopy import core, event, visual
 import math
+from response_handler import ResponseHandler
 
-class MITResponseHandler:
+class MITResponseHandler(ResponseHandler):
     def __init__(self, win, images_paths=None):
         """
         Initialize the ResponseHandler instance.
         """
-        self.win = win
-        self.response = None
-        self.feedback = "Incorrect. No response provided."
-        self.correct = None
-        self.clicked_item = None
+        super().__init__(win)
         self.carousel_radius = 0.3
         self.items = []
         self.images_paths = images_paths[:12]
@@ -25,64 +22,51 @@ class MITResponseHandler:
 
         timer = core.Clock()
         mouse.setPos((0, 0))  # Reset mouse position
-        while not self.clicked_item and timer.getTime() < 3:
+        while not self.clicked_object and timer.getTime() < 3:
             for item in self.items:
                 if mouse.isPressedIn(item):
                     highlight_circle = visual.Circle(self.win, radius=0.04, fillColor=None, lineColor='lightgreen', lineWidth=4)
                     highlight_circle.pos = item.pos
-                    self.clicked_item = item.image
+                    self.clicked_object = item.image
                     item.draw()
                     highlight_circle.draw()
                     self.win.flip()  # Odświeżenie okna, aby wyświetlić highlight_circle natychmiast
                     core.wait(0.5)
                     break
-                if self.clicked_item:
+                if self.clicked_object:
                     break
     
-    def check_correctness(self, highlight_target, targets, objects):
+    def check_correctness(self, highlight_target, targets, highlighted_indices, objects):
         """
         Check the correctness of the response.
 
         Returns:
             bool: True if the response is correct, False otherwise.
         """
-        
-        # Checking the correctness of the response
 
-        clicked_target = False
-        for target in targets:
-            if self.clicked_item == objects.images_paths[target.orbit_index]:
-                clicked_target = True
-                break
+        highlighted_image = objects.images_paths[highlighted_indices[0]]
+        clicked_target = self.clicked_object == highlighted_image
+        clicked_cross = self.clicked_object == objects.images_paths[0]
 
-        if self.clicked_item:
-            if clicked_target:
-                if highlight_target:
-                    self.feedback = "Poprawnie! Podświetlono cel."
+        if self.clicked_object:
+            if highlight_target:
+                if clicked_target:
+                    self.feedback = "Poprawnie! To był cel."
                     self.correct = True
                 else:
-                    self.feedback = "Niepoprawnie. Podświetlono dystraktor."
+                    self.feedback = "Niepoprawnie. To nie był cel."
                     self.correct = False
             else:
-                if not highlight_target:
+                if clicked_cross:
                     self.feedback = "Poprawnie! Podświetlono dystraktor."
                     self.correct = True
-                else:
+                else:   
                     self.feedback = "Niepoprawnie. Podświetlono cel."
                     self.correct = False
-                
         else:
             self.correct = False
-        
-        return self.correct
-    
-    def display_feedback(self):
-        feedback_duration = 1.5 
-        feedback_message = visual.TextStim(self.win, text=self.feedback, color='black')
-        feedback_message.draw()
-        self.win.flip()
-        core.wait(feedback_duration)
 
+        return self.correct
 
     def draw_carousel(self):
         positions = self.get_circle_positions(self.carousel_radius, len(self.images_paths) + 1)
