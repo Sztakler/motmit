@@ -4,6 +4,7 @@ from orbiting_images import OrbitingImages
 import csv
 from trial import Trial
 from mit_response_handler import MITResponseHandler
+from eyetracker import eyetracker
 
 class Form():
     def __init__(self):
@@ -14,13 +15,6 @@ class MITTrial(Trial):
         super().__init__(win, trial_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target)
         self.objects = OrbitingImages(win, self.target_set_size, self.targets, self.targets_side, images_paths=images_paths)
         self.response_handler = MITResponseHandler(win, images_paths=images_paths)
-
-    def draw_stop(self):
-        delay = 0.5
-        self.objects.draw_static(core.getTime())
-        self.draw_fixation_cross()
-        self.win.flip()
-        core.wait(delay)
 
     def draw_probe(self):
         delay = 0.5
@@ -33,10 +27,12 @@ class MITTrial(Trial):
 
     def run(self):
         t1 = core.getTime()
-        self.draw_fixation_cross()
+        eyetracker.start_recording()
+        self.draw_fixation()
         self.draw_cue()
         self.draw_tracking()
         self.draw_stop()
+        eyetracker.stop_recording()
         self.draw_probe()
 
         self.response_handler.get_response()

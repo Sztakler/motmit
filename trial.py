@@ -4,6 +4,7 @@ import csv
 from fixation_cross import FixationCross
 import uuid
 from config import filename
+from eyetracker import eyetracker
 
 class Form():
     def __init__(self):
@@ -37,24 +38,44 @@ class Trial:
         self.cross.draw()
 
     def draw_fixation(self):
-        self.draw_fixation_cross()
-        self.win.flip()
-        core.wait(0.5)
+        delay = 0.5
+        clock = core.Clock()
+        clock.reset()
+        
+        while clock.getTime() < delay:
+            eye_contact = eyetracker.check_position() and eyetracker.check_blink()
+
+            self.win.flip()
+            core.wait(0.01)
+
+            if not eye_contact:
+                return False
 
     def draw_cue(self):
         delay = 0.75
         start_time = core.getTime()
-        self.objects.draw_static(start_time)
-        self.objects.highlight_target()
-        self.win.flip()
-        core.wait(delay)
+        while core.getTime() - start_time < delay:
+            eye_contact = eyetracker.check_position() and eyetracker.check_blink()
+
+            self.objects.draw_static(start_time)
+            self.objects.highlight_target()
+            self.win.flip()
+
+            if not eye_contact:
+                return False
 
     def draw_stop(self):
         delay = 0.5
-        self.objects.draw_static(core.getTime())
-        self.draw_fixation_cross()
-        self.win.flip()
-        core.wait(delay)
+        start_time = core.getTime()
+        while core.getTime() - start_time < delay:
+            eye_contact = eyetracker.check_position() and eyetracker.check_blink()
+
+            self.objects.draw_static(start_time)
+            self.draw_fixation_cross()
+            self.win.flip()
+            
+            if not eye_contact:
+                return False
 
     def draw_probe(self):
         delay = 0.5
@@ -71,11 +92,16 @@ class Trial:
 
         start_time = core.getTime()
         while core.getTime() - start_time < initial_direction_movement_time:
+            eye_contact = eyetracker.check_position() and eyetracker.check_blink()
+            
             self.objects.animate(start_time)
             self.draw_fixation_cross()      
             self.win.flip()
             if 'escape' in event.getKeys():
                 core.quit()
+            
+            if not eye_contact:
+                return False
 
         current_time = core.getTime() - start_time
         self.objects.update_initial_angles(current_time)
@@ -87,31 +113,45 @@ class Trial:
             start_time = core.getTime()
             clock.reset()
             while clock.getTime() < interval:
+                eye_contact = eyetracker.check_position() and eyetracker.check_blink()
+
                 self.objects.animate(start_time)
                 self.draw_fixation_cross()      
                 self.win.flip()
                 if 'escape' in event.getKeys():
                     core.quit()
+                
+                if not eye_contact:
+                    return False
+                
             current_time = core.getTime() - start_time
             self.objects.update_initial_angles(current_time)
             self.objects.orbits[index].change_direction()
         
         start_time = core.getTime()
         while core.getTime() - start_time < new_direction_movement_time:
+            eye_contact = eyetracker.check_position() and eyetracker.check_blink()
+            
             self.objects.animate(start_time)
             self.draw_fixation_cross()     
             self.win.flip()
+
             if 'escape' in event.getKeys():
                 core.quit()
+        
+            if not eye_contact:
+                return False
 
     def run(self):
         t1 = core.getTime()
-        self.draw_fixation_cross()
+        eyetracker.start_recording()
+        self.draw_fixation()
         self.draw_cue()
         self.draw_tracking()
         self.draw_stop()
         self.draw_probe()
-
+        eyetracker.stop_recording()
+        
         self.response_handler.get_response()
         is_correct = self.response_handler.check_correctness(self.highlight_target)
         self.response_handler.display_feedback()

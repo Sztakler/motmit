@@ -7,9 +7,10 @@ from mit_trial import MITTrial
 from form import Form
 import os
 from config import filename, fieldnames
+from eyetracker import eyetracker
 
 form = Form()
-form.show_form()
+# form.show_form()
 
 win = visual.Window([1920,1080], units="height", fullscr=True)
     
@@ -41,6 +42,7 @@ random.shuffle(combinations)
 print(combinations[0])
 print(len(combinations))
 
+experimentName = "MOT_MIT"
 images_directory = "images"
 image_count = 28
 images_paths = [f"{images_directory}/{i}.png" for i in range(1, image_count + 1)]
@@ -48,6 +50,11 @@ images_paths = [f"{images_directory}/{i}.png" for i in range(1, image_count + 1)
 selected_combinations = combinations[:]
 
 file_exists = os.path.isfile(filename) and os.path.getsize(filename) > 0
+
+eyetracker.config(win, experimentName, form.id)
+
+eyetracker.calibrate()
+eyetracker.start_recording()
 
 with open(filename, mode="a", newline="") as file:
     writer = csv.DictWriter(file, fieldnames=fieldnames)
