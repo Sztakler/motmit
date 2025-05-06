@@ -1,4 +1,4 @@
-from psychopy import core, visual
+from psychopy import core, visual, event
 from config import scale
 
 class ResponseHandler:
@@ -17,10 +17,8 @@ class ResponseHandler:
         self.clicked_object = None
 
     def display_feedback(self):
-        feedback_duration = 1.5 
         feedback_message = visual.TextStim(self.win, text=self.feedback, color='black', height=0.05 * scale)
-        continue_prompt = visual.TextStim(self.win, text="Naciśnij 'escape', by zakończyć badanie. Naciśnij dowolny przycisk, by kontynuować.", color='black', height=0.05 * scale, pos=(0, -0.2 * self.win.size[1]))
+        continue_prompt = visual.TextStim(self.win, text="Naciśnij dowolny przycisk myszy, by kontynuować.", color='black', height=0.05 * scale, pos=(0, -0.2 * self.win.size[1]))
         feedback_message.draw()
         continue_prompt.draw()
         self.win.flip()
-        core.wait(feedback_duration)

@@ -16,4 +16,4 @@ class MOTTrial(Trial):
         correct_response = self.highlighted_indices
 
         self.save_data(self.response_handler.clicked_object, correct_response, is_correct)
-        self.wait_for_input()
+        self.wait_for_input

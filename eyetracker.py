@@ -61,6 +61,13 @@ class Eyetracker:
         # self.win.mouseVisible = True
         pass
 
+    def calibrate_and_start_recording(self):
+        # self.win.mouseVisible = False
+        # self.calibration.run()
+        # self.start_recording()
+        # self.win.mouseVisible = True
+        pass
+
     def start_recording(self):
         # self.eyetracker.setRecordingState(True)
         pass

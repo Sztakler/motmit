@@ -197,15 +197,22 @@ class Trial:
                 core.quit()
         
         self.interrupted = True
+        
+    def wait_for_input(self):
+        mouse = event.Mouse(win=self.win)
 
+        while not any(mouse.getPressed()):
+            logger.info("Waiting for mouse input")
 
-    def wait_for_input(self):   
-        while True:
-            keys = event.getKeys()
-            if 'escape' in keys:
-                core.quit()
-            if keys:
-                break
+            keys = event.getKeys(modifiers=True)
+            for key, mods in keys:
+                if key == 'escape':
+                    core.quit()
+                if key == 'r' and 'ctrl' in mods:
+                    logger.info("Manually recalibrated eyetracker")
+                    eyetracker.calibrate_and_start_recording()
+
+            core.wait(0.01)
 
     def save_data(self, response, correct_response, correctness):
         with open(self.filename, mode='a', newline='') as file:
