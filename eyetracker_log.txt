@@ -15009,3 +15009,9 @@
 2025-05-06 18:45:28,359 - INFO - Started recording
 2025-05-06 18:45:28,359 - INFO - Start trial
 2025-05-06 18:45:36,468 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000013AEA742680>, <target.Target object at 0x0000013AEA741F90>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x0000013AEA714400>
+2025-05-06 18:47:30,133 - INFO - Started recording
+2025-05-06 18:47:30,133 - INFO - Start trial
+2025-05-06 18:48:01,839 - INFO - Started recording
+2025-05-06 18:48:01,839 - INFO - Start trial
+2025-05-06 18:48:10,046 - INFO - Started recording
+2025-05-06 18:48:10,046 - INFO - Start trial

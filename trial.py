@@ -145,7 +145,9 @@ class Trial:
 
     def run_trial(self):
         logger.info("Start trial")
-        
+
+        self.win.mouseVisible = False
+
         if not self.draw_fixation(): 
             self.interrupted = True
             logger.warning("Lost eye contact in draw_fixation()")
@@ -163,7 +165,9 @@ class Trial:
             return
         
         self.draw_stop()
-        self.draw_probe()   
+        self.draw_probe()
+
+        self.win.mouseVisible = True
 
     def handle_response(self):
         self.response_handler.get_response()

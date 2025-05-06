@@ -56,7 +56,9 @@ class Eyetracker:
         pass
        
     def calibrate(self):
+        # self.win.mouseVisible = False
         # self.calibration.run()
+        # self.win.mouseVisible = True
         pass
 
     def start_recording(self):
@@ -113,7 +115,7 @@ class Eyetracker:
         # gpos = self.eyetracker.getLastGazePosition()
         # return gpos
         pass
-    
+
     def reset_state(self):
         # self.stop_recording()
         # core.wait(0.5)
