@@ -14961,3 +14961,11 @@
 2025-04-26 14:03:21,848 - INFO - Gaze position: [7.394199371337891, 32.86779999732971]
 2025-04-26 14:03:21,848 - INFO - not moving
 2025-04-26 14:03:21,848 - INFO - not blinking
+2025-05-06 18:23:28,602 - INFO - Started recording
+2025-05-06 18:23:28,602 - INFO - Start trial
+2025-05-06 18:23:36,764 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x000002619994CC70>, <target.Target object at 0x000002619994CC10>, <target.Target object at 0x000002619994CBB0>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x000002619994EB00>
+2025-05-06 18:24:42,540 - INFO - Started recording
+2025-05-06 18:24:42,541 - INFO - Start trial
+2025-05-06 18:24:49,562 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000026B21B6E830>, <target.Target object at 0x0000026B21B6E7D0>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x0000026B21B6EB30>
+2025-05-06 18:24:51,685 - INFO - Started recording
+2025-05-06 18:24:51,685 - INFO - Start trial
