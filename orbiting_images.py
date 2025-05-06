@@ -1,17 +1,13 @@
-from psychopy import core, visual
 import numpy as np
 import random
 from orbiting_objects import OrbitingObjects
 from orbiting_images_pair import OrbitingImagesPair
-from target import Target
-import math
-from config import scale
+from config import scale, orbiting_speed
 
 class OrbitingImages(OrbitingObjects):
-    def __init__(self, win, target_set_size, targets, target_side, orbit_radius=0.05 * scale, speed=2.0, images_paths=None):
+    def __init__(self, win, target_set_size, targets, target_side, orbit_radius=0.05 * scale, speed=orbiting_speed, images_paths=None):
         super().__init__(win, target_set_size, targets, target_side, orbit_radius, speed)
 
-        # print("Images paths:", images_paths)
         self.images_paths = images_paths[:self.number_of_pairs]
         random.shuffle(self.images_paths)
         self.orbits = []

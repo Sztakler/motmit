@@ -1,10 +1,9 @@
-from psychopy import core, visual
-import numpy as np
+from psychopy import core
 import random
-from config import scale
+from config import scale, orbiting_speed
 
 class OrbitingObjects:
-    def __init__(self, win, target_set_size, targets, target_side, orbit_radius=0.05 * scale, speed=2.0):
+    def __init__(self, win, target_set_size, targets, target_side, orbit_radius=0.05 * scale, speed=orbiting_speed):
         self.win = win
         self.orbit_radius = orbit_radius
         self.speed = speed

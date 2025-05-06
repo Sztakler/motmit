@@ -3,10 +3,10 @@ import numpy as np
 import random
 from orbiting_objects import OrbitingObjects
 from orbiting_circle_pair import OrbitingCirclePair
-from config import scale
+from config import scale, orbiting_speed
 
 class OrbitingCircles(OrbitingObjects):
-    def __init__(self, win, target_set_size, targets, target_side, orbit_radius=0.08 * scale, speed=2.0):
+    def __init__(self, win, target_set_size, targets, target_side, orbit_radius=0.08 * scale, speed=orbiting_speed):
         super().__init__(win, target_set_size, targets, target_side, orbit_radius, speed)
         
         self.orbits = []
