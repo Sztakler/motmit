@@ -77,7 +77,7 @@ class Trial:
 
 
     def draw_probe(self):
-        delay = 0.5
+        delay = 0.75
         self.draw_fixation_cross()
         self.objects.draw_static(core.getTime())
         self.highlighted_indices = self.objects.highlight_object(self.highlight_target)
@@ -145,15 +145,6 @@ class Trial:
 
     def run_trial(self):
         logger.info("Start trial")
-        # trackRoi = visual.Circle(self.win,
-        #     radius = 75, pos=(0, 0),
-        #     fillColor = None, lineColor = 'white')
-        
-        # clock = core.Clock()
-        # clock.reset()
-        # while clock.getTime() < 1.0:
-        #     trackRoi.draw()
-        #     self.win.flip()
         
         if not self.draw_fixation(): 
             self.interrupted = True
