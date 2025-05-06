@@ -14969,3 +14969,11 @@
 2025-05-06 18:24:49,562 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000026B21B6E830>, <target.Target object at 0x0000026B21B6E7D0>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x0000026B21B6EB30>
 2025-05-06 18:24:51,685 - INFO - Started recording
 2025-05-06 18:24:51,685 - INFO - Start trial
+2025-05-06 18:28:41,414 - INFO - Started recording
+2025-05-06 18:28:41,414 - INFO - Start trial
+2025-05-06 18:28:47,905 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000025AB8E92E30>, <target.Target object at 0x0000025AB8E92E90>, <target.Target object at 0x0000025AB8E92EF0>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x0000025AB8E92A40>
+2025-05-06 18:28:52,900 - INFO - Started recording
+2025-05-06 18:28:52,901 - INFO - Start trial
+2025-05-06 18:28:59,202 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000025AB8E91B40>, <target.Target object at 0x0000025AB8E91BA0>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000025AC348A860>
+2025-05-06 18:29:01,684 - INFO - Started recording
+2025-05-06 18:29:01,684 - INFO - Start trial

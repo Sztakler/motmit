@@ -3,3 +3,6 @@ fieldnames = ['UserID', 'First Name', 'Last Name', 'Age', 'Sex', 'Handedness', '
 scale = 1080
 target_color="blue"
 mirror_color="yellow"
+response_circle_radius = 0.1
+response_circle_target_color = "green"
+response_circle_mirror_color = "red"
