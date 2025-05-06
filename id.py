@@ -28,5 +28,5 @@ def encode_conditions(trial_type, target_side, set_size, layout):
 
 # Example usage
 if __name__ == "__main__":
-    print(encode_conditions("mot", "l", "2", [0, 1, 2]))  # Output: 0000
-    print(encode_conditions("mit", "r", "3", [1, 2]))  # Output: 1112
+    # print(encode_conditions("mot", "l", "2", [0, 1, 2]))  # Output: 0000
+    # print(encode_conditions("mit", "r", "3", [1, 2]))  # Output: 1112

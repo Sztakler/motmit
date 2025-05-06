@@ -1,6 +1,9 @@
 from psychopy import core, event, visual
 import math
 from response_handler import ResponseHandler
+from config import scale
+
+from logger import logger
 
 class MITResponseHandler(ResponseHandler):
     def __init__(self, win, images_paths=None):
@@ -8,7 +11,7 @@ class MITResponseHandler(ResponseHandler):
         Initialize the ResponseHandler instance.
         """
         super().__init__(win)
-        self.carousel_radius = 0.3
+        self.carousel_radius = 0.3 * scale
         self.items = []
         self.images_paths = images_paths[:12]
 
@@ -25,7 +28,7 @@ class MITResponseHandler(ResponseHandler):
         while not self.clicked_object and timer.getTime() < 3:
             for item in self.items:
                 if mouse.isPressedIn(item):
-                    highlight_circle = visual.Circle(self.win, radius=0.04, fillColor=None, lineColor='lightgreen', lineWidth=4)
+                    highlight_circle = visual.Circle(self.win, radius=0.04 * scale, fillColor=None, lineColor='lightgreen', lineWidth=4)
                     highlight_circle.pos = item.pos
                     self.clicked_object = item.image
                     item.draw()
@@ -43,7 +46,7 @@ class MITResponseHandler(ResponseHandler):
         Returns:
             bool: True if the response is correct, False otherwise.
         """
-
+        logger.info(f"Check correctness: highlight_target {highlight_target}, targets {targets}, highlighted_indices {highlighted_indices}, objects {objects}")
         highlighted_image = objects.images_paths[highlighted_indices[0]]
         clicked_target = self.clicked_object == highlighted_image
         clicked_cross = self.clicked_object == objects.images_paths[0]
@@ -70,11 +73,11 @@ class MITResponseHandler(ResponseHandler):
 
     def draw_carousel(self):
         positions = self.get_circle_positions(self.carousel_radius, len(self.images_paths) + 1)
-        cross = visual.ImageStim(self.win, image="images/0.png", pos=positions[0], size=(0.04, 0.04)) 
+        cross = visual.ImageStim(self.win, image="images/0.png", pos=positions[0], size=(0.04 * scale, 0.04 * scale)) 
         cross.draw()     
         self.items.append(cross)
         for i, pos in enumerate(positions[1:], 1):
-            item = visual.ImageStim(self.win, image=self.images_paths[i % len(self.images_paths)], pos=pos, size=(0.15, 0.15))
+            item = visual.ImageStim(self.win, image=self.images_paths[i % len(self.images_paths)], pos=pos, size=(0.15 * scale, 0.15 * scale))
             item.draw()
             self.items.append(item)
         self.win.flip()

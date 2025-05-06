@@ -9,8 +9,8 @@ class Form:
         self.sex = ""
         self.age = 0
         self.handedness = ""
-        self.datetime = core.getTime().strftime("%Y-%m-%d %H:%M:%S")
-        print(self.datetime)
+        self.datetime = ""
+        # print(self.datetime)
         self.first_name = ""
         self.last_name = ""
 

@@ -6,13 +6,20 @@ from mot_trial import MOTTrial
 from mit_trial import MITTrial
 from form import Form
 import os
-from config import filename, fieldnames
+from config import participants_path, fieldnames
 from eyetracker import eyetracker
+import logging
+
+logging.basicConfig(
+    filename='eyetracker_log.txt',
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 form = Form()
 # form.show_form()
-
-win = visual.Window([1920,1080], units="height", fullscr=True)
+ 
+win = visual.Window([1920,1080], units="pix", fullscr=True)
     
 def get_mirror_orbit_index(orbit_index):
     return (orbit_index + orbits_on_side) % (2 * orbits_on_side) 
@@ -34,13 +41,13 @@ for trial_type in ['mot', 'mit']:
                         mirror_orbit_index = get_mirror_orbit_index(orbit_index)
                         targets.append(Target(orbit_index, mirror_orbit_index, circle_index))
                     layout = layout_indices[i]
-                    print("layout", layout)
+                    # print("layout", layout)
                     combinations.append((target_set_size, targets, target_side, trial_type, highlight_target, layout))
 
 combinations *= 2
 random.shuffle(combinations)
-print(combinations[0])
-print(len(combinations))
+# print(combinations[0])
+# print(len(combinations))
 
 experimentName = "MOT_MIT"
 images_directory = "images"
@@ -49,12 +56,12 @@ images_paths = [f"{images_directory}/{i}.png" for i in range(1, image_count + 1)
 
 selected_combinations = combinations[:]
 
+filename = f"{participants_path}/{form.id}.csv"
 file_exists = os.path.isfile(filename) and os.path.getsize(filename) > 0
 
 eyetracker.config(win, experimentName, form.id)
 
-eyetracker.calibrate()
-eyetracker.start_recording()
+
 
 with open(filename, mode="a", newline="") as file:
     writer = csv.DictWriter(file, fieldnames=fieldnames)
@@ -62,10 +69,17 @@ with open(filename, mode="a", newline="") as file:
     if not file_exists:
         writer.writeheader()
 
+eyetracker.calibrate()
+eyetracker.start_recording()
 for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations, start=1):
     trial = None
     if trial_type == "mot":
-        trial = MOTTrial(win, trial_number, target_set_size, targets, target_side, form, trial_type, layout, highlight_target)
+        trial = MOTTrial(win, trial_number, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename)
     else:
-        trial = MITTrial(win, trial_number, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, images_paths)
+        trial = MITTrial(win, trial_number, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
+    
+    eyetracker.start_recording()
+    logging.info("Started recording")
     trial.run()
+    win.flip()
+eyetracker.stop_recording()

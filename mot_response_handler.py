@@ -1,5 +1,6 @@
 from psychopy import core, event, visual
 from response_handler import ResponseHandler
+from config import scale
 
 class MOTResponseHandler(ResponseHandler):
     def __init__(self, win):
@@ -7,8 +8,8 @@ class MOTResponseHandler(ResponseHandler):
         Initialize the ResponseHandler instance.
         """
         super().__init__(win)
-        self.green_circle = visual.Circle(self.win, radius=0.2, fillColor='green', pos=(-0.4, 0))
-        self.red_circle = visual.Circle(self.win, radius=0.2, fillColor='red', pos=(0.4, 0))
+        self.green_circle = visual.Circle(self.win, radius=0.2 * scale, fillColor='green', pos=(-0.4 * scale, 0))
+        self.red_circle = visual.Circle(self.win, radius=0.2 * scale, fillColor='red', pos=(0.4 * scale, 0))
 
     def get_response(self):
         self.green_circle.draw()

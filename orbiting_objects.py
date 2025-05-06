@@ -1,9 +1,10 @@
 from psychopy import core, visual
 import numpy as np
 import random
+from config import scale
 
 class OrbitingObjects:
-    def __init__(self, win, target_set_size, targets, target_side, orbit_radius=0.05, speed=2.0):
+    def __init__(self, win, target_set_size, targets, target_side, orbit_radius=0.05 * scale, speed=2.0):
         self.win = win
         self.orbit_radius = orbit_radius
         self.speed = speed
@@ -17,8 +18,17 @@ class OrbitingObjects:
 
 
     def get_offsets(self):
-        return [(-0.6, 0.3), (-0.6, 0.0), (-0.6, -0.3),
-                    (0.6, 0.3),  (0.6, 0.0),  (0.6, -0.3)]
+        winWidth = self.win.size[0] / 2
+        winHeight = self.win.size[1] / 2
+
+        return [
+            (-0.6 * winWidth, 0.3 * winHeight), 
+            (-0.6 * winWidth, 0.0 * winHeight),
+            (-0.6 * winWidth, -0.3 * winHeight),
+            (0.6 * winWidth, 0.3 * winHeight),
+            (0.6 * winWidth, 0.0 * winHeight), 
+            (0.6 * winWidth, -0.3 * winHeight)
+            ]
     
     def highlight_target(self):
         for target in self.targets:

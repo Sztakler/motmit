@@ -5,12 +5,13 @@ from orbiting_objects import OrbitingObjects
 from orbiting_images_pair import OrbitingImagesPair
 from target import Target
 import math
+from config import scale
 
 class OrbitingImages(OrbitingObjects):
-    def __init__(self, win, target_set_size, targets, target_side, orbit_radius=0.05, speed=2.0, images_paths=None):
+    def __init__(self, win, target_set_size, targets, target_side, orbit_radius=0.05 * scale, speed=2.0, images_paths=None):
         super().__init__(win, target_set_size, targets, target_side, orbit_radius, speed)
 
-        print("Images paths:", images_paths)
+        # print("Images paths:", images_paths)
         self.images_paths = images_paths[:self.number_of_pairs]
         random.shuffle(self.images_paths)
         self.orbits = []

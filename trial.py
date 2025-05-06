@@ -3,31 +3,29 @@ import random
 import csv
 from fixation_cross import FixationCross
 import uuid
-from config import filename
+from config import scale
 from eyetracker import eyetracker
-
-class Form():
-    def __init__(self):
-        pass
+from logger import logger
 
 class Trial:
-    def __init__(self, win, trial_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target):
+    def __init__(self, win, trial_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename):
         self.win = win
         self.trial_number = trial_number
-        self.orbit_radius = 0.1
+        self.orbit_radius = 0.1 * scale
         self.speed = 0.5
         self.target_set_size = target_set_size
         self.targets = targets
         self.targets_side = targets_side
         self.form = form
         self.trial_type = trial_type
-        self.cross = FixationCross(win, size=0.05)
+        self.cross = FixationCross(win, size=0.05 * scale)
         self.interrupted = False
         self.highlight_target = highlight_target
         self.response_handler = None
         self.highlighted_indices = None
         self.layout = layout
         self.id = uuid.uuid4()
+        self.filename = filename
       
     def split_time(self, time, n):
         cuts = sorted([random.uniform(0, time) for _ in range(n - 1)])
@@ -44,12 +42,14 @@ class Trial:
         
         while clock.getTime() < delay:
             eye_contact = eyetracker.check_position() and eyetracker.check_blink()
-
+            self.draw_fixation_cross()
             self.win.flip()
             core.wait(0.01)
 
             if not eye_contact:
                 return False
+            
+        return True
 
     def draw_cue(self):
         delay = 0.75
@@ -57,25 +57,24 @@ class Trial:
         while core.getTime() - start_time < delay:
             eye_contact = eyetracker.check_position() and eyetracker.check_blink()
 
+            self.draw_fixation_cross()
             self.objects.draw_static(start_time)
             self.objects.highlight_target()
             self.win.flip()
 
             if not eye_contact:
                 return False
+            
+        return True
 
     def draw_stop(self):
         delay = 0.5
         start_time = core.getTime()
         while core.getTime() - start_time < delay:
-            eye_contact = eyetracker.check_position() and eyetracker.check_blink()
-
             self.objects.draw_static(start_time)
             self.draw_fixation_cross()
             self.win.flip()
-            
-            if not eye_contact:
-                return False
+
 
     def draw_probe(self):
         delay = 0.5
@@ -121,8 +120,8 @@ class Trial:
                 if 'escape' in event.getKeys():
                     core.quit()
                 
-                if not eye_contact:
-                    return False
+                # if not eye_contact:
+                #     return False
                 
             current_time = core.getTime() - start_time
             self.objects.update_initial_angles(current_time)
@@ -141,28 +140,69 @@ class Trial:
         
             if not eye_contact:
                 return False
+            
+        return True
 
-    def run(self):
-        t1 = core.getTime()
-        eyetracker.start_recording()
-        self.draw_fixation()
-        self.draw_cue()
-        self.draw_tracking()
-        self.draw_stop()
-        self.draw_probe()
-        eyetracker.stop_recording()
+    def run_trial(self):
+        logger.info("Start trial")
+        # trackRoi = visual.Circle(self.win,
+        #     radius = 75, pos=(0, 0),
+        #     fillColor = None, lineColor = 'white')
         
+        # clock = core.Clock()
+        # clock.reset()
+        # while clock.getTime() < 1.0:
+        #     trackRoi.draw()
+        #     self.win.flip()
+        
+        if not self.draw_fixation(): 
+            self.interrupted = True
+            logger.warning("Lost eye contact in draw_fixation()")
+            self.display_look_at_center_message_and_quit()
+            return
+        if not self.draw_cue(): 
+            self.interrupted = True
+            logger.warning("Lost eye contact in draw_cue()")
+            self.display_look_at_center_message_and_quit()
+            return
+        if not self.draw_tracking(): 
+            self.interrupted = True
+            logger.warning("Lost eye contact in draw_tracking()")
+            self.display_look_at_center_message_and_quit()
+            return
+        
+        self.draw_stop()
+        self.draw_probe()   
+
+    def handle_response(self):
         self.response_handler.get_response()
         is_correct = self.response_handler.check_correctness(self.highlight_target)
         self.response_handler.display_feedback()
         
         self.save_data(self.response_handler.clicked_object, is_correct)
-    
-        t2 = core.getTime()
-
-        print("Time:", t2 - t1)
-
         self.wait_for_input()
+
+    def run(self):
+        self.run_trial()
+        if self.interrupted:
+            return
+        self.handle_response()
+
+    def display_look_at_center_message_and_quit(self):
+        """Wyświetla komunikat o patrzeniu na środek i kończy trial."""
+        message = visual.TextStim(self.win, text="Proszę patrzeć na środek!", color='black', height=0.05 * scale)
+        clock = core.Clock()
+        duration = 2.0  # ile sekund wyświetlamy komunikat
+        
+        clock.reset()
+        while clock.getTime() < duration:
+            message.draw()
+            self.win.flip()
+            if 'escape' in event.getKeys():
+                core.quit()
+        
+        self.interrupted = True
+
 
     def wait_for_input(self):   
         while True:
@@ -173,7 +213,7 @@ class Trial:
                 break
 
     def save_data(self, response, correct_response, correctness):
-        with open(filename, mode='a', newline='') as file:
+        with open(self.filename, mode='a', newline='') as file:
             writer = csv.writer(file)
             condition_id = self.generate_condition_id()
             #                'ID',         'First Name',         'Last Name',         'Age',         'Sex',         'Handedness',         'E-mail',        'Trial Number',    'Trial Type',     'Target Set Size',  'Target Side',      "Layout",       "Probing",         "Response", "Correct Response", "Correctness", "TrialID", "ConditionID"])
@@ -233,7 +273,7 @@ class Trial:
         set_size_encoded = set_size_map.get(self.target_set_size, "Invalid")
         probing_encoded = probing_map.get(self.highlight_target, "Invalid")
 
-        print("ENCODED", trial_type_encoded, target_side_encoded, set_size_encoded, probing_encoded, layout_encoded)
+        # print("ENCODED", trial_type_encoded, target_side_encoded, set_size_encoded, probing_encoded, layout_encoded)
 
         # Check for invalid inputs
         if "Invalid" in (trial_type_encoded, target_side_encoded, set_size_encoded, layout_encoded):

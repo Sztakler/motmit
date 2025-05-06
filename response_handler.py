@@ -1,4 +1,5 @@
 from psychopy import core, visual
+from config import scale
 
 class ResponseHandler:
     """
@@ -17,8 +18,8 @@ class ResponseHandler:
 
     def display_feedback(self):
         feedback_duration = 1.5 
-        feedback_message = visual.TextStim(self.win, text=self.feedback, color='black', height=0.05)
-        continue_prompt = visual.TextStim(self.win, text="Naciśnij 'escape', by zakończyć badanie. Naciśnij dowolny przycisk, by kontynuować.", color='black', height=0.05, pos=(0, -0.2))
+        feedback_message = visual.TextStim(self.win, text=self.feedback, color='black', height=0.05 * scale)
+        continue_prompt = visual.TextStim(self.win, text="Naciśnij 'escape', by zakończyć badanie. Naciśnij dowolny przycisk, by kontynuować.", color='black', height=0.05 * scale, pos=(0, -0.2 * self.win.size[1]))
         feedback_message.draw()
         continue_prompt.draw()
         self.win.flip()

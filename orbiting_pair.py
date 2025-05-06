@@ -1,8 +1,9 @@
 from psychopy import visual
 import numpy as np
+from config import scale
 
 class OrbitingPair:
-    def __init__(self, win, offset, orbit_radius=0.1, initial_angle=0, direction=1):
+    def __init__(self, win, offset, orbit_radius=0.1 * scale, initial_angle=0, direction=1):
         self.win = win
         self.orbit_radius = orbit_radius
         self.offset = offset
@@ -12,8 +13,8 @@ class OrbitingPair:
         self.line_width = 8
         self.target_color = "lightgreen"
         self.mirrow_color = "lightblue"
-        self.target_border = visual.Circle(win, radius=0.025, fillColor=None, lineColor=self.target_color, lineWidth=self.line_width)
-        self.mirror_border = visual.Circle(win, radius=0.025, fillColor=None, lineColor=self.mirrow_color, lineWidth=self.line_width)
+        self.target_border = visual.Circle(win, radius=0.025 * scale, fillColor=None, lineColor=self.target_color, lineWidth=self.line_width)
+        self.mirror_border = visual.Circle(win, radius=0.025 * scale, fillColor=None, lineColor=self.mirrow_color, lineWidth=self.line_width)
         self.objects = []
 
     def draw_static(self):
