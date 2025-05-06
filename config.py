@@ -6,3 +6,5 @@ mirror_color="yellow"
 response_circle_radius = 0.1
 response_circle_target_color = "green"
 response_circle_mirror_color = "red"
+
+orbit_radius = 0.04

@@ -22,12 +22,12 @@ class OrbitingObjects:
         winHeight = self.win.size[1] / 2
 
         return [
-            (-0.6 * winWidth, 0.3 * winHeight), 
+            (-0.6 * winWidth, 0.5 * winHeight), 
             (-0.6 * winWidth, 0.0 * winHeight),
-            (-0.6 * winWidth, -0.3 * winHeight),
-            (0.6 * winWidth, 0.3 * winHeight),
+            (-0.6 * winWidth, -0.5 * winHeight),
+            (0.6 * winWidth, 0.5 * winHeight),
             (0.6 * winWidth, 0.0 * winHeight), 
-            (0.6 * winWidth, -0.3 * winHeight)
+            (0.6 * winWidth, -0.5 * winHeight)
             ]
     
     def highlight_target(self):
