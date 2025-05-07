@@ -87,9 +87,6 @@ for trial_number, (target_set_size, targets, target_side, trial_type, highlight_
     interrupted = trial.run(practiceMode=True)
     win.flip()
 
-    # if interrupted:
-    interrupted_trials.append(trial)
-
 eyetracker.stop_recording()
 display_feedback(win, "Koniec bloku testowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby przejść do badania.")
 
