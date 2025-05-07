@@ -1,4 +1,0 @@
-UserID,First Name,Last Name,Age,Sex,Handedness,E-mail,Trial Number,Trial Type,Target Set Size,Target Side,Layout,Probing,Response,Correct Response,Correctness,TrialID,ConditionID
-7701a749-082f-482c-aa84-b198bf07f82f,,,0,,,,1,mit,3,1,"[0, 1, 2]",True,images/1.png,images/1.png,True,2653baf5-367e-4695-afd9-395d98390272,11110
-7701a749-082f-482c-aa84-b198bf07f82f,,,0,,,,2,mit,2,1,"[0, 1]",True,images/11.png,images/3.png,False,93cc7f02-cd30-4955-b588-698ab340a07f,11011
-7701a749-082f-482c-aa84-b198bf07f82f,,,0,,,,3,mit,3,0,"[0, 1, 2]",True,,images/5.png,False,e377c7a9-108c-4be8-91f1-01cffdc53198,10110

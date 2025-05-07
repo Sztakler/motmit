@@ -23,14 +23,15 @@ class MITTrial(Trial):
         self.win.flip()
         core.wait(delay)
 
-    def handle_response(self):
+    def handle_response(self, practiceMode=False):
         self.response_handler.get_response()
         is_correct = self.response_handler.check_correctness(self.highlight_target, self.targets, self.highlighted_indices, self.objects)
         self.response_handler.display_feedback()
         
         correct_response = self.objects.images_paths[self.highlighted_indices[0]]
-
-        self.save_data(self.response_handler.clicked_object, correct_response, is_correct)
+        
+        if not practiceMode:
+            self.save_data(self.response_handler.clicked_object, correct_response, is_correct)
         wait_for_input(self.win)
 
         

@@ -178,19 +178,20 @@ class Trial:
 
         self.win.mouseVisible = True
 
-    def handle_response(self):
+    def handle_response(self, practiceMode=False):
         self.response_handler.get_response()
         is_correct = self.response_handler.check_correctness(self.highlight_target)
         self.response_handler.display_feedback()
         
-        self.save_data(self.response_handler.clicked_object, is_correct)
+        if not practiceMode:
+            self.save_data(self.response_handler.clicked_object, is_correct)
         wait_for_input(self.win)
 
-    def run(self):
+    def run(self, practiceMode=False):
         self.run_trial()
         if self.interrupted:
             return self.interrupted
-        self.handle_response()
+        self.handle_response(practiceMode)
         return self.interrupted
 
     def display_look_at_center_message_and_quit(self):

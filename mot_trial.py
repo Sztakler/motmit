@@ -9,12 +9,13 @@ class MOTTrial(Trial):
         self.objects = OrbitingCircles(win, self.target_set_size, self.targets, self.targets_side)
         self.response_handler = MOTResponseHandler(win)
 
-    def handle_response(self):
+    def handle_response(self, practiceMode=False):
         self.response_handler.get_response()
         is_correct = self.response_handler.check_correctness(self.highlight_target)
         self.response_handler.display_feedback()
         
         correct_response = self.highlighted_indices
 
-        self.save_data(self.response_handler.clicked_object, correct_response, is_correct)
+        if not practiceMode:
+            self.save_data(self.response_handler.clicked_object, correct_response, is_correct)
         wait_for_input(self.win)

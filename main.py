@@ -48,8 +48,7 @@ for trial_type in ['mot', 'mit']:
 
 combinations *= 2
 random.shuffle(combinations)
-print(len(combinations))
-
+                      
 experimentName = "MOT_MIT"
 images_directory = "images"
 image_count = 28
@@ -70,31 +69,51 @@ with open(filename, mode="a", newline="") as file:
     if not file_exists:
         writer.writeheader()
 
-# eyetracker.calibrate()
-# eyetracker.start_recording()
-
 interrupted_trials = []
+
+logger.info(f"Practice block started")
+eyetracker.calibrate_and_start_recording()
+display_feedback(win, f"Zaczynasz blok testowy. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
+
+for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations[:len(selected_combinations) // 3], start=1):
+    trial = None
+    if trial_type == "mot":
+        trial = MOTTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename)
+    else:
+        trial = MITTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
+    
+    eyetracker.start_recording()
+    logger.info("Eyetracker started recording")
+    interrupted = trial.run(practiceMode=True)
+    win.flip()
+
+    # if interrupted:
+    interrupted_trials.append(trial)
+
+eyetracker.stop_recording()
+display_feedback(win, "Koniec bloku testowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby przejść do badania.")
 
 n_blocks = 1
 for block in range(n_blocks):
     logger.info(f"Block {block + 1} started")
     eyetracker.calibrate_and_start_recording()
+    random.shuffle(selected_combinations)
     display_feedback(win, f"Zaczynasz blok {block + 1}. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
 
     for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations, start=1):
         trial = None
         if trial_type == "mot":
-            trial = MOTTrial(win, trial_number, block, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename)
+            trial = MOTTrial(win, trial_number, block + 1, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename)
         else:
-            trial = MITTrial(win, trial_number, block, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
+            trial = MITTrial(win, trial_number, block + 1, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
         
         eyetracker.start_recording()
         logger.info("Eyetracker started recording")
         interrupted = trial.run()
         win.flip()
 
-        # if interrupted:
-        interrupted_trials.append(trial)
+        if interrupted:
+            interrupted_trials.append(trial)
 
     eyetracker.stop_recording()
     if block != n_blocks - 1:
