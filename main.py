@@ -55,7 +55,7 @@ images_directory = "images"
 image_count = 28
 images_paths = [f"{images_directory}/{i}.png" for i in range(1, image_count + 1)]
 
-selected_combinations = combinations[:1]
+selected_combinations = combinations[:2]
 
 filename = f"{participants_path}/{form.id}.csv"
 file_exists = os.path.isfile(filename) and os.path.getsize(filename) > 0
@@ -73,7 +73,9 @@ with open(filename, mode="a", newline="") as file:
 # eyetracker.calibrate()
 # eyetracker.start_recording()
 
-n_blocks = 4
+interrupted_trials = []
+
+n_blocks = 1
 for block in range(n_blocks):
     logger.info(f"Block {block + 1} started")
     eyetracker.calibrate_and_start_recording()
@@ -82,17 +84,29 @@ for block in range(n_blocks):
     for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations, start=1):
         trial = None
         if trial_type == "mot":
-            trial = MOTTrial(win, trial_number, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename)
+            trial = MOTTrial(win, trial_number, block, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename)
         else:
-            trial = MITTrial(win, trial_number, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
+            trial = MITTrial(win, trial_number, block, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
         
         eyetracker.start_recording()
         logger.info("Eyetracker started recording")
-        trial.run()
+        interrupted = trial.run()
         win.flip()
+
+        # if interrupted:
+        interrupted_trials.append(trial)
 
     eyetracker.stop_recording()
     if block != n_blocks - 1:
         display_feedback(win, "Koniec bloku. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby kontynuować.")
-    else:
-       display_feedback(win, "Koniec eksperymentu. Dziękujemy za udział.")
+
+logger.info(f"Interrupted trials: {len(interrupted_trials)}")
+if len(interrupted_trials) > 0:
+        logger.info(f"Interrupted trials: {len(interrupted_trials)}")
+        display_feedback(win, "Niektóre próby zostały przerwane. Naciśnij dowolny przycisk myszy, aby je powtórzyć.")
+        for trial in interrupted_trials[:len(selected_combinations) // 2]:
+            trial.reset()
+            trial.run()
+        interrupted_trials.clear()
+
+display_feedback(win, "Koniec eksperymentu. Dziękujemy za udział.")

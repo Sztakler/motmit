@@ -4,8 +4,8 @@ from mot_response_handler import MOTResponseHandler
 from utils.input import wait_for_input
 
 class MOTTrial(Trial):
-    def __init__(self, win, trial_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename):
-        super().__init__(win, trial_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename)
+    def __init__(self, win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename):
+        super().__init__(win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename)
         self.objects = OrbitingCircles(win, self.target_set_size, self.targets, self.targets_side)
         self.response_handler = MOTResponseHandler(win)
 

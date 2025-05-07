@@ -9,9 +9,10 @@ from logger import logger
 from utils.input import wait_for_input
 
 class Trial:
-    def __init__(self, win, trial_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename):
+    def __init__(self, win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename):
         self.win = win
         self.trial_number = trial_number
+        self.block_number = block_number
         self.orbit_radius = 0.1 * scale
         self.speed = 0.5
         self.target_set_size = target_set_size
@@ -28,6 +29,13 @@ class Trial:
         self.id = uuid.uuid4()
         self.filename = filename
       
+    def reset(self):
+        self.interrupted = False
+        self.highlighted_indices = None
+        self.response_handler.clicked_object = None
+        self.response_handler.feedback = None
+        self.response_handler.correct = None
+
     def split_time(self, time, n):
         cuts = sorted([random.uniform(0, time) for _ in range(n - 1)])
         intervals = [cuts[0]] + [cuts[i] - cuts[i-1] for i in range(1, n-1)] + [time - cuts[-1]]
@@ -181,8 +189,9 @@ class Trial:
     def run(self):
         self.run_trial()
         if self.interrupted:
-            return
+            return self.interrupted
         self.handle_response()
+        return self.interrupted
 
     def display_look_at_center_message_and_quit(self):
         """Wyświetla komunikat o patrzeniu na środek i kończy trial."""
@@ -203,8 +212,8 @@ class Trial:
         with open(self.filename, mode='a', newline='') as file:
             writer = csv.writer(file)
             condition_id = self.generate_condition_id()
-            #                'ID',         'First Name',         'Last Name',         'Age',         'Sex',         'Handedness',         'E-mail',        'Trial Number',    'Trial Type',     'Target Set Size',  'Target Side',      "Layout",       "Probing",         "Response", "Correct Response", "Correctness", "TrialID", "ConditionID"])
-            writer.writerow([self.form.id, self.form.first_name, self.form.last_name, self.form.age, self.form.sex, self.form.handedness, self.form.email, self.trial_number, self.trial_type, self.target_set_size, self.targets_side, self.layout, self.highlight_target, response, correct_response, correctness, self.id, condition_id])
+            #                'ID',         'First Name',         'Last Name',         'Age',         'Sex',         'Handedness',         'E-mail',        'Trial Number',    'Block Number'   'Trial Type',     'Target Set Size',  'Target Side',      "Layout",       "Probing",         "Response", "Correct Response", "Correctness", "TrialID", "ConditionID"])
+            writer.writerow([self.form.id, self.form.first_name, self.form.last_name, self.form.age, self.form.sex, self.form.handedness, self.form.email, self.trial_number, self.block_number, self.trial_type, self.target_set_size, self.targets_side, self.layout, self.highlight_target, response, correct_response, correctness, self.id, condition_id])
 
     def generate_condition_id(self):
         """
