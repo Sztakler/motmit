@@ -2,6 +2,7 @@ from psychopy import core
 from orbiting_images import OrbitingImages
 from trial import Trial
 from mit_response_handler import MITResponseHandler
+from utils.input import wait_for_input
 
 class Form():
     def __init__(self):
@@ -30,6 +31,6 @@ class MITTrial(Trial):
         correct_response = self.objects.images_paths[self.highlighted_indices[0]]
 
         self.save_data(self.response_handler.clicked_object, correct_response, is_correct)
-        self.wait_for_input()
+        wait_for_input(self.win)
 
         

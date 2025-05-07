@@ -1,8 +1,8 @@
 from psychopy import core, event, visual
 import math
-from response_handler import ResponseHandler
 from config import scale
 
+from response_handler import ResponseHandler
 from logger import logger
 
 class MITResponseHandler(ResponseHandler):

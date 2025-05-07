@@ -6,6 +6,7 @@ import uuid
 from config import scale
 from eyetracker import eyetracker
 from logger import logger
+from utils.input import wait_for_input
 
 class Trial:
     def __init__(self, win, trial_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename):
@@ -175,7 +176,7 @@ class Trial:
         self.response_handler.display_feedback()
         
         self.save_data(self.response_handler.clicked_object, is_correct)
-        self.wait_for_input()
+        wait_for_input(self.win)
 
     def run(self):
         self.run_trial()
@@ -197,22 +198,6 @@ class Trial:
                 core.quit()
         
         self.interrupted = True
-        
-    def wait_for_input(self):
-        mouse = event.Mouse(win=self.win)
-
-        while not any(mouse.getPressed()):
-            logger.info("Waiting for mouse input")
-
-            keys = event.getKeys(modifiers=True)
-            for key, mods in keys:
-                if key == 'escape':
-                    core.quit()
-                if key == 'r' and 'ctrl' in mods:
-                    logger.info("Manually recalibrated eyetracker")
-                    eyetracker.calibrate_and_start_recording()
-
-            core.wait(0.01)
 
     def save_data(self, response, correct_response, correctness):
         with open(self.filename, mode='a', newline='') as file:

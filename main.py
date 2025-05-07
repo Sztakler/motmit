@@ -1,4 +1,4 @@
-from psychopy import visual
+from psychopy import visual, core, event
 import random
 import csv
 from target import Target
@@ -6,15 +6,11 @@ from mot_trial import MOTTrial
 from mit_trial import MITTrial
 from form import Form
 import os
-from config import participants_path, fieldnames
+from config import participants_path, fieldnames, feedback_color, feedback_font_size, scale
 from eyetracker import eyetracker
 import logging
-
-logging.basicConfig(
-    filename='eyetracker_log.txt',
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+from utils.input import wait_for_input
+from logger import logger
 
 form = Form()
 # form.show_form()
@@ -23,6 +19,13 @@ win = visual.Window([1920,1080], units="pix", fullscr=True)
     
 def get_mirror_orbit_index(orbit_index):
     return (orbit_index + orbits_on_side) % (2 * orbits_on_side) 
+
+def display_feedback(win, feedback_text):
+    feedback = visual.TextStim(win, text=feedback_text, color=feedback_color, height=feedback_font_size * scale)
+    feedback.draw()
+    win.flip()
+    wait_for_input(win)
+    logger.info("Feedback displayed")
 
 orbits_on_side = 3
 combinations = []
@@ -41,20 +44,18 @@ for trial_type in ['mot', 'mit']:
                         mirror_orbit_index = get_mirror_orbit_index(orbit_index)
                         targets.append(Target(orbit_index, mirror_orbit_index, circle_index))
                     layout = layout_indices[i]
-                    # print("layout", layout)
                     combinations.append((target_set_size, targets, target_side, trial_type, highlight_target, layout))
 
 combinations *= 2
 random.shuffle(combinations)
-# print(combinations[0])
-# print(len(combinations))
+print(len(combinations))
 
 experimentName = "MOT_MIT"
 images_directory = "images"
 image_count = 28
 images_paths = [f"{images_directory}/{i}.png" for i in range(1, image_count + 1)]
 
-selected_combinations = combinations[:]
+selected_combinations = combinations[:1]
 
 filename = f"{participants_path}/{form.id}.csv"
 file_exists = os.path.isfile(filename) and os.path.getsize(filename) > 0
@@ -69,17 +70,29 @@ with open(filename, mode="a", newline="") as file:
     if not file_exists:
         writer.writeheader()
 
-eyetracker.calibrate()
-eyetracker.start_recording()
-for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations, start=1):
-    trial = None
-    if trial_type == "mot":
-        trial = MOTTrial(win, trial_number, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename)
+# eyetracker.calibrate()
+# eyetracker.start_recording()
+
+n_blocks = 4
+for block in range(n_blocks):
+    logger.info(f"Block {block + 1} started")
+    eyetracker.calibrate_and_start_recording()
+    display_feedback(win, f"Zaczynasz blok {block + 1}. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
+
+    for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations, start=1):
+        trial = None
+        if trial_type == "mot":
+            trial = MOTTrial(win, trial_number, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename)
+        else:
+            trial = MITTrial(win, trial_number, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
+        
+        eyetracker.start_recording()
+        logger.info("Eyetracker started recording")
+        trial.run()
+        win.flip()
+
+    eyetracker.stop_recording()
+    if block != n_blocks - 1:
+        display_feedback(win, "Koniec bloku. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby kontynuować.")
     else:
-        trial = MITTrial(win, trial_number, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
-    
-    eyetracker.start_recording()
-    logging.info("Started recording")
-    trial.run()
-    win.flip()
-eyetracker.stop_recording()
+       display_feedback(win, "Koniec eksperymentu. Dziękujemy za udział.")

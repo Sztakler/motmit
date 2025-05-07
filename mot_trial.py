@@ -1,6 +1,7 @@
 from orbiting_circles import OrbitingCircles
 from trial import Trial
 from mot_response_handler import MOTResponseHandler
+from utils.input import wait_for_input
 
 class MOTTrial(Trial):
     def __init__(self, win, trial_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename):
@@ -16,4 +17,4 @@ class MOTTrial(Trial):
         correct_response = self.highlighted_indices
 
         self.save_data(self.response_handler.clicked_object, correct_response, is_correct)
-        self.wait_for_input
+        wait_for_input(self.win)
