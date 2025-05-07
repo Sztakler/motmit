@@ -1,6 +1,6 @@
 from psychopy import core, event, visual
 import math
-from config import scale
+from config import scale, target_color, image_radius
 
 from response_handler import ResponseHandler
 from logger import logger
@@ -13,22 +13,29 @@ class MITResponseHandler(ResponseHandler):
         super().__init__(win)
         self.carousel_radius = 0.3 * scale
         self.items = []
-        self.images_paths = images_paths[:12]
+        self.image_pairs = images_paths
+        print("Images paths:", len(self.image_pairs))
 
-    def get_response(self):
+    def get_response(self, objects):
         mouse = event.Mouse(win=self.win)
 
-        self.draw_carousel()
+        self.draw_carousel(objects)
         # Sorting the items based on their image names
-        # Assuming the image names are in the format "images/0.png", "images/1.png", etc.
-        self.items.sort(key=lambda item: int(item.image.split('/')[1].split('.')[0]))
+        # Assuming the image names are in the format "images/1a.png", "images/1b.png", etc.
+        def sort_key(item):
+            filename = item.image.split('/')[-1].split('.')[0]
+            num = int(filename[:-1])
+            letter = filename[-1]
+            return (num, letter)
+
+        self.items.sort(key=sort_key)
 
         timer = core.Clock()
         mouse.setPos((0, 0))  # Reset mouse position
         while not self.clicked_object and timer.getTime() < 3:
             for item in self.items:
                 if mouse.isPressedIn(item):
-                    highlight_circle = visual.Circle(self.win, radius=0.04 * scale, fillColor=None, lineColor='lightgreen', lineWidth=4)
+                    highlight_circle = visual.Circle(self.win, radius=0.04 * scale, fillColor=None, lineColor=target_color, lineWidth=4)
                     highlight_circle.pos = item.pos
                     self.clicked_object = item.image
                     item.draw()
@@ -71,15 +78,20 @@ class MITResponseHandler(ResponseHandler):
 
         return self.correct
 
-    def draw_carousel(self):
-        positions = self.get_circle_positions(self.carousel_radius, len(self.images_paths) + 1)
-        cross = visual.ImageStim(self.win, image="images/0.png", pos=positions[0], size=(0.04 * scale, 0.04 * scale)) 
+    def draw_carousel(self, objects):
+        flat_images = [img for pair in objects.images_paths for img in pair]
+        print(flat_images   )
+        positions = self.get_circle_positions(self.carousel_radius, len(flat_images) + 1)
+        
+        cross = visual.ImageStim(self.win, image="images/0a.png", pos=positions[0], size=(image_radius * scale, image_radius * scale)) 
         cross.draw()     
         self.items.append(cross)
-        for i, pos in enumerate(positions[1:], 1):
-            item = visual.ImageStim(self.win, image=self.images_paths[i % len(self.images_paths)], pos=pos, size=(0.15 * scale, 0.15 * scale))
+        
+        for i, (image_path, pos) in enumerate(zip(flat_images, positions[1:]), 1):
+            item = visual.ImageStim(self.win, image=image_path, pos=pos, size=(image_radius * scale, image_radius * scale))
             item.draw()
             self.items.append(item)
+        
         self.win.flip()
     
     def get_circle_positions(self, radius, count):

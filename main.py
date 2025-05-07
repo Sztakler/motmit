@@ -29,7 +29,7 @@ def display_feedback(win, feedback_text):
 
 orbits_on_side = 3
 combinations = []
-for trial_type in ['mot', 'mit']:
+for trial_type in ['mit']:
     for highlight_target in [True, False]:
         for target_set_size in [2, 3]:
             for target_side in [0, 1]:
@@ -51,8 +51,8 @@ random.shuffle(combinations)
                       
 experimentName = "MOT_MIT"
 images_directory = "images"
-image_count = 28
-images_paths = [f"{images_directory}/{i}.png" for i in range(1, image_count + 1)]
+image_count = 11
+images_paths =  [(f"{images_directory}/{i}a.png", f"{images_directory}/{i}b.png") for i in range(1, image_count + 1)]
 
 selected_combinations = combinations[:2]
 

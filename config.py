@@ -12,4 +12,7 @@ feedback_color = "black"
 feedback_font_size = 0.05
 
 orbit_radius = 0.04
+images_orbit_radius = 0.06
+image_radius = 0.08
+image_cover_radius = 0.04
 orbiting_speed = 3/2 * pi # 3/2 * pi = 270 deg/s

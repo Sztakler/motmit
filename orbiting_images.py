@@ -2,31 +2,31 @@ import numpy as np
 import random
 from orbiting_objects import OrbitingObjects
 from orbiting_images_pair import OrbitingImagesPair
-from config import scale, orbiting_speed
+from config import scale, orbiting_speed, images_orbit_radius
 
 class OrbitingImages(OrbitingObjects):
-    def __init__(self, win, target_set_size, targets, target_side, orbit_radius=0.05 * scale, speed=orbiting_speed, images_paths=None):
+    def __init__(self, win, target_set_size, targets, target_side, orbit_radius=images_orbit_radius * scale, speed=orbiting_speed, images_paths=None):
         super().__init__(win, target_set_size, targets, target_side, orbit_radius, speed)
 
-        self.images_paths = images_paths[:self.number_of_pairs]
+        self.images_paths = images_paths[:self.number_of_pairs // 2]
         random.shuffle(self.images_paths)
         self.orbits = []
 
         # Create pairs of images for the first half of the offsets
         for i, offset in enumerate(self.offsets[:self.number_of_pairs // 2]):
-            n = 2 * i
             initial_angle = np.random.uniform(0, 2 * np.pi)
             dir = random.choice([-1, 1])
-            pair = OrbitingImagesPair(win, offset, self.orbit_radius, initial_angle, dir,  images_paths=self.images_paths[n:n+2])
+            pair = OrbitingImagesPair(win, offset, self.orbit_radius, initial_angle, dir, images_paths=self.images_paths[i])
             self.orbits.append(pair)
         
         # Create the second half of the orbits with mirrored images
         for i, offset in enumerate(self.offsets[self.number_of_pairs // 2:]):
-            n = 2 * i
             initial_angle = np.random.uniform(0, 2 * np.pi)
             dir = random.choice([-1, 1])
-            pair = OrbitingImagesPair(win, offset, self.orbit_radius, initial_angle, dir,  images_paths=self.images_paths[n:n+2])
+            pair = OrbitingImagesPair(win, offset, self.orbit_radius, initial_angle, dir,  images_paths=self.images_paths[i])
             self.orbits.append(pair)
+        
+        print("Orbits:", len(self.orbits))
 
     def cover(self):
         for orbit in self.orbits:

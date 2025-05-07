@@ -24,7 +24,7 @@ class MITTrial(Trial):
         core.wait(delay)
 
     def handle_response(self, practiceMode=False):
-        self.response_handler.get_response()
+        self.response_handler.get_response(self.objects)
         is_correct = self.response_handler.check_correctness(self.highlight_target, self.targets, self.highlighted_indices, self.objects)
         self.response_handler.display_feedback()
         
