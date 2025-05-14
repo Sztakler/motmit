@@ -16,3 +16,6 @@ images_orbit_radius = 0.06
 image_radius = 0.08
 image_cover_radius = 0.04
 orbiting_speed = 3/2 * pi # 3/2 * pi = 270 deg/s
+
+mot_target_color = "blue"
+mit_target_color = "magenta"

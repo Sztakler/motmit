@@ -1,9 +1,9 @@
 from psychopy import visual
 import numpy as np
-from config import scale, target_color, mirror_color
+from config import scale, mot_target_color, mirror_color
 
 class OrbitingPair:
-    def __init__(self, win, offset, orbit_radius=0.1 * scale, initial_angle=0, direction=1):
+    def __init__(self, win, offset, orbit_radius=0.1 * scale, initial_angle=0, direction=1, target_color=mot_target_color):
         self.win = win
         self.orbit_radius = orbit_radius
         self.offset = offset

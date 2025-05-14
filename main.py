@@ -29,7 +29,7 @@ def display_feedback(win, feedback_text):
 
 orbits_on_side = 3
 combinations = []
-for trial_type in ['mit']:
+for trial_type in ['mot', 'mit']:
     for highlight_target in [True, False]:
         for target_set_size in [2, 3]:
             for target_side in [0, 1]:
@@ -78,7 +78,7 @@ display_feedback(win, f"Zaczynasz blok testowy. Naciśnij dowolny przycisk myszy
 for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations[:len(selected_combinations) // 3], start=1):
     trial = None
     if trial_type == "mot":
-        trial = MOTTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename)
+        trial = MOTTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
     else:
         trial = MITTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
     
@@ -99,8 +99,8 @@ for block in range(n_blocks):
 
     for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations, start=1):
         trial = None
-        if trial_type == "mot":
-            trial = MOTTrial(win, trial_number, block + 1, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename)
+        if trial_type == "mit":
+            trial = MOTTrial(win, trial_number, block + 1, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
         else:
             trial = MITTrial(win, trial_number, block + 1, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
         

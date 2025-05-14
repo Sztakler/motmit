@@ -1,6 +1,6 @@
 from psychopy import core, event, visual
 import math
-from config import scale, target_color, image_radius
+from config import scale, mit_target_color, image_radius
 
 from response_handler import ResponseHandler
 from logger import logger
@@ -35,7 +35,7 @@ class MITResponseHandler(ResponseHandler):
         while not self.clicked_object and timer.getTime() < 3:
             for item in self.items:
                 if mouse.isPressedIn(item):
-                    highlight_circle = visual.Circle(self.win, radius=0.04 * scale, fillColor=None, lineColor=target_color, lineWidth=4)
+                    highlight_circle = visual.Circle(self.win, radius=0.04 * scale, fillColor=None, lineColor=mit_target_color, lineWidth=4)
                     highlight_circle.pos = item.pos
                     self.clicked_object = item.image
                     item.draw()
@@ -54,9 +54,11 @@ class MITResponseHandler(ResponseHandler):
             bool: True if the response is correct, False otherwise.
         """
         logger.info(f"Check correctness: highlight_target {highlight_target}, targets {targets}, highlighted_indices {highlighted_indices}, objects {objects}")
-        highlighted_image = objects.images_paths[highlighted_indices[0]]
+        print("indices", highlighted_indices[0], "images" ,objects.images_paths, "higlighted", highlighted_indices, "corrent", highlight_target) 
+        flat_images = [img for pair in objects.images_paths for img in pair]
+        highlighted_image = flat_images[highlighted_indices[0]]
         clicked_target = self.clicked_object == highlighted_image
-        clicked_cross = self.clicked_object == objects.images_paths[0]
+        clicked_cross = self.clicked_object == flat_images[0]
 
         if self.clicked_object:
             if highlight_target:
