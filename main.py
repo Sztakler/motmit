@@ -51,7 +51,7 @@ random.shuffle(combinations)
                       
 experimentName = "MOT_MIT"
 images_directory = "images"
-image_count = 11
+image_count = 9
 images_paths =  [(f"{images_directory}/{i}a.png", f"{images_directory}/{i}b.png") for i in range(1, image_count + 1)]
 
 selected_combinations = combinations[:30]

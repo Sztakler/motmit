@@ -3,8 +3,12 @@ import psychopy.iohub as io
 import os
 from logger import logger
 
+on = False
+
 class Eyetracker:
     def __init__(self):
+        if not on:
+            return
         self.ioConfig = {}
         self.ioConfig['eyetracker.hw.tobii.EyeTracker'] = {
         'name': 'tracker',
@@ -18,6 +22,8 @@ class Eyetracker:
         self.blink_counter = 0
     
     def config(self, win, experimentName, id):
+        if not on:
+            return
         self.ioConfig['Keyboard'] = dict(use_keymap='psychopy')
         self.ioSession = '1'
         self.filename = (str(id) + '_' + experimentName)
@@ -54,22 +60,34 @@ class Eyetracker:
             fillColor = None, lineColor = 'white')
        
     def calibrate(self):
+        if not on:
+            return
         self.calibration.run()
 
     def calibrate_and_start_recording(self):
+        if not on:
+            return
         self.calibration.run()
         self.start_recording()
 
     def start_recording(self):
+        if not on:
+            return
         self.eyetracker.setRecordingState(True)
     
     def stop_recording(self):
+        if not on:
+            return
         self.eyetracker.setRecordingState(False)
 
     def get_data(self):
+        if not on:
+            return
         logger.info(f"Getting data from eyetracker")
 
     def check_position(self):
+        if not on:
+            return True
         gpos = self.getLastGazePosition()
 
         if gpos is None:
@@ -87,6 +105,8 @@ class Eyetracker:
             return False
             
     def check_blink(self):
+        if not on:
+            return True
         gpos = self.getLastGazePosition()
 
         if gpos is None:
@@ -107,10 +127,14 @@ class Eyetracker:
             return True
 
     def getLastGazePosition(self):
+        if not on:
+            return
         gpos = self.eyetracker.getLastGazePosition()
         return gpos
 
     def reset_state(self):
+        if not on:
+            return
         self.stop_recording()
         core.wait(0.5)
         self.eyetracker.flushData()

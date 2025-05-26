@@ -9434,3 +9434,27 @@
 2025-05-16 12:26:56,989 - INFO - moved eyes
 2025-05-16 12:26:56,997 - WARNING - Lost eye contact in draw_cue()
 2025-05-26 23:16:45,741 - INFO - Practice block started
+2025-05-26 23:19:45,778 - INFO - Practice block started
+2025-05-26 23:19:46,227 - INFO - Waiting for mouse button release
+2025-05-26 23:19:46,228 - INFO - Waiting for fresh click
+2025-05-26 23:19:47,046 - INFO - Feedback displayed
+2025-05-26 23:19:47,754 - INFO - Eyetracker started recording
+2025-05-26 23:19:47,754 - INFO - Start trial
+2025-05-26 23:19:54,687 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000028DD20D70A0>, <target.Target object at 0x0000028DD20D7100>], highlighted_indices (3, 0), objects <orbiting_images.OrbitingImages object at 0x0000028DD20DA890>
+2025-05-26 23:19:54,704 - INFO - Waiting for mouse button release
+2025-05-26 23:19:54,704 - INFO - Waiting for fresh click
+2025-05-26 23:19:55,744 - INFO - Eyetracker started recording
+2025-05-26 23:19:55,745 - INFO - Start trial
+2025-05-26 23:20:02,864 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000028DD20D67D0>, <target.Target object at 0x0000028DD20D6830>, <target.Target object at 0x0000028DD20D6890>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x0000028DE0484F70>
+2025-05-26 23:20:02,880 - INFO - Waiting for mouse button release
+2025-05-26 23:20:02,880 - INFO - Waiting for fresh click
+2025-05-26 23:20:04,256 - INFO - Eyetracker started recording
+2025-05-26 23:20:04,256 - INFO - Start trial
+2025-05-26 23:20:10,521 - INFO - Waiting for mouse button release
+2025-05-26 23:20:10,600 - INFO - Waiting for fresh click
+2025-05-26 23:21:22,217 - INFO - Practice block started
+2025-05-26 23:21:22,332 - INFO - Waiting for mouse button release
+2025-05-26 23:21:22,332 - INFO - Waiting for fresh click
+2025-05-26 23:21:22,851 - INFO - Feedback displayed
+2025-05-26 23:21:23,493 - INFO - Eyetracker started recording
+2025-05-26 23:21:23,493 - INFO - Start trial
