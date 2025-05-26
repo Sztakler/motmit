@@ -9,7 +9,7 @@ from logger import logger
 from utils.input import wait_for_input
 
 class Trial:
-    def __init__(self, win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename):
+    def __init__(self, win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename, feedback_color):
         self.win = win
         self.trial_number = trial_number
         self.block_number = block_number
@@ -28,6 +28,7 @@ class Trial:
         self.layout = layout
         self.id = uuid.uuid4()
         self.filename = filename
+        self.feedback_color = feedback_color
       
     def reset(self):
         self.interrupted = False
@@ -45,18 +46,28 @@ class Trial:
         self.cross.draw()
 
     def draw_fixation(self):
-        delay = 0.5
+        delay = 0.75
         clock = core.Clock()
         clock.reset()
         
+        color = "niebieskie"
+        if self.feedback_color == "magenta":
+            color = "fioletowe"
+
+        while clock.getTime() < delay:
+            message = visual.TextStim(self.win, text=f"Proszę śledzić {color} obiekty", color=self.feedback_color, height=0.05 * scale, pos=(0.0, 0.0 * scale))
+            message.draw()
+            self.win.flip()
+            core.wait(0.01)
+
         while clock.getTime() < delay:
             eye_contact = eyetracker.check_position() and eyetracker.check_blink()
             self.draw_fixation_cross()
             self.win.flip()
             core.wait(0.01)
 
-            if not eye_contact:
-                return False
+            # if not eye_contact:
+            #     return False
             
         return True
 
@@ -181,7 +192,7 @@ class Trial:
     def handle_response(self, practiceMode=False):
         self.response_handler.get_response()
         is_correct = self.response_handler.check_correctness(self.highlight_target)
-        self.response_handler.display_feedback()
+        self.response_handler.display_feedback(self.feedback_color)
         
         if not practiceMode:
             self.save_data(self.response_handler.clicked_object, is_correct)
@@ -196,12 +207,13 @@ class Trial:
 
     def display_look_at_center_message_and_quit(self):
         """Wyświetla komunikat o patrzeniu na środek i kończy trial."""
-        message = visual.TextStim(self.win, text="Proszę patrzeć na środek!", color='black', height=0.05 * scale)
+        message = visual.TextStim(self.win, text="Proszę patrzeć na środek i nie mrugać!", color='black', height=0.05 * scale, pos=(0, 0.15 * scale))
         clock = core.Clock()
         duration = 2.0  # ile sekund wyświetlamy komunikat
         
         clock.reset()
         while clock.getTime() < duration:
+            self.draw_fixation_cross()
             message.draw()
             self.win.flip()
             if 'escape' in event.getKeys():

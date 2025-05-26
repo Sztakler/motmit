@@ -8,8 +8,9 @@ class OrbitingImages(OrbitingObjects):
     def __init__(self, win, target_set_size, targets, target_side, orbit_radius=images_orbit_radius * scale, speed=orbiting_speed, images_paths=None, target_color=mot_target_color):
         super().__init__(win, target_set_size, targets, target_side, orbit_radius, speed)
 
-        self.images_paths = images_paths[:self.number_of_pairs // 2]
+        self.images_paths = images_paths[:]
         random.shuffle(self.images_paths)
+        self.images_paths = self.images_paths[:self.number_of_pairs // 2]
         self.orbits = []
 
         # Create pairs of images for the first half of the offsets

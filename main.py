@@ -54,7 +54,7 @@ images_directory = "images"
 image_count = 11
 images_paths =  [(f"{images_directory}/{i}a.png", f"{images_directory}/{i}b.png") for i in range(1, image_count + 1)]
 
-selected_combinations = combinations[:2]
+selected_combinations = combinations[:30]
 
 filename = f"{participants_path}/{form.id}.csv"
 file_exists = os.path.isfile(filename) and os.path.getsize(filename) > 0
@@ -75,12 +75,12 @@ logger.info(f"Practice block started")
 eyetracker.calibrate_and_start_recording()
 display_feedback(win, f"Zaczynasz blok testowy. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
 
-for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations[:len(selected_combinations) // 3], start=1):
+for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations[:len(selected_combinations) ], start=1):
     trial = None
     if trial_type == "mot":
-        trial = MOTTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
+        trial = MOTTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths, "blue")
     else:
-        trial = MITTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
+        trial = MITTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths, "magenta")
     
     eyetracker.start_recording()
     logger.info("Eyetracker started recording")
@@ -100,9 +100,9 @@ for block in range(n_blocks):
     for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations, start=1):
         trial = None
         if trial_type == "mit":
-            trial = MOTTrial(win, trial_number, block + 1, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
+            trial = MOTTrial(win, trial_number, block + 1, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths, "blue")
         else:
-            trial = MITTrial(win, trial_number, block + 1, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths)
+            trial = MITTrial(win, trial_number, block + 1, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths, "magenta")
         
         eyetracker.start_recording()
         logger.info("Eyetracker started recording")

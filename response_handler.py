@@ -12,7 +12,7 @@ class ResponseHandler:
         """
         self.win = win
         self.response = None
-        self.feedback = "Incorrect. No response provided."
+        self.feedback = "Niepoprawne. Brak odpowiedzi."
         self.correct = None
         self.clicked_object = None
 

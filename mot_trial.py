@@ -3,12 +3,18 @@ from trial import Trial
 from mot_response_handler import MOTResponseHandler
 from utils.input import wait_for_input
 from config import mot_target_color
+from random import shuffle
 
 class MOTTrial(Trial):
-    def __init__(self, win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename, images_paths=None):
+    def __init__(self, win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename, images_paths=None, feedback_color="blue"):
         print(images_paths)
-        super().__init__(win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename)
-        self.objects = OrbitingImages(win, self.target_set_size, self.targets, self.targets_side, images_paths=images_paths, target_color=mot_target_color)
+        images = images_paths[:]
+        shuffle(images)
+        print("images", images[0][0])
+        images = [(images[0][0],images[0][0])]*12
+
+        super().__init__(win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename, feedback_color)
+        self.objects = OrbitingImages(win, self.target_set_size, self.targets, self.targets_side, images_paths=images, target_color=mot_target_color)
         self.response_handler = MOTResponseHandler(win)
 
     def handle_response(self, practiceMode=False):

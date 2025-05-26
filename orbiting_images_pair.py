@@ -7,6 +7,7 @@ class OrbitingImagesPair(OrbitingPair):
         super().__init__(win, offset, orbit_radius, initial_angle, direction, target_color)
         self.images_paths = images_paths
         self.covers = [visual.Circle(win, radius=image_cover_radius * scale, fillColor='black', lineColor='black', lineWidth=4) for _ in range(2)]
+
         self.objects = [visual.ImageStim(win, image=path, size=(image_radius * scale, image_radius * scale)) for path in images_paths]
         self.target_border.radius = image_cover_radius * scale
         self.mirror_border.radius = image_cover_radius * scale

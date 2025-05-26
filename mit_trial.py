@@ -10,8 +10,8 @@ class Form():
         pass
 
 class MITTrial(Trial):
-    def __init__(self, win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename, images_paths=None):
-        super().__init__(win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename)
+    def __init__(self, win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename, images_paths=None, feedback_color="magenta"):
+        super().__init__(win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename, feedback_color)
         self.objects = OrbitingImages(win, self.target_set_size, self.targets, self.targets_side, images_paths=images_paths, target_color=mit_target_color)
         self.response_handler = MITResponseHandler(win, images_paths=images_paths)
 

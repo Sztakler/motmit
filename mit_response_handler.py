@@ -5,6 +5,12 @@ from config import scale, mit_target_color, image_radius
 from response_handler import ResponseHandler
 from logger import logger
 
+def sort_key(image_path):
+        filename = image_path.split('/')[-1].split('.')[0]
+        num = int(filename[:-1])
+        letter = filename[-1]
+        return (num, letter)
+
 class MITResponseHandler(ResponseHandler):
     def __init__(self, win, images_paths=None):
         """
@@ -20,15 +26,6 @@ class MITResponseHandler(ResponseHandler):
         mouse = event.Mouse(win=self.win)
 
         self.draw_carousel(objects)
-        # Sorting the items based on their image names
-        # Assuming the image names are in the format "images/1a.png", "images/1b.png", etc.
-        def sort_key(item):
-            filename = item.image.split('/')[-1].split('.')[0]
-            num = int(filename[:-1])
-            letter = filename[-1]
-            return (num, letter)
-
-        self.items.sort(key=sort_key)
 
         timer = core.Clock()
         mouse.setPos((0, 0))  # Reset mouse position
@@ -45,6 +42,8 @@ class MITResponseHandler(ResponseHandler):
                     break
                 if self.clicked_object:
                     break
+
+        print("zaznaczony", self.clicked_object)
     
     def check_correctness(self, highlight_target, targets, highlighted_indices, objects):
         """
@@ -55,10 +54,12 @@ class MITResponseHandler(ResponseHandler):
         """
         logger.info(f"Check correctness: highlight_target {highlight_target}, targets {targets}, highlighted_indices {highlighted_indices}, objects {objects}")
         print("indices", highlighted_indices[0], "images" ,objects.images_paths, "higlighted", highlighted_indices, "corrent", highlight_target) 
+        print("objects", objects.images_paths)
         flat_images = [img for pair in objects.images_paths for img in pair]
-        highlighted_image = flat_images[highlighted_indices[0]]
+        highlighted_image = objects.images_paths[highlighted_indices[0] % 3][highlighted_indices[1]]
+        print("kliknięty i podkreślony, krzyż", self.clicked_object, highlighted_image, flat_images[0])
         clicked_target = self.clicked_object == highlighted_image
-        clicked_cross = self.clicked_object == flat_images[0]
+        clicked_cross = self.clicked_object == "images/0a.png"
 
         if self.clicked_object:
             if highlight_target:
@@ -82,7 +83,10 @@ class MITResponseHandler(ResponseHandler):
 
     def draw_carousel(self, objects):
         flat_images = [img for pair in objects.images_paths for img in pair]
-        print(flat_images   )
+        print("unsorted" ,flat_images   )
+
+        flat_images.sort(key=sort_key)
+        print("sorted", flat_images   )
         positions = self.get_circle_positions(self.carousel_radius, len(flat_images) + 1)
         
         cross = visual.ImageStim(self.win, image="images/0a.png", pos=positions[0], size=(image_radius * scale, image_radius * scale)) 

@@ -1,7 +1,7 @@
 from psychopy import core
 import random
 from config import scale, orbiting_speed
-
+import math
 class OrbitingObjects:
     def __init__(self, win, target_set_size, targets, target_side, orbit_radius=0.05 * scale, speed=orbiting_speed):
         self.win = win
@@ -19,15 +19,17 @@ class OrbitingObjects:
     def get_offsets(self):
         winWidth = self.win.size[0] / 2
         winHeight = self.win.size[1] / 2
-
+        radius = .2 * scale
+        shift = 0.1 * scale
+        degree_shift = -60
         return [
-            (-0.6 * winWidth, 0.5 * winHeight), 
-            (-0.6 * winWidth, 0.0 * winHeight),
-            (-0.6 * winWidth, -0.5 * winHeight),
-            (0.6 * winWidth, 0.5 * winHeight),
-            (0.6 * winWidth, 0.0 * winHeight), 
-            (0.6 * winWidth, -0.5 * winHeight)
-            ]
+            ( radius * math.cos(math.radians(0 + degree_shift)) + shift,   radius * math.sin(math.radians(0 + degree_shift)) ),
+            ( radius * math.cos(math.radians(60 + degree_shift)) + shift,  radius * math.sin(math.radians(60 + degree_shift)) ),
+            ( radius * math.cos(math.radians(120 + degree_shift)) + shift, radius * math.sin(math.radians(120 + degree_shift)) ),
+            ( radius * math.cos(math.radians(180 + degree_shift)) - shift, radius * math.sin(math.radians(180 + degree_shift)) ),
+            ( radius * math.cos(math.radians(240 + degree_shift)) - shift, radius * math.sin(math.radians(240 + degree_shift)) ),
+            ( radius * math.cos(math.radians(300 + degree_shift)) - shift, radius * math.sin(math.radians(300 + degree_shift)) ),
+        ]
     
     def highlight_target(self):
         for target in self.targets:
