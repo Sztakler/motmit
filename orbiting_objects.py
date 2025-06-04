@@ -19,7 +19,7 @@ class OrbitingObjects:
     def get_offsets(self):
         winWidth = self.win.size[0] / 2
         winHeight = self.win.size[1] / 2
-        radius = .2 * scale
+        radius = .4 * scale
         shift = 0.1 * scale
         degree_shift = -60
         return [

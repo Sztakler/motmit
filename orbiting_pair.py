@@ -1,6 +1,6 @@
 from psychopy import visual
 import numpy as np
-from config import scale, mot_target_color, mirror_color
+from config import scale, mot_target_color, mirror_color, image_radius
 
 class OrbitingPair:
     def __init__(self, win, offset, orbit_radius=0.1 * scale, initial_angle=0, direction=1, target_color=mot_target_color):
@@ -11,8 +11,8 @@ class OrbitingPair:
         self.direction = direction
         self.angle = 0
         self.line_width = 8
-        self.target_border = visual.Circle(win, radius=0.025 * scale, fillColor=None, lineColor=target_color, lineWidth=self.line_width)
-        self.mirror_border = visual.Circle(win, radius=0.025 * scale, fillColor=None, lineColor=mirror_color, lineWidth=self.line_width)
+        self.target_border = visual.Circle(win, radius=0.04 * scale, fillColor=None, lineColor=target_color, lineWidth=self.line_width)
+        self.mirror_border = visual.Circle(win, radius=0.04 * scale, fillColor=None, lineColor=mirror_color, lineWidth=self.line_width)
         self.objects = []
 
     def draw_static(self):

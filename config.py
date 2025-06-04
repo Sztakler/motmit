@@ -11,11 +11,13 @@ response_circle_mirror_color = "red"
 feedback_color = "black"
 feedback_font_size = 0.05
 
-orbit_radius = 0.04
-images_orbit_radius = 0.06
+orbit_radius = 0.06
+images_orbit_radius = 0.08
 image_radius = 0.08
-image_cover_radius = 0.04
+image_cover_radius = 0.043
 orbiting_speed = 3/2 * pi # 3/2 * pi = 270 deg/s
 
 mot_target_color = "blue"
 mit_target_color = "magenta"
+
+max_response_time = 4.0  # seconds

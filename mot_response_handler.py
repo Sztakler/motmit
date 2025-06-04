@@ -1,6 +1,6 @@
 from psychopy import core, event, visual
 from response_handler import ResponseHandler
-from config import scale, response_circle_radius, response_circle_target_color, response_circle_mirror_color
+from config import scale, response_circle_radius, response_circle_target_color, response_circle_mirror_color, max_response_time
 
 class MOTResponseHandler(ResponseHandler):
     def __init__(self, win):
@@ -8,8 +8,8 @@ class MOTResponseHandler(ResponseHandler):
         Initialize the ResponseHandler instance.
         """
         super().__init__(win)
-        self.green_circle = visual.Circle(self.win, radius=response_circle_radius * scale, fillColor=response_circle_target_color, pos=(-0.4 * scale, 0))
-        self.red_circle = visual.Circle(self.win, radius=response_circle_radius * scale, fillColor=response_circle_mirror_color, pos=(0.4 * scale, 0))
+        self.green_circle = visual.Circle(self.win, radius=response_circle_radius * scale, fillColor=response_circle_target_color, pos=(-0.2 * scale, 0))
+        self.red_circle = visual.Circle(self.win, radius=response_circle_radius * scale, fillColor=response_circle_mirror_color, pos=(0.2 * scale, 0))
 
     def get_response(self):
         self.green_circle.draw()
@@ -19,7 +19,7 @@ class MOTResponseHandler(ResponseHandler):
 
         timer = core.Clock()
         mouse.setPos((0, 0))  # Reset mouse position
-        while not self.clicked_object and timer.getTime() < 3:
+        while not self.clicked_object and timer.getTime() < max_response_time:
             if mouse.isPressedIn(self.green_circle):
                 self.clicked_object = response_circle_target_color
             elif mouse.isPressedIn(self.red_circle):

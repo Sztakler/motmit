@@ -3,7 +3,7 @@ import random
 import csv
 from fixation_cross import FixationCross
 import uuid
-from config import scale
+from config import scale, mot_target_color, mit_target_color
 from eyetracker import eyetracker
 from logger import logger
 from utils.input import wait_for_input
@@ -51,8 +51,8 @@ class Trial:
         clock.reset()
         
         color = "niebieskie"
-        if self.feedback_color == "magenta":
-            color = "fioletowe"
+        if self.feedback_color ==  mit_target_color:
+            color = "różowe"
 
         while clock.getTime() < delay:
             message = visual.TextStim(self.win, text=f"Proszę śledzić {color} obiekty", color=self.feedback_color, height=0.05 * scale, pos=(0.0, 0.0 * scale))
@@ -72,7 +72,7 @@ class Trial:
         return True
 
     def draw_cue(self):
-        delay = 0.75
+        delay = 1.0
         start_time = core.getTime()
         while core.getTime() - start_time < delay:
             eye_contact = eyetracker.check_position() and eyetracker.check_blink()
@@ -97,7 +97,7 @@ class Trial:
 
 
     def draw_probe(self):
-        delay = 0.75
+        delay = 1.0
         self.draw_fixation_cross()
         self.objects.draw_static(core.getTime())
         self.highlighted_indices = self.objects.highlight_object(self.highlight_target)

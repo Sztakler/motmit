@@ -128,7 +128,7 @@ class Eyetracker:
 
     def getLastGazePosition(self):
         if not on:
-            return
+            return None
         gpos = self.eyetracker.getLastGazePosition()
         return gpos
 
