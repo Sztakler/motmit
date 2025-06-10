@@ -9921,3 +9921,74 @@
 2025-06-05 09:47:15,778 - INFO - Waiting for fresh click
 2025-06-05 09:47:17,426 - INFO - Eyetracker started recording
 2025-06-05 09:47:17,426 - INFO - Start trial
+2025-06-10 20:03:35,207 - INFO - Practice block started
+2025-06-10 20:03:35,623 - INFO - Waiting for mouse button release
+2025-06-10 20:03:35,623 - INFO - Waiting for fresh click
+2025-06-10 20:03:36,700 - INFO - Feedback displayed
+2025-06-10 20:03:37,397 - INFO - Eyetracker started recording
+2025-06-10 20:03:37,397 - INFO - Start trial
+2025-06-10 20:03:47,036 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000025C3F6478B0>, <target.Target object at 0x0000025C3F644A60>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000025C34052BF0>
+2025-06-10 20:03:47,069 - INFO - Waiting for mouse button release
+2025-06-10 20:03:47,069 - INFO - Waiting for fresh click
+2025-06-10 20:03:49,209 - INFO - Eyetracker started recording
+2025-06-10 20:03:49,209 - INFO - Start trial
+2025-06-10 20:03:56,580 - INFO - Waiting for mouse button release
+2025-06-10 20:03:56,646 - INFO - Waiting for fresh click
+2025-06-10 20:03:57,649 - INFO - Eyetracker started recording
+2025-06-10 20:03:57,649 - INFO - Start trial
+2025-06-10 20:07:15,630 - INFO - Practice block started
+2025-06-10 20:07:15,746 - INFO - Waiting for mouse button release
+2025-06-10 20:07:15,746 - INFO - Waiting for fresh click
+2025-06-10 20:07:15,989 - INFO - Feedback displayed
+2025-06-10 20:07:16,676 - INFO - Eyetracker started recording
+2025-06-10 20:07:16,676 - INFO - Start trial
+2025-06-10 20:07:24,038 - INFO - Waiting for mouse button release
+2025-06-10 20:07:24,114 - INFO - Waiting for fresh click
+2025-06-10 20:07:25,786 - INFO - Eyetracker started recording
+2025-06-10 20:07:25,786 - INFO - Start trial
+2025-06-10 20:07:34,017 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000013E231C2EC0>, <target.Target object at 0x0000013E231C2E60>], highlighted_indices (2, 0), objects <orbiting_images.OrbitingImages object at 0x0000013E239DD6F0>
+2025-06-10 20:07:34,032 - INFO - Waiting for mouse button release
+2025-06-10 20:07:34,033 - INFO - Waiting for fresh click
+2025-06-10 20:07:35,428 - INFO - Eyetracker started recording
+2025-06-10 20:07:35,428 - INFO - Start trial
+2025-06-10 20:08:27,191 - INFO - Practice block started
+2025-06-10 20:08:27,307 - INFO - Waiting for mouse button release
+2025-06-10 20:08:27,307 - INFO - Waiting for fresh click
+2025-06-10 20:08:27,998 - INFO - Feedback displayed
+2025-06-10 20:08:28,420 - INFO - Eyetracker started recording
+2025-06-10 20:08:28,420 - INFO - Start trial
+2025-06-10 20:08:35,783 - INFO - Waiting for mouse button release
+2025-06-10 20:08:35,869 - INFO - Waiting for fresh click
+2025-06-10 20:08:36,932 - INFO - Eyetracker started recording
+2025-06-10 20:08:36,932 - INFO - Start trial
+2025-06-10 20:09:09,804 - INFO - Practice block started
+2025-06-10 20:09:09,920 - INFO - Waiting for mouse button release
+2025-06-10 20:09:09,920 - INFO - Waiting for fresh click
+2025-06-10 20:09:10,253 - INFO - Feedback displayed
+2025-06-10 20:09:10,917 - INFO - Eyetracker started recording
+2025-06-10 20:09:10,917 - INFO - Start trial
+2025-06-10 20:09:18,397 - INFO - Waiting for mouse button release
+2025-06-10 20:09:18,443 - INFO - Waiting for fresh click
+2025-06-10 20:09:19,358 - INFO - Eyetracker started recording
+2025-06-10 20:09:19,358 - INFO - Start trial
+2025-06-10 20:09:51,533 - INFO - Practice block started
+2025-06-10 20:09:51,648 - INFO - Waiting for mouse button release
+2025-06-10 20:09:51,649 - INFO - Waiting for fresh click
+2025-06-10 20:09:51,981 - INFO - Feedback displayed
+2025-06-10 20:09:52,591 - INFO - Eyetracker started recording
+2025-06-10 20:09:52,591 - INFO - Start trial
+2025-06-10 20:09:59,959 - INFO - Waiting for mouse button release
+2025-06-10 20:10:00,023 - INFO - Waiting for fresh click
+2025-06-10 20:10:01,073 - INFO - Eyetracker started recording
+2025-06-10 20:10:01,073 - INFO - Start trial
+2025-06-10 20:11:41,519 - INFO - Practice block started
+2025-06-10 20:11:41,635 - INFO - Waiting for mouse button release
+2025-06-10 20:11:41,635 - INFO - Waiting for fresh click
+2025-06-10 20:11:42,099 - INFO - Feedback displayed
+2025-06-10 20:11:42,712 - INFO - Eyetracker started recording
+2025-06-10 20:11:42,712 - INFO - Start trial
+2025-06-10 20:11:51,079 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000203B245BB20>, <target.Target object at 0x00000203B245B940>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000203A6E981C0>
+2025-06-10 20:11:51,113 - INFO - Waiting for mouse button release
+2025-06-10 20:11:51,113 - INFO - Waiting for fresh click
+2025-06-10 20:11:54,465 - INFO - Eyetracker started recording
+2025-06-10 20:11:54,465 - INFO - Start trial

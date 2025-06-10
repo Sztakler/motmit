@@ -26,7 +26,10 @@ class MITTrial(Trial):
 
     def handle_response(self, practiceMode=False):
         self.response_handler.get_response(self.objects)
-        is_correct = self.response_handler.check_correctness(self.highlight_target, self.targets, self.highlighted_indices, self.objects)
+        if practiceMode:
+            is_correct = self.response_handler.check_correctness_training(self.highlight_target, self.targets, self.highlighted_indices, self.objects)
+        else:
+            is_correct = self.response_handler.check_correctness(self.highlight_target, self.targets, self.highlighted_indices, self.objects)
         self.response_handler.display_feedback(mit_target_color)
         flat_images = [img for pair in self.objects.images_paths for img in pair]
         correct_response = flat_images[self.highlighted_indices[0]]

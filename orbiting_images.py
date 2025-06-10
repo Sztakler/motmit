@@ -27,7 +27,6 @@ class OrbitingImages(OrbitingObjects):
             pair = OrbitingImagesPair(win, offset, self.orbit_radius, initial_angle, dir,  images_paths=self.images_paths[i], target_color=target_color)
             self.orbits.append(pair)
         
-        print("Orbits:", len(self.orbits))
 
     def cover(self):
         for orbit in self.orbits:

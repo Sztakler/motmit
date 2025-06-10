@@ -7,10 +7,8 @@ from random import shuffle
 
 class MOTTrial(Trial):
     def __init__(self, win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename, images_paths=None, feedback_color="blue"):
-        print(images_paths)
         images = images_paths[:]
         shuffle(images)
-        print("images", images[0][0])
         images = [(images[0][0],images[0][0])]*12
 
         super().__init__(win, trial_number, block_number, target_set_size, targets, targets_side, form, trial_type, layout, highlight_target, filename, feedback_color)
@@ -19,7 +17,12 @@ class MOTTrial(Trial):
 
     def handle_response(self, practiceMode=False):
         self.response_handler.get_response()
-        is_correct = self.response_handler.check_correctness(self.highlight_target)
+
+        if practiceMode:
+            is_correct = self.response_handler.check_correctness_training(self.highlight_target)
+        else:
+            is_correct = self.response_handler.check_correctness(self.highlight_target)
+            
         self.response_handler.display_feedback(mot_target_color)
         
         correct_response = self.highlighted_indices

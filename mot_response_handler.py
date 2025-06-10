@@ -72,5 +72,5 @@ class MOTResponseHandler(ResponseHandler):
             else:
                 self.feedback = "Źle. Nie wybrałeś ikony dystraktora."
                 self.correct = False
-        
+        print(self.feedback)
         return self.correct
