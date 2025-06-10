@@ -191,7 +191,12 @@ class Trial:
 
     def handle_response(self, practiceMode=False):
         self.response_handler.get_response()
-        is_correct = self.response_handler.check_correctness(self.highlight_target)
+        
+        if practiceMode:
+            is_correct = self.response_handler.check_correctness_training(self.highlight_target)
+        else:
+            is_correct = self.response_handler.check_correctness(self.highlight_target)
+            
         self.response_handler.display_feedback(self.feedback_color)
         
         if not practiceMode:

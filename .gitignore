@@ -25,7 +25,8 @@ share/python-wheels/
 .installed.cfg
 *.egg
 MANIFEST
-data/
+data/eyetracker/*
+data/participants/*
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

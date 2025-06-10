@@ -80,6 +80,45 @@ class MITResponseHandler(ResponseHandler):
             self.correct = False
 
         return self.correct
+    
+    def check_correctness_training(self, highlight_target, targets, highlighted_indices, objects):
+        """
+        Check the correctness of the response and provide verbose feedback.
+
+        Returns:
+            bool: True if the response is correct, False otherwise.
+        """
+        logger.info(f"Check correctness: highlight_target {highlight_target}, targets {targets}, highlighted_indices {highlighted_indices}, objects {objects}")
+        print("indices", highlighted_indices[0], "images" ,objects.images_paths, "higlighted", highlighted_indices, "corrent", highlight_target) 
+        print("objects", objects.images_paths)
+        flat_images = [img for pair in objects.images_paths for img in pair]
+        highlighted_image = objects.images_paths[highlighted_indices[0] % 3][highlighted_indices[1]]
+        print("kliknięty i podkreślony, krzyż", self.clicked_object, highlighted_image, flat_images[0])
+        clicked_target = self.clicked_object == highlighted_image
+        clicked_cross = self.clicked_object == "images/0a.png"
+
+        if self.clicked_object:
+            if highlight_target:
+                if clicked_target:
+                    self.feedback = "Dobrze. Wybrałeś poprawny target."
+                    self.correct = True
+                elif clicked_cross:
+                    self.feedback = "Źle. Wybrałeś ikonę dystraktora."
+                    self.correct = False
+                else:
+                    self.feedback = "Źle. Wybrałeś zły target."
+                    self.correct = False
+            else:
+                if clicked_cross:
+                    self.feedback = "Dobrze. Wybrałeś ikonę dystraktora."
+                    self.correct = True
+                else:   
+                    self.feedback = "Źle. Nie wybrałeś ikony dystraktora."
+                    self.correct = False
+        else:
+            self.correct = False
+
+        return self.correct
 
     def draw_carousel(self, objects):
         flat_images = [img for pair in objects.images_paths for img in pair]

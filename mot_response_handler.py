@@ -49,3 +49,28 @@ class MOTResponseHandler(ResponseHandler):
                 self.correct = False
         
         return self.correct
+
+    def check_correctness_training(self, is_target_highlighted):
+        """
+        Check the correctness of the response. And provide verbose feedback.
+
+        Returns:
+            bool: True if the response is correct, False otherwise.
+        """
+        # Checking the correctness of the response
+        if self.clicked_object == response_circle_target_color:
+            if is_target_highlighted:
+                self.feedback = "Dobrze. Wybrałeś poprawny target."
+                self.correct = True
+            else:
+                self.feedback = "Źle. Wybrałeś ikonę dystraktora."
+                self.correct = False
+        elif self.clicked_object == response_circle_mirror_color:
+            if not is_target_highlighted:
+                self.feedback = "Dobrze. Wybrałeś ikonę dystraktora."
+                self.correct = True
+            else:
+                self.feedback = "Źle. Nie wybrałeś ikony dystraktora."
+                self.correct = False
+        
+        return self.correct
