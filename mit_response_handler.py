@@ -1,6 +1,6 @@
 from psychopy import core, event, visual
 import math
-from config import scale, mit_target_color, image_radius, max_response_time
+from config import scale, mit_target_color, image_radius, max_response_time_mit
 
 from response_handler import ResponseHandler
 from logger import logger
@@ -29,7 +29,7 @@ class MITResponseHandler(ResponseHandler):
 
         timer = core.Clock()
         mouse.setPos((0, 0))  # Reset mouse position
-        while not self.clicked_object and timer.getTime() < max_response_time:
+        while not self.clicked_object and timer.getTime() < max_response_time_mit:
             for item in self.items:
                 if mouse.isPressedIn(item):
                     highlight_circle = visual.Circle(self.win, radius=0.04 * scale, fillColor=None, lineColor=mit_target_color, lineWidth=4)
@@ -64,17 +64,17 @@ class MITResponseHandler(ResponseHandler):
         if self.clicked_object:
             if highlight_target:
                 if clicked_target:
-                    self.feedback = "Poprawnie! To był cel."
+                    self.feedback = "Dobrze."
                     self.correct = True
                 else:
-                    self.feedback = "Niepoprawnie. To nie był cel."
+                    self.feedback = "Źle."
                     self.correct = False
             else:
                 if clicked_cross:
-                    self.feedback = "Poprawnie! Podświetlono dystraktor."
+                    self.feedback = "Dobrze."
                     self.correct = True
                 else:   
-                    self.feedback = "Niepoprawnie. Podświetlono cel."
+                    self.feedback = "Źle."
                     self.correct = False
         else:
             self.correct = False

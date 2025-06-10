@@ -3,7 +3,7 @@ from orbiting_images import OrbitingImages
 from trial import Trial
 from mit_response_handler import MITResponseHandler
 from utils.input import wait_for_input
-from config import mit_target_color
+from config import mit_target_color, probe_time
 
 class Form():
     def __init__(self):
@@ -16,7 +16,7 @@ class MITTrial(Trial):
         self.response_handler = MITResponseHandler(win, images_paths=images_paths)
 
     def draw_probe(self):
-        delay = 0.5
+        delay = probe_time
         self.draw_fixation_cross()
         self.objects.draw_static(core.getTime())
         self.objects.cover()

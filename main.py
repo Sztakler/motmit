@@ -6,14 +6,14 @@ from mot_trial import MOTTrial
 from mit_trial import MITTrial
 from form import Form
 import os
-from config import participants_path, fieldnames, feedback_color, feedback_font_size, scale, mit_target_color, mot_target_color
+from config import participants_path, fieldnames, feedback_color, feedback_font_size, scale, mit_target_color, mot_target_color, training_on
 from eyetracker import eyetracker
 import logging
 from utils.input import wait_for_input
 from logger import logger
 
 form = Form()
-form.show_form()
+# form.show_form()
  
 win = visual.Window([1920,1080], units="pix", fullscr=True)
     
@@ -71,24 +71,25 @@ with open(filename, mode="a", newline="") as file:
 
 interrupted_trials = []
 
-# logger.info(f"Practice block started")
-# eyetracker.calibrate_and_start_recording()
-# display_feedback(win, f"Zaczynasz blok testowy. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
+if training_on:
+    logger.info(f"Practice block started")
+    eyetracker.calibrate_and_start_recording()
+    display_feedback(win, f"Zaczynasz blok testowy. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
 
-# for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations[:len(selected_combinations) ], start=1):
-#     trial = None
-#     if trial_type == "mot":
-#         trial = MOTTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths, mot_target_color)
-#     else:
-#         trial = MITTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths, mit_target_color)
-    
-#     eyetracker.start_recording()
-#     logger.info("Eyetracker started recording")
-#     interrupted = trial.run(practiceMode=True)
-#     win.flip()
+    for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations[:len(selected_combinations) ], start=1):
+        trial = None
+        if trial_type == "mot":
+            trial = MOTTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths, mot_target_color)
+        else:
+            trial = MITTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths, mit_target_color)
+        
+        eyetracker.start_recording()
+        logger.info("Eyetracker started recording")
+        interrupted = trial.run(practiceMode=True)
+        win.flip()
 
-# eyetracker.stop_recording()
-# display_feedback(win, "Koniec bloku testowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby przejść do badania.")
+    eyetracker.stop_recording()
+    display_feedback(win, "Koniec bloku testowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby przejść do badania.")
 
 n_blocks = 1
 for block in range(n_blocks):

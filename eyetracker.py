@@ -2,12 +2,11 @@ from psychopy import hardware, visual, core
 import psychopy.iohub as io
 import os
 from logger import logger
-
-on = False
+from config import eyetracker_on
 
 class Eyetracker:
     def __init__(self):
-        if not on:
+        if not eyetracker_on:
             return
         self.ioConfig = {}
         self.ioConfig['eyetracker.hw.tobii.EyeTracker'] = {
@@ -22,7 +21,7 @@ class Eyetracker:
         self.blink_counter = 0
     
     def config(self, win, experimentName, id):
-        if not on:
+        if not eyetracker_on:
             return
         self.ioConfig['Keyboard'] = dict(use_keymap='psychopy')
         self.ioSession = '1'
@@ -60,33 +59,33 @@ class Eyetracker:
             fillColor = None, lineColor = 'white')
        
     def calibrate(self):
-        if not on:
+        if not eyetracker_on:
             return
         self.calibration.run()
 
     def calibrate_and_start_recording(self):
-        if not on:
+        if not eyetracker_on:
             return
         self.calibration.run()
         self.start_recording()
 
     def start_recording(self):
-        if not on:
+        if not eyetracker_on:
             return
         self.eyetracker.setRecordingState(True)
     
     def stop_recording(self):
-        if not on:
+        if not eyetracker_on:
             return
         self.eyetracker.setRecordingState(False)
 
     def get_data(self):
-        if not on:
+        if not eyetracker_on:
             return
         logger.info(f"Getting data from eyetracker")
 
     def check_position(self):
-        if not on:
+        if not eyetracker_on:
             return True
         gpos = self.getLastGazePosition()
 
@@ -105,7 +104,7 @@ class Eyetracker:
             return False
             
     def check_blink(self):
-        if not on:
+        if not eyetracker_on:
             return True
         gpos = self.getLastGazePosition()
 
@@ -127,13 +126,13 @@ class Eyetracker:
             return True
 
     def getLastGazePosition(self):
-        if not on:
+        if not eyetracker_on:
             return None
         gpos = self.eyetracker.getLastGazePosition()
         return gpos
 
     def reset_state(self):
-        if not on:
+        if not eyetracker_on:
             return
         self.stop_recording()
         core.wait(0.5)

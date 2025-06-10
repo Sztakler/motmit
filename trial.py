@@ -3,7 +3,7 @@ import random
 import csv
 from fixation_cross import FixationCross
 import uuid
-from config import scale, mot_target_color, mit_target_color
+from config import scale, mot_target_color, mit_target_color, cue_time, probe_time
 from eyetracker import eyetracker
 from logger import logger
 from utils.input import wait_for_input
@@ -72,7 +72,7 @@ class Trial:
         return True
 
     def draw_cue(self):
-        delay = 1.0
+        delay = cue_time
         start_time = core.getTime()
         while core.getTime() - start_time < delay:
             eye_contact = eyetracker.check_position() and eyetracker.check_blink()
@@ -97,7 +97,7 @@ class Trial:
 
 
     def draw_probe(self):
-        delay = 1.0
+        delay = probe_time
         self.draw_fixation_cross()
         self.objects.draw_static(core.getTime())
         self.highlighted_indices = self.objects.highlight_object(self.highlight_target)

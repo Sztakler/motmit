@@ -1,6 +1,6 @@
 from psychopy import core, event, visual
 from response_handler import ResponseHandler
-from config import scale, response_circle_radius, response_circle_target_color, response_circle_mirror_color, max_response_time
+from config import scale, response_circle_radius, response_circle_target_color, response_circle_mirror_color, max_response_time_mot
 
 class MOTResponseHandler(ResponseHandler):
     def __init__(self, win):
@@ -19,7 +19,7 @@ class MOTResponseHandler(ResponseHandler):
 
         timer = core.Clock()
         mouse.setPos((0, 0))  # Reset mouse position
-        while not self.clicked_object and timer.getTime() < max_response_time:
+        while not self.clicked_object and timer.getTime() < max_response_time_mot:
             if mouse.isPressedIn(self.green_circle):
                 self.clicked_object = response_circle_target_color
             elif mouse.isPressedIn(self.red_circle):
@@ -35,17 +35,17 @@ class MOTResponseHandler(ResponseHandler):
         # Checking the correctness of the response
         if self.clicked_object == response_circle_target_color:
             if is_target_highlighted:
-                self.feedback = "Poprawnie! Podświetlono cel."
+                self.feedback = "Dobrze."
                 self.correct = True
             else:
-                self.feedback = "Niepoprawnie. Podświetlono dystraktor."
+                self.feedback = "Źle."
                 self.correct = False
         elif self.clicked_object == response_circle_mirror_color:
             if not is_target_highlighted:
-                self.feedback = "Poprawnie! Podświetlono dystraktor."
+                self.feedback = "Dobrze."
                 self.correct = True
             else:
-                self.feedback = "Niepoprawnie. Podświetlono cel."
+                self.feedback = "Źle."
                 self.correct = False
         
         return self.correct
