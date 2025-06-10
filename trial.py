@@ -226,12 +226,18 @@ class Trial:
         
         self.interrupted = True
 
-    def save_data(self, response, correct_response, correctness):
+    def save_data(self, response, correct_response, correctness, flat_images=[]):
+        condition_id = self.generate_condition_id()
+        stripped_images = [path.replace('images/', '') for path in flat_images]
+        print(correct_response, response)
+        stripped_response = response.replace('images/', '') if response else None
+        stripped_correct_response = correct_response.replace('images/', '') if self.trial_type == "mit" else correct_response
+        target_side = 'l' if self.targets_side == 0 else 'r'
+        targets = [[target.orbit_index, target.mirror_orbit_index, target.circle_index] for target in self.targets]
         with open(self.filename, mode='a', newline='') as file:
             writer = csv.writer(file)
-            condition_id = self.generate_condition_id()
-            #                'ID',         'First Name',         'Last Name',         'Age',         'Sex',         'Handedness',         'E-mail',        'Trial Number',    'Block Number'   'Trial Type',     'Target Set Size',  'Target Side',      "Layout",       "Probing",         "Response", "Correct Response", "Correctness", "TrialID", "ConditionID"])
-            writer.writerow([self.form.id, self.form.first_name, self.form.last_name, self.form.age, self.form.sex, self.form.handedness, self.form.email, self.trial_number, self.block_number, self.trial_type, self.target_set_size, self.targets_side, self.layout, self.highlight_target, response, correct_response, correctness, self.id, condition_id])
+            #                'ID',         'First Name',         'Last Name',         'Age',         'Sex',         'Handedness',         'E-mail',        'Trial Number',    'Block Number'   'Trial Type',     'Target Set Size',  'Target Side',      "Layout",       "Highlighted target",         "Response", "Correct Response", "Correctness", "TrialID", "ConditionID", "Images", "Targets"])
+            writer.writerow([self.form.id, self.form.first_name, self.form.last_name, self.form.age, self.form.sex, self.form.handedness, self.form.email, self.trial_number, self.block_number, self.trial_type, self.target_set_size, target_side, self.layout, self.highlight_target, stripped_response, stripped_correct_response, correctness, self.id, condition_id, stripped_images, targets])
 
     def generate_condition_id(self):
         """

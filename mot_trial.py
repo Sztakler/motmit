@@ -26,7 +26,8 @@ class MOTTrial(Trial):
         self.response_handler.display_feedback(mot_target_color)
         
         correct_response = self.highlighted_indices
+        flat_images = [img for pair in self.objects.images_paths for img in pair]
 
         if not practiceMode:
-            self.save_data(self.response_handler.clicked_object, correct_response, is_correct)
+            self.save_data(self.response_handler.clicked_object, correct_response, is_correct, flat_images)
         wait_for_input(self.win)
