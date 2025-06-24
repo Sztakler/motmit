@@ -10097,3 +10097,2712 @@
 2025-06-10 20:42:11,979 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x000001788FBAC250>, <target.Target object at 0x000001788FBADF30>, <target.Target object at 0x000001788FBADC90>], highlighted_indices (0, 1), objects <orbiting_images.OrbitingImages object at 0x000001789E189660>
 2025-06-10 20:42:11,996 - INFO - Waiting for mouse button release
 2025-06-10 20:42:11,996 - INFO - Waiting for fresh click
+2025-06-11 10:20:46,800 - INFO - Block 1 started
+2025-06-11 10:20:47,004 - INFO - Waiting for mouse button release
+2025-06-11 10:20:47,004 - INFO - Waiting for fresh click
+2025-06-11 10:20:51,612 - INFO - Feedback displayed
+2025-06-11 10:20:52,783 - INFO - Eyetracker started recording
+2025-06-11 10:20:52,783 - INFO - Start trial
+2025-06-11 10:21:01,931 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x000001E2CC4647C0>, <target.Target object at 0x000001E2CC464820>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x000001E2CE9558B0>
+2025-06-11 10:21:01,941 - INFO - Waiting for mouse button release
+2025-06-11 10:21:01,941 - INFO - Waiting for fresh click
+2025-06-11 10:21:08,619 - INFO - Eyetracker started recording
+2025-06-11 10:21:08,619 - INFO - Start trial
+2025-06-11 10:21:16,011 - INFO - Waiting for mouse button release
+2025-06-11 10:21:16,011 - INFO - Waiting for fresh click
+2025-06-11 10:21:21,402 - INFO - Eyetracker started recording
+2025-06-11 10:21:21,402 - INFO - Start trial
+2025-06-11 10:21:29,931 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x000001E2CC464880>, <target.Target object at 0x000001E2CC4648E0>, <target.Target object at 0x000001E2CC464940>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x000001E2CF706580>
+2025-06-11 10:21:29,940 - INFO - Waiting for mouse button release
+2025-06-11 10:21:29,941 - INFO - Waiting for fresh click
+2025-06-11 10:21:33,045 - INFO - Eyetracker started recording
+2025-06-11 10:21:33,045 - INFO - Start trial
+2025-06-11 10:21:42,312 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x000001E2CC462AC0>, <target.Target object at 0x000001E2CC462B20>], highlighted_indices (4, 0), objects <orbiting_images.OrbitingImages object at 0x000001E2CFB72850>
+2025-06-11 10:21:42,330 - INFO - Waiting for mouse button release
+2025-06-11 10:21:42,330 - INFO - Waiting for fresh click
+2025-06-11 10:21:44,021 - INFO - Eyetracker started recording
+2025-06-11 10:21:44,021 - INFO - Start trial
+2025-06-11 10:21:52,915 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x000001E2CC464880>, <target.Target object at 0x000001E2CC4648E0>, <target.Target object at 0x000001E2CC464940>], highlighted_indices (0, 1), objects <orbiting_images.OrbitingImages object at 0x000001E2CFB9AD60>
+2025-06-11 10:21:52,924 - INFO - Waiting for mouse button release
+2025-06-11 10:21:52,924 - INFO - Waiting for fresh click
+2025-06-11 10:21:54,901 - INFO - Eyetracker started recording
+2025-06-11 10:21:54,901 - INFO - Start trial
+2025-06-11 10:24:20,673 - INFO - Practice block started
+2025-06-11 10:24:20,713 - INFO - Waiting for mouse button release
+2025-06-11 10:24:20,713 - INFO - Waiting for fresh click
+2025-06-11 10:24:24,435 - INFO - Feedback displayed
+2025-06-11 10:24:25,605 - INFO - Eyetracker started recording
+2025-06-11 10:24:25,606 - INFO - Start trial
+2025-06-11 10:24:33,137 - INFO - Waiting for mouse button release
+2025-06-11 10:24:33,137 - INFO - Waiting for fresh click
+2025-06-11 10:24:37,091 - INFO - Eyetracker started recording
+2025-06-11 10:24:37,091 - INFO - Start trial
+2025-06-11 10:24:46,130 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000022979E42C40>, <target.Target object at 0x0000022979E42CA0>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000022902029C40>
+2025-06-11 10:24:46,147 - INFO - Waiting for mouse button release
+2025-06-11 10:24:46,147 - INFO - Waiting for fresh click
+2025-06-11 10:27:49,316 - INFO - Practice block started
+2025-06-11 10:27:49,358 - INFO - Waiting for mouse button release
+2025-06-11 10:27:49,358 - INFO - Waiting for fresh click
+2025-06-11 10:27:50,903 - INFO - Feedback displayed
+2025-06-11 10:27:51,411 - INFO - Eyetracker started recording
+2025-06-11 10:27:51,411 - INFO - Start trial
+2025-06-11 10:27:58,739 - INFO - Waiting for mouse button release
+2025-06-11 10:27:58,739 - INFO - Waiting for fresh click
+2025-06-11 10:28:00,510 - INFO - Eyetracker started recording
+2025-06-11 10:28:00,510 - INFO - Start trial
+2025-06-11 10:28:09,227 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x000001B72D2045E0>, <target.Target object at 0x000001B72D204640>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x000001B72E518F10>
+2025-06-11 10:28:09,237 - INFO - Waiting for mouse button release
+2025-06-11 10:28:09,237 - INFO - Waiting for fresh click
+2025-06-11 10:41:42,283 - INFO - Practice block started
+2025-06-11 10:41:44,553 - INFO - Waiting for mouse button release
+2025-06-11 10:41:44,553 - INFO - Waiting for fresh click
+2025-06-11 10:41:45,215 - INFO - Feedback displayed
+2025-06-11 10:41:46,186 - INFO - Eyetracker started recording
+2025-06-11 10:41:46,186 - INFO - Start trial
+2025-06-11 10:41:48,904 - INFO - moved eyes
+2025-06-11 10:41:48,912 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 10:47:48,541 - INFO - Practice block started
+2025-06-11 10:48:18,458 - INFO - Waiting for mouse button release
+2025-06-11 10:48:18,458 - INFO - Waiting for fresh click
+2025-06-11 10:48:32,114 - INFO - Feedback displayed
+2025-06-11 10:48:33,277 - INFO - Eyetracker started recording
+2025-06-11 10:48:33,277 - INFO - Start trial
+2025-06-11 10:48:34,040 - INFO - moved eyes
+2025-06-11 10:48:34,050 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:48:36,984 - INFO - Eyetracker started recording
+2025-06-11 10:48:36,984 - INFO - Start trial
+2025-06-11 10:48:37,803 - INFO - moved eyes
+2025-06-11 10:48:37,813 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:48:40,971 - INFO - Eyetracker started recording
+2025-06-11 10:48:40,971 - INFO - Start trial
+2025-06-11 10:48:44,895 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:48:44,949 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:48:45,195 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:48:45,209 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 10:48:48,150 - INFO - Eyetracker started recording
+2025-06-11 10:48:48,150 - INFO - Start trial
+2025-06-11 10:48:48,907 - INFO - moved eyes
+2025-06-11 10:48:48,915 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:48:51,850 - INFO - Eyetracker started recording
+2025-06-11 10:48:51,850 - INFO - Start trial
+2025-06-11 10:48:52,608 - INFO - moved eyes
+2025-06-11 10:48:52,616 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:48:55,801 - INFO - Eyetracker started recording
+2025-06-11 10:48:55,801 - INFO - Start trial
+2025-06-11 10:49:08,260 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2AF0>, <target.Target object at 0x0000027B82FA2B50>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B859E3A00>
+2025-06-11 10:49:08,268 - INFO - Waiting for mouse button release
+2025-06-11 10:49:08,269 - INFO - Waiting for fresh click
+2025-06-11 10:49:17,856 - INFO - Eyetracker started recording
+2025-06-11 10:49:17,856 - INFO - Start trial
+2025-06-11 10:49:18,613 - INFO - moved eyes
+2025-06-11 10:49:18,621 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:49:21,559 - INFO - Eyetracker started recording
+2025-06-11 10:49:21,559 - INFO - Start trial
+2025-06-11 10:49:30,353 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4C10>, <target.Target object at 0x0000027B82FA4C70>, <target.Target object at 0x0000027B82FA4CD0>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B852F7C10>
+2025-06-11 10:49:30,367 - INFO - Waiting for mouse button release
+2025-06-11 10:49:30,367 - INFO - Waiting for fresh click
+2025-06-11 10:50:00,317 - INFO - Eyetracker started recording
+2025-06-11 10:50:00,317 - INFO - Start trial
+2025-06-11 10:50:01,069 - INFO - moved eyes
+2025-06-11 10:50:01,078 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:50:04,239 - INFO - Eyetracker started recording
+2025-06-11 10:50:04,240 - INFO - Start trial
+2025-06-11 10:50:05,804 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:50:05,821 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:50:08,762 - INFO - Eyetracker started recording
+2025-06-11 10:50:08,762 - INFO - Start trial
+2025-06-11 10:50:21,192 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA49D0>, <target.Target object at 0x0000027B82FA4A30>, <target.Target object at 0x0000027B82FA4A90>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B85375A60>
+2025-06-11 10:50:21,201 - INFO - Waiting for mouse button release
+2025-06-11 10:50:21,201 - INFO - Waiting for fresh click
+2025-06-11 10:50:26,833 - INFO - Eyetracker started recording
+2025-06-11 10:50:26,833 - INFO - Start trial
+2025-06-11 10:50:27,593 - INFO - moved eyes
+2025-06-11 10:50:27,601 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:50:30,762 - INFO - Eyetracker started recording
+2025-06-11 10:50:30,762 - INFO - Start trial
+2025-06-11 10:50:31,519 - INFO - moved eyes
+2025-06-11 10:50:31,528 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:50:34,714 - INFO - Eyetracker started recording
+2025-06-11 10:50:34,714 - INFO - Start trial
+2025-06-11 10:50:35,466 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:50:35,485 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:50:38,659 - INFO - Eyetracker started recording
+2025-06-11 10:50:38,659 - INFO - Start trial
+2025-06-11 10:50:48,390 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2BB0>, <target.Target object at 0x0000027B82FA2C10>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B853292B0>
+2025-06-11 10:50:48,406 - INFO - Waiting for mouse button release
+2025-06-11 10:50:48,407 - INFO - Waiting for fresh click
+2025-06-11 10:50:52,494 - INFO - Eyetracker started recording
+2025-06-11 10:50:52,494 - INFO - Start trial
+2025-06-11 10:50:53,274 - INFO - moved eyes
+2025-06-11 10:50:53,281 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:50:56,478 - INFO - Eyetracker started recording
+2025-06-11 10:50:56,478 - INFO - Start trial
+2025-06-11 10:51:07,243 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2F70>, <target.Target object at 0x0000027B82FA2FD0>, <target.Target object at 0x0000027B82FA4070>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B85335400>
+2025-06-11 10:51:07,253 - INFO - Waiting for mouse button release
+2025-06-11 10:51:07,253 - INFO - Waiting for fresh click
+2025-06-11 10:51:12,481 - INFO - Eyetracker started recording
+2025-06-11 10:51:12,481 - INFO - Start trial
+2025-06-11 10:51:21,796 - INFO - Waiting for mouse button release
+2025-06-11 10:51:21,796 - INFO - Waiting for fresh click
+2025-06-11 10:51:31,967 - INFO - Eyetracker started recording
+2025-06-11 10:51:31,967 - INFO - Start trial
+2025-06-11 10:51:42,482 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2C70>, <target.Target object at 0x0000027B82FA2CD0>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8523FC10>
+2025-06-11 10:51:42,499 - INFO - Waiting for mouse button release
+2025-06-11 10:51:42,499 - INFO - Waiting for fresh click
+2025-06-11 10:51:49,395 - INFO - Eyetracker started recording
+2025-06-11 10:51:49,395 - INFO - Start trial
+2025-06-11 10:51:57,337 - INFO - Waiting for mouse button release
+2025-06-11 10:51:57,337 - INFO - Waiting for fresh click
+2025-06-11 10:51:59,620 - INFO - Eyetracker started recording
+2025-06-11 10:51:59,620 - INFO - Start trial
+2025-06-11 10:52:08,722 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA41F0>, <target.Target object at 0x0000027B82FA4250>, <target.Target object at 0x0000027B82FA42B0>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B83375580>
+2025-06-11 10:52:08,732 - INFO - Waiting for mouse button release
+2025-06-11 10:52:08,732 - INFO - Waiting for fresh click
+2025-06-11 10:52:19,810 - INFO - Eyetracker started recording
+2025-06-11 10:52:19,810 - INFO - Start trial
+2025-06-11 10:52:30,113 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA4310>, <target.Target object at 0x0000027B82FA4370>, <target.Target object at 0x0000027B82FA43D0>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B851F39A0>
+2025-06-11 10:52:30,127 - INFO - Waiting for mouse button release
+2025-06-11 10:52:30,128 - INFO - Waiting for fresh click
+2025-06-11 10:52:35,064 - INFO - Eyetracker started recording
+2025-06-11 10:52:35,064 - INFO - Start trial
+2025-06-11 10:52:35,817 - INFO - moved eyes
+2025-06-11 10:52:35,825 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:52:38,979 - INFO - Eyetracker started recording
+2025-06-11 10:52:38,979 - INFO - Start trial
+2025-06-11 10:52:48,546 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2AF0>, <target.Target object at 0x0000027B82FA2B50>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B8529AEE0>
+2025-06-11 10:52:48,562 - INFO - Waiting for mouse button release
+2025-06-11 10:52:48,562 - INFO - Waiting for fresh click
+2025-06-11 10:52:51,956 - INFO - Eyetracker started recording
+2025-06-11 10:52:51,956 - INFO - Start trial
+2025-06-11 10:52:59,448 - INFO - Waiting for mouse button release
+2025-06-11 10:52:59,448 - INFO - Waiting for fresh click
+2025-06-11 10:53:02,430 - INFO - Eyetracker started recording
+2025-06-11 10:53:02,430 - INFO - Start trial
+2025-06-11 10:53:03,220 - INFO - moved eyes
+2025-06-11 10:53:03,233 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:53:06,361 - INFO - Eyetracker started recording
+2025-06-11 10:53:06,362 - INFO - Start trial
+2025-06-11 10:53:13,856 - INFO - Waiting for mouse button release
+2025-06-11 10:53:13,857 - INFO - Waiting for fresh click
+2025-06-11 10:53:20,232 - INFO - Eyetracker started recording
+2025-06-11 10:53:20,232 - INFO - Start trial
+2025-06-11 10:53:29,857 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4D30>, <target.Target object at 0x0000027B82FA4D90>, <target.Target object at 0x0000027B82FA4DF0>], highlighted_indices (4, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B85899160>
+2025-06-11 10:53:29,870 - INFO - Waiting for mouse button release
+2025-06-11 10:53:29,870 - INFO - Waiting for fresh click
+2025-06-11 10:53:35,289 - INFO - Eyetracker started recording
+2025-06-11 10:53:35,289 - INFO - Start trial
+2025-06-11 10:53:37,167 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:53:37,183 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:53:40,093 - INFO - Eyetracker started recording
+2025-06-11 10:53:40,093 - INFO - Start trial
+2025-06-11 10:53:40,968 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:53:40,986 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:53:44,117 - INFO - Eyetracker started recording
+2025-06-11 10:53:44,117 - INFO - Start trial
+2025-06-11 10:53:51,751 - INFO - Waiting for mouse button release
+2025-06-11 10:53:51,751 - INFO - Waiting for fresh click
+2025-06-11 10:53:54,002 - INFO - Eyetracker started recording
+2025-06-11 10:53:54,003 - INFO - Start trial
+2025-06-11 10:53:55,456 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:53:55,474 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:53:58,600 - INFO - Eyetracker started recording
+2025-06-11 10:53:58,600 - INFO - Start trial
+2025-06-11 10:53:59,456 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:53:59,473 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:54:02,380 - INFO - Eyetracker started recording
+2025-06-11 10:54:02,380 - INFO - Start trial
+2025-06-11 10:54:03,207 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:54:03,223 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:54:06,330 - INFO - Eyetracker started recording
+2025-06-11 10:54:06,330 - INFO - Start trial
+2025-06-11 10:54:14,176 - INFO - Waiting for mouse button release
+2025-06-11 10:54:14,176 - INFO - Waiting for fresh click
+2025-06-11 10:54:19,089 - INFO - Eyetracker started recording
+2025-06-11 10:54:19,089 - INFO - Start trial
+2025-06-11 10:54:28,536 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2BB0>, <target.Target object at 0x0000027B82FA2C10>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B85660D90>
+2025-06-11 10:54:28,545 - INFO - Waiting for mouse button release
+2025-06-11 10:54:28,545 - INFO - Waiting for fresh click
+2025-06-11 10:54:33,605 - INFO - Eyetracker started recording
+2025-06-11 10:54:33,605 - INFO - Start trial
+2025-06-11 10:54:34,967 - INFO - moved eyes
+2025-06-11 10:54:34,975 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:54:37,887 - INFO - Eyetracker started recording
+2025-06-11 10:54:37,887 - INFO - Start trial
+2025-06-11 10:54:46,392 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2C70>, <target.Target object at 0x0000027B82FA2CD0>], highlighted_indices (3, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B856B0A00>
+2025-06-11 10:54:46,401 - INFO - Waiting for mouse button release
+2025-06-11 10:54:46,401 - INFO - Waiting for fresh click
+2025-06-11 10:54:50,892 - INFO - Eyetracker started recording
+2025-06-11 10:54:50,892 - INFO - Start trial
+2025-06-11 10:54:58,432 - INFO - Waiting for mouse button release
+2025-06-11 10:54:58,432 - INFO - Waiting for fresh click
+2025-06-11 10:54:59,896 - INFO - Eyetracker started recording
+2025-06-11 10:54:59,896 - INFO - Start trial
+2025-06-11 10:55:07,499 - INFO - Waiting for mouse button release
+2025-06-11 10:55:07,499 - INFO - Waiting for fresh click
+2025-06-11 10:55:09,762 - INFO - Eyetracker started recording
+2025-06-11 10:55:09,763 - INFO - Start trial
+2025-06-11 10:55:18,569 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA48B0>, <target.Target object at 0x0000027B82FA4910>, <target.Target object at 0x0000027B82FA4970>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B856F6070>
+2025-06-11 10:55:18,578 - INFO - Waiting for mouse button release
+2025-06-11 10:55:18,578 - INFO - Waiting for fresh click
+2025-06-11 10:55:34,435 - INFO - Eyetracker started recording
+2025-06-11 10:55:34,436 - INFO - Start trial
+2025-06-11 10:55:43,553 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4670>, <target.Target object at 0x0000027B82FA46D0>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8573CDF0>
+2025-06-11 10:55:43,562 - INFO - Waiting for mouse button release
+2025-06-11 10:55:43,562 - INFO - Waiting for fresh click
+2025-06-11 10:55:45,291 - INFO - Eyetracker started recording
+2025-06-11 10:55:45,291 - INFO - Start trial
+2025-06-11 10:55:54,282 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA45B0>, <target.Target object at 0x0000027B82FA4610>], highlighted_indices (2, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8576CA90>
+2025-06-11 10:55:54,291 - INFO - Waiting for mouse button release
+2025-06-11 10:55:54,291 - INFO - Waiting for fresh click
+2025-06-11 10:55:57,491 - INFO - Eyetracker started recording
+2025-06-11 10:55:57,491 - INFO - Start trial
+2025-06-11 10:55:58,270 - INFO - moved eyes
+2025-06-11 10:55:58,277 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:56:00,769 - INFO - Eyetracker started recording
+2025-06-11 10:56:00,769 - INFO - Start trial
+2025-06-11 10:56:04,589 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:56:04,621 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:56:04,644 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:56:08,569 - INFO - Waiting for mouse button release
+2025-06-11 10:56:08,569 - INFO - Waiting for fresh click
+2025-06-11 10:56:11,533 - INFO - Eyetracker started recording
+2025-06-11 10:56:11,533 - INFO - Start trial
+2025-06-11 10:56:14,699 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:56:14,714 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 10:56:17,828 - INFO - Eyetracker started recording
+2025-06-11 10:56:17,828 - INFO - Start trial
+2025-06-11 10:56:19,999 - INFO - moved eyes
+2025-06-11 10:56:20,007 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:56:22,938 - INFO - Eyetracker started recording
+2025-06-11 10:56:22,938 - INFO - Start trial
+2025-06-11 10:56:23,698 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:56:23,715 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:56:26,851 - INFO - Eyetracker started recording
+2025-06-11 10:56:26,851 - INFO - Start trial
+2025-06-11 10:56:28,246 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:56:28,262 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:56:31,410 - INFO - Eyetracker started recording
+2025-06-11 10:56:31,410 - INFO - Start trial
+2025-06-11 10:56:32,215 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:56:32,232 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:56:35,373 - INFO - Eyetracker started recording
+2025-06-11 10:56:35,373 - INFO - Start trial
+2025-06-11 10:56:42,944 - INFO - Waiting for mouse button release
+2025-06-11 10:56:42,944 - INFO - Waiting for fresh click
+2025-06-11 10:56:47,181 - INFO - Eyetracker started recording
+2025-06-11 10:56:47,181 - INFO - Start trial
+2025-06-11 10:56:47,943 - INFO - moved eyes
+2025-06-11 10:56:47,952 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:56:50,859 - INFO - Eyetracker started recording
+2025-06-11 10:56:50,859 - INFO - Start trial
+2025-06-11 10:57:01,530 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2E50>, <target.Target object at 0x0000027B82FA2EB0>, <target.Target object at 0x0000027B82FA2F10>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B89D1B9A0>
+2025-06-11 10:57:01,545 - INFO - Waiting for mouse button release
+2025-06-11 10:57:01,545 - INFO - Waiting for fresh click
+2025-06-11 10:57:08,200 - INFO - Eyetracker started recording
+2025-06-11 10:57:08,200 - INFO - Start trial
+2025-06-11 10:57:15,708 - INFO - Waiting for mouse button release
+2025-06-11 10:57:15,708 - INFO - Waiting for fresh click
+2025-06-11 10:57:18,263 - INFO - Eyetracker started recording
+2025-06-11 10:57:18,263 - INFO - Start trial
+2025-06-11 10:57:26,248 - INFO - Waiting for mouse button release
+2025-06-11 10:57:26,248 - INFO - Waiting for fresh click
+2025-06-11 10:57:29,386 - INFO - Eyetracker started recording
+2025-06-11 10:57:29,386 - INFO - Start trial
+2025-06-11 10:57:37,961 - INFO - Waiting for mouse button release
+2025-06-11 10:57:37,961 - INFO - Waiting for fresh click
+2025-06-11 10:57:40,578 - INFO - Eyetracker started recording
+2025-06-11 10:57:40,578 - INFO - Start trial
+2025-06-11 10:57:50,333 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2E50>, <target.Target object at 0x0000027B82FA2EB0>, <target.Target object at 0x0000027B82FA2F10>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B89DCE8B0>
+2025-06-11 10:57:50,342 - INFO - Waiting for mouse button release
+2025-06-11 10:57:50,342 - INFO - Waiting for fresh click
+2025-06-11 10:57:54,768 - INFO - Eyetracker started recording
+2025-06-11 10:57:54,768 - INFO - Start trial
+2025-06-11 10:57:56,002 - INFO - moved eyes
+2025-06-11 10:57:56,010 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 10:57:59,096 - INFO - Eyetracker started recording
+2025-06-11 10:57:59,096 - INFO - Start trial
+2025-06-11 10:58:06,799 - INFO - Waiting for mouse button release
+2025-06-11 10:58:06,799 - INFO - Waiting for fresh click
+2025-06-11 10:58:09,139 - INFO - Eyetracker started recording
+2025-06-11 10:58:09,139 - INFO - Start trial
+2025-06-11 10:58:16,680 - INFO - Waiting for mouse button release
+2025-06-11 10:58:16,680 - INFO - Waiting for fresh click
+2025-06-11 10:58:18,614 - INFO - Eyetracker started recording
+2025-06-11 10:58:18,614 - INFO - Start trial
+2025-06-11 10:58:26,231 - INFO - Waiting for mouse button release
+2025-06-11 10:58:26,231 - INFO - Waiting for fresh click
+2025-06-11 10:58:27,640 - INFO - Eyetracker started recording
+2025-06-11 10:58:27,641 - INFO - Start trial
+2025-06-11 10:58:36,219 - INFO - Waiting for mouse button release
+2025-06-11 10:58:36,219 - INFO - Waiting for fresh click
+2025-06-11 10:58:38,139 - INFO - Eyetracker started recording
+2025-06-11 10:58:38,140 - INFO - Start trial
+2025-06-11 10:58:42,050 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 10:58:45,499 - INFO - Waiting for mouse button release
+2025-06-11 10:58:45,499 - INFO - Waiting for fresh click
+2025-06-11 10:58:48,653 - INFO - Eyetracker started recording
+2025-06-11 10:58:48,654 - INFO - Start trial
+2025-06-11 10:58:57,296 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2D30>, <target.Target object at 0x0000027B82FA2D90>, <target.Target object at 0x0000027B82FA2DF0>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B858EE1C0>
+2025-06-11 10:58:57,305 - INFO - Waiting for mouse button release
+2025-06-11 10:58:57,305 - INFO - Waiting for fresh click
+2025-06-11 10:59:01,040 - INFO - Eyetracker started recording
+2025-06-11 10:59:01,040 - INFO - Start trial
+2025-06-11 10:59:08,553 - INFO - Waiting for mouse button release
+2025-06-11 10:59:08,553 - INFO - Waiting for fresh click
+2025-06-11 10:59:10,005 - INFO - Eyetracker started recording
+2025-06-11 10:59:10,006 - INFO - Start trial
+2025-06-11 10:59:14,121 - INFO - moved eyes
+2025-06-11 10:59:14,129 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 10:59:17,245 - INFO - Eyetracker started recording
+2025-06-11 10:59:17,245 - INFO - Start trial
+2025-06-11 10:59:24,903 - INFO - Waiting for mouse button release
+2025-06-11 10:59:24,903 - INFO - Waiting for fresh click
+2025-06-11 10:59:28,412 - INFO - Eyetracker started recording
+2025-06-11 10:59:28,412 - INFO - Start trial
+2025-06-11 10:59:37,160 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA28B0>, <target.Target object at 0x0000027B82FA2910>], highlighted_indices (0, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B85246850>
+2025-06-11 10:59:37,174 - INFO - Waiting for mouse button release
+2025-06-11 10:59:37,175 - INFO - Waiting for fresh click
+2025-06-11 10:59:39,899 - INFO - Eyetracker started recording
+2025-06-11 10:59:39,899 - INFO - Start trial
+2025-06-11 10:59:49,473 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4AF0>, <target.Target object at 0x0000027B82FA4B50>, <target.Target object at 0x0000027B82FA4BB0>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B85A09B80>
+2025-06-11 10:59:49,487 - INFO - Waiting for mouse button release
+2025-06-11 10:59:49,487 - INFO - Waiting for fresh click
+2025-06-11 10:59:52,958 - INFO - Eyetracker started recording
+2025-06-11 10:59:52,958 - INFO - Start trial
+2025-06-11 11:00:00,554 - INFO - Waiting for mouse button release
+2025-06-11 11:00:00,554 - INFO - Waiting for fresh click
+2025-06-11 11:00:05,282 - INFO - Eyetracker started recording
+2025-06-11 11:00:05,282 - INFO - Start trial
+2025-06-11 11:00:15,360 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4D30>, <target.Target object at 0x0000027B82FA4D90>, <target.Target object at 0x0000027B82FA4DF0>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B852F16D0>
+2025-06-11 11:00:15,375 - INFO - Waiting for mouse button release
+2025-06-11 11:00:15,375 - INFO - Waiting for fresh click
+2025-06-11 11:00:18,269 - INFO - Eyetracker started recording
+2025-06-11 11:00:18,269 - INFO - Start trial
+2025-06-11 11:00:25,912 - INFO - Waiting for mouse button release
+2025-06-11 11:00:25,913 - INFO - Waiting for fresh click
+2025-06-11 11:00:29,038 - INFO - Eyetracker started recording
+2025-06-11 11:00:29,038 - INFO - Start trial
+2025-06-11 11:00:36,817 - INFO - Waiting for mouse button release
+2025-06-11 11:00:36,817 - INFO - Waiting for fresh click
+2025-06-11 11:00:41,876 - INFO - Eyetracker started recording
+2025-06-11 11:00:41,876 - INFO - Start trial
+2025-06-11 11:00:49,575 - INFO - Waiting for mouse button release
+2025-06-11 11:00:49,576 - INFO - Waiting for fresh click
+2025-06-11 11:00:57,263 - INFO - Eyetracker started recording
+2025-06-11 11:00:57,263 - INFO - Start trial
+2025-06-11 11:01:06,033 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2A30>, <target.Target object at 0x0000027B82FA2A90>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B88CFA190>
+2025-06-11 11:01:06,051 - INFO - Waiting for mouse button release
+2025-06-11 11:01:06,051 - INFO - Waiting for fresh click
+2025-06-11 11:01:09,644 - INFO - Eyetracker started recording
+2025-06-11 11:01:09,644 - INFO - Start trial
+2025-06-11 11:01:10,787 - INFO - moved eyes
+2025-06-11 11:01:10,795 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:01:13,894 - INFO - Eyetracker started recording
+2025-06-11 11:01:13,894 - INFO - Start trial
+2025-06-11 11:01:22,377 - INFO - Waiting for mouse button release
+2025-06-11 11:01:22,377 - INFO - Waiting for fresh click
+2025-06-11 11:01:27,167 - INFO - Eyetracker started recording
+2025-06-11 11:01:27,167 - INFO - Start trial
+2025-06-11 11:01:34,825 - INFO - Waiting for mouse button release
+2025-06-11 11:01:34,825 - INFO - Waiting for fresh click
+2025-06-11 11:01:37,031 - INFO - Eyetracker started recording
+2025-06-11 11:01:37,032 - INFO - Start trial
+2025-06-11 11:01:44,431 - INFO - Waiting for mouse button release
+2025-06-11 11:01:44,431 - INFO - Waiting for fresh click
+2025-06-11 11:01:46,588 - INFO - Eyetracker started recording
+2025-06-11 11:01:46,588 - INFO - Start trial
+2025-06-11 11:01:47,714 - INFO - moved eyes
+2025-06-11 11:01:47,722 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:01:50,215 - INFO - Eyetracker started recording
+2025-06-11 11:01:50,215 - INFO - Start trial
+2025-06-11 11:01:57,952 - INFO - Waiting for mouse button release
+2025-06-11 11:01:57,952 - INFO - Waiting for fresh click
+2025-06-11 11:02:01,202 - INFO - Eyetracker started recording
+2025-06-11 11:02:01,202 - INFO - Start trial
+2025-06-11 11:02:10,017 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4670>, <target.Target object at 0x0000027B82FA46D0>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B853667F0>
+2025-06-11 11:02:10,034 - INFO - Waiting for mouse button release
+2025-06-11 11:02:10,034 - INFO - Waiting for fresh click
+2025-06-11 11:02:12,169 - INFO - Eyetracker started recording
+2025-06-11 11:02:12,169 - INFO - Start trial
+2025-06-11 11:02:19,538 - INFO - Waiting for mouse button release
+2025-06-11 11:02:19,538 - INFO - Waiting for fresh click
+2025-06-11 11:02:21,750 - INFO - Eyetracker started recording
+2025-06-11 11:02:21,751 - INFO - Start trial
+2025-06-11 11:02:33,233 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA28B0>, <target.Target object at 0x0000027B82FA2910>], highlighted_indices (0, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B85435820>
+2025-06-11 11:02:33,250 - INFO - Waiting for mouse button release
+2025-06-11 11:02:33,250 - INFO - Waiting for fresh click
+2025-06-11 11:02:35,088 - INFO - Eyetracker started recording
+2025-06-11 11:02:35,088 - INFO - Start trial
+2025-06-11 11:02:35,848 - INFO - moved eyes
+2025-06-11 11:02:35,857 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:02:38,958 - INFO - Eyetracker started recording
+2025-06-11 11:02:38,958 - INFO - Start trial
+2025-06-11 11:02:46,320 - INFO - Waiting for mouse button release
+2025-06-11 11:02:46,320 - INFO - Waiting for fresh click
+2025-06-11 11:02:48,048 - INFO - Eyetracker started recording
+2025-06-11 11:02:48,048 - INFO - Start trial
+2025-06-11 11:02:48,806 - INFO - moved eyes
+2025-06-11 11:02:48,814 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:02:51,727 - INFO - Eyetracker started recording
+2025-06-11 11:02:51,727 - INFO - Start trial
+2025-06-11 11:03:00,153 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4430>, <target.Target object at 0x0000027B82FA4490>], highlighted_indices (2, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B85878CD0>
+2025-06-11 11:03:00,169 - INFO - Waiting for mouse button release
+2025-06-11 11:03:00,169 - INFO - Waiting for fresh click
+2025-06-11 11:03:01,739 - INFO - Eyetracker started recording
+2025-06-11 11:03:01,739 - INFO - Start trial
+2025-06-11 11:03:04,234 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:03:04,249 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:03:07,347 - INFO - Eyetracker started recording
+2025-06-11 11:03:07,347 - INFO - Start trial
+2025-06-11 11:03:08,183 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:03:08,199 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:03:11,313 - INFO - Eyetracker started recording
+2025-06-11 11:03:11,313 - INFO - Start trial
+2025-06-11 11:03:18,752 - INFO - Waiting for mouse button release
+2025-06-11 11:03:18,752 - INFO - Waiting for fresh click
+2025-06-11 11:03:20,408 - INFO - Eyetracker started recording
+2025-06-11 11:03:20,408 - INFO - Start trial
+2025-06-11 11:03:29,096 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4430>, <target.Target object at 0x0000027B82FA4490>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B858AD7F0>
+2025-06-11 11:03:29,112 - INFO - Waiting for mouse button release
+2025-06-11 11:03:29,112 - INFO - Waiting for fresh click
+2025-06-11 11:03:31,261 - INFO - Eyetracker started recording
+2025-06-11 11:03:31,261 - INFO - Start trial
+2025-06-11 11:03:40,920 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2A30>, <target.Target object at 0x0000027B82FA2A90>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8596AE20>
+2025-06-11 11:03:40,934 - INFO - Waiting for mouse button release
+2025-06-11 11:03:40,934 - INFO - Waiting for fresh click
+2025-06-11 11:03:43,534 - INFO - Eyetracker started recording
+2025-06-11 11:03:43,534 - INFO - Start trial
+2025-06-11 11:03:53,152 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA4310>, <target.Target object at 0x0000027B82FA4370>, <target.Target object at 0x0000027B82FA43D0>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B854A61C0>
+2025-06-11 11:03:53,160 - INFO - Waiting for mouse button release
+2025-06-11 11:03:53,161 - INFO - Waiting for fresh click
+2025-06-11 11:03:55,373 - INFO - Eyetracker started recording
+2025-06-11 11:03:55,373 - INFO - Start trial
+2025-06-11 11:04:02,992 - INFO - Waiting for mouse button release
+2025-06-11 11:04:02,992 - INFO - Waiting for fresh click
+2025-06-11 11:04:05,025 - INFO - Eyetracker started recording
+2025-06-11 11:04:05,025 - INFO - Start trial
+2025-06-11 11:04:12,454 - INFO - Waiting for mouse button release
+2025-06-11 11:04:12,455 - INFO - Waiting for fresh click
+2025-06-11 11:04:13,148 - INFO - Waiting for mouse button release
+2025-06-11 11:04:13,148 - INFO - Waiting for fresh click
+2025-06-11 11:09:25,867 - INFO - Feedback displayed
+2025-06-11 11:09:25,867 - INFO - Block 1 started
+2025-06-11 11:10:00,295 - INFO - Waiting for mouse button release
+2025-06-11 11:10:00,295 - INFO - Waiting for fresh click
+2025-06-11 11:10:04,009 - INFO - Feedback displayed
+2025-06-11 11:10:04,479 - INFO - Eyetracker started recording
+2025-06-11 11:10:04,479 - INFO - Start trial
+2025-06-11 11:10:05,520 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:10:05,537 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:10:08,639 - INFO - Eyetracker started recording
+2025-06-11 11:10:08,639 - INFO - Start trial
+2025-06-11 11:10:09,420 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:10:09,437 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:10:12,558 - INFO - Eyetracker started recording
+2025-06-11 11:10:12,558 - INFO - Start trial
+2025-06-11 11:10:13,718 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:10:13,735 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:10:16,623 - INFO - Eyetracker started recording
+2025-06-11 11:10:16,624 - INFO - Start trial
+2025-06-11 11:10:17,655 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:10:17,673 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:10:20,787 - INFO - Eyetracker started recording
+2025-06-11 11:10:20,787 - INFO - Start trial
+2025-06-11 11:10:22,099 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:10:22,116 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:10:25,222 - INFO - Eyetracker started recording
+2025-06-11 11:10:25,222 - INFO - Start trial
+2025-06-11 11:10:26,215 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:10:26,232 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:10:29,324 - INFO - Eyetracker started recording
+2025-06-11 11:10:29,324 - INFO - Start trial
+2025-06-11 11:10:30,167 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:10:30,184 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:10:33,294 - INFO - Eyetracker started recording
+2025-06-11 11:10:33,294 - INFO - Start trial
+2025-06-11 11:10:34,543 - INFO - brak pozycji wzroku (blink_counter=1)
+2025-06-11 11:10:35,077 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:10:35,094 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:10:38,184 - INFO - Eyetracker started recording
+2025-06-11 11:10:38,185 - INFO - Start trial
+2025-06-11 11:10:39,017 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:10:39,035 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:10:42,124 - INFO - Eyetracker started recording
+2025-06-11 11:10:42,124 - INFO - Start trial
+2025-06-11 11:10:50,104 - INFO - Waiting for mouse button release
+2025-06-11 11:10:50,104 - INFO - Waiting for fresh click
+2025-06-11 11:11:00,030 - INFO - Eyetracker started recording
+2025-06-11 11:11:00,030 - INFO - Start trial
+2025-06-11 11:11:09,015 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2F70>, <target.Target object at 0x0000027B82FA2FD0>, <target.Target object at 0x0000027B82FA4070>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B8A1039A0>
+2025-06-11 11:11:09,023 - INFO - Waiting for mouse button release
+2025-06-11 11:11:09,023 - INFO - Waiting for fresh click
+2025-06-11 11:11:11,078 - INFO - Eyetracker started recording
+2025-06-11 11:11:11,078 - INFO - Start trial
+2025-06-11 11:11:18,416 - INFO - Waiting for mouse button release
+2025-06-11 11:11:18,416 - INFO - Waiting for fresh click
+2025-06-11 11:11:20,185 - INFO - Eyetracker started recording
+2025-06-11 11:11:20,186 - INFO - Start trial
+2025-06-11 11:11:23,306 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:11:23,321 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:11:26,412 - INFO - Eyetracker started recording
+2025-06-11 11:11:26,412 - INFO - Start trial
+2025-06-11 11:11:27,641 - INFO - moved eyes
+2025-06-11 11:11:27,649 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:11:30,750 - INFO - Eyetracker started recording
+2025-06-11 11:11:30,750 - INFO - Start trial
+2025-06-11 11:11:31,754 - INFO - moved eyes
+2025-06-11 11:11:31,762 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:11:34,992 - INFO - Eyetracker started recording
+2025-06-11 11:11:34,992 - INFO - Start trial
+2025-06-11 11:11:43,528 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA28B0>, <target.Target object at 0x0000027B82FA2910>], highlighted_indices (0, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B8A1AA880>
+2025-06-11 11:11:43,537 - INFO - Waiting for mouse button release
+2025-06-11 11:11:43,537 - INFO - Waiting for fresh click
+2025-06-11 11:11:45,072 - INFO - Eyetracker started recording
+2025-06-11 11:11:45,073 - INFO - Start trial
+2025-06-11 11:11:52,503 - INFO - Waiting for mouse button release
+2025-06-11 11:11:52,503 - INFO - Waiting for fresh click
+2025-06-11 11:11:54,404 - INFO - Eyetracker started recording
+2025-06-11 11:11:54,404 - INFO - Start trial
+2025-06-11 11:12:03,656 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA40D0>, <target.Target object at 0x0000027B82FA4130>, <target.Target object at 0x0000027B82FA4190>], highlighted_indices (4, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8A103B20>
+2025-06-11 11:12:03,664 - INFO - Waiting for mouse button release
+2025-06-11 11:12:03,664 - INFO - Waiting for fresh click
+2025-06-11 11:12:07,056 - INFO - Eyetracker started recording
+2025-06-11 11:12:07,056 - INFO - Start trial
+2025-06-11 11:12:07,812 - INFO - moved eyes
+2025-06-11 11:12:07,820 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:12:10,914 - INFO - Eyetracker started recording
+2025-06-11 11:12:10,915 - INFO - Start trial
+2025-06-11 11:12:15,276 - INFO - moved eyes
+2025-06-11 11:12:15,284 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:12:18,178 - INFO - Eyetracker started recording
+2025-06-11 11:12:18,178 - INFO - Start trial
+2025-06-11 11:12:21,086 - INFO - moved eyes
+2025-06-11 11:12:21,095 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:12:23,778 - INFO - Eyetracker started recording
+2025-06-11 11:12:23,779 - INFO - Start trial
+2025-06-11 11:12:25,724 - INFO - moved eyes
+2025-06-11 11:12:25,732 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:12:28,849 - INFO - Eyetracker started recording
+2025-06-11 11:12:28,849 - INFO - Start trial
+2025-06-11 11:12:36,527 - INFO - Waiting for mouse button release
+2025-06-11 11:12:36,527 - INFO - Waiting for fresh click
+2025-06-11 11:12:43,510 - INFO - Eyetracker started recording
+2025-06-11 11:12:43,511 - INFO - Start trial
+2025-06-11 11:12:52,726 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2AF0>, <target.Target object at 0x0000027B82FA2B50>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B85A0AD90>
+2025-06-11 11:12:52,734 - INFO - Waiting for mouse button release
+2025-06-11 11:12:52,734 - INFO - Waiting for fresh click
+2025-06-11 11:12:55,365 - INFO - Eyetracker started recording
+2025-06-11 11:12:55,365 - INFO - Start trial
+2025-06-11 11:13:03,304 - INFO - Waiting for mouse button release
+2025-06-11 11:13:03,304 - INFO - Waiting for fresh click
+2025-06-11 11:13:06,606 - INFO - Eyetracker started recording
+2025-06-11 11:13:06,606 - INFO - Start trial
+2025-06-11 11:13:15,561 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2970>, <target.Target object at 0x0000027B82FA29D0>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B85246520>
+2025-06-11 11:13:15,578 - INFO - Waiting for mouse button release
+2025-06-11 11:13:15,578 - INFO - Waiting for fresh click
+2025-06-11 11:13:17,670 - INFO - Eyetracker started recording
+2025-06-11 11:13:17,670 - INFO - Start trial
+2025-06-11 11:13:26,231 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4670>, <target.Target object at 0x0000027B82FA46D0>], highlighted_indices (3, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B851C6310>
+2025-06-11 11:13:26,239 - INFO - Waiting for mouse button release
+2025-06-11 11:13:26,239 - INFO - Waiting for fresh click
+2025-06-11 11:14:33,495 - INFO - Eyetracker started recording
+2025-06-11 11:14:33,495 - INFO - Start trial
+2025-06-11 11:14:40,879 - INFO - Waiting for mouse button release
+2025-06-11 11:14:40,879 - INFO - Waiting for fresh click
+2025-06-11 11:14:42,883 - INFO - Eyetracker started recording
+2025-06-11 11:14:42,883 - INFO - Start trial
+2025-06-11 11:14:50,977 - INFO - Waiting for mouse button release
+2025-06-11 11:14:50,977 - INFO - Waiting for fresh click
+2025-06-11 11:14:54,030 - INFO - Eyetracker started recording
+2025-06-11 11:14:54,030 - INFO - Start trial
+2025-06-11 11:15:01,464 - INFO - Waiting for mouse button release
+2025-06-11 11:15:01,464 - INFO - Waiting for fresh click
+2025-06-11 11:15:02,632 - INFO - Eyetracker started recording
+2025-06-11 11:15:02,632 - INFO - Start trial
+2025-06-11 11:15:03,410 - INFO - moved eyes
+2025-06-11 11:15:03,419 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:15:05,903 - INFO - Eyetracker started recording
+2025-06-11 11:15:05,903 - INFO - Start trial
+2025-06-11 11:15:13,319 - INFO - Waiting for mouse button release
+2025-06-11 11:15:13,319 - INFO - Waiting for fresh click
+2025-06-11 11:15:15,448 - INFO - Eyetracker started recording
+2025-06-11 11:15:15,448 - INFO - Start trial
+2025-06-11 11:15:24,791 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA40D0>, <target.Target object at 0x0000027B82FA4130>, <target.Target object at 0x0000027B82FA4190>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B85493970>
+2025-06-11 11:15:24,806 - INFO - Waiting for mouse button release
+2025-06-11 11:15:24,806 - INFO - Waiting for fresh click
+2025-06-11 11:15:27,986 - INFO - Eyetracker started recording
+2025-06-11 11:15:27,986 - INFO - Start trial
+2025-06-11 11:15:36,680 - INFO - Waiting for mouse button release
+2025-06-11 11:15:36,680 - INFO - Waiting for fresh click
+2025-06-11 11:15:38,669 - INFO - Eyetracker started recording
+2025-06-11 11:15:38,669 - INFO - Start trial
+2025-06-11 11:15:48,584 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4E50>, <target.Target object at 0x0000027B82FA4EB0>, <target.Target object at 0x0000027B82FA4F10>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B859F8AC0>
+2025-06-11 11:15:48,592 - INFO - Waiting for mouse button release
+2025-06-11 11:15:48,592 - INFO - Waiting for fresh click
+2025-06-11 11:15:50,735 - INFO - Eyetracker started recording
+2025-06-11 11:15:50,735 - INFO - Start trial
+2025-06-11 11:15:59,744 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA44F0>, <target.Target object at 0x0000027B82FA4550>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8A1E6EB0>
+2025-06-11 11:15:59,760 - INFO - Waiting for mouse button release
+2025-06-11 11:15:59,760 - INFO - Waiting for fresh click
+2025-06-11 11:16:01,770 - INFO - Eyetracker started recording
+2025-06-11 11:16:01,770 - INFO - Start trial
+2025-06-11 11:16:10,119 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4D30>, <target.Target object at 0x0000027B82FA4D90>, <target.Target object at 0x0000027B82FA4DF0>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B8A1E6EB0>
+2025-06-11 11:16:10,131 - INFO - Waiting for mouse button release
+2025-06-11 11:16:10,132 - INFO - Waiting for fresh click
+2025-06-11 11:16:11,623 - INFO - Eyetracker started recording
+2025-06-11 11:16:11,623 - INFO - Start trial
+2025-06-11 11:16:21,191 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4E50>, <target.Target object at 0x0000027B82FA4EB0>, <target.Target object at 0x0000027B82FA4F10>], highlighted_indices (4, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B856A2E20>
+2025-06-11 11:16:21,206 - INFO - Waiting for mouse button release
+2025-06-11 11:16:21,206 - INFO - Waiting for fresh click
+2025-06-11 11:16:22,848 - INFO - Eyetracker started recording
+2025-06-11 11:16:22,848 - INFO - Start trial
+2025-06-11 11:16:31,896 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2C70>, <target.Target object at 0x0000027B82FA2CD0>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B853626D0>
+2025-06-11 11:16:31,911 - INFO - Waiting for mouse button release
+2025-06-11 11:16:31,911 - INFO - Waiting for fresh click
+2025-06-11 11:16:33,689 - INFO - Eyetracker started recording
+2025-06-11 11:16:33,689 - INFO - Start trial
+2025-06-11 11:16:34,508 - INFO - moved eyes
+2025-06-11 11:16:34,515 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:16:37,421 - INFO - Eyetracker started recording
+2025-06-11 11:16:37,421 - INFO - Start trial
+2025-06-11 11:16:38,649 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:16:38,666 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:16:41,770 - INFO - Eyetracker started recording
+2025-06-11 11:16:41,770 - INFO - Start trial
+2025-06-11 11:16:44,052 - INFO - moved eyes
+2025-06-11 11:16:44,060 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:16:47,172 - INFO - Eyetracker started recording
+2025-06-11 11:16:47,172 - INFO - Start trial
+2025-06-11 11:16:49,840 - INFO - moved eyes
+2025-06-11 11:16:49,848 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:16:52,933 - INFO - Eyetracker started recording
+2025-06-11 11:16:52,933 - INFO - Start trial
+2025-06-11 11:16:57,639 - INFO - moved eyes
+2025-06-11 11:16:57,647 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:17:00,781 - INFO - Eyetracker started recording
+2025-06-11 11:17:00,781 - INFO - Start trial
+2025-06-11 11:17:08,359 - INFO - Waiting for mouse button release
+2025-06-11 11:17:08,359 - INFO - Waiting for fresh click
+2025-06-11 11:17:10,560 - INFO - Eyetracker started recording
+2025-06-11 11:17:10,561 - INFO - Start trial
+2025-06-11 11:17:11,446 - INFO - moved eyes
+2025-06-11 11:17:11,454 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:17:13,941 - INFO - Eyetracker started recording
+2025-06-11 11:17:13,941 - INFO - Start trial
+2025-06-11 11:17:15,848 - INFO - moved eyes
+2025-06-11 11:17:15,856 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:17:18,741 - INFO - Eyetracker started recording
+2025-06-11 11:17:18,741 - INFO - Start trial
+2025-06-11 11:17:27,585 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2D30>, <target.Target object at 0x0000027B82FA2D90>, <target.Target object at 0x0000027B82FA2DF0>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B85980820>
+2025-06-11 11:17:27,593 - INFO - Waiting for mouse button release
+2025-06-11 11:17:27,593 - INFO - Waiting for fresh click
+2025-06-11 11:17:29,221 - INFO - Eyetracker started recording
+2025-06-11 11:17:29,221 - INFO - Start trial
+2025-06-11 11:17:36,644 - INFO - Waiting for mouse button release
+2025-06-11 11:17:36,645 - INFO - Waiting for fresh click
+2025-06-11 11:17:38,173 - INFO - Eyetracker started recording
+2025-06-11 11:17:38,174 - INFO - Start trial
+2025-06-11 11:17:47,303 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA47F0>, <target.Target object at 0x0000027B82FA4850>], highlighted_indices (4, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8598EC10>
+2025-06-11 11:17:47,318 - INFO - Waiting for mouse button release
+2025-06-11 11:17:47,318 - INFO - Waiting for fresh click
+2025-06-11 11:17:48,783 - INFO - Eyetracker started recording
+2025-06-11 11:17:48,783 - INFO - Start trial
+2025-06-11 11:17:58,199 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2D30>, <target.Target object at 0x0000027B82FA2D90>, <target.Target object at 0x0000027B82FA2DF0>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B89E8E520>
+2025-06-11 11:17:58,207 - INFO - Waiting for mouse button release
+2025-06-11 11:17:58,207 - INFO - Waiting for fresh click
+2025-06-11 11:18:00,124 - INFO - Eyetracker started recording
+2025-06-11 11:18:00,124 - INFO - Start trial
+2025-06-11 11:18:10,103 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2AF0>, <target.Target object at 0x0000027B82FA2B50>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B89D8CD00>
+2025-06-11 11:18:10,120 - INFO - Waiting for mouse button release
+2025-06-11 11:18:10,120 - INFO - Waiting for fresh click
+2025-06-11 11:18:17,198 - INFO - Eyetracker started recording
+2025-06-11 11:18:17,198 - INFO - Start trial
+2025-06-11 11:18:25,983 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA49D0>, <target.Target object at 0x0000027B82FA4A30>, <target.Target object at 0x0000027B82FA4A90>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B89DA5880>
+2025-06-11 11:18:25,991 - INFO - Waiting for mouse button release
+2025-06-11 11:18:25,992 - INFO - Waiting for fresh click
+2025-06-11 11:18:28,059 - INFO - Eyetracker started recording
+2025-06-11 11:18:28,059 - INFO - Start trial
+2025-06-11 11:18:28,814 - INFO - moved eyes
+2025-06-11 11:18:28,822 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:18:31,919 - INFO - Eyetracker started recording
+2025-06-11 11:18:31,919 - INFO - Start trial
+2025-06-11 11:18:40,743 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA45B0>, <target.Target object at 0x0000027B82FA4610>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B89D75D30>
+2025-06-11 11:18:40,765 - INFO - Waiting for mouse button release
+2025-06-11 11:18:40,765 - INFO - Waiting for fresh click
+2025-06-11 11:18:45,585 - INFO - Eyetracker started recording
+2025-06-11 11:18:45,585 - INFO - Start trial
+2025-06-11 11:18:54,286 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4670>, <target.Target object at 0x0000027B82FA46D0>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B89E2FBE0>
+2025-06-11 11:18:54,295 - INFO - Waiting for mouse button release
+2025-06-11 11:18:54,295 - INFO - Waiting for fresh click
+2025-06-11 11:18:56,475 - INFO - Eyetracker started recording
+2025-06-11 11:18:56,475 - INFO - Start trial
+2025-06-11 11:18:57,256 - INFO - moved eyes
+2025-06-11 11:18:57,263 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:19:00,164 - INFO - Eyetracker started recording
+2025-06-11 11:19:00,164 - INFO - Start trial
+2025-06-11 11:19:08,591 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA47F0>, <target.Target object at 0x0000027B82FA4850>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8A205AF0>
+2025-06-11 11:19:08,612 - INFO - Waiting for mouse button release
+2025-06-11 11:19:08,612 - INFO - Waiting for fresh click
+2025-06-11 11:19:10,616 - INFO - Eyetracker started recording
+2025-06-11 11:19:10,616 - INFO - Start trial
+2025-06-11 11:19:18,223 - INFO - Waiting for mouse button release
+2025-06-11 11:19:18,223 - INFO - Waiting for fresh click
+2025-06-11 11:19:20,083 - INFO - Eyetracker started recording
+2025-06-11 11:19:20,084 - INFO - Start trial
+2025-06-11 11:19:23,651 - INFO - moved eyes
+2025-06-11 11:19:23,659 - INFO - moved eyes
+2025-06-11 11:19:23,725 - INFO - moved eyes
+2025-06-11 11:19:23,826 - INFO - moved eyes
+2025-06-11 11:19:23,834 - INFO - moved eyes
+2025-06-11 11:19:23,843 - INFO - moved eyes
+2025-06-11 11:19:23,851 - INFO - moved eyes
+2025-06-11 11:19:23,859 - INFO - moved eyes
+2025-06-11 11:19:23,868 - INFO - moved eyes
+2025-06-11 11:19:23,876 - INFO - moved eyes
+2025-06-11 11:19:23,910 - INFO - moved eyes
+2025-06-11 11:19:23,918 - INFO - moved eyes
+2025-06-11 11:19:23,927 - INFO - moved eyes
+2025-06-11 11:19:23,935 - INFO - moved eyes
+2025-06-11 11:19:23,943 - INFO - moved eyes
+2025-06-11 11:19:23,952 - INFO - moved eyes
+2025-06-11 11:19:24,186 - INFO - moved eyes
+2025-06-11 11:19:24,194 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:19:27,325 - INFO - Eyetracker started recording
+2025-06-11 11:19:27,325 - INFO - Start trial
+2025-06-11 11:19:30,283 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:19:30,298 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:19:33,405 - INFO - Eyetracker started recording
+2025-06-11 11:19:33,405 - INFO - Start trial
+2025-06-11 11:19:37,404 - INFO - moved eyes
+2025-06-11 11:19:37,554 - INFO - moved eyes
+2025-06-11 11:19:37,562 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:19:40,663 - INFO - Eyetracker started recording
+2025-06-11 11:19:40,663 - INFO - Start trial
+2025-06-11 11:19:41,421 - INFO - moved eyes
+2025-06-11 11:19:41,429 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:19:44,519 - INFO - Eyetracker started recording
+2025-06-11 11:19:44,519 - INFO - Start trial
+2025-06-11 11:19:45,715 - INFO - moved eyes
+2025-06-11 11:19:45,723 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:19:48,833 - INFO - Eyetracker started recording
+2025-06-11 11:19:48,833 - INFO - Start trial
+2025-06-11 11:19:56,200 - INFO - Waiting for mouse button release
+2025-06-11 11:19:56,200 - INFO - Waiting for fresh click
+2025-06-11 11:19:58,853 - INFO - Eyetracker started recording
+2025-06-11 11:19:58,853 - INFO - Start trial
+2025-06-11 11:20:06,218 - INFO - Waiting for mouse button release
+2025-06-11 11:20:06,218 - INFO - Waiting for fresh click
+2025-06-11 11:20:07,911 - INFO - Eyetracker started recording
+2025-06-11 11:20:07,911 - INFO - Start trial
+2025-06-11 11:20:16,535 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4430>, <target.Target object at 0x0000027B82FA4490>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B8A312CA0>
+2025-06-11 11:20:16,549 - INFO - Waiting for mouse button release
+2025-06-11 11:20:16,549 - INFO - Waiting for fresh click
+2025-06-11 11:20:18,315 - INFO - Eyetracker started recording
+2025-06-11 11:20:18,315 - INFO - Start trial
+2025-06-11 11:20:26,864 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA44F0>, <target.Target object at 0x0000027B82FA4550>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B8A32A5E0>
+2025-06-11 11:20:26,872 - INFO - Waiting for mouse button release
+2025-06-11 11:20:26,872 - INFO - Waiting for fresh click
+2025-06-11 11:20:28,431 - INFO - Eyetracker started recording
+2025-06-11 11:20:28,431 - INFO - Start trial
+2025-06-11 11:20:38,224 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA4310>, <target.Target object at 0x0000027B82FA4370>, <target.Target object at 0x0000027B82FA43D0>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8A209B80>
+2025-06-11 11:20:38,240 - INFO - Waiting for mouse button release
+2025-06-11 11:20:38,240 - INFO - Waiting for fresh click
+2025-06-11 11:20:42,408 - INFO - Eyetracker started recording
+2025-06-11 11:20:42,408 - INFO - Start trial
+2025-06-11 11:20:43,197 - INFO - moved eyes
+2025-06-11 11:20:43,207 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:20:46,320 - INFO - Eyetracker started recording
+2025-06-11 11:20:46,321 - INFO - Start trial
+2025-06-11 11:20:53,775 - INFO - Waiting for mouse button release
+2025-06-11 11:20:53,775 - INFO - Waiting for fresh click
+2025-06-11 11:20:55,292 - INFO - Eyetracker started recording
+2025-06-11 11:20:55,292 - INFO - Start trial
+2025-06-11 11:21:03,775 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4730>, <target.Target object at 0x0000027B82FA4790>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B89D75AF0>
+2025-06-11 11:21:03,783 - INFO - Waiting for mouse button release
+2025-06-11 11:21:03,783 - INFO - Waiting for fresh click
+2025-06-11 11:21:07,056 - INFO - Eyetracker started recording
+2025-06-11 11:21:07,056 - INFO - Start trial
+2025-06-11 11:21:10,865 - INFO - moved eyes
+2025-06-11 11:21:10,874 - INFO - moved eyes
+2025-06-11 11:21:10,881 - INFO - moved eyes
+2025-06-11 11:21:14,415 - INFO - Waiting for mouse button release
+2025-06-11 11:21:14,415 - INFO - Waiting for fresh click
+2025-06-11 11:21:16,286 - INFO - Eyetracker started recording
+2025-06-11 11:21:16,287 - INFO - Start trial
+2025-06-11 11:21:17,039 - INFO - moved eyes
+2025-06-11 11:21:17,046 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:21:19,946 - INFO - Eyetracker started recording
+2025-06-11 11:21:19,946 - INFO - Start trial
+2025-06-11 11:21:24,665 - INFO - moved eyes
+2025-06-11 11:21:24,673 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:21:27,562 - INFO - Eyetracker started recording
+2025-06-11 11:21:27,562 - INFO - Start trial
+2025-06-11 11:21:28,324 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:21:28,341 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:21:30,833 - INFO - Eyetracker started recording
+2025-06-11 11:21:30,833 - INFO - Start trial
+2025-06-11 11:21:38,584 - INFO - Waiting for mouse button release
+2025-06-11 11:21:38,585 - INFO - Waiting for fresh click
+2025-06-11 11:21:40,790 - INFO - Eyetracker started recording
+2025-06-11 11:21:40,790 - INFO - Start trial
+2025-06-11 11:21:48,351 - INFO - Waiting for mouse button release
+2025-06-11 11:21:48,351 - INFO - Waiting for fresh click
+2025-06-11 11:21:49,973 - INFO - Eyetracker started recording
+2025-06-11 11:21:49,973 - INFO - Start trial
+2025-06-11 11:21:51,333 - INFO - moved eyes
+2025-06-11 11:21:51,341 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:21:54,449 - INFO - Eyetracker started recording
+2025-06-11 11:21:54,449 - INFO - Start trial
+2025-06-11 11:21:56,388 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:21:56,404 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:21:59,519 - INFO - Eyetracker started recording
+2025-06-11 11:21:59,519 - INFO - Start trial
+2025-06-11 11:22:01,336 - INFO - moved eyes
+2025-06-11 11:22:01,344 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:22:04,450 - INFO - Eyetracker started recording
+2025-06-11 11:22:04,450 - INFO - Start trial
+2025-06-11 11:22:07,013 - INFO - moved eyes
+2025-06-11 11:22:07,022 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:22:10,114 - INFO - Eyetracker started recording
+2025-06-11 11:22:10,114 - INFO - Start trial
+2025-06-11 11:22:14,127 - INFO - moved eyes
+2025-06-11 11:22:14,135 - INFO - moved eyes
+2025-06-11 11:22:14,144 - INFO - moved eyes
+2025-06-11 11:22:14,152 - INFO - moved eyes
+2025-06-11 11:22:14,160 - INFO - moved eyes
+2025-06-11 11:22:14,169 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:22:17,271 - INFO - Eyetracker started recording
+2025-06-11 11:22:17,271 - INFO - Start trial
+2025-06-11 11:22:24,575 - INFO - Waiting for mouse button release
+2025-06-11 11:22:24,575 - INFO - Waiting for fresh click
+2025-06-11 11:22:27,321 - INFO - Eyetracker started recording
+2025-06-11 11:22:27,322 - INFO - Start trial
+2025-06-11 11:22:34,680 - INFO - Waiting for mouse button release
+2025-06-11 11:22:34,680 - INFO - Waiting for fresh click
+2025-06-11 11:22:36,572 - INFO - Eyetracker started recording
+2025-06-11 11:22:36,572 - INFO - Start trial
+2025-06-11 11:22:44,007 - INFO - Waiting for mouse button release
+2025-06-11 11:22:44,007 - INFO - Waiting for fresh click
+2025-06-11 11:22:45,787 - INFO - Eyetracker started recording
+2025-06-11 11:22:45,788 - INFO - Start trial
+2025-06-11 11:22:46,544 - INFO - moved eyes
+2025-06-11 11:22:46,552 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:22:49,639 - INFO - Eyetracker started recording
+2025-06-11 11:22:49,639 - INFO - Start trial
+2025-06-11 11:22:52,340 - INFO - moved eyes
+2025-06-11 11:22:52,348 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:22:55,457 - INFO - Eyetracker started recording
+2025-06-11 11:22:55,457 - INFO - Start trial
+2025-06-11 11:22:56,221 - INFO - moved eyes
+2025-06-11 11:22:56,230 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:22:59,330 - INFO - Eyetracker started recording
+2025-06-11 11:22:59,331 - INFO - Start trial
+2025-06-11 11:23:00,183 - INFO - moved eyes
+2025-06-11 11:23:00,191 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:23:03,101 - INFO - Eyetracker started recording
+2025-06-11 11:23:03,101 - INFO - Start trial
+2025-06-11 11:23:11,869 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2A30>, <target.Target object at 0x0000027B82FA2A90>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8573F0A0>
+2025-06-11 11:23:11,877 - INFO - Waiting for mouse button release
+2025-06-11 11:23:11,877 - INFO - Waiting for fresh click
+2025-06-11 11:23:12,978 - INFO - Eyetracker started recording
+2025-06-11 11:23:12,978 - INFO - Start trial
+2025-06-11 11:23:20,383 - INFO - Waiting for mouse button release
+2025-06-11 11:23:20,383 - INFO - Waiting for fresh click
+2025-06-11 11:23:22,151 - INFO - Eyetracker started recording
+2025-06-11 11:23:22,151 - INFO - Start trial
+2025-06-11 11:23:29,638 - INFO - Waiting for mouse button release
+2025-06-11 11:23:29,638 - INFO - Waiting for fresh click
+2025-06-11 11:23:31,262 - INFO - Eyetracker started recording
+2025-06-11 11:23:31,262 - INFO - Start trial
+2025-06-11 11:23:33,828 - INFO - moved eyes
+2025-06-11 11:23:33,836 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:23:36,919 - INFO - Eyetracker started recording
+2025-06-11 11:23:36,920 - INFO - Start trial
+2025-06-11 11:23:37,788 - INFO - moved eyes
+2025-06-11 11:23:37,797 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:23:40,874 - INFO - Eyetracker started recording
+2025-06-11 11:23:40,874 - INFO - Start trial
+2025-06-11 11:23:42,524 - INFO - moved eyes
+2025-06-11 11:23:42,532 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:23:44,549 - INFO - Interrupted trials: 47
+2025-06-11 11:23:44,549 - INFO - Interrupted trials: 47
+2025-06-11 11:23:44,557 - INFO - Waiting for mouse button release
+2025-06-11 11:23:44,557 - INFO - Waiting for fresh click
+2025-06-11 11:23:53,716 - INFO - Feedback displayed
+2025-06-11 11:23:53,716 - INFO - Start trial
+2025-06-11 11:24:01,128 - INFO - Waiting for mouse button release
+2025-06-11 11:24:01,128 - INFO - Waiting for fresh click
+2025-06-11 11:24:02,082 - INFO - Start trial
+2025-06-11 11:24:10,871 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA41F0>, <target.Target object at 0x0000027B82FA4250>, <target.Target object at 0x0000027B82FA42B0>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B856F1730>
+2025-06-11 11:24:10,891 - INFO - Waiting for mouse button release
+2025-06-11 11:24:10,891 - INFO - Waiting for fresh click
+2025-06-11 11:24:11,634 - INFO - Start trial
+2025-06-11 11:24:19,015 - INFO - Waiting for mouse button release
+2025-06-11 11:24:19,015 - INFO - Waiting for fresh click
+2025-06-11 11:24:19,998 - INFO - Start trial
+2025-06-11 11:24:29,183 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4C10>, <target.Target object at 0x0000027B82FA4C70>, <target.Target object at 0x0000027B82FA4CD0>], highlighted_indices (3, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B85772880>
+2025-06-11 11:24:29,190 - INFO - Waiting for mouse button release
+2025-06-11 11:24:29,190 - INFO - Waiting for fresh click
+2025-06-11 11:24:30,294 - INFO - Start trial
+2025-06-11 11:24:37,734 - INFO - Waiting for mouse button release
+2025-06-11 11:24:37,734 - INFO - Waiting for fresh click
+2025-06-11 11:24:38,327 - INFO - Start trial
+2025-06-11 11:24:46,405 - INFO - Waiting for mouse button release
+2025-06-11 11:24:46,405 - INFO - Waiting for fresh click
+2025-06-11 11:24:47,589 - INFO - Start trial
+2025-06-11 11:24:58,023 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2E50>, <target.Target object at 0x0000027B82FA2EB0>, <target.Target object at 0x0000027B82FA2F10>], highlighted_indices (2, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B856E60D0>
+2025-06-11 11:24:58,031 - INFO - Waiting for mouse button release
+2025-06-11 11:24:58,031 - INFO - Waiting for fresh click
+2025-06-11 11:24:58,744 - INFO - Start trial
+2025-06-11 11:25:08,816 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA28B0>, <target.Target object at 0x0000027B82FA2910>], highlighted_indices (0, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B859271C0>
+2025-06-11 11:25:08,832 - INFO - Waiting for mouse button release
+2025-06-11 11:25:08,832 - INFO - Waiting for fresh click
+2025-06-11 11:25:09,625 - INFO - Start trial
+2025-06-11 11:25:19,111 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA41F0>, <target.Target object at 0x0000027B82FA4250>, <target.Target object at 0x0000027B82FA42B0>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B85451DF0>
+2025-06-11 11:25:19,119 - INFO - Waiting for mouse button release
+2025-06-11 11:25:19,119 - INFO - Waiting for fresh click
+2025-06-11 11:25:19,892 - INFO - Start trial
+2025-06-11 11:25:28,607 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2F70>, <target.Target object at 0x0000027B82FA2FD0>, <target.Target object at 0x0000027B82FA4070>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8A1381C0>
+2025-06-11 11:25:28,623 - INFO - Waiting for mouse button release
+2025-06-11 11:25:28,623 - INFO - Waiting for fresh click
+2025-06-11 11:25:29,175 - INFO - Start trial
+2025-06-11 11:25:39,743 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA49D0>, <target.Target object at 0x0000027B82FA4A30>, <target.Target object at 0x0000027B82FA4A90>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8A16B3A0>
+2025-06-11 11:25:39,758 - INFO - Waiting for mouse button release
+2025-06-11 11:25:39,759 - INFO - Waiting for fresh click
+2025-06-11 11:25:41,063 - INFO - Start trial
+2025-06-11 11:25:49,694 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4C10>, <target.Target object at 0x0000027B82FA4C70>, <target.Target object at 0x0000027B82FA4CD0>], highlighted_indices (3, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8A182BE0>
+2025-06-11 11:25:49,702 - INFO - Waiting for mouse button release
+2025-06-11 11:25:49,703 - INFO - Waiting for fresh click
+2025-06-11 11:25:50,385 - INFO - Start trial
+2025-06-11 11:25:57,767 - INFO - Waiting for mouse button release
+2025-06-11 11:25:57,767 - INFO - Waiting for fresh click
+2025-06-11 11:25:58,349 - INFO - Start trial
+2025-06-11 11:26:07,741 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4D30>, <target.Target object at 0x0000027B82FA4D90>, <target.Target object at 0x0000027B82FA4DF0>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B85665CD0>
+2025-06-11 11:26:07,749 - INFO - Waiting for mouse button release
+2025-06-11 11:26:07,749 - INFO - Waiting for fresh click
+2025-06-11 11:26:08,231 - INFO - Start trial
+2025-06-11 11:26:17,351 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA48B0>, <target.Target object at 0x0000027B82FA4910>, <target.Target object at 0x0000027B82FA4970>], highlighted_indices (0, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B85329C40>
+2025-06-11 11:26:17,367 - INFO - Waiting for mouse button release
+2025-06-11 11:26:17,367 - INFO - Waiting for fresh click
+2025-06-11 11:26:17,879 - INFO - Start trial
+2025-06-11 11:26:26,774 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2BB0>, <target.Target object at 0x0000027B82FA2C10>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B852F11C0>
+2025-06-11 11:26:26,782 - INFO - Waiting for mouse button release
+2025-06-11 11:26:26,782 - INFO - Waiting for fresh click
+2025-06-11 11:26:27,113 - INFO - Start trial
+2025-06-11 11:26:34,462 - INFO - Waiting for mouse button release
+2025-06-11 11:26:34,462 - INFO - Waiting for fresh click
+2025-06-11 11:26:35,005 - INFO - Start trial
+2025-06-11 11:26:44,190 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2970>, <target.Target object at 0x0000027B82FA29D0>], highlighted_indices (2, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B85362EE0>
+2025-06-11 11:26:44,198 - INFO - Waiting for mouse button release
+2025-06-11 11:26:44,198 - INFO - Waiting for fresh click
+2025-06-11 11:26:44,670 - INFO - Start trial
+2025-06-11 11:26:53,169 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4AF0>, <target.Target object at 0x0000027B82FA4B50>, <target.Target object at 0x0000027B82FA4BB0>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B89D400A0>
+2025-06-11 11:26:53,177 - INFO - Waiting for mouse button release
+2025-06-11 11:26:53,177 - INFO - Waiting for fresh click
+2025-06-11 11:26:53,740 - INFO - Start trial
+2025-06-11 11:27:02,382 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA45B0>, <target.Target object at 0x0000027B82FA4610>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B89D6DAC0>
+2025-06-11 11:27:02,399 - INFO - Waiting for mouse button release
+2025-06-11 11:27:02,399 - INFO - Waiting for fresh click
+2025-06-11 11:27:02,720 - INFO - Start trial
+2025-06-11 11:27:12,504 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA4310>, <target.Target object at 0x0000027B82FA4370>, <target.Target object at 0x0000027B82FA43D0>], highlighted_indices (3, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B853A8F70>
+2025-06-11 11:27:12,513 - INFO - Waiting for mouse button release
+2025-06-11 11:27:12,513 - INFO - Waiting for fresh click
+2025-06-11 11:27:12,943 - INFO - Start trial
+2025-06-11 11:27:20,318 - INFO - Waiting for mouse button release
+2025-06-11 11:27:20,318 - INFO - Waiting for fresh click
+2025-06-11 11:27:20,820 - INFO - Start trial
+2025-06-11 11:27:28,167 - INFO - Waiting for mouse button release
+2025-06-11 11:27:28,167 - INFO - Waiting for fresh click
+2025-06-11 11:27:28,639 - INFO - Start trial
+2025-06-11 11:27:36,041 - INFO - Waiting for mouse button release
+2025-06-11 11:27:36,041 - INFO - Waiting for fresh click
+2025-06-11 11:27:37,225 - INFO - Start trial
+2025-06-11 11:27:46,415 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2BB0>, <target.Target object at 0x0000027B82FA2C10>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B89D75F40>
+2025-06-11 11:27:46,430 - INFO - Waiting for mouse button release
+2025-06-11 11:27:46,431 - INFO - Waiting for fresh click
+2025-06-11 11:27:47,856 - INFO - Start trial
+2025-06-11 11:27:57,840 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA48B0>, <target.Target object at 0x0000027B82FA4910>, <target.Target object at 0x0000027B82FA4970>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B89DD8EB0>
+2025-06-11 11:27:57,848 - INFO - Waiting for mouse button release
+2025-06-11 11:27:57,848 - INFO - Waiting for fresh click
+2025-06-11 11:28:02,524 - INFO - Start trial
+2025-06-11 11:28:09,830 - INFO - Waiting for mouse button release
+2025-06-11 11:28:09,830 - INFO - Waiting for fresh click
+2025-06-11 11:28:10,322 - INFO - Start trial
+2025-06-11 11:28:17,583 - INFO - Waiting for mouse button release
+2025-06-11 11:28:17,583 - INFO - Waiting for fresh click
+2025-06-11 11:28:18,176 - INFO - Start trial
+2025-06-11 11:28:25,503 - INFO - Waiting for mouse button release
+2025-06-11 11:28:25,503 - INFO - Waiting for fresh click
+2025-06-11 11:28:25,995 - INFO - Start trial
+2025-06-11 11:28:35,286 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4AF0>, <target.Target object at 0x0000027B82FA4B50>, <target.Target object at 0x0000027B82FA4BB0>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B8A2C8550>
+2025-06-11 11:28:35,301 - INFO - Waiting for mouse button release
+2025-06-11 11:28:35,302 - INFO - Waiting for fresh click
+2025-06-11 11:28:35,743 - INFO - Start trial
+2025-06-11 11:28:43,127 - INFO - Waiting for mouse button release
+2025-06-11 11:28:43,127 - INFO - Waiting for fresh click
+2025-06-11 11:28:43,699 - INFO - Start trial
+2025-06-11 11:28:51,271 - INFO - Waiting for mouse button release
+2025-06-11 11:28:51,271 - INFO - Waiting for fresh click
+2025-06-11 11:28:52,425 - INFO - Start trial
+2025-06-11 11:29:01,258 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2A30>, <target.Target object at 0x0000027B82FA2A90>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B856A2A30>
+2025-06-11 11:29:01,273 - INFO - Waiting for mouse button release
+2025-06-11 11:29:01,273 - INFO - Waiting for fresh click
+2025-06-11 11:29:02,247 - INFO - Start trial
+2025-06-11 11:29:10,720 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2C70>, <target.Target object at 0x0000027B82FA2CD0>], highlighted_indices (3, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B85881040>
+2025-06-11 11:29:10,728 - INFO - Waiting for mouse button release
+2025-06-11 11:29:10,728 - INFO - Waiting for fresh click
+2025-06-11 11:29:11,280 - INFO - Start trial
+2025-06-11 11:29:20,022 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4430>, <target.Target object at 0x0000027B82FA4490>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x0000027B89E79400>
+2025-06-11 11:29:20,045 - INFO - Waiting for mouse button release
+2025-06-11 11:29:20,045 - INFO - Waiting for fresh click
+2025-06-11 11:29:23,034 - INFO - Start trial
+2025-06-11 11:29:31,624 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x0000027B82FA4730>, <target.Target object at 0x0000027B82FA4790>], highlighted_indices (3, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B851D43A0>
+2025-06-11 11:29:31,633 - INFO - Waiting for mouse button release
+2025-06-11 11:29:31,633 - INFO - Waiting for fresh click
+2025-06-11 11:29:32,285 - INFO - Start trial
+2025-06-11 11:29:39,656 - INFO - Waiting for mouse button release
+2025-06-11 11:29:39,656 - INFO - Waiting for fresh click
+2025-06-11 11:29:42,224 - INFO - Start trial
+2025-06-11 11:29:49,647 - INFO - Waiting for mouse button release
+2025-06-11 11:29:49,647 - INFO - Waiting for fresh click
+2025-06-11 11:29:54,704 - INFO - Start trial
+2025-06-11 11:30:02,350 - INFO - Waiting for mouse button release
+2025-06-11 11:30:02,351 - INFO - Waiting for fresh click
+2025-06-11 11:30:02,943 - INFO - Start trial
+2025-06-11 11:30:10,294 - INFO - Waiting for mouse button release
+2025-06-11 11:30:10,294 - INFO - Waiting for fresh click
+2025-06-11 11:30:10,936 - INFO - Start trial
+2025-06-11 11:30:18,247 - INFO - Waiting for mouse button release
+2025-06-11 11:30:18,247 - INFO - Waiting for fresh click
+2025-06-11 11:30:18,919 - INFO - Start trial
+2025-06-11 11:30:26,224 - INFO - Waiting for mouse button release
+2025-06-11 11:30:26,224 - INFO - Waiting for fresh click
+2025-06-11 11:30:26,927 - INFO - Start trial
+2025-06-11 11:30:34,304 - INFO - Waiting for mouse button release
+2025-06-11 11:30:34,304 - INFO - Waiting for fresh click
+2025-06-11 11:30:34,806 - INFO - Start trial
+2025-06-11 11:30:45,943 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x0000027B82FA2E50>, <target.Target object at 0x0000027B82FA2EB0>, <target.Target object at 0x0000027B82FA2F10>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x0000027B852BCBB0>
+2025-06-11 11:30:45,953 - INFO - Waiting for mouse button release
+2025-06-11 11:30:45,953 - INFO - Waiting for fresh click
+2025-06-11 11:30:48,220 - INFO - Start trial
+2025-06-11 11:30:55,582 - INFO - Waiting for mouse button release
+2025-06-11 11:30:55,583 - INFO - Waiting for fresh click
+2025-06-11 11:30:56,174 - INFO - Start trial
+2025-06-11 11:31:03,494 - INFO - Waiting for mouse button release
+2025-06-11 11:31:03,494 - INFO - Waiting for fresh click
+2025-06-11 11:31:03,976 - INFO - Start trial
+2025-06-11 11:31:11,303 - INFO - Waiting for mouse button release
+2025-06-11 11:31:11,303 - INFO - Waiting for fresh click
+2025-06-11 11:31:11,691 - INFO - Waiting for mouse button release
+2025-06-11 11:31:11,691 - INFO - Waiting for fresh click
+2025-06-11 11:31:25,283 - INFO - Feedback displayed
+2025-06-11 11:40:23,770 - INFO - Block 1 started
+2025-06-11 11:40:59,112 - INFO - Waiting for mouse button release
+2025-06-11 11:40:59,113 - INFO - Waiting for fresh click
+2025-06-11 11:41:07,482 - INFO - Feedback displayed
+2025-06-11 11:41:08,649 - INFO - Eyetracker started recording
+2025-06-11 11:41:08,649 - INFO - Start trial
+2025-06-11 11:41:09,408 - INFO - moved eyes
+2025-06-11 11:41:09,419 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:41:12,382 - INFO - Eyetracker started recording
+2025-06-11 11:41:12,383 - INFO - Start trial
+2025-06-11 11:41:13,143 - INFO - moved eyes
+2025-06-11 11:41:13,150 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:41:16,329 - INFO - Eyetracker started recording
+2025-06-11 11:41:16,330 - INFO - Start trial
+2025-06-11 11:41:17,101 - INFO - moved eyes
+2025-06-11 11:41:17,110 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:41:20,290 - INFO - Eyetracker started recording
+2025-06-11 11:41:20,290 - INFO - Start trial
+2025-06-11 11:41:21,075 - INFO - moved eyes
+2025-06-11 11:41:21,082 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:41:24,263 - INFO - Eyetracker started recording
+2025-06-11 11:41:24,264 - INFO - Start trial
+2025-06-11 11:41:25,023 - INFO - moved eyes
+2025-06-11 11:41:25,030 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:41:28,223 - INFO - Eyetracker started recording
+2025-06-11 11:41:28,223 - INFO - Start trial
+2025-06-11 11:41:28,979 - INFO - moved eyes
+2025-06-11 11:41:28,987 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:41:32,176 - INFO - Eyetracker started recording
+2025-06-11 11:41:32,177 - INFO - Start trial
+2025-06-11 11:41:32,937 - INFO - moved eyes
+2025-06-11 11:41:32,946 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:41:36,149 - INFO - Eyetracker started recording
+2025-06-11 11:41:36,149 - INFO - Start trial
+2025-06-11 11:41:36,901 - INFO - moved eyes
+2025-06-11 11:41:36,909 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:41:40,111 - INFO - Eyetracker started recording
+2025-06-11 11:41:40,111 - INFO - Start trial
+2025-06-11 11:41:40,876 - INFO - moved eyes
+2025-06-11 11:41:40,883 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:41:43,853 - INFO - Eyetracker started recording
+2025-06-11 11:41:43,853 - INFO - Start trial
+2025-06-11 11:41:44,609 - INFO - moved eyes
+2025-06-11 11:41:44,616 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:41:47,810 - INFO - Eyetracker started recording
+2025-06-11 11:41:47,810 - INFO - Start trial
+2025-06-11 11:41:48,574 - INFO - moved eyes
+2025-06-11 11:41:48,581 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:41:51,540 - INFO - Eyetracker started recording
+2025-06-11 11:41:51,540 - INFO - Start trial
+2025-06-11 11:41:52,303 - INFO - moved eyes
+2025-06-11 11:41:52,310 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:42:17,132 - INFO - Block 1 started
+2025-06-11 11:42:44,445 - INFO - Waiting for mouse button release
+2025-06-11 11:42:44,445 - INFO - Waiting for fresh click
+2025-06-11 11:42:51,309 - INFO - Feedback displayed
+2025-06-11 11:42:52,265 - INFO - Eyetracker started recording
+2025-06-11 11:42:52,265 - INFO - Start trial
+2025-06-11 11:42:53,029 - INFO - moved eyes
+2025-06-11 11:42:53,039 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:42:56,003 - INFO - Eyetracker started recording
+2025-06-11 11:42:56,003 - INFO - Start trial
+2025-06-11 11:42:56,778 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:42:56,795 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:42:59,299 - INFO - Eyetracker started recording
+2025-06-11 11:42:59,299 - INFO - Start trial
+2025-06-11 11:43:00,051 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:43:00,070 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:43:03,010 - INFO - Eyetracker started recording
+2025-06-11 11:43:03,010 - INFO - Start trial
+2025-06-11 11:43:11,629 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F32B0>, <target.Target object at 0x00000178B99F3310>, <target.Target object at 0x00000178B99F3370>], highlighted_indices (3, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BEAD55E0>
+2025-06-11 11:43:11,641 - INFO - Waiting for mouse button release
+2025-06-11 11:43:11,641 - INFO - Waiting for fresh click
+2025-06-11 11:43:14,057 - INFO - Eyetracker started recording
+2025-06-11 11:43:14,057 - INFO - Start trial
+2025-06-11 11:43:21,845 - INFO - Waiting for mouse button release
+2025-06-11 11:43:21,845 - INFO - Waiting for fresh click
+2025-06-11 11:43:28,706 - INFO - Eyetracker started recording
+2025-06-11 11:43:28,706 - INFO - Start trial
+2025-06-11 11:43:36,182 - INFO - Waiting for mouse button release
+2025-06-11 11:43:36,182 - INFO - Waiting for fresh click
+2025-06-11 11:43:37,820 - INFO - Eyetracker started recording
+2025-06-11 11:43:37,820 - INFO - Start trial
+2025-06-11 11:43:45,206 - INFO - Waiting for mouse button release
+2025-06-11 11:43:45,206 - INFO - Waiting for fresh click
+2025-06-11 11:43:46,790 - INFO - Eyetracker started recording
+2025-06-11 11:43:46,790 - INFO - Start trial
+2025-06-11 11:43:55,622 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F19D0>, <target.Target object at 0x00000178B99F1A30>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BEBD82B0>
+2025-06-11 11:43:55,630 - INFO - Waiting for mouse button release
+2025-06-11 11:43:55,630 - INFO - Waiting for fresh click
+2025-06-11 11:43:57,143 - INFO - Eyetracker started recording
+2025-06-11 11:43:57,143 - INFO - Start trial
+2025-06-11 11:44:06,949 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1A90>, <target.Target object at 0x00000178B99F1AF0>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BE6C9370>
+2025-06-11 11:44:06,958 - INFO - Waiting for mouse button release
+2025-06-11 11:44:06,958 - INFO - Waiting for fresh click
+2025-06-11 11:44:09,507 - INFO - Eyetracker started recording
+2025-06-11 11:44:09,508 - INFO - Start trial
+2025-06-11 11:44:16,845 - INFO - Waiting for mouse button release
+2025-06-11 11:44:16,845 - INFO - Waiting for fresh click
+2025-06-11 11:44:18,506 - INFO - Eyetracker started recording
+2025-06-11 11:44:18,506 - INFO - Start trial
+2025-06-11 11:44:25,845 - INFO - Waiting for mouse button release
+2025-06-11 11:44:25,845 - INFO - Waiting for fresh click
+2025-06-11 11:44:27,013 - INFO - Eyetracker started recording
+2025-06-11 11:44:27,013 - INFO - Start trial
+2025-06-11 11:44:34,422 - INFO - Waiting for mouse button release
+2025-06-11 11:44:34,422 - INFO - Waiting for fresh click
+2025-06-11 11:44:35,886 - INFO - Eyetracker started recording
+2025-06-11 11:44:35,886 - INFO - Start trial
+2025-06-11 11:44:44,636 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1F10>, <target.Target object at 0x00000178B99F1F70>, <target.Target object at 0x00000178B99F1FD0>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BE751250>
+2025-06-11 11:44:44,644 - INFO - Waiting for mouse button release
+2025-06-11 11:44:44,644 - INFO - Waiting for fresh click
+2025-06-11 11:44:46,265 - INFO - Eyetracker started recording
+2025-06-11 11:44:46,265 - INFO - Start trial
+2025-06-11 11:44:47,280 - INFO - moved eyes
+2025-06-11 11:44:47,288 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:44:50,451 - INFO - Eyetracker started recording
+2025-06-11 11:44:50,451 - INFO - Start trial
+2025-06-11 11:44:58,138 - INFO - Waiting for mouse button release
+2025-06-11 11:44:58,139 - INFO - Waiting for fresh click
+2025-06-11 11:44:59,960 - INFO - Eyetracker started recording
+2025-06-11 11:44:59,960 - INFO - Start trial
+2025-06-11 11:45:10,134 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3490>, <target.Target object at 0x00000178B99F34F0>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BEB99A00>
+2025-06-11 11:45:10,142 - INFO - Waiting for mouse button release
+2025-06-11 11:45:10,142 - INFO - Waiting for fresh click
+2025-06-11 11:45:11,904 - INFO - Eyetracker started recording
+2025-06-11 11:45:11,904 - INFO - Start trial
+2025-06-11 11:45:21,629 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3CD0>, <target.Target object at 0x00000178B99F3D30>, <target.Target object at 0x00000178B99F3D90>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BEACE3D0>
+2025-06-11 11:45:21,652 - INFO - Waiting for mouse button release
+2025-06-11 11:45:21,652 - INFO - Waiting for fresh click
+2025-06-11 11:45:24,498 - INFO - Eyetracker started recording
+2025-06-11 11:45:24,498 - INFO - Start trial
+2025-06-11 11:45:34,646 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F3190>, <target.Target object at 0x00000178B99F31F0>, <target.Target object at 0x00000178B99F3250>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BEAD54C0>
+2025-06-11 11:45:34,663 - INFO - Waiting for mouse button release
+2025-06-11 11:45:34,663 - INFO - Waiting for fresh click
+2025-06-11 11:45:36,637 - INFO - Eyetracker started recording
+2025-06-11 11:45:36,637 - INFO - Start trial
+2025-06-11 11:45:37,398 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:45:37,416 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:45:40,594 - INFO - Eyetracker started recording
+2025-06-11 11:45:40,594 - INFO - Start trial
+2025-06-11 11:45:47,974 - INFO - Waiting for mouse button release
+2025-06-11 11:45:47,974 - INFO - Waiting for fresh click
+2025-06-11 11:45:49,619 - INFO - Eyetracker started recording
+2025-06-11 11:45:49,619 - INFO - Start trial
+2025-06-11 11:45:57,108 - INFO - Waiting for mouse button release
+2025-06-11 11:45:57,108 - INFO - Waiting for fresh click
+2025-06-11 11:45:58,653 - INFO - Eyetracker started recording
+2025-06-11 11:45:58,653 - INFO - Start trial
+2025-06-11 11:46:06,098 - INFO - Waiting for mouse button release
+2025-06-11 11:46:06,098 - INFO - Waiting for fresh click
+2025-06-11 11:46:07,672 - INFO - Eyetracker started recording
+2025-06-11 11:46:07,672 - INFO - Start trial
+2025-06-11 11:46:15,021 - INFO - Waiting for mouse button release
+2025-06-11 11:46:15,021 - INFO - Waiting for fresh click
+2025-06-11 11:46:16,356 - INFO - Eyetracker started recording
+2025-06-11 11:46:16,357 - INFO - Start trial
+2025-06-11 11:46:26,030 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F19D0>, <target.Target object at 0x00000178B99F1A30>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BE81CB50>
+2025-06-11 11:46:26,038 - INFO - Waiting for mouse button release
+2025-06-11 11:46:26,039 - INFO - Waiting for fresh click
+2025-06-11 11:46:28,170 - INFO - Eyetracker started recording
+2025-06-11 11:46:28,170 - INFO - Start trial
+2025-06-11 11:46:35,525 - INFO - Waiting for mouse button release
+2025-06-11 11:46:35,525 - INFO - Waiting for fresh click
+2025-06-11 11:46:37,022 - INFO - Eyetracker started recording
+2025-06-11 11:46:37,022 - INFO - Start trial
+2025-06-11 11:46:44,461 - INFO - Waiting for mouse button release
+2025-06-11 11:46:44,461 - INFO - Waiting for fresh click
+2025-06-11 11:46:45,908 - INFO - Eyetracker started recording
+2025-06-11 11:46:45,909 - INFO - Start trial
+2025-06-11 11:46:53,280 - INFO - Waiting for mouse button release
+2025-06-11 11:46:53,280 - INFO - Waiting for fresh click
+2025-06-11 11:46:54,801 - INFO - Eyetracker started recording
+2025-06-11 11:46:54,801 - INFO - Start trial
+2025-06-11 11:47:06,789 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1A90>, <target.Target object at 0x00000178B99F1AF0>], highlighted_indices (4, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BE8B8BB0>
+2025-06-11 11:47:06,797 - INFO - Waiting for mouse button release
+2025-06-11 11:47:06,797 - INFO - Waiting for fresh click
+2025-06-11 11:47:09,368 - INFO - Eyetracker started recording
+2025-06-11 11:47:09,368 - INFO - Start trial
+2025-06-11 11:47:16,685 - INFO - Waiting for mouse button release
+2025-06-11 11:47:16,685 - INFO - Waiting for fresh click
+2025-06-11 11:47:18,017 - INFO - Eyetracker started recording
+2025-06-11 11:47:18,017 - INFO - Start trial
+2025-06-11 11:47:22,086 - INFO - moved eyes
+2025-06-11 11:47:22,094 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:47:25,246 - INFO - Eyetracker started recording
+2025-06-11 11:47:25,246 - INFO - Start trial
+2025-06-11 11:47:35,312 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F36D0>, <target.Target object at 0x00000178B99F3730>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BE949CD0>
+2025-06-11 11:47:35,320 - INFO - Waiting for mouse button release
+2025-06-11 11:47:35,320 - INFO - Waiting for fresh click
+2025-06-11 11:47:36,839 - INFO - Eyetracker started recording
+2025-06-11 11:47:36,839 - INFO - Start trial
+2025-06-11 11:47:45,564 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F33D0>, <target.Target object at 0x00000178B99F3430>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BE98DB50>
+2025-06-11 11:47:45,572 - INFO - Waiting for mouse button release
+2025-06-11 11:47:45,572 - INFO - Waiting for fresh click
+2025-06-11 11:47:49,800 - INFO - Eyetracker started recording
+2025-06-11 11:47:49,800 - INFO - Start trial
+2025-06-11 11:47:53,194 - INFO - moved eyes
+2025-06-11 11:47:54,374 - INFO - moved eyes
+2025-06-11 11:47:54,382 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:47:57,554 - INFO - Eyetracker started recording
+2025-06-11 11:47:57,554 - INFO - Start trial
+2025-06-11 11:48:06,879 - INFO - Waiting for mouse button release
+2025-06-11 11:48:06,879 - INFO - Waiting for fresh click
+2025-06-11 11:48:09,752 - INFO - Eyetracker started recording
+2025-06-11 11:48:09,753 - INFO - Start trial
+2025-06-11 11:48:17,367 - INFO - Waiting for mouse button release
+2025-06-11 11:48:17,367 - INFO - Waiting for fresh click
+2025-06-11 11:48:21,539 - INFO - Eyetracker started recording
+2025-06-11 11:48:21,539 - INFO - Start trial
+2025-06-11 11:48:30,324 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F33D0>, <target.Target object at 0x00000178B99F3430>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BEA266D0>
+2025-06-11 11:48:30,332 - INFO - Waiting for mouse button release
+2025-06-11 11:48:30,333 - INFO - Waiting for fresh click
+2025-06-11 11:48:31,162 - INFO - Eyetracker started recording
+2025-06-11 11:48:31,162 - INFO - Start trial
+2025-06-11 11:48:32,468 - INFO - moved eyes
+2025-06-11 11:48:32,476 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:48:35,628 - INFO - Eyetracker started recording
+2025-06-11 11:48:35,628 - INFO - Start trial
+2025-06-11 11:48:42,988 - INFO - Waiting for mouse button release
+2025-06-11 11:48:42,988 - INFO - Waiting for fresh click
+2025-06-11 11:48:43,990 - INFO - Eyetracker started recording
+2025-06-11 11:48:43,990 - INFO - Start trial
+2025-06-11 11:48:48,769 - INFO - moved eyes
+2025-06-11 11:48:48,777 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:48:51,919 - INFO - Eyetracker started recording
+2025-06-11 11:48:51,919 - INFO - Start trial
+2025-06-11 11:49:01,485 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1850>, <target.Target object at 0x00000178B99F18B0>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BED1D790>
+2025-06-11 11:49:01,502 - INFO - Waiting for mouse button release
+2025-06-11 11:49:01,502 - INFO - Waiting for fresh click
+2025-06-11 11:49:03,200 - INFO - Eyetracker started recording
+2025-06-11 11:49:03,200 - INFO - Start trial
+2025-06-11 11:49:03,954 - INFO - moved eyes
+2025-06-11 11:49:03,963 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:49:06,909 - INFO - Eyetracker started recording
+2025-06-11 11:49:06,909 - INFO - Start trial
+2025-06-11 11:49:15,461 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3490>, <target.Target object at 0x00000178B99F34F0>], highlighted_indices (0, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BEDAA250>
+2025-06-11 11:49:15,469 - INFO - Waiting for mouse button release
+2025-06-11 11:49:15,469 - INFO - Waiting for fresh click
+2025-06-11 11:49:16,712 - INFO - Eyetracker started recording
+2025-06-11 11:49:16,712 - INFO - Start trial
+2025-06-11 11:49:21,217 - INFO - moved eyes
+2025-06-11 11:49:21,225 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:49:24,363 - INFO - Eyetracker started recording
+2025-06-11 11:49:24,363 - INFO - Start trial
+2025-06-11 11:49:25,126 - INFO - moved eyes
+2025-06-11 11:49:25,134 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:49:28,267 - INFO - Eyetracker started recording
+2025-06-11 11:49:28,267 - INFO - Start trial
+2025-06-11 11:49:32,087 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:49:32,141 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:49:32,781 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:49:32,796 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:49:35,957 - INFO - Eyetracker started recording
+2025-06-11 11:49:35,957 - INFO - Start trial
+2025-06-11 11:49:37,137 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:49:37,154 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:49:40,305 - INFO - Eyetracker started recording
+2025-06-11 11:49:40,306 - INFO - Start trial
+2025-06-11 11:49:41,732 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:49:41,750 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:49:44,253 - INFO - Eyetracker started recording
+2025-06-11 11:49:44,253 - INFO - Start trial
+2025-06-11 11:49:45,201 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:49:45,217 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:49:48,378 - INFO - Eyetracker started recording
+2025-06-11 11:49:48,378 - INFO - Start trial
+2025-06-11 11:49:56,228 - INFO - Waiting for mouse button release
+2025-06-11 11:49:56,228 - INFO - Waiting for fresh click
+2025-06-11 11:49:57,837 - INFO - Eyetracker started recording
+2025-06-11 11:49:57,837 - INFO - Start trial
+2025-06-11 11:50:06,708 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F3070>, <target.Target object at 0x00000178B99F30D0>, <target.Target object at 0x00000178B99F3130>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BEF0EB50>
+2025-06-11 11:50:06,730 - INFO - Waiting for mouse button release
+2025-06-11 11:50:06,730 - INFO - Waiting for fresh click
+2025-06-11 11:50:08,359 - INFO - Eyetracker started recording
+2025-06-11 11:50:08,359 - INFO - Start trial
+2025-06-11 11:50:16,637 - INFO - Waiting for mouse button release
+2025-06-11 11:50:16,637 - INFO - Waiting for fresh click
+2025-06-11 11:50:18,341 - INFO - Eyetracker started recording
+2025-06-11 11:50:18,341 - INFO - Start trial
+2025-06-11 11:50:19,101 - INFO - moved eyes
+2025-06-11 11:50:19,109 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:50:22,022 - INFO - Eyetracker started recording
+2025-06-11 11:50:22,022 - INFO - Start trial
+2025-06-11 11:50:31,213 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3CD0>, <target.Target object at 0x00000178B99F3D30>, <target.Target object at 0x00000178B99F3D90>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BEFA51F0>
+2025-06-11 11:50:31,222 - INFO - Waiting for mouse button release
+2025-06-11 11:50:31,222 - INFO - Waiting for fresh click
+2025-06-11 11:50:33,472 - INFO - Eyetracker started recording
+2025-06-11 11:50:33,472 - INFO - Start trial
+2025-06-11 11:50:40,724 - INFO - Waiting for mouse button release
+2025-06-11 11:50:40,724 - INFO - Waiting for fresh click
+2025-06-11 11:50:42,303 - INFO - Eyetracker started recording
+2025-06-11 11:50:42,303 - INFO - Start trial
+2025-06-11 11:50:50,750 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1B50>, <target.Target object at 0x00000178B99F1BB0>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BF0019A0>
+2025-06-11 11:50:50,763 - INFO - Waiting for mouse button release
+2025-06-11 11:50:50,763 - INFO - Waiting for fresh click
+2025-06-11 11:50:52,369 - INFO - Eyetracker started recording
+2025-06-11 11:50:52,369 - INFO - Start trial
+2025-06-11 11:50:59,813 - INFO - Waiting for mouse button release
+2025-06-11 11:50:59,814 - INFO - Waiting for fresh click
+2025-06-11 11:51:00,746 - INFO - Eyetracker started recording
+2025-06-11 11:51:00,746 - INFO - Start trial
+2025-06-11 11:51:08,037 - INFO - Waiting for mouse button release
+2025-06-11 11:51:08,037 - INFO - Waiting for fresh click
+2025-06-11 11:51:09,375 - INFO - Eyetracker started recording
+2025-06-11 11:51:09,375 - INFO - Start trial
+2025-06-11 11:51:12,853 - INFO - moved eyes
+2025-06-11 11:51:12,861 - INFO - moved eyes
+2025-06-11 11:51:12,870 - INFO - moved eyes
+2025-06-11 11:51:13,046 - INFO - moved eyes
+2025-06-11 11:51:13,054 - INFO - moved eyes
+2025-06-11 11:51:13,063 - INFO - moved eyes
+2025-06-11 11:51:13,071 - INFO - moved eyes
+2025-06-11 11:51:13,079 - INFO - moved eyes
+2025-06-11 11:51:13,130 - INFO - moved eyes
+2025-06-11 11:51:13,138 - INFO - moved eyes
+2025-06-11 11:51:13,188 - INFO - moved eyes
+2025-06-11 11:51:13,196 - INFO - moved eyes
+2025-06-11 11:51:13,204 - INFO - moved eyes
+2025-06-11 11:51:13,213 - INFO - moved eyes
+2025-06-11 11:51:13,221 - INFO - moved eyes
+2025-06-11 11:51:13,229 - INFO - moved eyes
+2025-06-11 11:51:13,238 - INFO - moved eyes
+2025-06-11 11:51:13,246 - INFO - moved eyes
+2025-06-11 11:51:13,255 - INFO - moved eyes
+2025-06-11 11:51:13,271 - INFO - moved eyes
+2025-06-11 11:51:13,280 - INFO - moved eyes
+2025-06-11 11:51:13,288 - INFO - moved eyes
+2025-06-11 11:51:13,297 - INFO - moved eyes
+2025-06-11 11:51:13,305 - INFO - moved eyes
+2025-06-11 11:51:13,313 - INFO - moved eyes
+2025-06-11 11:51:13,322 - INFO - moved eyes
+2025-06-11 11:51:13,330 - INFO - moved eyes
+2025-06-11 11:51:13,338 - INFO - moved eyes
+2025-06-11 11:51:13,364 - INFO - moved eyes
+2025-06-11 11:51:13,372 - INFO - moved eyes
+2025-06-11 11:51:13,380 - INFO - moved eyes
+2025-06-11 11:51:13,389 - INFO - moved eyes
+2025-06-11 11:51:13,397 - INFO - moved eyes
+2025-06-11 11:51:13,405 - INFO - moved eyes
+2025-06-11 11:51:13,414 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:51:16,325 - INFO - Eyetracker started recording
+2025-06-11 11:51:16,325 - INFO - Start trial
+2025-06-11 11:51:25,220 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1C10>, <target.Target object at 0x00000178B99F1C70>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BED6A610>
+2025-06-11 11:51:25,230 - INFO - Waiting for mouse button release
+2025-06-11 11:51:25,230 - INFO - Waiting for fresh click
+2025-06-11 11:51:28,157 - INFO - Eyetracker started recording
+2025-06-11 11:51:28,157 - INFO - Start trial
+2025-06-11 11:51:28,910 - INFO - moved eyes
+2025-06-11 11:51:28,918 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:51:31,438 - INFO - Eyetracker started recording
+2025-06-11 11:51:31,438 - INFO - Start trial
+2025-06-11 11:51:32,202 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:51:32,219 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:51:35,360 - INFO - Eyetracker started recording
+2025-06-11 11:51:35,360 - INFO - Start trial
+2025-06-11 11:51:42,789 - INFO - Waiting for mouse button release
+2025-06-11 11:51:42,789 - INFO - Waiting for fresh click
+2025-06-11 11:51:44,373 - INFO - Eyetracker started recording
+2025-06-11 11:51:44,373 - INFO - Start trial
+2025-06-11 11:51:51,740 - INFO - Waiting for mouse button release
+2025-06-11 11:51:51,740 - INFO - Waiting for fresh click
+2025-06-11 11:51:53,072 - INFO - Eyetracker started recording
+2025-06-11 11:51:53,072 - INFO - Start trial
+2025-06-11 11:52:01,452 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3550>, <target.Target object at 0x00000178B99F35B0>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BE987AF0>
+2025-06-11 11:52:01,460 - INFO - Waiting for mouse button release
+2025-06-11 11:52:01,460 - INFO - Waiting for fresh click
+2025-06-11 11:52:06,846 - INFO - Eyetracker started recording
+2025-06-11 11:52:06,846 - INFO - Start trial
+2025-06-11 11:52:15,837 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F3070>, <target.Target object at 0x00000178B99F30D0>, <target.Target object at 0x00000178B99F3130>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BE949670>
+2025-06-11 11:52:15,845 - INFO - Waiting for mouse button release
+2025-06-11 11:52:15,846 - INFO - Waiting for fresh click
+2025-06-11 11:52:17,499 - INFO - Eyetracker started recording
+2025-06-11 11:52:17,500 - INFO - Start trial
+2025-06-11 11:52:26,696 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3A90>, <target.Target object at 0x00000178B99F3AF0>, <target.Target object at 0x00000178B99F3B50>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BE9112B0>
+2025-06-11 11:52:26,704 - INFO - Waiting for mouse button release
+2025-06-11 11:52:26,704 - INFO - Waiting for fresh click
+2025-06-11 11:52:28,486 - INFO - Eyetracker started recording
+2025-06-11 11:52:28,487 - INFO - Start trial
+2025-06-11 11:52:35,796 - INFO - Waiting for mouse button release
+2025-06-11 11:52:35,796 - INFO - Waiting for fresh click
+2025-06-11 11:52:37,342 - INFO - Eyetracker started recording
+2025-06-11 11:52:37,343 - INFO - Start trial
+2025-06-11 11:52:46,637 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1F10>, <target.Target object at 0x00000178B99F1F70>, <target.Target object at 0x00000178B99F1FD0>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BE6D6B20>
+2025-06-11 11:52:46,651 - INFO - Waiting for mouse button release
+2025-06-11 11:52:46,651 - INFO - Waiting for fresh click
+2025-06-11 11:52:49,411 - INFO - Eyetracker started recording
+2025-06-11 11:52:49,411 - INFO - Start trial
+2025-06-11 11:52:53,785 - INFO - moved eyes
+2025-06-11 11:52:53,793 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:52:56,947 - INFO - Eyetracker started recording
+2025-06-11 11:52:56,947 - INFO - Start trial
+2025-06-11 11:52:57,765 - INFO - moved eyes
+2025-06-11 11:52:57,773 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:53:00,910 - INFO - Eyetracker started recording
+2025-06-11 11:53:00,910 - INFO - Start trial
+2025-06-11 11:53:01,711 - INFO - moved eyes
+2025-06-11 11:53:01,719 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:53:04,859 - INFO - Eyetracker started recording
+2025-06-11 11:53:04,859 - INFO - Start trial
+2025-06-11 11:53:07,185 - INFO - moved eyes
+2025-06-11 11:53:07,192 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:53:09,693 - INFO - Eyetracker started recording
+2025-06-11 11:53:09,693 - INFO - Start trial
+2025-06-11 11:53:13,912 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:53:13,927 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:53:16,832 - INFO - Eyetracker started recording
+2025-06-11 11:53:16,832 - INFO - Start trial
+2025-06-11 11:53:18,233 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:53:18,249 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:53:21,162 - INFO - Eyetracker started recording
+2025-06-11 11:53:21,162 - INFO - Start trial
+2025-06-11 11:53:29,669 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3DF0>, <target.Target object at 0x00000178B99F3E50>, <target.Target object at 0x00000178B99F3EB0>], highlighted_indices (3, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BEA1C340>
+2025-06-11 11:53:29,676 - INFO - Waiting for mouse button release
+2025-06-11 11:53:29,677 - INFO - Waiting for fresh click
+2025-06-11 11:53:31,890 - INFO - Eyetracker started recording
+2025-06-11 11:53:31,890 - INFO - Start trial
+2025-06-11 11:53:40,508 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1CD0>, <target.Target object at 0x00000178B99F1D30>, <target.Target object at 0x00000178B99F1D90>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BE702310>
+2025-06-11 11:53:40,517 - INFO - Waiting for mouse button release
+2025-06-11 11:53:40,517 - INFO - Waiting for fresh click
+2025-06-11 11:53:41,437 - INFO - Eyetracker started recording
+2025-06-11 11:53:41,437 - INFO - Start trial
+2025-06-11 11:53:49,125 - INFO - Waiting for mouse button release
+2025-06-11 11:53:49,125 - INFO - Waiting for fresh click
+2025-06-11 11:53:51,275 - INFO - Eyetracker started recording
+2025-06-11 11:53:51,275 - INFO - Start trial
+2025-06-11 11:53:59,812 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3610>, <target.Target object at 0x00000178B99F3670>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BE8C0B50>
+2025-06-11 11:53:59,820 - INFO - Waiting for mouse button release
+2025-06-11 11:53:59,820 - INFO - Waiting for fresh click
+2025-06-11 11:54:02,072 - INFO - Eyetracker started recording
+2025-06-11 11:54:02,072 - INFO - Start trial
+2025-06-11 11:54:04,581 - INFO - moved eyes
+2025-06-11 11:54:04,589 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 11:54:07,724 - INFO - Eyetracker started recording
+2025-06-11 11:54:07,724 - INFO - Start trial
+2025-06-11 11:54:08,499 - INFO - moved eyes
+2025-06-11 11:54:08,507 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:54:11,628 - INFO - Eyetracker started recording
+2025-06-11 11:54:11,629 - INFO - Start trial
+2025-06-11 11:54:12,383 - INFO - moved eyes
+2025-06-11 11:54:12,391 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:54:15,517 - INFO - Eyetracker started recording
+2025-06-11 11:54:15,518 - INFO - Start trial
+2025-06-11 11:54:16,271 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 11:54:16,289 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:54:19,399 - INFO - Eyetracker started recording
+2025-06-11 11:54:19,399 - INFO - Start trial
+2025-06-11 11:54:28,148 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3790>, <target.Target object at 0x00000178B99F37F0>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BE825A00>
+2025-06-11 11:54:28,156 - INFO - Waiting for mouse button release
+2025-06-11 11:54:28,157 - INFO - Waiting for fresh click
+2025-06-11 11:54:29,593 - INFO - Eyetracker started recording
+2025-06-11 11:54:29,593 - INFO - Start trial
+2025-06-11 11:54:36,980 - INFO - Waiting for mouse button release
+2025-06-11 11:54:36,980 - INFO - Waiting for fresh click
+2025-06-11 11:54:39,003 - INFO - Eyetracker started recording
+2025-06-11 11:54:39,003 - INFO - Start trial
+2025-06-11 11:54:47,660 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1DF0>, <target.Target object at 0x00000178B99F1E50>, <target.Target object at 0x00000178B99F1EB0>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BF07AE20>
+2025-06-11 11:54:47,676 - INFO - Waiting for mouse button release
+2025-06-11 11:54:47,676 - INFO - Waiting for fresh click
+2025-06-11 11:54:48,882 - INFO - Eyetracker started recording
+2025-06-11 11:54:48,882 - INFO - Start trial
+2025-06-11 11:54:57,522 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3550>, <target.Target object at 0x00000178B99F35B0>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BF0C5E50>
+2025-06-11 11:54:57,531 - INFO - Waiting for mouse button release
+2025-06-11 11:54:57,531 - INFO - Waiting for fresh click
+2025-06-11 11:54:58,300 - INFO - Eyetracker started recording
+2025-06-11 11:54:58,300 - INFO - Start trial
+2025-06-11 11:55:05,614 - INFO - Waiting for mouse button release
+2025-06-11 11:55:05,614 - INFO - Waiting for fresh click
+2025-06-11 11:55:07,195 - INFO - Eyetracker started recording
+2025-06-11 11:55:07,195 - INFO - Start trial
+2025-06-11 11:55:17,532 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1CD0>, <target.Target object at 0x00000178B99F1D30>, <target.Target object at 0x00000178B99F1D90>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BF0C5100>
+2025-06-11 11:55:17,549 - INFO - Waiting for mouse button release
+2025-06-11 11:55:17,549 - INFO - Waiting for fresh click
+2025-06-11 11:55:19,192 - INFO - Eyetracker started recording
+2025-06-11 11:55:19,192 - INFO - Start trial
+2025-06-11 11:55:20,335 - INFO - moved eyes
+2025-06-11 11:55:20,343 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:55:23,484 - INFO - Eyetracker started recording
+2025-06-11 11:55:23,484 - INFO - Start trial
+2025-06-11 11:55:30,788 - INFO - Waiting for mouse button release
+2025-06-11 11:55:30,788 - INFO - Waiting for fresh click
+2025-06-11 11:55:32,437 - INFO - Eyetracker started recording
+2025-06-11 11:55:32,437 - INFO - Start trial
+2025-06-11 11:55:41,244 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3BB0>, <target.Target object at 0x00000178B99F3C10>, <target.Target object at 0x00000178B99F3C70>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BF174FA0>
+2025-06-11 11:55:41,252 - INFO - Waiting for mouse button release
+2025-06-11 11:55:41,253 - INFO - Waiting for fresh click
+2025-06-11 11:55:42,934 - INFO - Eyetracker started recording
+2025-06-11 11:55:42,935 - INFO - Start trial
+2025-06-11 11:55:50,325 - INFO - Waiting for mouse button release
+2025-06-11 11:55:50,325 - INFO - Waiting for fresh click
+2025-06-11 11:55:51,979 - INFO - Eyetracker started recording
+2025-06-11 11:55:51,979 - INFO - Start trial
+2025-06-11 11:56:00,788 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3850>, <target.Target object at 0x00000178B99F38B0>, <target.Target object at 0x00000178B99F3910>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BF1D54C0>
+2025-06-11 11:56:00,805 - INFO - Waiting for mouse button release
+2025-06-11 11:56:00,805 - INFO - Waiting for fresh click
+2025-06-11 11:56:02,483 - INFO - Eyetracker started recording
+2025-06-11 11:56:02,483 - INFO - Start trial
+2025-06-11 11:56:03,380 - INFO - moved eyes
+2025-06-11 11:56:03,388 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:56:06,515 - INFO - Eyetracker started recording
+2025-06-11 11:56:06,515 - INFO - Start trial
+2025-06-11 11:56:15,108 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F32B0>, <target.Target object at 0x00000178B99F3310>, <target.Target object at 0x00000178B99F3370>], highlighted_indices (4, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BF21D6D0>
+2025-06-11 11:56:15,116 - INFO - Waiting for mouse button release
+2025-06-11 11:56:15,117 - INFO - Waiting for fresh click
+2025-06-11 11:56:16,648 - INFO - Eyetracker started recording
+2025-06-11 11:56:16,648 - INFO - Start trial
+2025-06-11 11:56:26,332 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1910>, <target.Target object at 0x00000178B99F1970>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C14D2910>
+2025-06-11 11:56:26,341 - INFO - Waiting for mouse button release
+2025-06-11 11:56:26,341 - INFO - Waiting for fresh click
+2025-06-11 11:56:26,818 - INFO - Waiting for mouse button release
+2025-06-11 11:56:26,818 - INFO - Waiting for fresh click
+2025-06-11 11:57:55,403 - INFO - Feedback displayed
+2025-06-11 11:57:55,403 - INFO - Block 2 started
+2025-06-11 11:58:22,674 - INFO - Waiting for mouse button release
+2025-06-11 11:58:22,674 - INFO - Waiting for fresh click
+2025-06-11 11:58:51,601 - INFO - Manually recalibrated eyetracker
+2025-06-11 11:59:28,937 - INFO - Feedback displayed
+2025-06-11 11:59:29,653 - INFO - Eyetracker started recording
+2025-06-11 11:59:29,653 - INFO - Start trial
+2025-06-11 11:59:30,410 - INFO - moved eyes
+2025-06-11 11:59:30,418 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 11:59:33,349 - INFO - Eyetracker started recording
+2025-06-11 11:59:33,350 - INFO - Start trial
+2025-06-11 11:59:42,404 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3550>, <target.Target object at 0x00000178B99F35B0>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C150FB80>
+2025-06-11 11:59:42,412 - INFO - Waiting for mouse button release
+2025-06-11 11:59:42,412 - INFO - Waiting for fresh click
+2025-06-11 11:59:48,946 - INFO - Eyetracker started recording
+2025-06-11 11:59:48,946 - INFO - Start trial
+2025-06-11 11:59:57,284 - INFO - Waiting for mouse button release
+2025-06-11 11:59:57,284 - INFO - Waiting for fresh click
+2025-06-11 12:00:02,175 - INFO - Eyetracker started recording
+2025-06-11 12:00:02,175 - INFO - Start trial
+2025-06-11 12:00:09,597 - INFO - Waiting for mouse button release
+2025-06-11 12:00:09,597 - INFO - Waiting for fresh click
+2025-06-11 12:00:12,541 - INFO - Eyetracker started recording
+2025-06-11 12:00:12,541 - INFO - Start trial
+2025-06-11 12:00:19,989 - INFO - Waiting for mouse button release
+2025-06-11 12:00:19,989 - INFO - Waiting for fresh click
+2025-06-11 12:00:21,972 - INFO - Eyetracker started recording
+2025-06-11 12:00:21,973 - INFO - Start trial
+2025-06-11 12:00:30,484 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3790>, <target.Target object at 0x00000178B99F37F0>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BF21DEE0>
+2025-06-11 12:00:30,493 - INFO - Waiting for mouse button release
+2025-06-11 12:00:30,493 - INFO - Waiting for fresh click
+2025-06-11 12:00:32,327 - INFO - Eyetracker started recording
+2025-06-11 12:00:32,327 - INFO - Start trial
+2025-06-11 12:00:42,036 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1850>, <target.Target object at 0x00000178B99F18B0>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BF1FC100>
+2025-06-11 12:00:42,044 - INFO - Waiting for mouse button release
+2025-06-11 12:00:42,045 - INFO - Waiting for fresh click
+2025-06-11 12:00:46,436 - INFO - Eyetracker started recording
+2025-06-11 12:00:46,436 - INFO - Start trial
+2025-06-11 12:00:55,171 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3850>, <target.Target object at 0x00000178B99F38B0>, <target.Target object at 0x00000178B99F3910>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BF149FD0>
+2025-06-11 12:00:55,180 - INFO - Waiting for mouse button release
+2025-06-11 12:00:55,180 - INFO - Waiting for fresh click
+2025-06-11 12:00:56,529 - INFO - Eyetracker started recording
+2025-06-11 12:00:56,529 - INFO - Start trial
+2025-06-11 12:01:04,030 - INFO - Waiting for mouse button release
+2025-06-11 12:01:04,030 - INFO - Waiting for fresh click
+2025-06-11 12:01:05,626 - INFO - Eyetracker started recording
+2025-06-11 12:01:05,627 - INFO - Start trial
+2025-06-11 12:01:06,452 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:01:06,469 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:01:09,388 - INFO - Eyetracker started recording
+2025-06-11 12:01:09,388 - INFO - Start trial
+2025-06-11 12:01:17,919 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3550>, <target.Target object at 0x00000178B99F35B0>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BE8A97F0>
+2025-06-11 12:01:17,929 - INFO - Waiting for mouse button release
+2025-06-11 12:01:17,929 - INFO - Waiting for fresh click
+2025-06-11 12:01:19,289 - INFO - Eyetracker started recording
+2025-06-11 12:01:19,289 - INFO - Start trial
+2025-06-11 12:01:21,741 - INFO - moved eyes
+2025-06-11 12:01:21,749 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:01:24,897 - INFO - Eyetracker started recording
+2025-06-11 12:01:24,897 - INFO - Start trial
+2025-06-11 12:01:27,290 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:01:27,305 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:01:30,216 - INFO - Eyetracker started recording
+2025-06-11 12:01:30,216 - INFO - Start trial
+2025-06-11 12:01:39,182 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1DF0>, <target.Target object at 0x00000178B99F1E50>, <target.Target object at 0x00000178B99F1EB0>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BE84E280>
+2025-06-11 12:01:39,199 - INFO - Waiting for mouse button release
+2025-06-11 12:01:39,199 - INFO - Waiting for fresh click
+2025-06-11 12:01:43,486 - INFO - Eyetracker started recording
+2025-06-11 12:01:43,487 - INFO - Start trial
+2025-06-11 12:01:52,923 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F3190>, <target.Target object at 0x00000178B99F31F0>, <target.Target object at 0x00000178B99F3250>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BE8F22B0>
+2025-06-11 12:01:52,931 - INFO - Waiting for mouse button release
+2025-06-11 12:01:52,931 - INFO - Waiting for fresh click
+2025-06-11 12:01:54,361 - INFO - Eyetracker started recording
+2025-06-11 12:01:54,361 - INFO - Start trial
+2025-06-11 12:02:01,765 - INFO - Waiting for mouse button release
+2025-06-11 12:02:01,765 - INFO - Waiting for fresh click
+2025-06-11 12:02:03,533 - INFO - Eyetracker started recording
+2025-06-11 12:02:03,533 - INFO - Start trial
+2025-06-11 12:02:12,627 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3BB0>, <target.Target object at 0x00000178B99F3C10>, <target.Target object at 0x00000178B99F3C70>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BE8F2430>
+2025-06-11 12:02:12,636 - INFO - Waiting for mouse button release
+2025-06-11 12:02:12,636 - INFO - Waiting for fresh click
+2025-06-11 12:02:14,701 - INFO - Eyetracker started recording
+2025-06-11 12:02:14,701 - INFO - Start trial
+2025-06-11 12:02:15,463 - INFO - moved eyes
+2025-06-11 12:02:15,471 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:02:18,586 - INFO - Eyetracker started recording
+2025-06-11 12:02:18,586 - INFO - Start trial
+2025-06-11 12:02:25,964 - INFO - Waiting for mouse button release
+2025-06-11 12:02:25,965 - INFO - Waiting for fresh click
+2025-06-11 12:02:26,991 - INFO - Eyetracker started recording
+2025-06-11 12:02:26,991 - INFO - Start trial
+2025-06-11 12:02:34,350 - INFO - Waiting for mouse button release
+2025-06-11 12:02:34,350 - INFO - Waiting for fresh click
+2025-06-11 12:02:39,928 - INFO - Eyetracker started recording
+2025-06-11 12:02:39,928 - INFO - Start trial
+2025-06-11 12:02:47,301 - INFO - Waiting for mouse button release
+2025-06-11 12:02:47,301 - INFO - Waiting for fresh click
+2025-06-11 12:02:48,983 - INFO - Eyetracker started recording
+2025-06-11 12:02:48,983 - INFO - Start trial
+2025-06-11 12:02:49,747 - INFO - moved eyes
+2025-06-11 12:02:49,755 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:02:52,896 - INFO - Eyetracker started recording
+2025-06-11 12:02:52,896 - INFO - Start trial
+2025-06-11 12:03:00,563 - INFO - Waiting for mouse button release
+2025-06-11 12:03:00,564 - INFO - Waiting for fresh click
+2025-06-11 12:03:02,636 - INFO - Eyetracker started recording
+2025-06-11 12:03:02,636 - INFO - Start trial
+2025-06-11 12:03:06,504 - INFO - moved eyes
+2025-06-11 12:03:06,856 - INFO - moved eyes
+2025-06-11 12:03:06,864 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:03:09,975 - INFO - Eyetracker started recording
+2025-06-11 12:03:09,975 - INFO - Start trial
+2025-06-11 12:03:17,636 - INFO - Waiting for mouse button release
+2025-06-11 12:03:17,637 - INFO - Waiting for fresh click
+2025-06-11 12:03:21,340 - INFO - Eyetracker started recording
+2025-06-11 12:03:21,340 - INFO - Start trial
+2025-06-11 12:03:28,820 - INFO - Waiting for mouse button release
+2025-06-11 12:03:28,820 - INFO - Waiting for fresh click
+2025-06-11 12:03:30,448 - INFO - Eyetracker started recording
+2025-06-11 12:03:30,448 - INFO - Start trial
+2025-06-11 12:03:31,473 - INFO - moved eyes
+2025-06-11 12:03:31,481 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:03:33,982 - INFO - Eyetracker started recording
+2025-06-11 12:03:33,983 - INFO - Start trial
+2025-06-11 12:03:37,354 - INFO - moved eyes
+2025-06-11 12:03:37,505 - INFO - moved eyes
+2025-06-11 12:03:37,655 - INFO - moved eyes
+2025-06-11 12:03:37,756 - INFO - moved eyes
+2025-06-11 12:03:38,000 - INFO - moved eyes
+2025-06-11 12:03:38,008 - INFO - moved eyes
+2025-06-11 12:03:38,149 - INFO - moved eyes
+2025-06-11 12:03:38,157 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:03:41,288 - INFO - Eyetracker started recording
+2025-06-11 12:03:41,288 - INFO - Start trial
+2025-06-11 12:03:48,604 - INFO - Waiting for mouse button release
+2025-06-11 12:03:48,604 - INFO - Waiting for fresh click
+2025-06-11 12:03:51,303 - INFO - Eyetracker started recording
+2025-06-11 12:03:51,303 - INFO - Start trial
+2025-06-11 12:03:54,166 - INFO - moved eyes
+2025-06-11 12:03:54,173 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:03:57,089 - INFO - Eyetracker started recording
+2025-06-11 12:03:57,089 - INFO - Start trial
+2025-06-11 12:04:05,972 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1C10>, <target.Target object at 0x00000178B99F1C70>], highlighted_indices (3, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BF09EDC0>
+2025-06-11 12:04:05,980 - INFO - Waiting for mouse button release
+2025-06-11 12:04:05,981 - INFO - Waiting for fresh click
+2025-06-11 12:04:07,650 - INFO - Eyetracker started recording
+2025-06-11 12:04:07,650 - INFO - Start trial
+2025-06-11 12:04:15,139 - INFO - Waiting for mouse button release
+2025-06-11 12:04:15,140 - INFO - Waiting for fresh click
+2025-06-11 12:04:17,022 - INFO - Eyetracker started recording
+2025-06-11 12:04:17,022 - INFO - Start trial
+2025-06-11 12:04:24,382 - INFO - Waiting for mouse button release
+2025-06-11 12:04:24,382 - INFO - Waiting for fresh click
+2025-06-11 12:04:26,000 - INFO - Eyetracker started recording
+2025-06-11 12:04:26,000 - INFO - Start trial
+2025-06-11 12:04:27,012 - INFO - moved eyes
+2025-06-11 12:04:27,020 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:04:29,938 - INFO - Eyetracker started recording
+2025-06-11 12:04:29,938 - INFO - Start trial
+2025-06-11 12:04:30,697 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:04:30,715 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:04:33,852 - INFO - Eyetracker started recording
+2025-06-11 12:04:33,852 - INFO - Start trial
+2025-06-11 12:04:42,964 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3CD0>, <target.Target object at 0x00000178B99F3D30>, <target.Target object at 0x00000178B99F3D90>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x00000178C15FA3D0>
+2025-06-11 12:04:42,980 - INFO - Waiting for mouse button release
+2025-06-11 12:04:42,980 - INFO - Waiting for fresh click
+2025-06-11 12:04:44,755 - INFO - Eyetracker started recording
+2025-06-11 12:04:44,755 - INFO - Start trial
+2025-06-11 12:04:46,669 - INFO - moved eyes
+2025-06-11 12:04:46,677 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:04:49,815 - INFO - Eyetracker started recording
+2025-06-11 12:04:49,815 - INFO - Start trial
+2025-06-11 12:04:50,619 - INFO - moved eyes
+2025-06-11 12:04:50,627 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:04:53,725 - INFO - Eyetracker started recording
+2025-06-11 12:04:53,725 - INFO - Start trial
+2025-06-11 12:04:54,566 - INFO - moved eyes
+2025-06-11 12:04:54,574 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:04:57,690 - INFO - Eyetracker started recording
+2025-06-11 12:04:57,690 - INFO - Start trial
+2025-06-11 12:05:06,355 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3490>, <target.Target object at 0x00000178B99F34F0>], highlighted_indices (2, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C1A8BF40>
+2025-06-11 12:05:06,365 - INFO - Waiting for mouse button release
+2025-06-11 12:05:06,365 - INFO - Waiting for fresh click
+2025-06-11 12:05:19,050 - INFO - Eyetracker started recording
+2025-06-11 12:05:19,050 - INFO - Start trial
+2025-06-11 12:05:19,825 - INFO - moved eyes
+2025-06-11 12:05:19,833 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:05:22,751 - INFO - Eyetracker started recording
+2025-06-11 12:05:22,751 - INFO - Start trial
+2025-06-11 12:05:31,379 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1B50>, <target.Target object at 0x00000178B99F1BB0>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C1ADB8E0>
+2025-06-11 12:05:31,388 - INFO - Waiting for mouse button release
+2025-06-11 12:05:31,388 - INFO - Waiting for fresh click
+2025-06-11 12:05:33,338 - INFO - Eyetracker started recording
+2025-06-11 12:05:33,338 - INFO - Start trial
+2025-06-11 12:05:40,741 - INFO - Waiting for mouse button release
+2025-06-11 12:05:40,741 - INFO - Waiting for fresh click
+2025-06-11 12:05:42,510 - INFO - Eyetracker started recording
+2025-06-11 12:05:42,510 - INFO - Start trial
+2025-06-11 12:05:44,910 - INFO - moved eyes
+2025-06-11 12:05:44,918 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:05:47,832 - INFO - Eyetracker started recording
+2025-06-11 12:05:47,832 - INFO - Start trial
+2025-06-11 12:05:49,139 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:05:49,156 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:05:52,052 - INFO - Eyetracker started recording
+2025-06-11 12:05:52,052 - INFO - Start trial
+2025-06-11 12:05:55,484 - INFO - moved eyes
+2025-06-11 12:05:55,492 - INFO - moved eyes
+2025-06-11 12:05:55,501 - INFO - moved eyes
+2025-06-11 12:05:55,509 - INFO - moved eyes
+2025-06-11 12:05:55,517 - INFO - moved eyes
+2025-06-11 12:05:55,526 - INFO - moved eyes
+2025-06-11 12:05:55,534 - INFO - moved eyes
+2025-06-11 12:05:55,542 - INFO - moved eyes
+2025-06-11 12:05:55,551 - INFO - moved eyes
+2025-06-11 12:05:55,559 - INFO - moved eyes
+2025-06-11 12:05:55,568 - INFO - moved eyes
+2025-06-11 12:05:55,576 - INFO - moved eyes
+2025-06-11 12:05:55,584 - INFO - moved eyes
+2025-06-11 12:05:55,593 - INFO - moved eyes
+2025-06-11 12:05:55,601 - INFO - moved eyes
+2025-06-11 12:05:55,610 - INFO - moved eyes
+2025-06-11 12:05:55,618 - INFO - moved eyes
+2025-06-11 12:05:55,626 - INFO - moved eyes
+2025-06-11 12:05:55,635 - INFO - moved eyes
+2025-06-11 12:05:55,643 - INFO - moved eyes
+2025-06-11 12:05:55,651 - INFO - moved eyes
+2025-06-11 12:05:55,660 - INFO - moved eyes
+2025-06-11 12:05:55,667 - INFO - moved eyes
+2025-06-11 12:05:55,676 - INFO - moved eyes
+2025-06-11 12:05:55,701 - INFO - moved eyes
+2025-06-11 12:05:55,751 - INFO - moved eyes
+2025-06-11 12:05:55,759 - INFO - moved eyes
+2025-06-11 12:05:55,768 - INFO - moved eyes
+2025-06-11 12:05:55,776 - INFO - moved eyes
+2025-06-11 12:05:55,785 - INFO - moved eyes
+2025-06-11 12:05:55,793 - INFO - moved eyes
+2025-06-11 12:05:55,902 - INFO - moved eyes
+2025-06-11 12:05:55,911 - INFO - moved eyes
+2025-06-11 12:05:55,919 - INFO - moved eyes
+2025-06-11 12:05:56,111 - INFO - moved eyes
+2025-06-11 12:05:56,120 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:05:59,219 - INFO - Eyetracker started recording
+2025-06-11 12:05:59,219 - INFO - Start trial
+2025-06-11 12:06:03,199 - INFO - moved eyes
+2025-06-11 12:06:03,208 - INFO - moved eyes
+2025-06-11 12:06:03,216 - INFO - moved eyes
+2025-06-11 12:06:03,225 - INFO - moved eyes
+2025-06-11 12:06:03,300 - INFO - moved eyes
+2025-06-11 12:06:03,308 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:06:06,413 - INFO - Eyetracker started recording
+2025-06-11 12:06:06,413 - INFO - Start trial
+2025-06-11 12:06:08,811 - INFO - moved eyes
+2025-06-11 12:06:08,819 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:06:11,924 - INFO - Eyetracker started recording
+2025-06-11 12:06:11,924 - INFO - Start trial
+2025-06-11 12:06:12,693 - INFO - moved eyes
+2025-06-11 12:06:12,703 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:06:15,192 - INFO - Eyetracker started recording
+2025-06-11 12:06:15,192 - INFO - Start trial
+2025-06-11 12:06:18,837 - INFO - moved eyes
+2025-06-11 12:06:23,037 - INFO - Waiting for mouse button release
+2025-06-11 12:06:23,037 - INFO - Waiting for fresh click
+2025-06-11 12:06:30,807 - INFO - Eyetracker started recording
+2025-06-11 12:06:30,807 - INFO - Start trial
+2025-06-11 12:06:38,307 - INFO - Waiting for mouse button release
+2025-06-11 12:06:38,308 - INFO - Waiting for fresh click
+2025-06-11 12:06:39,242 - INFO - Eyetracker started recording
+2025-06-11 12:06:39,242 - INFO - Start trial
+2025-06-11 12:06:46,655 - INFO - Waiting for mouse button release
+2025-06-11 12:06:46,655 - INFO - Waiting for fresh click
+2025-06-11 12:06:48,316 - INFO - Eyetracker started recording
+2025-06-11 12:06:48,316 - INFO - Start trial
+2025-06-11 12:06:56,099 - INFO - Waiting for mouse button release
+2025-06-11 12:06:56,100 - INFO - Waiting for fresh click
+2025-06-11 12:07:01,199 - INFO - Eyetracker started recording
+2025-06-11 12:07:01,199 - INFO - Start trial
+2025-06-11 12:07:01,959 - INFO - moved eyes
+2025-06-11 12:07:01,968 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:07:05,098 - INFO - Eyetracker started recording
+2025-06-11 12:07:05,098 - INFO - Start trial
+2025-06-11 12:07:05,849 - INFO - moved eyes
+2025-06-11 12:07:05,856 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:07:08,750 - INFO - Eyetracker started recording
+2025-06-11 12:07:08,750 - INFO - Start trial
+2025-06-11 12:07:10,681 - INFO - moved eyes
+2025-06-11 12:07:10,689 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:07:13,788 - INFO - Eyetracker started recording
+2025-06-11 12:07:13,788 - INFO - Start trial
+2025-06-11 12:07:21,204 - INFO - Waiting for mouse button release
+2025-06-11 12:07:21,204 - INFO - Waiting for fresh click
+2025-06-11 12:07:25,340 - INFO - Eyetracker started recording
+2025-06-11 12:07:25,340 - INFO - Start trial
+2025-06-11 12:07:33,972 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3BB0>, <target.Target object at 0x00000178B99F3C10>, <target.Target object at 0x00000178B99F3C70>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BF0EB1C0>
+2025-06-11 12:07:33,988 - INFO - Waiting for mouse button release
+2025-06-11 12:07:33,988 - INFO - Waiting for fresh click
+2025-06-11 12:07:36,382 - INFO - Eyetracker started recording
+2025-06-11 12:07:36,382 - INFO - Start trial
+2025-06-11 12:07:38,305 - INFO - moved eyes
+2025-06-11 12:07:38,313 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:07:41,428 - INFO - Eyetracker started recording
+2025-06-11 12:07:41,428 - INFO - Start trial
+2025-06-11 12:07:43,449 - INFO - moved eyes
+2025-06-11 12:07:43,457 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:07:46,552 - INFO - Eyetracker started recording
+2025-06-11 12:07:46,552 - INFO - Start trial
+2025-06-11 12:07:47,312 - INFO - moved eyes
+2025-06-11 12:07:47,319 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:07:50,232 - INFO - Eyetracker started recording
+2025-06-11 12:07:50,232 - INFO - Start trial
+2025-06-11 12:07:52,184 - INFO - moved eyes
+2025-06-11 12:07:52,192 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:07:55,097 - INFO - Eyetracker started recording
+2025-06-11 12:07:55,097 - INFO - Start trial
+2025-06-11 12:07:58,549 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:07:58,602 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:08:03,651 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3610>, <target.Target object at 0x00000178B99F3670>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BED772B0>
+2025-06-11 12:08:03,660 - INFO - Waiting for mouse button release
+2025-06-11 12:08:03,660 - INFO - Waiting for fresh click
+2025-06-11 12:08:11,407 - INFO - Eyetracker started recording
+2025-06-11 12:08:11,407 - INFO - Start trial
+2025-06-11 12:08:21,788 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3A90>, <target.Target object at 0x00000178B99F3AF0>, <target.Target object at 0x00000178B99F3B50>], highlighted_indices (0, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BE99CD90>
+2025-06-11 12:08:21,797 - INFO - Waiting for mouse button release
+2025-06-11 12:08:21,797 - INFO - Waiting for fresh click
+2025-06-11 12:08:24,318 - INFO - Eyetracker started recording
+2025-06-11 12:08:24,319 - INFO - Start trial
+2025-06-11 12:08:25,069 - INFO - moved eyes
+2025-06-11 12:08:25,078 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:08:27,772 - INFO - Eyetracker started recording
+2025-06-11 12:08:27,772 - INFO - Start trial
+2025-06-11 12:08:31,005 - INFO - moved eyes
+2025-06-11 12:08:31,013 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:08:34,120 - INFO - Eyetracker started recording
+2025-06-11 12:08:34,120 - INFO - Start trial
+2025-06-11 12:08:42,763 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3CD0>, <target.Target object at 0x00000178B99F3D30>, <target.Target object at 0x00000178B99F3D90>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BEF2E3D0>
+2025-06-11 12:08:42,780 - INFO - Waiting for mouse button release
+2025-06-11 12:08:42,780 - INFO - Waiting for fresh click
+2025-06-11 12:08:44,624 - INFO - Eyetracker started recording
+2025-06-11 12:08:44,624 - INFO - Start trial
+2025-06-11 12:08:54,058 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F19D0>, <target.Target object at 0x00000178B99F1A30>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BE8A98E0>
+2025-06-11 12:08:54,067 - INFO - Waiting for mouse button release
+2025-06-11 12:08:54,067 - INFO - Waiting for fresh click
+2025-06-11 12:08:56,043 - INFO - Eyetracker started recording
+2025-06-11 12:08:56,043 - INFO - Start trial
+2025-06-11 12:09:04,387 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3610>, <target.Target object at 0x00000178B99F3670>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BF0C98B0>
+2025-06-11 12:09:04,401 - INFO - Waiting for mouse button release
+2025-06-11 12:09:04,401 - INFO - Waiting for fresh click
+2025-06-11 12:09:06,622 - INFO - Eyetracker started recording
+2025-06-11 12:09:06,622 - INFO - Start trial
+2025-06-11 12:09:13,987 - INFO - Waiting for mouse button release
+2025-06-11 12:09:13,988 - INFO - Waiting for fresh click
+2025-06-11 12:09:15,609 - INFO - Eyetracker started recording
+2025-06-11 12:09:15,610 - INFO - Start trial
+2025-06-11 12:09:23,148 - INFO - Waiting for mouse button release
+2025-06-11 12:09:23,148 - INFO - Waiting for fresh click
+2025-06-11 12:09:24,523 - INFO - Eyetracker started recording
+2025-06-11 12:09:24,523 - INFO - Start trial
+2025-06-11 12:09:33,234 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1C10>, <target.Target object at 0x00000178B99F1C70>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BF21DCA0>
+2025-06-11 12:09:33,243 - INFO - Waiting for mouse button release
+2025-06-11 12:09:33,243 - INFO - Waiting for fresh click
+2025-06-11 12:09:37,645 - INFO - Eyetracker started recording
+2025-06-11 12:09:37,645 - INFO - Start trial
+2025-06-11 12:09:38,562 - INFO - moved eyes
+2025-06-11 12:09:38,570 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:09:41,700 - INFO - Eyetracker started recording
+2025-06-11 12:09:41,700 - INFO - Start trial
+2025-06-11 12:09:42,998 - INFO - moved eyes
+2025-06-11 12:09:43,006 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:09:46,107 - INFO - Eyetracker started recording
+2025-06-11 12:09:46,107 - INFO - Start trial
+2025-06-11 12:09:49,390 - INFO - moved eyes
+2025-06-11 12:09:49,464 - INFO - moved eyes
+2025-06-11 12:09:49,472 - INFO - moved eyes
+2025-06-11 12:09:49,481 - INFO - moved eyes
+2025-06-11 12:09:50,134 - INFO - moved eyes
+2025-06-11 12:09:50,151 - INFO - moved eyes
+2025-06-11 12:09:50,159 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:09:53,269 - INFO - Eyetracker started recording
+2025-06-11 12:09:53,269 - INFO - Start trial
+2025-06-11 12:09:54,020 - INFO - moved eyes
+2025-06-11 12:09:54,028 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:09:56,523 - INFO - Eyetracker started recording
+2025-06-11 12:09:56,523 - INFO - Start trial
+2025-06-11 12:10:04,050 - INFO - Waiting for mouse button release
+2025-06-11 12:10:04,050 - INFO - Waiting for fresh click
+2025-06-11 12:10:10,714 - INFO - Eyetracker started recording
+2025-06-11 12:10:10,714 - INFO - Start trial
+2025-06-11 12:10:13,246 - INFO - moved eyes
+2025-06-11 12:10:13,254 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:10:16,354 - INFO - Eyetracker started recording
+2025-06-11 12:10:16,354 - INFO - Start trial
+2025-06-11 12:10:24,979 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F33D0>, <target.Target object at 0x00000178B99F3430>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C176CD00>
+2025-06-11 12:10:24,988 - INFO - Waiting for mouse button release
+2025-06-11 12:10:24,988 - INFO - Waiting for fresh click
+2025-06-11 12:10:26,895 - INFO - Eyetracker started recording
+2025-06-11 12:10:26,895 - INFO - Start trial
+2025-06-11 12:10:35,489 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1850>, <target.Target object at 0x00000178B99F18B0>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x00000178C1552E50>
+2025-06-11 12:10:35,506 - INFO - Waiting for mouse button release
+2025-06-11 12:10:35,506 - INFO - Waiting for fresh click
+2025-06-11 12:10:37,101 - INFO - Eyetracker started recording
+2025-06-11 12:10:37,101 - INFO - Start trial
+2025-06-11 12:10:39,699 - INFO - moved eyes
+2025-06-11 12:10:39,707 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:10:42,796 - INFO - Eyetracker started recording
+2025-06-11 12:10:42,796 - INFO - Start trial
+2025-06-11 12:10:44,632 - INFO - moved eyes
+2025-06-11 12:10:44,641 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:10:47,788 - INFO - Eyetracker started recording
+2025-06-11 12:10:47,788 - INFO - Start trial
+2025-06-11 12:10:55,460 - INFO - Waiting for mouse button release
+2025-06-11 12:10:55,461 - INFO - Waiting for fresh click
+2025-06-11 12:10:57,182 - INFO - Eyetracker started recording
+2025-06-11 12:10:57,182 - INFO - Start trial
+2025-06-11 12:10:57,945 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:10:57,962 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:11:00,881 - INFO - Eyetracker started recording
+2025-06-11 12:11:00,881 - INFO - Start trial
+2025-06-11 12:11:09,603 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3DF0>, <target.Target object at 0x00000178B99F3E50>, <target.Target object at 0x00000178B99F3EB0>], highlighted_indices (4, 0), objects <orbiting_images.OrbitingImages object at 0x00000178C181B9D0>
+2025-06-11 12:11:09,620 - INFO - Waiting for mouse button release
+2025-06-11 12:11:09,620 - INFO - Waiting for fresh click
+2025-06-11 12:11:11,721 - INFO - Eyetracker started recording
+2025-06-11 12:11:11,721 - INFO - Start trial
+2025-06-11 12:11:19,748 - INFO - Waiting for mouse button release
+2025-06-11 12:11:19,748 - INFO - Waiting for fresh click
+2025-06-11 12:11:21,593 - INFO - Eyetracker started recording
+2025-06-11 12:11:21,593 - INFO - Start trial
+2025-06-11 12:11:25,226 - INFO - moved eyes
+2025-06-11 12:11:25,233 - INFO - moved eyes
+2025-06-11 12:11:25,242 - INFO - moved eyes
+2025-06-11 12:11:25,443 - INFO - moved eyes
+2025-06-11 12:11:25,451 - INFO - moved eyes
+2025-06-11 12:11:25,468 - INFO - moved eyes
+2025-06-11 12:11:25,477 - INFO - moved eyes
+2025-06-11 12:11:25,485 - INFO - moved eyes
+2025-06-11 12:11:25,510 - INFO - moved eyes
+2025-06-11 12:11:25,518 - INFO - moved eyes
+2025-06-11 12:11:25,527 - INFO - moved eyes
+2025-06-11 12:11:25,535 - INFO - moved eyes
+2025-06-11 12:11:25,569 - INFO - moved eyes
+2025-06-11 12:11:25,577 - INFO - moved eyes
+2025-06-11 12:11:25,586 - INFO - moved eyes
+2025-06-11 12:11:25,593 - INFO - moved eyes
+2025-06-11 12:11:25,660 - INFO - moved eyes
+2025-06-11 12:11:25,668 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:11:28,721 - INFO - Eyetracker started recording
+2025-06-11 12:11:28,721 - INFO - Start trial
+2025-06-11 12:11:33,164 - INFO - moved eyes
+2025-06-11 12:11:33,173 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:11:36,200 - INFO - Eyetracker started recording
+2025-06-11 12:11:36,201 - INFO - Start trial
+2025-06-11 12:11:44,747 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F36D0>, <target.Target object at 0x00000178B99F3730>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C18F59D0>
+2025-06-11 12:11:44,757 - INFO - Waiting for mouse button release
+2025-06-11 12:11:44,757 - INFO - Waiting for fresh click
+2025-06-11 12:11:46,875 - INFO - Eyetracker started recording
+2025-06-11 12:11:46,875 - INFO - Start trial
+2025-06-11 12:11:50,447 - INFO - moved eyes
+2025-06-11 12:11:50,622 - INFO - moved eyes
+2025-06-11 12:11:54,332 - INFO - Waiting for mouse button release
+2025-06-11 12:11:54,332 - INFO - Waiting for fresh click
+2025-06-11 12:11:55,391 - INFO - Eyetracker started recording
+2025-06-11 12:11:55,391 - INFO - Start trial
+2025-06-11 12:12:02,763 - INFO - Waiting for mouse button release
+2025-06-11 12:12:02,764 - INFO - Waiting for fresh click
+2025-06-11 12:12:03,773 - INFO - Eyetracker started recording
+2025-06-11 12:12:03,773 - INFO - Start trial
+2025-06-11 12:12:04,537 - INFO - moved eyes
+2025-06-11 12:12:04,545 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:12:07,153 - INFO - Eyetracker started recording
+2025-06-11 12:12:07,153 - INFO - Start trial
+2025-06-11 12:12:09,842 - INFO - moved eyes
+2025-06-11 12:12:09,850 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:12:12,714 - INFO - Eyetracker started recording
+2025-06-11 12:12:12,714 - INFO - Start trial
+2025-06-11 12:12:15,880 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:12:15,895 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:12:19,205 - INFO - Eyetracker started recording
+2025-06-11 12:12:19,206 - INFO - Start trial
+2025-06-11 12:12:28,819 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3A90>, <target.Target object at 0x00000178B99F3AF0>, <target.Target object at 0x00000178B99F3B50>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C19E8AF0>
+2025-06-11 12:12:28,828 - INFO - Waiting for mouse button release
+2025-06-11 12:12:28,828 - INFO - Waiting for fresh click
+2025-06-11 12:12:33,484 - INFO - Eyetracker started recording
+2025-06-11 12:12:33,484 - INFO - Start trial
+2025-06-11 12:12:36,369 - INFO - moved eyes
+2025-06-11 12:12:36,377 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:12:38,402 - INFO - Waiting for mouse button release
+2025-06-11 12:12:38,402 - INFO - Waiting for fresh click
+2025-06-11 12:12:40,419 - INFO - Feedback displayed
+2025-06-11 12:12:40,419 - INFO - Block 3 started
+2025-06-11 12:13:06,515 - INFO - Waiting for mouse button release
+2025-06-11 12:13:06,515 - INFO - Waiting for fresh click
+2025-06-11 12:13:10,770 - INFO - Feedback displayed
+2025-06-11 12:13:12,017 - INFO - Eyetracker started recording
+2025-06-11 12:13:12,017 - INFO - Start trial
+2025-06-11 12:13:12,776 - INFO - moved eyes
+2025-06-11 12:13:12,785 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:13:15,981 - INFO - Eyetracker started recording
+2025-06-11 12:13:15,981 - INFO - Start trial
+2025-06-11 12:13:20,736 - INFO - moved eyes
+2025-06-11 12:13:20,744 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:13:23,946 - INFO - Eyetracker started recording
+2025-06-11 12:13:23,946 - INFO - Start trial
+2025-06-11 12:13:31,412 - INFO - Waiting for mouse button release
+2025-06-11 12:13:31,412 - INFO - Waiting for fresh click
+2025-06-11 12:13:33,226 - INFO - Eyetracker started recording
+2025-06-11 12:13:33,227 - INFO - Start trial
+2025-06-11 12:13:41,332 - INFO - Waiting for mouse button release
+2025-06-11 12:13:41,332 - INFO - Waiting for fresh click
+2025-06-11 12:13:44,779 - INFO - Eyetracker started recording
+2025-06-11 12:13:44,779 - INFO - Start trial
+2025-06-11 12:13:52,212 - INFO - Waiting for mouse button release
+2025-06-11 12:13:52,212 - INFO - Waiting for fresh click
+2025-06-11 12:13:53,637 - INFO - Eyetracker started recording
+2025-06-11 12:13:53,638 - INFO - Start trial
+2025-06-11 12:13:54,407 - INFO - moved eyes
+2025-06-11 12:13:54,415 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:13:57,562 - INFO - Eyetracker started recording
+2025-06-11 12:13:57,562 - INFO - Start trial
+2025-06-11 12:14:06,435 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3A90>, <target.Target object at 0x00000178B99F3AF0>, <target.Target object at 0x00000178B99F3B50>], highlighted_indices (0, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C1BD0040>
+2025-06-11 12:14:06,458 - INFO - Waiting for mouse button release
+2025-06-11 12:14:06,458 - INFO - Waiting for fresh click
+2025-06-11 12:14:12,610 - INFO - Eyetracker started recording
+2025-06-11 12:14:12,610 - INFO - Start trial
+2025-06-11 12:14:13,369 - INFO - moved eyes
+2025-06-11 12:14:13,377 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:14:16,494 - INFO - Eyetracker started recording
+2025-06-11 12:14:16,494 - INFO - Start trial
+2025-06-11 12:14:25,225 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F3070>, <target.Target object at 0x00000178B99F30D0>, <target.Target object at 0x00000178B99F3130>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C1972040>
+2025-06-11 12:14:25,235 - INFO - Waiting for mouse button release
+2025-06-11 12:14:25,235 - INFO - Waiting for fresh click
+2025-06-11 12:14:27,219 - INFO - Eyetracker started recording
+2025-06-11 12:14:27,219 - INFO - Start trial
+2025-06-11 12:14:27,986 - INFO - moved eyes
+2025-06-11 12:14:27,993 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:14:31,154 - INFO - Eyetracker started recording
+2025-06-11 12:14:31,154 - INFO - Start trial
+2025-06-11 12:14:32,928 - INFO - moved eyes
+2025-06-11 12:14:32,936 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:14:35,857 - INFO - Eyetracker started recording
+2025-06-11 12:14:35,857 - INFO - Start trial
+2025-06-11 12:14:46,466 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F32B0>, <target.Target object at 0x00000178B99F3310>, <target.Target object at 0x00000178B99F3370>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x00000178C1815160>
+2025-06-11 12:14:46,475 - INFO - Waiting for mouse button release
+2025-06-11 12:14:46,475 - INFO - Waiting for fresh click
+2025-06-11 12:14:49,041 - INFO - Eyetracker started recording
+2025-06-11 12:14:49,041 - INFO - Start trial
+2025-06-11 12:14:57,947 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3550>, <target.Target object at 0x00000178B99F35B0>], highlighted_indices (2, 0), objects <orbiting_images.OrbitingImages object at 0x00000178C1772250>
+2025-06-11 12:14:57,965 - INFO - Waiting for mouse button release
+2025-06-11 12:14:57,965 - INFO - Waiting for fresh click
+2025-06-11 12:15:00,017 - INFO - Eyetracker started recording
+2025-06-11 12:15:00,017 - INFO - Start trial
+2025-06-11 12:15:08,700 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F3190>, <target.Target object at 0x00000178B99F31F0>, <target.Target object at 0x00000178B99F3250>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BEFECA90>
+2025-06-11 12:15:08,717 - INFO - Waiting for mouse button release
+2025-06-11 12:15:08,717 - INFO - Waiting for fresh click
+2025-06-11 12:15:10,425 - INFO - Eyetracker started recording
+2025-06-11 12:15:10,426 - INFO - Start trial
+2025-06-11 12:15:13,311 - INFO - moved eyes
+2025-06-11 12:15:13,319 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:15:16,246 - INFO - Eyetracker started recording
+2025-06-11 12:15:16,246 - INFO - Start trial
+2025-06-11 12:15:25,203 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3DF0>, <target.Target object at 0x00000178B99F3E50>, <target.Target object at 0x00000178B99F3EB0>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BF21D6D0>
+2025-06-11 12:15:25,212 - INFO - Waiting for mouse button release
+2025-06-11 12:15:25,212 - INFO - Waiting for fresh click
+2025-06-11 12:15:26,711 - INFO - Eyetracker started recording
+2025-06-11 12:15:26,711 - INFO - Start trial
+2025-06-11 12:15:34,196 - INFO - Waiting for mouse button release
+2025-06-11 12:15:34,196 - INFO - Waiting for fresh click
+2025-06-11 12:15:35,432 - INFO - Eyetracker started recording
+2025-06-11 12:15:35,433 - INFO - Start trial
+2025-06-11 12:15:38,807 - INFO - moved eyes
+2025-06-11 12:15:39,049 - INFO - moved eyes
+2025-06-11 12:15:39,057 - INFO - moved eyes
+2025-06-11 12:15:43,962 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1DF0>, <target.Target object at 0x00000178B99F1E50>, <target.Target object at 0x00000178B99F1EB0>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BF1172E0>
+2025-06-11 12:15:43,980 - INFO - Waiting for mouse button release
+2025-06-11 12:15:43,980 - INFO - Waiting for fresh click
+2025-06-11 12:15:46,167 - INFO - Eyetracker started recording
+2025-06-11 12:15:46,167 - INFO - Start trial
+2025-06-11 12:15:46,920 - INFO - moved eyes
+2025-06-11 12:15:46,928 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:15:49,871 - INFO - Eyetracker started recording
+2025-06-11 12:15:49,871 - INFO - Start trial
+2025-06-11 12:15:58,963 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F36D0>, <target.Target object at 0x00000178B99F3730>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BF099C40>
+2025-06-11 12:15:58,972 - INFO - Waiting for mouse button release
+2025-06-11 12:15:58,972 - INFO - Waiting for fresh click
+2025-06-11 12:16:00,609 - INFO - Eyetracker started recording
+2025-06-11 12:16:00,609 - INFO - Start trial
+2025-06-11 12:16:01,366 - INFO - moved eyes
+2025-06-11 12:16:01,375 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:16:04,513 - INFO - Eyetracker started recording
+2025-06-11 12:16:04,513 - INFO - Start trial
+2025-06-11 12:16:12,171 - INFO - Waiting for mouse button release
+2025-06-11 12:16:12,172 - INFO - Waiting for fresh click
+2025-06-11 12:16:13,792 - INFO - Eyetracker started recording
+2025-06-11 12:16:13,792 - INFO - Start trial
+2025-06-11 12:16:15,611 - INFO - moved eyes
+2025-06-11 12:16:15,619 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:16:18,770 - INFO - Eyetracker started recording
+2025-06-11 12:16:18,770 - INFO - Start trial
+2025-06-11 12:16:19,531 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:16:19,549 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:16:22,478 - INFO - Eyetracker started recording
+2025-06-11 12:16:22,478 - INFO - Start trial
+2025-06-11 12:16:25,864 - INFO - moved eyes
+2025-06-11 12:16:25,888 - INFO - moved eyes
+2025-06-11 12:16:25,913 - INFO - moved eyes
+2025-06-11 12:16:25,939 - INFO - moved eyes
+2025-06-11 12:16:26,324 - INFO - moved eyes
+2025-06-11 12:16:26,332 - INFO - moved eyes
+2025-06-11 12:16:26,525 - INFO - moved eyes
+2025-06-11 12:16:26,533 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:16:29,240 - INFO - Eyetracker started recording
+2025-06-11 12:16:29,240 - INFO - Start trial
+2025-06-11 12:16:31,106 - INFO - moved eyes
+2025-06-11 12:16:31,114 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:16:34,022 - INFO - Eyetracker started recording
+2025-06-11 12:16:34,023 - INFO - Start trial
+2025-06-11 12:16:35,742 - INFO - moved eyes
+2025-06-11 12:16:35,750 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:16:38,668 - INFO - Eyetracker started recording
+2025-06-11 12:16:38,668 - INFO - Start trial
+2025-06-11 12:16:39,983 - INFO - moved eyes
+2025-06-11 12:16:39,992 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:16:43,122 - INFO - Eyetracker started recording
+2025-06-11 12:16:43,122 - INFO - Start trial
+2025-06-11 12:16:46,509 - INFO - moved eyes
+2025-06-11 12:16:46,709 - INFO - moved eyes
+2025-06-11 12:16:46,860 - INFO - moved eyes
+2025-06-11 12:16:47,102 - INFO - moved eyes
+2025-06-11 12:16:47,110 - INFO - moved eyes
+2025-06-11 12:16:47,655 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:16:47,669 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:16:50,175 - INFO - Eyetracker started recording
+2025-06-11 12:16:50,175 - INFO - Start trial
+2025-06-11 12:16:51,650 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:16:51,667 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:16:54,782 - INFO - Eyetracker started recording
+2025-06-11 12:16:54,783 - INFO - Start trial
+2025-06-11 12:16:57,501 - INFO - moved eyes
+2025-06-11 12:16:57,509 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:17:00,704 - INFO - Eyetracker started recording
+2025-06-11 12:17:00,704 - INFO - Start trial
+2025-06-11 12:17:09,483 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3A90>, <target.Target object at 0x00000178B99F3AF0>, <target.Target object at 0x00000178B99F3B50>], highlighted_indices (1, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C3BF4D60>
+2025-06-11 12:17:09,501 - INFO - Waiting for mouse button release
+2025-06-11 12:17:09,501 - INFO - Waiting for fresh click
+2025-06-11 12:17:17,751 - INFO - Eyetracker started recording
+2025-06-11 12:17:17,751 - INFO - Start trial
+2025-06-11 12:17:21,453 - INFO - moved eyes
+2025-06-11 12:17:21,730 - INFO - moved eyes
+2025-06-11 12:17:21,738 - INFO - moved eyes
+2025-06-11 12:17:21,855 - INFO - moved eyes
+2025-06-11 12:17:21,863 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:17:25,107 - INFO - Eyetracker started recording
+2025-06-11 12:17:25,107 - INFO - Start trial
+2025-06-11 12:17:26,809 - INFO - moved eyes
+2025-06-11 12:17:26,817 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:17:29,837 - INFO - Eyetracker started recording
+2025-06-11 12:17:29,837 - INFO - Start trial
+2025-06-11 12:17:38,499 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3970>, <target.Target object at 0x00000178B99F39D0>, <target.Target object at 0x00000178B99F3A30>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x00000178C3C62190>
+2025-06-11 12:17:38,519 - INFO - Waiting for mouse button release
+2025-06-11 12:17:38,519 - INFO - Waiting for fresh click
+2025-06-11 12:17:40,079 - INFO - Eyetracker started recording
+2025-06-11 12:17:40,079 - INFO - Start trial
+2025-06-11 12:17:41,170 - INFO - moved eyes
+2025-06-11 12:17:41,178 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:17:44,390 - INFO - Eyetracker started recording
+2025-06-11 12:17:44,390 - INFO - Start trial
+2025-06-11 12:17:53,923 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1DF0>, <target.Target object at 0x00000178B99F1E50>, <target.Target object at 0x00000178B99F1EB0>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x00000178C3CA9340>
+2025-06-11 12:17:53,944 - INFO - Waiting for mouse button release
+2025-06-11 12:17:53,944 - INFO - Waiting for fresh click
+2025-06-11 12:17:56,200 - INFO - Eyetracker started recording
+2025-06-11 12:17:56,200 - INFO - Start trial
+2025-06-11 12:17:59,365 - INFO - moved eyes
+2025-06-11 12:17:59,372 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:18:01,934 - INFO - Eyetracker started recording
+2025-06-11 12:18:01,934 - INFO - Start trial
+2025-06-11 12:18:09,270 - INFO - Waiting for mouse button release
+2025-06-11 12:18:09,270 - INFO - Waiting for fresh click
+2025-06-11 12:18:11,562 - INFO - Eyetracker started recording
+2025-06-11 12:18:11,562 - INFO - Start trial
+2025-06-11 12:18:15,257 - INFO - moved eyes
+2025-06-11 12:18:15,324 - INFO - moved eyes
+2025-06-11 12:18:15,333 - INFO - moved eyes
+2025-06-11 12:18:15,902 - INFO - moved eyes
+2025-06-11 12:18:15,910 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:18:19,272 - INFO - Eyetracker started recording
+2025-06-11 12:18:19,272 - INFO - Start trial
+2025-06-11 12:18:26,766 - INFO - Waiting for mouse button release
+2025-06-11 12:18:26,766 - INFO - Waiting for fresh click
+2025-06-11 12:18:29,551 - INFO - Eyetracker started recording
+2025-06-11 12:18:29,552 - INFO - Start trial
+2025-06-11 12:18:37,288 - INFO - Waiting for mouse button release
+2025-06-11 12:18:37,288 - INFO - Waiting for fresh click
+2025-06-11 12:18:41,213 - INFO - Eyetracker started recording
+2025-06-11 12:18:41,213 - INFO - Start trial
+2025-06-11 12:18:48,744 - INFO - Waiting for mouse button release
+2025-06-11 12:18:48,744 - INFO - Waiting for fresh click
+2025-06-11 12:18:50,394 - INFO - Eyetracker started recording
+2025-06-11 12:18:50,395 - INFO - Start trial
+2025-06-11 12:18:59,652 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1A90>, <target.Target object at 0x00000178B99F1AF0>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C47B57F0>
+2025-06-11 12:18:59,661 - INFO - Waiting for mouse button release
+2025-06-11 12:18:59,661 - INFO - Waiting for fresh click
+2025-06-11 12:19:02,136 - INFO - Eyetracker started recording
+2025-06-11 12:19:02,137 - INFO - Start trial
+2025-06-11 12:19:06,158 - INFO - moved eyes
+2025-06-11 12:19:06,275 - INFO - moved eyes
+2025-06-11 12:19:06,283 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:19:09,495 - INFO - Eyetracker started recording
+2025-06-11 12:19:09,495 - INFO - Start trial
+2025-06-11 12:19:12,184 - INFO - moved eyes
+2025-06-11 12:19:12,192 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:19:15,174 - INFO - Eyetracker started recording
+2025-06-11 12:19:15,174 - INFO - Start trial
+2025-06-11 12:19:18,113 - INFO - moved eyes
+2025-06-11 12:19:18,121 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:19:21,338 - INFO - Eyetracker started recording
+2025-06-11 12:19:21,338 - INFO - Start trial
+2025-06-11 12:19:23,506 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:19:23,524 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:19:26,865 - INFO - Eyetracker started recording
+2025-06-11 12:19:26,865 - INFO - Start trial
+2025-06-11 12:19:36,876 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1B50>, <target.Target object at 0x00000178B99F1BB0>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C4638640>
+2025-06-11 12:19:36,898 - INFO - Waiting for mouse button release
+2025-06-11 12:19:36,899 - INFO - Waiting for fresh click
+2025-06-11 12:19:38,260 - INFO - Eyetracker started recording
+2025-06-11 12:19:38,260 - INFO - Start trial
+2025-06-11 12:19:39,025 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:19:39,042 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:19:42,217 - INFO - Eyetracker started recording
+2025-06-11 12:19:42,217 - INFO - Start trial
+2025-06-11 12:19:45,306 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:19:45,320 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:19:48,122 - INFO - Eyetracker started recording
+2025-06-11 12:19:48,122 - INFO - Start trial
+2025-06-11 12:19:52,562 - INFO - moved eyes
+2025-06-11 12:19:52,570 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:19:55,801 - INFO - Eyetracker started recording
+2025-06-11 12:19:55,801 - INFO - Start trial
+2025-06-11 12:20:00,151 - INFO - moved eyes
+2025-06-11 12:20:00,159 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:20:03,367 - INFO - Eyetracker started recording
+2025-06-11 12:20:03,367 - INFO - Start trial
+2025-06-11 12:20:04,132 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:20:04,150 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:20:07,322 - INFO - Eyetracker started recording
+2025-06-11 12:20:07,322 - INFO - Start trial
+2025-06-11 12:20:15,786 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3610>, <target.Target object at 0x00000178B99F3670>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C482E160>
+2025-06-11 12:20:15,795 - INFO - Waiting for mouse button release
+2025-06-11 12:20:15,795 - INFO - Waiting for fresh click
+2025-06-11 12:20:18,367 - INFO - Eyetracker started recording
+2025-06-11 12:20:18,367 - INFO - Start trial
+2025-06-11 12:20:25,788 - INFO - Waiting for mouse button release
+2025-06-11 12:20:25,788 - INFO - Waiting for fresh click
+2025-06-11 12:20:27,650 - INFO - Eyetracker started recording
+2025-06-11 12:20:27,650 - INFO - Start trial
+2025-06-11 12:20:35,192 - INFO - Waiting for mouse button release
+2025-06-11 12:20:35,192 - INFO - Waiting for fresh click
+2025-06-11 12:20:37,626 - INFO - Eyetracker started recording
+2025-06-11 12:20:37,626 - INFO - Start trial
+2025-06-11 12:20:45,235 - INFO - Waiting for mouse button release
+2025-06-11 12:20:45,235 - INFO - Waiting for fresh click
+2025-06-11 12:20:47,194 - INFO - Eyetracker started recording
+2025-06-11 12:20:47,194 - INFO - Start trial
+2025-06-11 12:20:55,970 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3490>, <target.Target object at 0x00000178B99F34F0>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x00000178C48B6EE0>
+2025-06-11 12:20:55,981 - INFO - Waiting for mouse button release
+2025-06-11 12:20:55,982 - INFO - Waiting for fresh click
+2025-06-11 12:20:57,581 - INFO - Eyetracker started recording
+2025-06-11 12:20:57,581 - INFO - Start trial
+2025-06-11 12:21:05,134 - INFO - Waiting for mouse button release
+2025-06-11 12:21:05,134 - INFO - Waiting for fresh click
+2025-06-11 12:21:06,796 - INFO - Eyetracker started recording
+2025-06-11 12:21:06,796 - INFO - Start trial
+2025-06-11 12:21:07,555 - INFO - moved eyes
+2025-06-11 12:21:07,563 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:21:10,688 - INFO - Eyetracker started recording
+2025-06-11 12:21:10,688 - INFO - Start trial
+2025-06-11 12:21:17,970 - INFO - Waiting for mouse button release
+2025-06-11 12:21:17,970 - INFO - Waiting for fresh click
+2025-06-11 12:21:19,499 - INFO - Eyetracker started recording
+2025-06-11 12:21:19,499 - INFO - Start trial
+2025-06-11 12:21:23,986 - INFO - moved eyes
+2025-06-11 12:21:23,994 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:21:27,118 - INFO - Eyetracker started recording
+2025-06-11 12:21:27,118 - INFO - Start trial
+2025-06-11 12:21:31,355 - INFO - moved eyes
+2025-06-11 12:21:31,363 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:21:34,285 - INFO - Eyetracker started recording
+2025-06-11 12:21:34,285 - INFO - Start trial
+2025-06-11 12:21:38,125 - INFO - moved eyes
+2025-06-11 12:21:38,351 - INFO - moved eyes
+2025-06-11 12:21:38,359 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:21:41,479 - INFO - Eyetracker started recording
+2025-06-11 12:21:41,479 - INFO - Start trial
+2025-06-11 12:21:45,212 - INFO - moved eyes
+2025-06-11 12:21:45,220 - INFO - moved eyes
+2025-06-11 12:21:45,228 - INFO - moved eyes
+2025-06-11 12:21:45,304 - INFO - moved eyes
+2025-06-11 12:21:45,472 - INFO - moved eyes
+2025-06-11 12:21:45,480 - INFO - moved eyes
+2025-06-11 12:21:45,513 - INFO - moved eyes
+2025-06-11 12:21:45,521 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:21:48,659 - INFO - Eyetracker started recording
+2025-06-11 12:21:48,659 - INFO - Start trial
+2025-06-11 12:21:49,590 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:21:49,607 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:21:52,764 - INFO - Eyetracker started recording
+2025-06-11 12:21:52,765 - INFO - Start trial
+2025-06-11 12:22:00,218 - INFO - Waiting for mouse button release
+2025-06-11 12:22:00,218 - INFO - Waiting for fresh click
+2025-06-11 12:22:05,269 - INFO - Eyetracker started recording
+2025-06-11 12:22:05,269 - INFO - Start trial
+2025-06-11 12:22:13,877 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1C10>, <target.Target object at 0x00000178B99F1C70>], highlighted_indices (5, 1), objects <orbiting_images.OrbitingImages object at 0x00000178BEA4C9A0>
+2025-06-11 12:22:13,884 - INFO - Waiting for mouse button release
+2025-06-11 12:22:13,884 - INFO - Waiting for fresh click
+2025-06-11 12:22:15,410 - INFO - Eyetracker started recording
+2025-06-11 12:22:15,410 - INFO - Start trial
+2025-06-11 12:22:19,761 - INFO - moved eyes
+2025-06-11 12:22:19,769 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:22:22,475 - INFO - Eyetracker started recording
+2025-06-11 12:22:22,476 - INFO - Start trial
+2025-06-11 12:22:31,017 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3850>, <target.Target object at 0x00000178B99F38B0>, <target.Target object at 0x00000178B99F3910>], highlighted_indices (0, 0), objects <orbiting_images.OrbitingImages object at 0x00000178BF11F310>
+2025-06-11 12:22:31,025 - INFO - Waiting for mouse button release
+2025-06-11 12:22:31,025 - INFO - Waiting for fresh click
+2025-06-11 12:22:34,096 - INFO - Eyetracker started recording
+2025-06-11 12:22:34,096 - INFO - Start trial
+2025-06-11 12:22:37,281 - INFO - moved eyes
+2025-06-11 12:22:37,289 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:22:40,422 - INFO - Eyetracker started recording
+2025-06-11 12:22:40,422 - INFO - Start trial
+2025-06-11 12:22:41,263 - INFO - moved eyes
+2025-06-11 12:22:41,271 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:22:44,006 - INFO - Eyetracker started recording
+2025-06-11 12:22:44,006 - INFO - Start trial
+2025-06-11 12:22:52,337 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1A90>, <target.Target object at 0x00000178B99F1AF0>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C1815BB0>
+2025-06-11 12:22:52,352 - INFO - Waiting for mouse button release
+2025-06-11 12:22:52,352 - INFO - Waiting for fresh click
+2025-06-11 12:22:53,940 - INFO - Eyetracker started recording
+2025-06-11 12:22:53,940 - INFO - Start trial
+2025-06-11 12:23:01,307 - INFO - Waiting for mouse button release
+2025-06-11 12:23:01,308 - INFO - Waiting for fresh click
+2025-06-11 12:23:03,379 - INFO - Eyetracker started recording
+2025-06-11 12:23:03,379 - INFO - Start trial
+2025-06-11 12:23:10,730 - INFO - Waiting for mouse button release
+2025-06-11 12:23:10,730 - INFO - Waiting for fresh click
+2025-06-11 12:23:11,821 - INFO - Eyetracker started recording
+2025-06-11 12:23:11,821 - INFO - Start trial
+2025-06-11 12:23:15,694 - INFO - moved eyes
+2025-06-11 12:23:15,710 - INFO - moved eyes
+2025-06-11 12:23:15,769 - INFO - moved eyes
+2025-06-11 12:23:15,778 - INFO - moved eyes
+2025-06-11 12:23:15,786 - INFO - moved eyes
+2025-06-11 12:23:15,803 - INFO - moved eyes
+2025-06-11 12:23:15,811 - INFO - moved eyes
+2025-06-11 12:23:15,853 - INFO - moved eyes
+2025-06-11 12:23:15,861 - INFO - moved eyes
+2025-06-11 12:23:15,870 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:23:18,791 - INFO - Eyetracker started recording
+2025-06-11 12:23:18,791 - INFO - Start trial
+2025-06-11 12:23:21,932 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:23:21,947 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:23:25,192 - INFO - Eyetracker started recording
+2025-06-11 12:23:25,192 - INFO - Start trial
+2025-06-11 12:23:34,000 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3610>, <target.Target object at 0x00000178B99F3670>], highlighted_indices (3, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C484CC40>
+2025-06-11 12:23:34,008 - INFO - Waiting for mouse button release
+2025-06-11 12:23:34,009 - INFO - Waiting for fresh click
+2025-06-11 12:23:36,032 - INFO - Eyetracker started recording
+2025-06-11 12:23:36,032 - INFO - Start trial
+2025-06-11 12:23:43,722 - INFO - Waiting for mouse button release
+2025-06-11 12:23:43,722 - INFO - Waiting for fresh click
+2025-06-11 12:23:45,825 - INFO - Eyetracker started recording
+2025-06-11 12:23:45,825 - INFO - Start trial
+2025-06-11 12:23:49,674 - INFO - moved eyes
+2025-06-11 12:23:49,984 - INFO - moved eyes
+2025-06-11 12:23:49,992 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:23:53,241 - INFO - Eyetracker started recording
+2025-06-11 12:23:53,241 - INFO - Start trial
+2025-06-11 12:24:00,651 - INFO - Waiting for mouse button release
+2025-06-11 12:24:00,651 - INFO - Waiting for fresh click
+2025-06-11 12:24:02,545 - INFO - Eyetracker started recording
+2025-06-11 12:24:02,545 - INFO - Start trial
+2025-06-11 12:24:06,193 - INFO - moved eyes
+2025-06-11 12:24:09,866 - INFO - Waiting for mouse button release
+2025-06-11 12:24:09,866 - INFO - Waiting for fresh click
+2025-06-11 12:24:10,904 - INFO - Eyetracker started recording
+2025-06-11 12:24:10,904 - INFO - Start trial
+2025-06-11 12:24:11,662 - INFO - moved eyes
+2025-06-11 12:24:11,670 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:24:14,932 - INFO - Eyetracker started recording
+2025-06-11 12:24:14,932 - INFO - Start trial
+2025-06-11 12:24:24,643 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3CD0>, <target.Target object at 0x00000178B99F3D30>, <target.Target object at 0x00000178B99F3D90>], highlighted_indices (5, 0), objects <orbiting_images.OrbitingImages object at 0x00000178C5455A60>
+2025-06-11 12:24:24,664 - INFO - Waiting for mouse button release
+2025-06-11 12:24:24,665 - INFO - Waiting for fresh click
+2025-06-11 12:24:26,213 - INFO - Eyetracker started recording
+2025-06-11 12:24:26,213 - INFO - Start trial
+2025-06-11 12:24:34,777 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1F10>, <target.Target object at 0x00000178B99F1F70>, <target.Target object at 0x00000178B99F1FD0>], highlighted_indices (2, 0), objects <orbiting_images.OrbitingImages object at 0x00000178C548E8E0>
+2025-06-11 12:24:34,794 - INFO - Waiting for mouse button release
+2025-06-11 12:24:34,794 - INFO - Waiting for fresh click
+2025-06-11 12:24:36,102 - INFO - Eyetracker started recording
+2025-06-11 12:24:36,102 - INFO - Start trial
+2025-06-11 12:24:44,801 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F3190>, <target.Target object at 0x00000178B99F31F0>, <target.Target object at 0x00000178B99F3250>], highlighted_indices (4, 1), objects <orbiting_images.OrbitingImages object at 0x00000178C548E8E0>
+2025-06-11 12:24:44,813 - INFO - Waiting for mouse button release
+2025-06-11 12:24:44,813 - INFO - Waiting for fresh click
+2025-06-11 12:24:46,594 - INFO - Eyetracker started recording
+2025-06-11 12:24:46,594 - INFO - Start trial
+2025-06-11 12:24:54,002 - INFO - Waiting for mouse button release
+2025-06-11 12:24:54,002 - INFO - Waiting for fresh click
+2025-06-11 12:24:55,448 - INFO - Eyetracker started recording
+2025-06-11 12:24:55,448 - INFO - Start trial
+2025-06-11 12:25:05,219 - INFO - Check correctness: highlight_target False, targets [<target.Target object at 0x00000178B99F3CD0>, <target.Target object at 0x00000178B99F3D30>, <target.Target object at 0x00000178B99F3D90>], highlighted_indices (4, 0), objects <orbiting_images.OrbitingImages object at 0x00000178C54CE3A0>
+2025-06-11 12:25:05,237 - INFO - Waiting for mouse button release
+2025-06-11 12:25:05,238 - INFO - Waiting for fresh click
+2025-06-11 12:25:07,060 - INFO - Eyetracker started recording
+2025-06-11 12:25:07,061 - INFO - Start trial
+2025-06-11 12:25:10,899 - INFO - moved eyes
+2025-06-11 12:25:10,907 - INFO - moved eyes
+2025-06-11 12:25:11,719 - INFO - moved eyes
+2025-06-11 12:25:11,728 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:25:14,782 - INFO - Eyetracker started recording
+2025-06-11 12:25:14,782 - INFO - Start trial
+2025-06-11 12:25:18,234 - INFO - moved eyes
+2025-06-11 12:25:18,243 - INFO - moved eyes
+2025-06-11 12:25:18,251 - INFO - moved eyes
+2025-06-11 12:25:18,712 - INFO - moved eyes
+2025-06-11 12:25:18,720 - INFO - moved eyes
+2025-06-11 12:25:18,811 - INFO - moved eyes
+2025-06-11 12:25:18,820 - INFO - moved eyes
+2025-06-11 12:25:18,828 - INFO - moved eyes
+2025-06-11 12:25:18,836 - WARNING - Lost eye contact in draw_tracking()
+2025-06-11 12:25:22,135 - INFO - Eyetracker started recording
+2025-06-11 12:25:22,135 - INFO - Start trial
+2025-06-11 12:25:22,895 - INFO - moved eyes
+2025-06-11 12:25:22,903 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:25:26,263 - INFO - Eyetracker started recording
+2025-06-11 12:25:26,263 - INFO - Start trial
+2025-06-11 12:25:28,388 - INFO - moved eyes
+2025-06-11 12:25:28,396 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:25:31,740 - INFO - Eyetracker started recording
+2025-06-11 12:25:31,740 - INFO - Start trial
+2025-06-11 12:25:42,194 - INFO - Check correctness: highlight_target True, targets [<target.Target object at 0x00000178B99F1910>, <target.Target object at 0x00000178B99F1970>], highlighted_indices (1, 0), objects <orbiting_images.OrbitingImages object at 0x00000178C65D0610>
+2025-06-11 12:25:42,219 - INFO - Waiting for mouse button release
+2025-06-11 12:25:42,219 - INFO - Waiting for fresh click
+2025-06-11 12:25:48,010 - INFO - Eyetracker started recording
+2025-06-11 12:25:48,010 - INFO - Start trial
+2025-06-11 12:25:48,766 - INFO - moved eyes
+2025-06-11 12:25:48,773 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:25:52,076 - INFO - Eyetracker started recording
+2025-06-11 12:25:52,076 - INFO - Start trial
+2025-06-11 12:26:00,102 - INFO - Waiting for mouse button release
+2025-06-11 12:26:00,102 - INFO - Waiting for fresh click
+2025-06-11 12:26:08,473 - INFO - Interrupted trials: 127
+2025-06-11 12:26:08,473 - INFO - Interrupted trials: 127
+2025-06-11 12:26:08,490 - INFO - Waiting for mouse button release
+2025-06-11 12:26:08,490 - INFO - Waiting for fresh click
+2025-06-11 12:26:12,202 - INFO - Feedback displayed
+2025-06-11 12:26:12,202 - INFO - Start trial
+2025-06-11 12:26:12,958 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:13,092 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:15,098 - INFO - Start trial
+2025-06-11 12:26:15,862 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:15,936 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:17,941 - INFO - Start trial
+2025-06-11 12:26:18,703 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:18,754 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:20,763 - INFO - Start trial
+2025-06-11 12:26:21,517 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:21,632 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:23,645 - INFO - Start trial
+2025-06-11 12:26:24,404 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:24,502 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:26,512 - INFO - Start trial
+2025-06-11 12:26:27,264 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:27,349 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:29,357 - INFO - Start trial
+2025-06-11 12:26:30,110 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:30,206 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:32,216 - INFO - Start trial
+2025-06-11 12:26:32,967 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:33,025 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:35,032 - INFO - Start trial
+2025-06-11 12:26:35,796 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:35,845 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:37,857 - INFO - Start trial
+2025-06-11 12:26:38,607 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:38,718 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:40,732 - INFO - Start trial
+2025-06-11 12:26:41,498 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:41,557 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:43,568 - INFO - Start trial
+2025-06-11 12:26:44,322 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:44,420 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:46,427 - INFO - Start trial
+2025-06-11 12:26:47,192 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:47,290 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:49,301 - INFO - Start trial
+2025-06-11 12:26:50,065 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:50,162 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:52,173 - INFO - Start trial
+2025-06-11 12:26:52,926 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:53,024 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:55,034 - INFO - Start trial
+2025-06-11 12:26:55,797 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:55,854 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:26:57,862 - INFO - Start trial
+2025-06-11 12:26:58,626 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:26:58,724 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:00,731 - INFO - Start trial
+2025-06-11 12:27:01,495 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:01,580 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:03,591 - INFO - Start trial
+2025-06-11 12:27:04,344 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:04,432 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:06,442 - INFO - Start trial
+2025-06-11 12:27:07,194 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:07,251 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:09,261 - INFO - Start trial
+2025-06-11 12:27:10,017 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:10,114 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:12,122 - INFO - Start trial
+2025-06-11 12:27:12,886 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:12,984 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:14,996 - INFO - Start trial
+2025-06-11 12:27:15,752 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:15,849 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:17,862 - INFO - Start trial
+2025-06-11 12:27:18,619 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:18,717 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:20,727 - INFO - Start trial
+2025-06-11 12:27:21,491 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:21,546 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:23,553 - INFO - Start trial
+2025-06-11 12:27:24,312 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:24,396 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:26,404 - INFO - Start trial
+2025-06-11 12:27:27,163 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:27,261 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:29,273 - INFO - Start trial
+2025-06-11 12:27:30,023 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:30,120 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:32,130 - INFO - Start trial
+2025-06-11 12:27:32,890 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:32,988 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:34,999 - INFO - Start trial
+2025-06-11 12:27:35,758 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:35,855 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:37,866 - INFO - Start trial
+2025-06-11 12:27:38,624 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:38,722 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:40,731 - INFO - Start trial
+2025-06-11 12:27:41,495 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:41,593 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:43,606 - INFO - Start trial
+2025-06-11 12:27:44,362 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:44,436 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:46,444 - INFO - Start trial
+2025-06-11 12:27:47,207 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:47,305 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:49,313 - INFO - Start trial
+2025-06-11 12:27:50,072 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:50,170 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:52,182 - INFO - Start trial
+2025-06-11 12:27:52,945 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:53,042 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:55,054 - INFO - Start trial
+2025-06-11 12:27:55,812 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:55,909 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:27:57,921 - INFO - Start trial
+2025-06-11 12:27:58,685 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:27:58,783 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:28:00,794 - INFO - Start trial
+2025-06-11 12:28:01,553 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:28:01,650 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:28:03,663 - INFO - Start trial
+2025-06-11 12:28:04,421 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:28:04,519 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:28:06,531 - INFO - Start trial
+2025-06-11 12:28:07,285 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:28:07,343 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:28:09,350 - INFO - Start trial
+2025-06-11 12:28:10,419 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:28:10,457 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:28:12,467 - INFO - Start trial
+2025-06-11 12:28:13,223 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:28:13,265 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:28:15,274 - INFO - Start trial
+2025-06-11 12:28:16,037 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:28:16,075 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:28:18,081 - INFO - Start trial
+2025-06-11 12:28:18,837 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:28:18,881 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:28:20,890 - INFO - Start trial
+2025-06-11 12:28:21,650 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:28:21,693 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:28:23,697 - INFO - Start trial
+2025-06-11 12:28:24,460 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:28:24,504 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:28:26,509 - INFO - Start trial
+2025-06-11 12:28:27,267 - WARNING - Brak pozycji wzroku (None) gpos
+2025-06-11 12:28:27,311 - WARNING - Lost eye contact in draw_cue()
+2025-06-11 12:28:29,331 - INFO - Waiting for mouse button release
+2025-06-11 12:28:29,331 - INFO - Waiting for fresh click
+2025-06-11 12:28:34,859 - INFO - Feedback displayed

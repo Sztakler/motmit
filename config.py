@@ -28,4 +28,4 @@ max_response_time_mot = 2.5  # seconds
 max_response_time_mit = 5.0  # seconds
 
 training_on = False
-eyetracker_on = False
+eyetracker_on = True

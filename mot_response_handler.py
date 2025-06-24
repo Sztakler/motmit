@@ -60,17 +60,17 @@ class MOTResponseHandler(ResponseHandler):
         # Checking the correctness of the response
         if self.clicked_object == response_circle_target_color:
             if is_target_highlighted:
-                self.feedback = "Dobrze. Wybrałeś poprawny target."
+                self.feedback = "Dobrze."
                 self.correct = True
             else:
-                self.feedback = "Źle. Wybrałeś ikonę dystraktora."
+                self.feedback = "Źle."
                 self.correct = False
         elif self.clicked_object == response_circle_mirror_color:
             if not is_target_highlighted:
-                self.feedback = "Dobrze. Wybrałeś ikonę dystraktora."
+                self.feedback = "Dobrze."
                 self.correct = True
             else:
-                self.feedback = "Źle. Nie wybrałeś ikony dystraktora."
+                self.feedback = "Źle."
                 self.correct = False
         print(self.feedback)
         return self.correct

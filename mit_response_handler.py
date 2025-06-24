@@ -90,20 +90,20 @@ class MITResponseHandler(ResponseHandler):
         if self.clicked_object:
             if highlight_target:
                 if clicked_target:
-                    self.feedback = "Dobrze. Wybrałeś poprawny target."
+                    self.feedback = "Dobrze. Został podświetlony target. Wybrałeś poprawny target."
                     self.correct = True
                 elif clicked_cross:
-                    self.feedback = "Źle. Wybrałeś ikonę dystraktora."
+                    self.feedback = "Źle. Został podświetlony target. Wybrałeś ikonę dystraktora."
                     self.correct = False
                 else:
-                    self.feedback = "Źle. Wybrałeś zły target."
+                    self.feedback = "Źle. Został podświetlony target. Wybrałeś zły target."
                     self.correct = False
             else:
                 if clicked_cross:
-                    self.feedback = "Dobrze. Wybrałeś ikonę dystraktora."
+                    self.feedback = "Dobrze. Został podświetlony dystraktor. Wybrałeś ikonę dystraktora."
                     self.correct = True
                 else:   
-                    self.feedback = "Źle. Nie wybrałeś ikony dystraktora."
+                    self.feedback = "Źle. Został podświetlony dystraktor. Nie wybrałeś ikony dystraktora."
                     self.correct = False
         else:
             self.correct = False

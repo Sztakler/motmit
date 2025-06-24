@@ -54,7 +54,7 @@ images_directory = "images"
 image_count = 11
 images_paths =  [(f"{images_directory}/{i}a.png", f"{images_directory}/{i}b.png") for i in range(1, image_count + 1)]
 
-selected_combinations = combinations[:30]
+selected_combinations = combinations[:]
 
 filename = f"{participants_path}/{form.id}.csv"
 file_exists = os.path.isfile(filename) and os.path.getsize(filename) > 0
@@ -91,7 +91,7 @@ if training_on:
     eyetracker.stop_recording()
     display_feedback(win, "Koniec bloku testowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby przejść do badania.")
 
-n_blocks = 1
+n_blocks = 3
 for block in range(n_blocks):
     logger.info(f"Block {block + 1} started")
     eyetracker.calibrate_and_start_recording()
