@@ -91,7 +91,7 @@ if training_on:
     eyetracker.stop_recording()
     display_feedback(win, "Koniec bloku testowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby przejść do badania.")
 
-n_blocks = 3
+n_blocks = 4
 for block in range(n_blocks):
     logger.info(f"Block {block + 1} started")
     eyetracker.calibrate_and_start_recording()
@@ -119,6 +119,7 @@ for block in range(n_blocks):
 
 logger.info(f"Interrupted trials: {len(interrupted_trials)}")
 if len(interrupted_trials) > 0:
+        eyetracker.calibrate_and_start_recording()
         logger.info(f"Interrupted trials: {len(interrupted_trials)}")
         display_feedback(win, "Niektóre próby zostały przerwane. Naciśnij dowolny przycisk myszy, aby je powtórzyć.")
         for trial in interrupted_trials[:len(selected_combinations) // 2]:
