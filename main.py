@@ -58,6 +58,8 @@ images_paths =  [(f"{images_directory}/{i}a.png", f"{images_directory}/{i}b.png"
 
 selected_combinations = combinations[:]
 
+# Create the data/participants catalogue if it doesn't exist
+os.makedirs(participants_path, exist_ok=True)
 filename = f"{participants_path}/{form.id}.csv"
 file_exists = os.path.isfile(filename) and os.path.getsize(filename) > 0
 
