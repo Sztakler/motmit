@@ -6,14 +6,16 @@ from mot_trial import MOTTrial
 from mit_trial import MITTrial
 from form import Form
 import os
-from config import participants_path, fieldnames, feedback_color, feedback_font_size, scale, mit_target_color, mot_target_color, training_on
+from config import participants_path, fieldnames, feedback_color, feedback_font_size, scale, mit_target_color, mot_target_color, training_on, form_on
 from eyetracker import eyetracker
 import logging
 from utils.input import wait_for_input
 from logger import logger
 
 form = Form()
-# form.show_form()
+
+if form_on:
+    form.show_form()
  
 win = visual.Window([1920,1080], units="pix", fullscr=True)
     
