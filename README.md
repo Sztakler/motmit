@@ -1,4 +1,4 @@
-# Eksperyment MOT/MIT
+# MOT/MIT Experiment
 
 ## Experiment description
 
