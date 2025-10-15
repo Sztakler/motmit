@@ -122,7 +122,7 @@ if len(interrupted_trials) > 0:
         eyetracker.calibrate_and_start_recording()
         logger.info(f"Interrupted trials: {len(interrupted_trials)}")
         display_feedback(win, "Niektóre próby zostały przerwane. Naciśnij dowolny przycisk myszy, aby je powtórzyć.")
-        for trial in interrupted_trials[:len(selected_combinations)]:
+        for trial in interrupted_trials[:len(selected_combinations) // 2]:
             trial.reset()
             trial.run()
         interrupted_trials.clear()
