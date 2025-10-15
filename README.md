@@ -59,5 +59,7 @@ Generally most of the configuration variables **shouldn't be changed**. There ar
 | `training_on` | Boolean flag to enable or disable the training phase. **It must be enabled in the real experiment**. | `False` |
 | `eyetracker_on` | Boolean flag to enable or disable the eye-tracking system. **It must be enabled in the real experiment**. | `True` |
 | `form_on` | Boolean flag to enable or disable the user form (to collect user data before the experiment starts). **It must be enabled in the real experiment**. | `False` |
+| `n_blocks` | Number of blocks in the experiment. | `4` |
+| `n_selected_combinations` | Number of combinations to select per block. Useful for quick debugging when you want to reduce the number of trials. Set to `None` to include all combinations. | `None` |
 
 ---
