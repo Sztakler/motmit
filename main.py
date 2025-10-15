@@ -6,9 +6,8 @@ from mot_trial import MOTTrial
 from mit_trial import MITTrial
 from form import Form
 import os
-from config import participants_path, fieldnames, feedback_color, feedback_font_size, scale, mit_target_color, mot_target_color, training_on, form_on
+from config import participants_path, fieldnames, feedback_color, feedback_font_size, scale, mit_target_color, mot_target_color, training_on, form_on, n_blocks, n_selected_combinations
 from eyetracker import eyetracker
-import logging
 from utils.input import wait_for_input
 from logger import logger
 
@@ -56,7 +55,7 @@ images_directory = "images"
 image_count = 11
 images_paths =  [(f"{images_directory}/{i}a.png", f"{images_directory}/{i}b.png") for i in range(1, image_count + 1)]
 
-selected_combinations = combinations[:]
+selected_combinations = combinations[:n_selected_combinations]
 
 # Create the data/participants catalogue if it doesn't exist
 os.makedirs(participants_path, exist_ok=True)
@@ -64,8 +63,6 @@ filename = f"{participants_path}/{form.id}.csv"
 file_exists = os.path.isfile(filename) and os.path.getsize(filename) > 0
 
 eyetracker.config(win, experimentName, form.id)
-
-
 
 with open(filename, mode="a", newline="") as file:
     writer = csv.DictWriter(file, fieldnames=fieldnames)
@@ -95,7 +92,6 @@ if training_on:
     eyetracker.stop_recording()
     display_feedback(win, "Koniec bloku testowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby przejść do badania.")
 
-n_blocks = 4
 for block in range(n_blocks):
     logger.info(f"Block {block + 1} started")
     eyetracker.calibrate_and_start_recording()
@@ -114,8 +110,8 @@ for block in range(n_blocks):
         interrupted = trial.run()
         win.flip()
 
-        if interrupted:
-            interrupted_trials.append(trial)
+    if interrupted:
+        interrupted_trials.append(trial)
 
     eyetracker.stop_recording()
     if block != n_blocks - 1:
@@ -126,9 +122,10 @@ if len(interrupted_trials) > 0:
         eyetracker.calibrate_and_start_recording()
         logger.info(f"Interrupted trials: {len(interrupted_trials)}")
         display_feedback(win, "Niektóre próby zostały przerwane. Naciśnij dowolny przycisk myszy, aby je powtórzyć.")
-        for trial in interrupted_trials[:len(selected_combinations) // 2]:
+        for trial in interrupted_trials[:len(selected_combinations)]:
             trial.reset()
             trial.run()
         interrupted_trials.clear()
 
 display_feedback(win, "Koniec eksperymentu. Dziękujemy za udział.")
+
