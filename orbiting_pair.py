@@ -63,3 +63,6 @@ class OrbitingPair:
 
     def update_initial_angle(self, t, speed):
         self.initial_angle += self.direction * speed * t
+
+    def reset_angle(self):
+        self.angle = 0

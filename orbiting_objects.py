@@ -94,3 +94,7 @@ class OrbitingObjects:
 
     def is_target_highlighted(self):
         return self.highlighted_target
+    
+    def reset_angles(self):
+        for orbit in self.orbits:
+            orbit.reset_angle()

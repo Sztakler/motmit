@@ -36,7 +36,8 @@ class Trial:
         self.response_handler.clicked_object = None
         self.response_handler.feedback = None
         self.response_handler.correct = None
-
+        self.objects.reset_angles()
+        
     def split_time(self, time, n):
         cuts = sorted([random.uniform(0, time) for _ in range(n - 1)])
         intervals = [cuts[0]] + [cuts[i] - cuts[i-1] for i in range(1, n-1)] + [time - cuts[-1]]
