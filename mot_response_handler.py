@@ -72,5 +72,4 @@ class MOTResponseHandler(ResponseHandler):
             else:
                 self.feedback = "Źle."
                 self.correct = False
-        print(self.feedback)
         return self.correct
