@@ -108,7 +108,6 @@ class MITResponseHandler(ResponseHandler):
         else:
             self.correct = False
 
-        print(self.feedback)
         return self.correct
 
     def draw_carousel(self, objects):

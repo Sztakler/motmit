@@ -48,6 +48,7 @@ class Trial:
 
     def draw_fixation(self):
         delay = 0.75
+        fixation_delay = 0.5
         clock = core.Clock()
         clock.reset()
         
@@ -61,15 +62,12 @@ class Trial:
             self.win.flip()
             core.wait(0.01)
 
-        while clock.getTime() < delay:
-            eye_contact = eyetracker.check_position() and eyetracker.check_blink()
+        clock.reset()
+        while clock.getTime() < fixation_delay:
             self.draw_fixation_cross()
             self.win.flip()
             core.wait(0.01)
 
-            # if not eye_contact:
-            #     return False
-            
         return True
 
     def draw_cue(self):
@@ -230,7 +228,6 @@ class Trial:
     def save_data(self, response, correct_response, correctness, flat_images=[]):
         condition_id = self.generate_condition_id()
         stripped_images = [path.replace('images/', '') for path in flat_images]
-        print(correct_response, response)
         stripped_response = response.replace('images/', '') if response else None
         stripped_correct_response = correct_response.replace('images/', '') if self.trial_type == "mit" else correct_response
         target_side = 'l' if self.targets_side == 0 else 'r'
