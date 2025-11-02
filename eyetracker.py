@@ -3,6 +3,7 @@ import psychopy.iohub as io
 import os
 from logger import logger
 from config import eyetracker_on
+from datetime import datetime
 
 class Eyetracker:
     def __init__(self):
@@ -25,13 +26,14 @@ class Eyetracker:
             return
         self.ioConfig['Keyboard'] = dict(use_keymap='psychopy')
         self.ioSession = '1'
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         self.filename = (str(id) + '_' + experimentName)
-        self. data_directory = "data/eyetracker"
+        self.data_directory = "data/eyetracker"
         if not os.path.exists(self.data_directory):
             os.makedirs(self.data_directory)
     
         # Full path to eyetracker data files
-        self.filename = os.path.join(self.data_directory, str(id) + '_' + experimentName)
+        self.filename = os.path.join(self.data_directory, f"{id}_{experimentName}_{timestamp}")
 
         self.ioServer = io.launchHubServer(window=win, experiment_code='untitled', session_code=self.ioSession, datastore_name=self.filename, **self.ioConfig)
         self.eyetracker = self.ioServer.getDevice('tracker')
@@ -72,12 +74,20 @@ class Eyetracker:
     def start_recording(self):
         if not eyetracker_on:
             return
-        self.eyetracker.setRecordingState(True)
-    
+        try:
+            self.eyetracker.setRecordingState(True)
+            logger.info("Eyetracker started recording")
+        except Exception as e:
+            logger.error(f"Failed to start eyetracker recording: {e}")    
+
     def stop_recording(self):
         if not eyetracker_on:
             return
-        self.eyetracker.setRecordingState(False)
+        try:
+            self.eyetracker.setRecordingState(False)
+            logger.info("Eyetracker stopped recording")
+        except Exception as e:
+            logger.error(f"Failed to stop eyetracker recording: {e}")
 
     def get_data(self):
         if not eyetracker_on:
@@ -128,18 +138,28 @@ class Eyetracker:
     def getLastGazePosition(self):
         if not eyetracker_on:
             return None
-        gpos = self.eyetracker.getLastGazePosition()
-        return gpos
+        try:
+            gpos = self.eyetracker.getLastGazePosition()
+            if gpos is None:
+                logger.warning("Eyetracker returned None for gaze position")
+            else:
+                logger.debug(f"Gaze position: {gpos}")
+            return gpos
+        except Exception as e:
+            logger.error(f"Error getting gaze position: {e}")
+            return None
 
     def reset_state(self):
         if not eyetracker_on:
             return
-        self.stop_recording()
-        core.wait(0.5)
-        self.eyetracker.flushData()
-        self.start_recording()
-        self.blink_counter = 0
-        logger.info("Eyetracker reset (with flush)")
-
+        try:
+            self.stop_recording()
+            core.wait(0.5)
+            self.eyetracker.flushData()
+            self.start_recording()
+            self.blink_counter = 0
+            logger.info("Eyetracker reset successfully (flush + restart)")
+        except Exception as e:
+            logger.error(f"Error during eyetracker reset: {e}")
 # singleton
 eyetracker = Eyetracker()
