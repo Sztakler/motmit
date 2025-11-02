@@ -37,5 +37,3 @@ class MITTrial(Trial):
         if not practiceMode:
             self.save_data(self.response_handler.clicked_object, correct_response, is_correct, flat_images)
         wait_for_input(self.win)
-
-        

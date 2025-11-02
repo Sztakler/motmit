@@ -1,8 +1,9 @@
+from psychopy import core
 from orbiting_images import OrbitingImages
 from trial import Trial
 from mot_response_handler import MOTResponseHandler
 from utils.input import wait_for_input
-from config import mot_target_color
+from config import probe_time, mot_target_color
 from random import shuffle
 
 class MOTTrial(Trial):
@@ -15,6 +16,15 @@ class MOTTrial(Trial):
         self.objects = OrbitingImages(win, self.target_set_size, self.targets, self.targets_side, images_paths=images, target_color=mot_target_color)
         self.response_handler = MOTResponseHandler(win)
 
+    def draw_probe(self):
+        delay = probe_time
+        self.draw_fixation_cross()
+        self.objects.draw_static(core.getTime())
+        self.objects.cover()
+        self.highlighted_indices = self.objects.highlight_object(self.highlight_target)
+        self.win.flip()
+        core.wait(delay)
+        
     def handle_response(self, practiceMode=False):
         self.response_handler.get_response()
 
