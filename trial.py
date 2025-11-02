@@ -82,6 +82,7 @@ class Trial:
             self.win.flip()
 
             if not eye_contact:
+                logger.warning(f"Trial {self.trial_number}: eye contact lost during tracking")
                 return False
             
         return True
@@ -116,9 +117,11 @@ class Trial:
             self.draw_fixation_cross()      
             self.win.flip()
             if 'escape' in event.getKeys():
+                logger.info(f"Experiment cancelled manually")
                 core.quit()
             
             if not eye_contact:
+                logger.warning(f"Trial {self.trial_number}: eye contact lost during tracking")
                 return False
 
         current_time = core.getTime() - start_time
@@ -137,6 +140,7 @@ class Trial:
                 self.draw_fixation_cross()      
                 self.win.flip()
                 if 'escape' in event.getKeys():
+                    logger.info(f"Experiment cancelled manually")
                     core.quit()
                 
                 # if not eye_contact:
@@ -155,31 +159,33 @@ class Trial:
             self.win.flip()
 
             if 'escape' in event.getKeys():
+                logger.info(f"Experiment cancelled manually")
                 core.quit()
         
             if not eye_contact:
+                logger.warning(f"Trial {self.trial_number}: eye contact lost during tracking")
                 return False
             
         return True
 
     def run_trial(self):
-        logger.info("Start trial")
+        logger.info(f"Start trial {self.trial_number}, block {self.block_number}, type {self.trial_type}")
 
         self.win.mouseVisible = False
 
         if not self.draw_fixation(): 
             self.interrupted = True
-            logger.warning("Lost eye contact in draw_fixation()")
+            logger.warning(f"Lost eye contact in draw_fixation() - trial {self.trial_number}")
             self.display_look_at_center_message_and_quit()
             return
         if not self.draw_cue(): 
             self.interrupted = True
-            logger.warning("Lost eye contact in draw_cue()")
+            logger.warning(f"Lost eye contact in draw_cue() - trial {self.trial_number}")
             self.display_look_at_center_message_and_quit()
             return
         if not self.draw_tracking(): 
             self.interrupted = True
-            logger.warning("Lost eye contact in draw_tracking()")
+            logger.warning(f"Lost eye contact in draw_tracking() - trial {self.trial_number}")
             self.display_look_at_center_message_and_quit()
             return
         
@@ -199,6 +205,7 @@ class Trial:
         self.response_handler.display_feedback(self.feedback_color)
         
         if not practiceMode:
+            logger.info(f"Trial {self.trial_number}: Response = {self.response_handler.clicked_object}, Correct = {is_correct}")
             self.save_data(self.response_handler.clicked_object, is_correct)
         wait_for_input(self.win)
 
@@ -207,6 +214,9 @@ class Trial:
         if self.interrupted:
             return self.interrupted
         self.handle_response(practiceMode)
+        
+        logger.info(f"End trial {self.trial_number}")
+
         return self.interrupted
 
     def display_look_at_center_message_and_quit(self):
@@ -221,6 +231,7 @@ class Trial:
             message.draw()
             self.win.flip()
             if 'escape' in event.getKeys():
+                logger.info(f"Experiment cancelled manually")
                 core.quit()
         
         self.interrupted = True

@@ -10,6 +10,7 @@ def wait_for_input(win):
         keys = event.getKeys(modifiers=True)
         for key, mods in keys:
             if key == 'escape':
+                logger.info(f"Experiment cancelled manually")
                 core.quit()
         core.wait(0.01)
 
@@ -18,6 +19,7 @@ def wait_for_input(win):
         keys = event.getKeys(modifiers=True)
         for key, mods in keys:
             if key == 'escape':
+                logger.info(f"Experiment cancelled manually")
                 core.quit()
             if key == 'r' and 'ctrl' in mods:
                 logger.info("Manually recalibrated eyetracker")

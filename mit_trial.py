@@ -4,6 +4,7 @@ from trial import Trial
 from mit_response_handler import MITResponseHandler
 from utils.input import wait_for_input
 from config import mit_target_color, probe_time
+from logger import logger
 
 class Form():
     def __init__(self):
@@ -16,6 +17,7 @@ class MITTrial(Trial):
         self.response_handler = MITResponseHandler(win, images_paths=images_paths)
 
     def draw_probe(self):
+        logger.info(f"Trial {self.trial_number}: showing probe")
         delay = probe_time
         self.draw_fixation_cross()
         self.objects.draw_static(core.getTime())
@@ -23,6 +25,7 @@ class MITTrial(Trial):
         self.highlighted_indices = self.objects.highlight_object(self.highlight_target)
         self.win.flip()
         core.wait(delay)
+        logger.info(f"Trial {self.trial_number}: probe shown, highlighted_indices={self.highlighted_indices}")
 
     def handle_response(self, practiceMode=False):
         self.response_handler.get_response(self.objects)
@@ -36,4 +39,6 @@ class MITTrial(Trial):
         
         if not practiceMode:
             self.save_data(self.response_handler.clicked_object, correct_response, is_correct, flat_images)
+            logger.info(f"Trial {self.trial_number}: response={self.response_handler.clicked_object}, correct_response={correct_response}, correct={is_correct}")
+
         wait_for_input(self.win)
