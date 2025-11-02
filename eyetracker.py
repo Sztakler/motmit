@@ -3,6 +3,7 @@ import psychopy.iohub as io
 import os
 from logger import logger
 from config import eyetracker_on
+from datetime import datetime
 
 class Eyetracker:
     def __init__(self):
@@ -25,13 +26,14 @@ class Eyetracker:
             return
         self.ioConfig['Keyboard'] = dict(use_keymap='psychopy')
         self.ioSession = '1'
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         self.filename = (str(id) + '_' + experimentName)
         self.data_directory = "data/eyetracker"
         if not os.path.exists(self.data_directory):
             os.makedirs(self.data_directory)
     
         # Full path to eyetracker data files
-        self.filename = os.path.join(self.data_directory, str(id) + '_' + experimentName)
+        self.filename = os.path.join(self.data_directory, f"{id}_{experimentName}_{timestamp}")
 
         self.ioServer = io.launchHubServer(window=win, experiment_code='untitled', session_code=self.ioSession, datastore_name=self.filename, **self.ioConfig)
         self.eyetracker = self.ioServer.getDevice('tracker')
