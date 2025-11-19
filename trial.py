@@ -211,8 +211,11 @@ class Trial:
 
     def run(self, practiceMode=False):
         self.run_trial()
+
         if self.interrupted:
+            logger.info("Trial {self.trial_number} interrupted")
             return self.interrupted
+        
         self.handle_response(practiceMode)
         
         logger.info(f"End trial {self.trial_number}")

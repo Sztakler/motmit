@@ -110,8 +110,8 @@ for block in range(n_blocks):
         interrupted = trial.run()
         win.flip()
 
-    if interrupted:
-        interrupted_trials.append(trial)
+        if interrupted:
+            interrupted_trials.append(trial)
 
     eyetracker.stop_recording()
     if block != n_blocks - 1:
