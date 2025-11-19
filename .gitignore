@@ -27,6 +27,7 @@ share/python-wheels/
 MANIFEST
 data/eyetracker/*
 data/participants/*
+logs/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
