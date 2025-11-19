@@ -224,19 +224,10 @@ class Trial:
 
     def display_look_at_center_message_and_quit(self):
         """Wyświetla komunikat o patrzeniu na środek i kończy trial."""
-        message = visual.TextStim(self.win, text="Proszę patrzeć na środek i nie mrugać!", color='black', height=0.05 * scale, pos=(0, 0.15 * scale))
-        clock = core.Clock()
-        duration = 2.0  # ile sekund wyświetlamy komunikat
-        
-        clock.reset()
-        while clock.getTime() < duration:
-            self.draw_fixation_cross()
-            message.draw()
-            self.win.flip()
-            if 'escape' in event.getKeys():
-                logger.info(f"Experiment cancelled manually")
-                core.quit()
-        
+        message = visual.TextStim(self.win, text="Proszę patrzeć na środek i nie mrugać. Naciśnij dowolny przycisk myszy, aby kontynuować.", color='black', height=0.05 * scale, pos=(0, 0 * scale))
+        message.draw()
+        self.win.flip()
+        wait_for_input(self.win)
         self.interrupted = True
 
     def save_data(self, response, correct_response, correctness, flat_images=[]):
