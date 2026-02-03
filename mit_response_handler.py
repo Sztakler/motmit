@@ -42,6 +42,21 @@ class MITResponseHandler(ResponseHandler):
                 if self.clicked_object:
                     break
 
+    def _get_highlighted_image(self, highlighted_indices, objects):
+        if not highlighted_indices:
+            return None
+        try:
+            num_available_paths = len(objects.images_paths)
+            orbit_idx = highlighted_indices[0] % num_available_paths
+            item_idx = highlighted_indices[1]
+        
+            path_pair = objects.images_paths[orbit_idx]
+            return path_pair[item_idx]
+        
+        except (IndexError, TypeError) as e:
+            logger.error(f"Błąd indeksowania przy indeksach {highlighted_indices}: {e}")
+            return None
+
     
     def check_correctness(self, highlight_target, targets, highlighted_indices, objects):
         """
@@ -51,7 +66,7 @@ class MITResponseHandler(ResponseHandler):
             bool: True if the response is correct, False otherwise.
         """
         logger.info(f"Check correctness: highlight_target {highlight_target}, targets {targets}, highlighted_indices {highlighted_indices}, objects {objects}")
-        highlighted_image = objects.images_paths[highlighted_indices[0] % 3][highlighted_indices[1]]
+        highlighted_image = self._get_highlighted_image(highlighted_indices, objects)
         clicked_target = self.clicked_object == highlighted_image
         clicked_cross = self.clicked_object == "images/0a.png"
 
@@ -83,7 +98,7 @@ class MITResponseHandler(ResponseHandler):
             bool: True if the response is correct, False otherwise.
         """
         logger.info(f"Check correctness: highlight_target {highlight_target}, targets {targets}, highlighted_indices {highlighted_indices}, objects {objects}")
-        highlighted_image = objects.images_paths[highlighted_indices[0] % 3][highlighted_indices[1]]
+        highlighted_image = self._get_highlighted_image(highlighted_indices, objects)
         clicked_target = self.clicked_object == highlighted_image
         clicked_cross = self.clicked_object == "images/0a.png"
 
