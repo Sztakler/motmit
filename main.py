@@ -1,131 +1,157 @@
 from psychopy import visual, core, event
-import random
-import csv
-from target import Target
-from mot_trial import MOTTrial
-from mit_trial import MITTrial
-from form import Form
+from ExperimentView import ExperimentView
+from scenarios_generator import generate_base_pool, get_full_experiment
+from config import *
+from response_manager import handle_response
 import os
-from config import participants_path, fieldnames, feedback_color, feedback_font_size, scale, mit_target_color, mot_target_color, training_on, form_on, n_blocks, n_selected_combinations
-from eyetracker import eyetracker
-from utils.input import wait_for_input
-from logger import logger
+import re
 
-form = Form()
-
-if form_on:
-    form.show_form()
- 
-win = visual.Window([1920,1080], units="pix", fullscr=True)
+class FixationCross:
+    def __init__(self, win, size):
+        self.lines = [
+            visual.Line(win, start=(-size, 0), end=(size, 0), lineColor='black', lineWidth=2),
+            visual.Line(win, start=(0, -size), end=(0, size), lineColor='black', lineWidth=2)
+        ]
     
-def get_mirror_orbit_index(orbit_index):
-    return (orbit_index + orbits_on_side) % (2 * orbits_on_side) 
+    def draw(self):
+        for line in self.lines:
+            line.draw()
 
-def display_feedback(win, feedback_text):
-    feedback = visual.TextStim(win, text=feedback_text, color=feedback_color, height=feedback_font_size * scale)
-    feedback.draw()
+def get_images(folder_path="images/"):
+    """
+    Scans the folder for files named like '0a.png', '0b.png', '10a.png', etc.
+    Returns a sorted list of paths.
+    """
+    if not os.path.exists(folder_path):
+        print(f"Warning: Folder '{folder_path}' not found.")
+        return []
+
+    # Regex breakdown:
+    # ^\d+    -> Starts with one or more digits
+    # [ab]    -> Followed by exactly 'a' or 'b'
+    # \.png$  -> Ends with '.png'
+    pattern = re.compile(r'^(\d+)[ab]\.png$')
+    
+    files = []
+    for f in os.listdir(folder_path):
+        match = pattern.match(f)
+        if match:
+            files.append(f)
+    
+    # Sort numerically based on the number part first, then the letter
+    # This ensures: 0a, 0b, 1a, 1b ... 10a, 10b
+    files.sort(key=lambda x: (int(pattern.match(x).group(1)), x))
+    
+    return [os.path.join(folder_path, f) for f in files]
+
+# --- PHASE DURATIONS (Based on your Trial class) ---
+TIME_FIXATION_TEXT = 0.75  
+TIME_FIXATION_CROSS = 0.5   
+TIME_CUE = cue_time         
+TIME_MOVEMENT_START = 1.0   
+TIME_MOVEMENT_JITTER = 0.75 
+TIME_MOVEMENT_END = 0.75    
+TIME_STOP = 0.5             
+TIME_PROBE = probe_time     
+
+# Total movement duration for the loop
+TIME_MOVEMENT_TOTAL = TIME_MOVEMENT_START + TIME_MOVEMENT_JITTER + TIME_MOVEMENT_END
+
+def run_trial(win, trial_config):
+    view = ExperimentView(win, trial_config, base_switch_time=TIME_MOVEMENT_START)
+    fixation = FixationCross(win, size=20) # Assuming FixationCross is defined
+    clock = core.Clock()
+
+    # --- PHASE 0: Instruction Text ---
+    color_name = "blue" if trial_config.trial_type.name == "MOT" else "pink"
+    color_val = mot_target_color if trial_config.trial_type.name == "MOT" else mit_target_color
+    instr_msg = visual.TextStim(win, text=f"Please track the {color_name} objects", 
+                                color=color_val, height=30, units='pix')
+    
+    clock.reset()
+    while clock.getTime() < TIME_FIXATION_TEXT:
+        instr_msg.draw()
+        win.flip()
+
+    # --- PHASE 1: Fixation Cross ---
+    clock.reset()
+    while clock.getTime() < TIME_FIXATION_CROSS:
+        fixation.draw()
+        win.flip()
+
+    # --- PHASE 2: Cue (Static targets highlighted) ---
+    clock.reset()
+    while clock.getTime() < TIME_CUE:
+        view.update(t=0, show_targets=True)
+        fixation.draw()
+        win.flip()
+
+    # --- PHASE 3: Tracking (Motion with direction change) ---
+    clock.reset()
+    while clock.getTime() < TIME_MOVEMENT_TOTAL:
+        t = clock.getTime()
+        view.update(t=t, show_targets=False)
+        fixation.draw()
+        win.flip()
+        if 'escape' in event.getKeys(): return 'exit'
+
+    # --- PHASE 4: Stop (Static images before probe) ---
+    clock.reset()
+    while clock.getTime() < TIME_STOP:
+        view.update(t=TIME_MOVEMENT_TOTAL, show_targets=False)
+        fixation.draw()
+        win.flip()
+
+    # --- PHASE 5: Probe (Highlight single object) ---
+    clock.reset()
+    while clock.getTime() < TIME_PROBE:
+        view.update(t=TIME_MOVEMENT_TOTAL, probe_only=True)
+        fixation.draw()
+        win.flip()
+
+    # --- PHASE 6: Response ---
+    # win.mouseVisible = True
+    # print(f"Correct answer: {trial_config.correct_answer}")
+    # keys = event.waitKeys(keyList=['t', 'n', 'escape'])
+    is_correct, response_val, response_time = handle_response(win, trial_config)
+    print(f"Result: {is_correct}, Selected: {response_val}, Response Time: {response_time}")
+    
+    if 'escape' in event.getKeys(): return 'exit'
+
+    return 'ok'
+
+def run_break(win, current_block, total_blocks):
+    """
+    Displays a break screen between blocks.
+    """
+    message = f"Block {current_block} of {total_blocks} completed.\n\nTake a break!\nPress SPACE to continue."
+    break_text = visual.TextStim(win, text=message, color='black', height=30)
+    break_text.draw()
     win.flip()
-    wait_for_input(win)
-    logger.info("Feedback displayed")
+    event.waitKeys(keyList=['space'])
 
-orbits_on_side = 3
-combinations = []
-for trial_type in ['mot', 'mit']:
-    for highlight_target in [True, False]:
-        for target_set_size in [2, 3]:
-            for target_side in [0, 1]:
-                layout_indices = [[0, 1, 2], [0, 1, 2], [0, 1, 2]]
-                if target_set_size == 2:
-                    layout_indices = [[0, 1], [1, 2], [0, 2]]
-                orbit_indices = [[element + orbits_on_side * target_side for element in orbit_index] for orbit_index in layout_indices]
-                for i, indices in enumerate(orbit_indices):
-                    targets = []
-                    for orbit_index in indices:
-                        circle_index = random.choice([0, 1])
-                        mirror_orbit_index = get_mirror_orbit_index(orbit_index)
-                        targets.append(Target(orbit_index, mirror_orbit_index, circle_index))
-                    layout = layout_indices[i]
-                    combinations.append((target_set_size, targets, target_side, trial_type, highlight_target, layout))
-
-combinations *= 2
-random.shuffle(combinations)
-                      
-experimentName = "MOT_MIT"
-images_directory = "images"
-image_count = 11
-images_paths =  [(f"{images_directory}/{i}a.png", f"{images_directory}/{i}b.png") for i in range(1, image_count + 1)]
-
-selected_combinations = combinations[:n_selected_combinations]
-
-# Create the data/participants catalogue if it doesn't exist
-os.makedirs(participants_path, exist_ok=True)
-filename = f"{participants_path}/{form.id}.csv"
-file_exists = os.path.isfile(filename) and os.path.getsize(filename) > 0
-
-eyetracker.config(win, experimentName, form.id)
-
-with open(filename, mode="a", newline="") as file:
-    writer = csv.DictWriter(file, fieldnames=fieldnames)
-
-    if not file_exists:
-        writer.writeheader()
-
-interrupted_trials = []
-
-if training_on:
-    logger.info(f"Practice block started")
-    eyetracker.calibrate_and_start_recording()
-    display_feedback(win, f"Zaczynasz blok testowy. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
-
-    for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations[:len(selected_combinations) ], start=1):
-        trial = None
-        if trial_type == "mot":
-            trial = MOTTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths, mot_target_color)
-        else:
-            trial = MITTrial(win, trial_number, 0, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths, mit_target_color)
+if __name__ == "__main__":
+    win = visual.Window([1920, 1080], fullscr=True, units='pix')
+    images = get_images()
+    base_pool = generate_base_pool()
+    experiment_structure = get_full_experiment(base_pool, n_blocks)
+    
+    for b_idx, block in enumerate(experiment_structure, 1):
         
-        eyetracker.start_recording()
-        logger.info("Eyetracker started recording")
-        interrupted = trial.run(practiceMode=True)
-        win.flip()
+        # Iterate through trials in the current block
+        for trial in block:
+            result = run_trial(win, trial)
+            
+            if result == 'exit':
+                win.close()
+                core.quit()
+                
+            # data_log.save_trial_data(trial, result_dict)
 
-    eyetracker.stop_recording()
-    display_feedback(win, "Koniec bloku testowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby przejść do badania.")
+        # Handle break after each block except the last one
+        if b_idx < n_blocks:
+            run_break(win, b_idx, n_blocks)
 
-for block in range(n_blocks):
-    logger.info(f"Block {block + 1} started")
-    eyetracker.calibrate_and_start_recording()
-    random.shuffle(selected_combinations)
-    display_feedback(win, f"Zaczynasz blok {block + 1}. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
-
-    for trial_number, (target_set_size, targets, target_side, trial_type, highlight_target, layout) in enumerate(selected_combinations, start=1):
-        trial = None
-        if trial_type == "mot":
-            trial = MOTTrial(win, trial_number, block + 1, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths, mot_target_color)
-        else:
-            trial = MITTrial(win, trial_number, block + 1, target_set_size, targets, target_side, form, trial_type, layout, highlight_target, filename, images_paths, mit_target_color)
-        
-        eyetracker.start_recording()
-        logger.info("Eyetracker started recording")
-        interrupted = trial.run()
-        win.flip()
-
-        if interrupted:
-            interrupted_trials.append(trial)
-
-    eyetracker.stop_recording()
-    if block != n_blocks - 1:
-        display_feedback(win, "Koniec bloku. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby kontynuować.")
-
-logger.info(f"Interrupted trials: {len(interrupted_trials)}")
-if len(interrupted_trials) > 0:
-        eyetracker.calibrate_and_start_recording()
-        logger.info(f"Interrupted trials: {len(interrupted_trials)}")
-        display_feedback(win, "Niektóre próby zostały przerwane. Naciśnij dowolny przycisk myszy, aby je powtórzyć.")
-        for trial in interrupted_trials[:len(selected_combinations) // 2]:
-            trial.reset()
-            trial.run()
-        interrupted_trials.clear()
-
-display_feedback(win, "Koniec eksperymentu. Dziękujemy za udział.")
-
+    win.close()
+    core.quit()
+            

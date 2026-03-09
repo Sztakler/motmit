@@ -1,24 +1,34 @@
-from psychopy import core, visual, event
-from config import scale, feedback_color, feedback_font_size
+from psychopy import visual, core
+from config import scale, feedback_font_size
 
 class ResponseHandler:
     """
-    A class to handle responses for the application.
+    Base class for handling participant responses and feedback.
     """
-
     def __init__(self, win):
-        """
-        Initialize the ResponseHandler instance.
-        """
         self.win = win
-        self.response = None
-        self.feedback = "Brak odpowiedzi."
-        self.correct = None
         self.clicked_object = None
+        self.feedback = "No response."
+        self.correct = False
+        self.response_time = -1 # Default value if no response
 
-    def display_feedback(self, color=feedback_color):
-        feedback_message = visual.TextStim(self.win, text=self.feedback, color="black", height=feedback_font_size * scale)
-        continue_prompt = visual.TextStim(self.win, text="Naciśnij dowolny przycisk myszy, by kontynuować.", color="black", height=feedback_font_size * scale, pos=(0, -0.2 * self.win.size[1]))
+    def display_feedback(self):
+        """
+        Displays the result of the trial (Correct/Incorrect) to the participant.
+        """
+        # Create feedback text
+        feedback_message = visual.TextStim(
+            self.win, text=self.feedback, color="black", 
+            height=feedback_font_size * scale
+        )
+        # Create instruction to continue
+        continue_prompt = visual.TextStim(
+            self.win, text="Click any mouse button to continue.", 
+            color="black", height=(feedback_font_size * 0.6) * scale, 
+            pos=(0, -300 * scale)
+        )
+        
         feedback_message.draw()
         continue_prompt.draw()
         self.win.flip()
+
