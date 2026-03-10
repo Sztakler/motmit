@@ -10,7 +10,7 @@ class MOTResponseHandler(ResponseHandler):
             self.win, radius=response_circle_radius * scale, 
             fillColor=response_circle_target_color, pos=(-200 * scale, 0)
         )
-        self.mirror_circle = visual.Circle(
+        self.distractor_circle = visual.Circle(
             self.win, radius=response_circle_radius * scale, 
             fillColor=response_circle_mirror_color, pos=(200 * scale, 0)
         )
@@ -26,22 +26,22 @@ class MOTResponseHandler(ResponseHandler):
 
         # Draw and immediately start timer
         self.target_circle.draw()
-        self.mirror_circle.draw()
+        self.distractor_circle.draw()
         self.win.flip()
         start_time = core.getTime()
         
         while timer.getTime() < timeout:
             self.target_circle.draw()
-            self.mirror_circle.draw()
+            self.distractor_circle.draw()
             self.win.flip()
 
             if mouse.getPressed()[0]:
                 if mouse.isPressedIn(self.target_circle):
-                    self.clicked_object = "target_color"
+                    self.clicked_object = "target"
                     self.response_time = core.getTime() - start_time
                     break
-                elif mouse.isPressedIn(self.mirror_circle):
-                    self.clicked_object = "mirror_color"
+                elif mouse.isPressedIn(self.distractor_circle):
+                    self.clicked_object = "distractor"
                     self.response_time = core.getTime() - start_time
                     break
         

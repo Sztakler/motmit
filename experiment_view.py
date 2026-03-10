@@ -10,26 +10,31 @@ class ExperimentView:
         self.orbit_radius = images_orbit_radius
         self.base_switch_time = base_switch_time # Time when the direction change window starts
 
+        # Hexagonal layout
         radius_hex = 432
         shift = 108
-        degree_shift = -60
         
-        # Positions of 6 orbit centers (matching orbit_id 0-5)
-        self.offsets = []
-        for i in range(6):
-            angle_deg = (i * 60) + degree_shift
-            angle_rad = math.radians(angle_deg)
+        # Angles for the orbits (60° Top, 0° Mid, -60° Bot)
+        base_angles = [60, 0, -60] 
+        
+        self.offsets = [None] * 6
+        
+        for i in range(3):
+            angle_rad = math.radians(base_angles[i])
             
-            x = radius_hex * math.cos(angle_rad)
-            y = radius_hex * math.sin(angle_rad)
+            # --- LEFT COLUMN (Indices 0, 1, 2) ---
+            # We use '- shift' to place OrbitIDs 0, 1, 2 on the LEFT side of the screen
+            # This matches TrialConfig where Side.LEFT usually generates IDs 0-2
+            lx = (radius_hex * math.cos(angle_rad) * -1) - shift 
+            ly = radius_hex * math.sin(angle_rad)
+            self.offsets[i] = (lx, ly)
             
-            # Column shifts
-            if i < 3:
-                x += shift
-            else:
-                x -= shift
-                
-            self.offsets.append((x, y))
+            # --- RIGHT COLUMN (Indices 3, 4, 5) ---
+            # Mirrored across the Y-axis (-lx) to place IDs 3, 4, 5 on the RIGHT
+            # 0 (Top-L) mirrors to 3 (Top-R)
+            # 1 (Mid-L) mirrors to 4 (Mid-R)
+            # 2 (Bot-L) mirrors to 5 (Bot-R)
+            self.offsets[i+3] = (-lx, ly)
 
         # Movement parameters
         self.directions = [np.random.choice([-1, 1]) for _ in range(6)]
