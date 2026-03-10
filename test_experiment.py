@@ -1,7 +1,7 @@
 import pytest
 import re
 from constants import Side, OrbitPosition, Layout, TrialType
-from models import Target, TrialConfig
+from models import Orbit, TrialConfig
 from scenarios_generator import generate_base_pool
 
 # --- TARGET CLASS TESTS ---
@@ -9,25 +9,25 @@ from scenarios_generator import generate_base_pool
 def test_target_id_calculation():
     """Verify that orbit IDs are correctly calculated for each screen position."""
     # LEFT column: 0, 1, 2
-    t1 = Target(OrbitPosition.TOP, Side.LEFT, True, "img.png")
+    t1 = Orbit(OrbitPosition.TOP, Side.LEFT, True, "img.png")
     assert t1.orbit_id == 0
     
-    t2 = Target(OrbitPosition.BOTTOM, Side.LEFT, True, "img.png")
+    t2 = Orbit(OrbitPosition.BOTTOM, Side.LEFT, True, "img.png")
     assert t2.orbit_id == 2
     
     # RIGHT column: 3, 4, 5
-    t3 = Target(OrbitPosition.TOP, Side.RIGHT, True, "img.png")
+    t3 = Orbit(OrbitPosition.TOP, Side.RIGHT, True, "img.png")
     assert t3.orbit_id == 3
     
-    t4 = Target(OrbitPosition.BOTTOM, Side.RIGHT, True, "img.png")
+    t4 = Orbit(OrbitPosition.BOTTOM, Side.RIGHT, True, "img.png")
     assert t4.orbit_id == 5
 
 def test_target_mirror_calculation():
     """Verify that the mirror ID always points to the opposite side of the screen."""
     # Top Left (0) -> Top Right (3)
-    assert Target(OrbitPosition.TOP, Side.LEFT, True, "img.png").mirror_id == 3
+    assert Orbit(OrbitPosition.TOP, Side.LEFT, True, "img.png").mirror_id == 3
     # Mid Right (4) -> Mid Left (1)
-    assert Target(OrbitPosition.MIDDLE, Side.RIGHT, True, "img.png").mirror_id == 1
+    assert Orbit(OrbitPosition.MIDDLE, Side.RIGHT, True, "img.png").mirror_id == 1
 
 # --- GENERATOR AND BALANCE TESTS ---
 

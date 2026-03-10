@@ -1,6 +1,7 @@
 import numpy as np
 from psychopy import visual
 from config import  image_radius, images_orbit_radius, orbiting_speed, mot_target_color, mit_target_color, mirror_color
+import math
 
 class ExperimentView:
     def __init__(self, win, trial_config, base_switch_time=1.0):
@@ -8,15 +9,27 @@ class ExperimentView:
         self.config = trial_config
         self.orbit_radius = images_orbit_radius
         self.base_switch_time = base_switch_time # Time when the direction change window starts
+
+        radius_hex = 432
+        shift = 108
+        degree_shift = -60
         
         # Positions of 6 orbit centers (matching orbit_id 0-5)
-        x_d = 400 
-        y_d = 300 
-
-        self.offsets = [
-            (-x_d, y_d), (-x_d, 0), (-x_d, -y_d), # Left column
-            (x_d, y_d),  (x_d, 0),  (x_d, -y_d)   # Right column
-        ]
+        self.offsets = []
+        for i in range(6):
+            angle_deg = (i * 60) + degree_shift
+            angle_rad = math.radians(angle_deg)
+            
+            x = radius_hex * math.cos(angle_rad)
+            y = radius_hex * math.sin(angle_rad)
+            
+            # Column shifts
+            if i < 3:
+                x += shift
+            else:
+                x -= shift
+                
+            self.offsets.append((x, y))
 
         # Movement parameters
         self.directions = [np.random.choice([-1, 1]) for _ in range(6)]
