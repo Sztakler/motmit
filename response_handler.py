@@ -23,8 +23,8 @@ class ResponseHandler:
         )
         # Create instruction to continue
         continue_prompt = visual.TextStim(
-            self.win, text="Click any mouse button to continue.", 
-            color="black", height=(feedback_font_size * 0.6) * scale, 
+            self.win, text="Naciśnij dowolny przycisk myszy, aby kontynuować.", 
+            color="black", height=feedback_font_size, 
             pos=(0, -300 * scale)
         )
         

@@ -77,7 +77,7 @@ TIME_PROBE = probe_time
 # Total movement duration for the loop
 TIME_MOVEMENT_TOTAL = TIME_MOVEMENT_START + TIME_MOVEMENT_JITTER + TIME_MOVEMENT_END
 
-def run_trial(win, trial_config):
+def run_trial(win, trial_config, is_practice=False):
     view = ExperimentView(win, trial_config, base_switch_time=TIME_MOVEMENT_START)
     fixation = FixationCross(win, size=54) # Assuming FixationCross is defined
     clock = core.Clock()
@@ -85,6 +85,9 @@ def run_trial(win, trial_config):
     # --- PHASE 0: Instruction Text ---
     color_name = "niebieskie" if trial_config.trial_type.name == "MOT" else "różowe"
     color_val = mot_target_color if trial_config.trial_type.name == "MOT" else mit_target_color
+    
+    # Hide mouse cursor
+    win.mouseVisible = False
     
     display_feedback(win, message=f"Proszę śledzić {color_name} obiekty", 
                                 color=color_val, await_input=False)
@@ -136,11 +139,14 @@ def run_trial(win, trial_config):
         fixation.draw()
         win.flip()
 
+    # Show mouse cursor
+    win.mouseVisible = True
+
     # --- PHASE 6: Response ---
     # win.mouseVisible = True
     # print(f"Correct answer: {trial_config.correct_answer}")
     # keys = event.waitKeys(keyList=['t', 'n', 'escape'])
-    is_correct, response_val, response_time = handle_response(win, trial_config)
+    is_correct, response_val, response_time = handle_response(win, trial_config, is_practice)
     print(f"Result: {is_correct}, Selected: {response_val}, Response Time: {response_time}")
     
     results = {
@@ -169,6 +175,7 @@ if __name__ == "__main__":
     csv_filename = f"data/participants/{form.id}_results.csv"
     data_saver = DataManager(csv_filename, form)
 
+    # --- Practice Phase ---
     if training_on:
         practice_trials = experiment_structure[0][:4]
         eyetracker.calibrate_and_start_recording()
@@ -176,7 +183,7 @@ if __name__ == "__main__":
 
         for trial in practice_trials:
             eyetracker.start_recording()
-            run_trial(win, trial)
+            run_trial(win, trial, is_practice=training_on)
             eyetracker.stop_recording()
 
         display_feedback(win, "Koniec bloku testowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby przejść do badania.")
@@ -184,6 +191,7 @@ if __name__ == "__main__":
 
     interrupted_trials = []
 
+    # --- Main Phase ---
     for b_idx, block in enumerate(experiment_structure, 1):
         # Calibrate eyetracker at the beginning of each block
         eyetracker.calibrate_and_start_recording()
@@ -201,7 +209,7 @@ if __name__ == "__main__":
             if interrupted:
                 interrupted_trials.append(trial)
             else:
-                # data_saver.save_trial_data(trial, result)
+                data_saver.save_trial_data(trial, result)
                 continue
 
             if 'escape' in event.getKeys():
@@ -214,6 +222,8 @@ if __name__ == "__main__":
         if b_idx < n_blocks:
             display_feedback(win, "Koniec bloku. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby kontynuować.")
 
+    
+    # --- Interrupted Trials Phase ---
     if interrupted_trials:
         display_feedback(win, "Niektóre próby zostały przerwane. Naciśnij dowolny przycisk myszy, aby je powtórzyć.")
         eyetracker.calibrate_and_start_recording()
@@ -231,7 +241,7 @@ if __name__ == "__main__":
                 # interrupted_trials.append(trial)
                 continue
             else:
-                # data_saver.save_trial_data(trial, result)
+                data_saver.save_trial_data(trial, result)
                 continue
 
     display_feedback(win, "Koniec eksperymentu. Dziękujemy za udział.")

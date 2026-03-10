@@ -1,0 +1,4 @@
+UserID,First Name,Last Name,Age,Sex,Handedness,E-mail,Trial Number,Block number,Trial Type,Target Set Size,Target Side,Layout,Highlighted Target,Response,Correct Response,Correctness,TrialID,ConditionID,Images,Targets
+64cfc340-814b-4326-89e9-f2c0fdbe4c3d,,,0,,,,1,1,mot,3,l,"[0, 1, 2]",True,red,"(1, 1)",False,fd326381-6eb0-4d1b-b617-01b8f1214efb,00110,"['11a.png', '11a.png', '11a.png', '11a.png', '11a.png', '11a.png']","[[0, 3, 1], [1, 4, 1], [2, 5, 0]]"
+64cfc340-814b-4326-89e9-f2c0fdbe4c3d,,,0,,,,2,1,mot,2,r,"[0, 2]",False,green,"(4, 0)",False,293abe2c-b75b-4e46-80f5-e5d8ae070fe3,01003,"['1a.png', '1a.png', '1a.png', '1a.png', '1a.png', '1a.png']","[[3, 0, 1], [5, 2, 0]]"
+64cfc340-814b-4326-89e9-f2c0fdbe4c3d,,,0,,,,3,1,mot,2,l,"[1, 2]",False,green,"(2, 1)",False,51c42338-2846-4c4e-9408-77bed59afcf4,00002,"['3a.png', '3a.png', '3a.png', '3a.png', '3a.png', '3a.png']","[[1, 4, 0], [2, 5, 0]]"

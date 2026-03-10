@@ -3,7 +3,7 @@ from mit_response_handler import MITResponseHandler
 from psychopy import event, core
 from utils.input import wait_for_input
 
-def handle_response(win, trial_config):
+def handle_response(win, trial_config, is_practice=False):
     """
     Manages the response phase and returns trial results.
     """
@@ -27,7 +27,8 @@ def handle_response(win, trial_config):
         
         is_correct = handler.check_correctness(
             probe_image_path=correct_path,
-            is_target_probed=trial_config.probe_is_target
+            is_target_probed=trial_config.probe_is_target,
+            is_practice=is_practice
         )
 
     response_time = handler.response_time

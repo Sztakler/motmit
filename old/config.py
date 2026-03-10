@@ -30,6 +30,6 @@ max_response_time_mit = 5.0  # seconds
 n_blocks = 4
 n_selected_combinations = None
 
-training_on = False
+training_on = True
 eyetracker_on = False
 form_on = False

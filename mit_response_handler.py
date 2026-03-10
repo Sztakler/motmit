@@ -82,16 +82,42 @@ class MITResponseHandler(ResponseHandler):
                         break
             self.win.flip()
 
-    def check_correctness(self, probe_image_path, is_target_probed):
+    def check_correctness(self, probe_image_path, is_target_probed, is_practice = False):
         """
         Checks if the clicked image matches the identity of the probed object.
         """
+        distractor_icon = "images/0a.png"
+        
         if is_target_probed:
             # Must match the exact image path of the probed target
             self.correct = (self.clicked_object == probe_image_path)
         else:
             # If a distractor was probed, the participant must click the '0a.png' icon
-            self.correct = (self.clicked_object == "images/0a.png")
-            
-        self.feedback = "Dobrze." if self.correct else "Źle."
+            self.correct = (self.clicked_object == distractor_icon)
+
+        # Generate feedback
+        if not is_practice:
+            # Short feedback in main experiment part
+            self.feedback = "Dobrze." if self.correct else "Źle."
+        else:
+            # Verbose feedback for training mode
+            if self.clicked_object:
+                clicked_cross = (self.clicked_object == distractor_icon)
+                clicked_target = (self.clicked_object == probe_image_path)
+
+                if is_target_probed:
+                    if clicked_target:
+                        self.feedback = "Dobrze. Został podświetlony target. Wybrałeś poprawny target."
+                    elif clicked_cross:
+                        self.feedback = "Źle. Został podświetlony target. Wybrałeś ikonę dystraktora."
+                    else:
+                        self.feedback = "Źle. Został podświetlony target. Wybrałeś zły target."
+                else:  # Highlighted distractor
+                    if clicked_cross:
+                        self.feedback = "Dobrze. Został podświetlony dystraktor. Wybrałeś ikonę dystraktora."
+                    else:
+                        self.feedback = "Źle. Został podświetlony dystraktor. Nie wybrałeś ikony dystraktora."
+            else:
+                self.feedback = "Źle. Brak odpowiedzi."
+
         return self.correct

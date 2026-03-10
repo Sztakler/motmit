@@ -1,6 +1,7 @@
 import csv
 import os
 from config import fieldnames  # Using the global fieldnames list from config.py
+from constants import Side
 
 class DataManager:
     """
@@ -28,43 +29,54 @@ class DataManager:
         Maps trial results and configuration to the CSV field structure.
         """
         # Mapping side index to human-readable label
-        side_map = {0: 'L', 1: 'R'}
+        side_map = {Side.LEFT: 'L', Side.RIGHT: 'R'}
         
         # Consolidate stimulus information into pipe-separated strings
         # to avoid breaking CSV columns with commas
-        all_images = [os.path.basename(img) for pair in trial_config.images_paths for img in pair]
-        target_info = [f"Orb:{t.orbit_id}_Circ:{t.target_idx}" for t in trial_config.active_orbits]
+        all_images = []
+        for pair in trial_config.images_paths:
+            all_images.append(os.path.basename(pair[0]))
+            all_images.append(os.path.basename(pair[1]))
+
+        target_info = [f"Orb:{o.orbit_id}_Tidx:{o.target_idx}" for o in trial_config.active_orbits]
+
+        if trial_config.trial_type.name == "MIT":
+            if trial_config.probe_is_target:
+                correct_val = trial_config.probe_orbit.image_pair[trial_config.probe_index]
+            else:
+                correct_val = "images/0a.png"
+        else:
+            # For MOT text information will suffice
+            correct_val = "target" if trial_config.probe_is_target else "distractor"
 
         with open(self.filename, mode='a', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=self.fieldnames)
             
             # Prepare the row dictionary matching fieldnames exactly
             row_data = {
-                'UserID': self.user_form.id,
-                'First Name': self.user_form.first_name,
-                'Last Name': self.user_form.last_name,
-                'Age': self.user_form.age,
-                'Sex': self.user_form.sex,
-                'Handedness': self.user_form.handedness,
-                'E-mail': self.user_form.email,
-                'Trial Number': trial_config.trial_number,
-                'Block number': trial_config.block_number,
-                'Trial Type': trial_config.trial_type.name,
-                'Target Set Size': trial_config.target_set_size,
-                'Target Side': side_map.get(trial_config.target_side, 'N/A'),
-                'Layout': str(trial_config.layout),
-                'Highlighted Target': trial_config.probe_object.is_target,
-                'Response': result_data['clicked_object'],
-                'Response Time': result_data['response_time'],
-                'Correct Response': result_data['correct_answer'],
-                'Correctness': result_data['is_correct'],
-                'Response Time': f"{result_data['response_time']:.3f}",
-                'TrialID': trial_config.id,
-                'ConditionID': trial_config.condition_id,
-                'Images': "|".join(all_images),
-                'Targets': "|".join(target_info)
-            }
+                    'UserID': self.user_form.id,
+                    'First Name': self.user_form.first_name,
+                    'Last Name': self.user_form.last_name,
+                    'Age': self.user_form.age,
+                    'Sex': self.user_form.sex,
+                    'Handedness': self.user_form.handedness,
+                    'E-mail': self.user_form.email,
+                    'Trial Number': trial_config.trial_number,
+                    'Block number': trial_config.block_number,
+                    'Trial Type': trial_config.trial_type.name,
+                    'Target Set Size': trial_config.target_set_size,
+                    'Target Side': side_map.get(trial_config.target_side, 'N/A'),
+                    'Layout': trial_config.layout, 
+                    'Highlighted Target': trial_config.probe_is_target,
+                    'Response': result_data['clicked_object'], 
+                    'Correct Response': correct_val,
+                    'Correctness': 1 if result_data['is_correct'] else 0,
+                    'Response Time': f"{result_data['response_time']:.3f}",
+                    'TrialID': trial_config.id,
+                    'ConditionID': trial_config.condition_id,
+                    'Images': "|".join(all_images),
+                    'Targets': "|".join(target_info)
+                }
             
-            # Ensure we only write keys that exist in the config fieldnames
             filtered_row = {k: v for k, v in row_data.items() if k in self.fieldnames}
             writer.writerow(filtered_row)
