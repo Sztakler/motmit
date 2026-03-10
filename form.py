@@ -4,7 +4,7 @@ import uuid
 
 class Form:
     def __init__(self):
-        self.id = uuid.uuid4()
+        self.id = str(uuid.uuid4())[:8]
         self.email = ""
         self.sex = ""
         self.age = 0

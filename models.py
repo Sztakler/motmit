@@ -31,7 +31,7 @@ class TrialConfig:
         self.trial_number = 0 # To be set by the generator
         self.block_number = 0 # To be set by the generator
         self.condition_id = self.encode_conditions_binary()
-
+        self.active_orbits = []
         self.all_orbits= []
         positions, _ = layout.value
 
@@ -50,18 +50,18 @@ class TrialConfig:
                 img_idx += 1
 
         # Selecting probe for highlighting
-        active_orbits = [o for o in self.all_orbits if o.has_target]
-        self.probe_orbit = random.choice(active_orbits)
+        self.active_orbits = [o for o in self.all_orbits if o.has_target]
+        self.probe_orbit = random.choice(self.active_orbits)
 
-        for o in active_orbits:
+        for o in self.active_orbits:
             print(o.target_idx)
 
         if self.probe_is_target:
             self.probe_index = self.probe_orbit.target_idx
-            self.corrent_answer = "target"
+            self.correct_answer = "target"
         else:
             self.probe_index = self.probe_orbit.distractor_idx
-            self.corrent_answer = "distractor"
+            self.correct_answer = "distractor"
         
 
     def encode_conditions_binary(self):

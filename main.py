@@ -4,6 +4,7 @@ from scenarios_generator import generate_base_pool, get_full_experiment
 from config import *
 from response_manager import handle_response
 from eyetracker import eyetracker
+from data_manager import DataManager
 from form import Form
 import os
 import re
@@ -125,9 +126,16 @@ def run_trial(win, trial_config):
     is_correct, response_val, response_time = handle_response(win, trial_config)
     print(f"Result: {is_correct}, Selected: {response_val}, Response Time: {response_time}")
     
-    if 'escape' in event.getKeys(): return 'exit'
+    results = {
+        'clicked_object': response_val,
+        'correct_answer': trial_config.correct_answer, # should be different answer in MOT (target/distractor) and MIT (image path)
+        'is_correct': is_correct,
+        'response_time': response_time
+    }
 
-    return 'ok'
+    if 'escape' in event.getKeys(): return True, results
+
+    return False, results
 
 def run_break(win, current_block, total_blocks):
     """
@@ -151,25 +159,41 @@ if __name__ == "__main__":
 
     eyetracker.config(win, experiment_name, form.id)
     
+    csv_filename = f"data/participants/{form.id}_results.csv"
+    data_saver = DataManager(csv_filename, form)
+
+    practice_trials = experiment_structure[0][:4]
+    eyetracker.calibrate_and_start_recording()
+    for trial in practice_trials:
+        eyetracker.start_recording()
+        run_trial(win, trial)
+        eyetracker.stop_recording()
+
     interrupted_trials = []
 
     for b_idx, block in enumerate(experiment_structure, 1):
         # Calibrate eyetracker at the beginning of each block
         eyetracker.calibrate_and_start_recording()
-
+        repeat_msg = visual.TextStim(win, text=f"Beginning block {b_idx}", color='black')
+        repeat_msg.draw()
+        win.flip()
+        core.wait(2.0)
         # Iterate through trials in the current block
-        for trial in block:
+        for trial in block[:2]:
             # Reset eyetracker state before each trial to flush data
             eyetracker.start_recording()
         
             interrupted, result = run_trial(win, trial)
+
+            eyetracker.stop_recording()
             
             if interrupted:
                 interrupted_trials.append(trial)
+            else:
+                # data_saver.save_trial_data(trial, result)
+                continue
 
-            eyetracker.stop_recording()
-
-            if result == 'exit':
+            if 'escape' in event.getKeys():
                 win.close()
                 core.quit()
                 
@@ -178,6 +202,26 @@ if __name__ == "__main__":
         # Handle break after each block except the last one
         if b_idx < n_blocks:
             run_break(win, b_idx, n_blocks)
+
+    if interrupted_trials:
+        repeat_msg = visual.TextStim(win, text=f"Repeating {len(interrupted_trials)} interrupted trials...", color='black')
+        repeat_msg.draw()
+        win.flip()
+        core.wait(2.0)
+
+        while interrupted_trials:
+            trial = interrupted_trials.pop(0)
+            
+            eyetracker.start_recording()
+            interrupted, result = run_trial(win, trial)
+            eyetracker.stop_recording()
+
+            if interrupted:
+                # interrupted_trials.append(trial)
+                continue
+            else:
+                # data_saver.save_trial_data(trial, result)
+                continue
 
     win.close()
     core.quit()

@@ -32,8 +32,8 @@ class DataManager:
         
         # Consolidate stimulus information into pipe-separated strings
         # to avoid breaking CSV columns with commas
-        all_images = [img for pair in trial_config.images_paths for img in pair]
-        target_info = [f"Orb:{t.orbit_index}_Circ:{t.circle_index}" for t in trial_config.targets]
+        all_images = [os.path.basename(img) for pair in trial_config.images_paths for img in pair]
+        target_info = [f"Orb:{t.orbit_id}_Circ:{t.target_idx}" for t in trial_config.active_orbits]
 
         with open(self.filename, mode='a', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=self.fieldnames)
@@ -51,13 +51,14 @@ class DataManager:
                 'Block number': trial_config.block_number,
                 'Trial Type': trial_config.trial_type.name,
                 'Target Set Size': trial_config.target_set_size,
-                'Target Side': side_map.get(trial_config.targets_side, 'N/A'),
+                'Target Side': side_map.get(trial_config.target_side, 'N/A'),
                 'Layout': str(trial_config.layout),
                 'Highlighted Target': trial_config.probe_object.is_target,
                 'Response': result_data['clicked_object'],
+                'Response Time': result_data['response_time'],
                 'Correct Response': result_data['correct_answer'],
                 'Correctness': result_data['is_correct'],
-                'Response Time': f"{result_data['rt']:.3f}",
+                'Response Time': f"{result_data['response_time']:.3f}",
                 'TrialID': trial_config.id,
                 'ConditionID': trial_config.condition_id,
                 'Images': "|".join(all_images),
