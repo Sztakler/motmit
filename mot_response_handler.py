@@ -1,6 +1,6 @@
 from psychopy import visual, event, core
 from response_handler import ResponseHandler
-from config import scale, response_circle_radius, response_circle_target_color, response_circle_mirror_color
+from config import scale, response_circle_radius, response_circle_target_color, response_circle_mirror_color, max_response_time_mot
 
 class MOTResponseHandler(ResponseHandler):
     def __init__(self, win):
@@ -15,13 +15,14 @@ class MOTResponseHandler(ResponseHandler):
             fillColor=response_circle_mirror_color, pos=(200 * scale, 0)
         )
 
-    def get_response(self, timeout=5.0):
+    def get_response(self):
         """
         Waits for a mouse click on one of the two circles.
         """
         mouse = event.Mouse(win=self.win)
         mouse.setPos((0, 0))
         timer = core.Clock()
+        timeout = max_response_time_mot
 
         # Draw and immediately start timer
         self.target_circle.draw()
@@ -53,5 +54,5 @@ class MOTResponseHandler(ResponseHandler):
         elif self.clicked_object == "mirror_color":
             self.correct = not is_target_probed
             
-        self.feedback = "Correct." if self.correct else "Incorrect."
+        self.feedback = "Dobrze." if self.correct else "Źle."
         return self.correct

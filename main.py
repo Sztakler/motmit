@@ -8,6 +8,7 @@ from data_manager import DataManager
 from form import Form
 import os
 import re
+from utils.input import wait_for_input
 
 class FixationCross:
     def __init__(self, win, size):
@@ -47,6 +48,22 @@ def get_images(folder_path="images/"):
     
     return [os.path.join(folder_path, f) for f in files]
 
+def display_feedback(win, message, color=feedback_color, await_input=True):
+    """Displays short feedback message to the user."""
+    feedback = visual.TextStim(win, text=message, color=color, height=feedback_font_size)
+    feedback.draw()
+    win.flip()
+    if await_input:
+        wait_for_input(win)
+
+def display_look_at_center_message(win):
+    """Wyświetla komunikat o patrzeniu na środek i kończy trial."""
+    message = visual.TextStim(win, text="Proszę patrzeć na środek i nie mrugać. Naciśnij dowolny przycisk myszy, aby kontynuować.", color='black', height=feedback_font_size, pos=(0, 0))
+    message.draw()
+    win.flip()
+    wait_for_input(win)
+
+
 # --- PHASE DURATIONS (Based on your Trial class) ---
 TIME_FIXATION_TEXT = 0.75  
 TIME_FIXATION_CROSS = 0.5   
@@ -62,19 +79,17 @@ TIME_MOVEMENT_TOTAL = TIME_MOVEMENT_START + TIME_MOVEMENT_JITTER + TIME_MOVEMENT
 
 def run_trial(win, trial_config):
     view = ExperimentView(win, trial_config, base_switch_time=TIME_MOVEMENT_START)
-    fixation = FixationCross(win, size=20) # Assuming FixationCross is defined
+    fixation = FixationCross(win, size=54) # Assuming FixationCross is defined
     clock = core.Clock()
 
     # --- PHASE 0: Instruction Text ---
-    color_name = mot_target_color if trial_config.trial_type.name == "MOT" else mit_target_color
+    color_name = "niebieskie" if trial_config.trial_type.name == "MOT" else "różowe"
     color_val = mot_target_color if trial_config.trial_type.name == "MOT" else mit_target_color
-    instr_msg = visual.TextStim(win, text=f"Please track the {color_name} objects", 
-                                color=color_val, height=30, units='pix')
     
-    clock.reset()
-    while clock.getTime() < TIME_FIXATION_TEXT:
-        instr_msg.draw()
-        win.flip()
+    display_feedback(win, message=f"Proszę śledzić {color_name} obiekty", 
+                                color=color_val, await_input=False)
+    core.wait(TIME_FIXATION_TEXT)
+    win.flip()
 
     # --- PHASE 1: Fixation Cross ---
     clock.reset()
@@ -86,6 +101,7 @@ def run_trial(win, trial_config):
     clock.reset()
     while clock.getTime() < TIME_CUE:
         if not (eyetracker.check_position() and eyetracker.check_blink()):
+            display_look_at_center_message(win)
             return True, None
         
         view.update(t=0, show_targets=True)
@@ -98,6 +114,7 @@ def run_trial(win, trial_config):
         t = clock.getTime()
 
         if not (eyetracker.check_position() and eyetracker.check_blink()):
+            display_look_at_center_message(win)
             return True, None
         
         view.update(t=t, show_targets=False)
@@ -137,16 +154,6 @@ def run_trial(win, trial_config):
 
     return False, results
 
-def run_break(win, current_block, total_blocks):
-    """
-    Displays a break screen between blocks.
-    """
-    message = f"Block {current_block} of {total_blocks} completed.\n\nTake a break!\nPress SPACE to continue."
-    break_text = visual.TextStim(win, text=message, color='black', height=30)
-    break_text.draw()
-    win.flip()
-    event.waitKeys(keyList=['space'])
-
 if __name__ == "__main__":
     win = visual.Window([1920, 1080], fullscr=True, units='pix')
     images = get_images()
@@ -162,22 +169,26 @@ if __name__ == "__main__":
     csv_filename = f"data/participants/{form.id}_results.csv"
     data_saver = DataManager(csv_filename, form)
 
-    practice_trials = experiment_structure[0][:4]
-    eyetracker.calibrate_and_start_recording()
-    for trial in practice_trials:
-        eyetracker.start_recording()
-        run_trial(win, trial)
-        eyetracker.stop_recording()
+    if training_on:
+        practice_trials = experiment_structure[0][:4]
+        eyetracker.calibrate_and_start_recording()
+        display_feedback(win, f"Zaczynasz blok testowy. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
+
+        for trial in practice_trials:
+            eyetracker.start_recording()
+            run_trial(win, trial)
+            eyetracker.stop_recording()
+
+        display_feedback(win, "Koniec bloku testowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby przejść do badania.")
+
 
     interrupted_trials = []
 
     for b_idx, block in enumerate(experiment_structure, 1):
         # Calibrate eyetracker at the beginning of each block
         eyetracker.calibrate_and_start_recording()
-        repeat_msg = visual.TextStim(win, text=f"Beginning block {b_idx}", color='black')
-        repeat_msg.draw()
-        win.flip()
-        core.wait(2.0)
+        display_feedback(win, f"Zaczynasz blok {b_idx}. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
+
         # Iterate through trials in the current block
         for trial in block[:2]:
             # Reset eyetracker state before each trial to flush data
@@ -201,13 +212,13 @@ if __name__ == "__main__":
 
         # Handle break after each block except the last one
         if b_idx < n_blocks:
-            run_break(win, b_idx, n_blocks)
+            display_feedback(win, "Koniec bloku. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby kontynuować.")
 
     if interrupted_trials:
-        repeat_msg = visual.TextStim(win, text=f"Repeating {len(interrupted_trials)} interrupted trials...", color='black')
-        repeat_msg.draw()
-        win.flip()
-        core.wait(2.0)
+        display_feedback(win, "Niektóre próby zostały przerwane. Naciśnij dowolny przycisk myszy, aby je powtórzyć.")
+        eyetracker.calibrate_and_start_recording()
+        display_feedback(win, "Zaczynasz blok powtórzeniowy. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
+
 
         while interrupted_trials:
             trial = interrupted_trials.pop(0)
@@ -222,6 +233,8 @@ if __name__ == "__main__":
             else:
                 # data_saver.save_trial_data(trial, result)
                 continue
+
+    display_feedback(win, "Koniec eksperymentu. Dziękujemy za udział.")
 
     win.close()
     core.quit()

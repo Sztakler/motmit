@@ -31,5 +31,5 @@ n_blocks = 4
 n_selected_combinations = None
 
 training_on = False
-eyetracker_on = True
+eyetracker_on = False
 form_on = False

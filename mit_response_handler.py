@@ -1,7 +1,7 @@
 import math
 from psychopy import visual, event, core
 from response_handler import ResponseHandler
-from config import scale, mit_target_color, image_radius
+from config import scale, mit_target_color, image_radius, max_response_time_mit
 
 class MITResponseHandler(ResponseHandler):
     def __init__(self, win):
@@ -45,7 +45,7 @@ class MITResponseHandler(ResponseHandler):
             )
             self.items.append(stim)
 
-    def get_response(self, all_objects_data, timeout=10.0):
+    def get_response(self, all_objects_data):
         """
         Displays the carousel and waits for a selection.
         """
@@ -55,6 +55,7 @@ class MITResponseHandler(ResponseHandler):
         timer = core.Clock()
         self.win.flip()
         start_time = core.getTime()
+        timeout = max_response_time_mit
 
         while timer.getTime() < timeout and not self.clicked_object:
             # Draw all elements of the carousel
@@ -92,5 +93,5 @@ class MITResponseHandler(ResponseHandler):
             # If a distractor was probed, the participant must click the '0a.png' icon
             self.correct = (self.clicked_object == "images/0a.png")
             
-        self.feedback = "Correct." if self.correct else "Incorrect."
+        self.feedback = "Dobrze." if self.correct else "Źle."
         return self.correct

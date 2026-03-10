@@ -1,6 +1,7 @@
 from mot_response_handler import MOTResponseHandler
 from mit_response_handler import MITResponseHandler
 from psychopy import event, core
+from utils.input import wait_for_input
 
 def handle_response(win, trial_config):
     """
@@ -41,31 +42,3 @@ def handle_response(win, trial_config):
 
     
     return is_correct, clicked_val, response_time
-
-def wait_for_input(win):
-    """
-    Waits for a mouse click and handles other key combinations.
-    """
-    mouse = event.Mouse(win=win)
-    # Wait until use depresses a mouse button (prevents ghosting of the mouse button event)
-    # logger.info("Waiting for mouse button release")
-    while any(mouse.getPressed()):
-        keys = event.getKeys(modifiers=True)
-        for key, mods in keys:
-            if key == 'escape':
-    #             logger.info(f"Experiment cancelled manually")
-                core.quit()
-        core.wait(0.01)
-
-    # logger.info("Waiting for fresh click")
-    while not any(mouse.getPressed()):
-        keys = event.getKeys(modifiers=True)
-        for key, mods in keys:
-            if key == 'escape':
-    #             logger.info(f"Experiment cancelled manually")
-                core.quit()
-            if key == 'r' and 'ctrl' in mods:
-    #             logger.info("Manually recalibrated eyetracker")
-                # eyetracker.calibrate_and_start_recording()
-                continue
-        core.wait(0.01)

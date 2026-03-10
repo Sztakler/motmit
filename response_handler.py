@@ -8,7 +8,7 @@ class ResponseHandler:
     def __init__(self, win):
         self.win = win
         self.clicked_object = None
-        self.feedback = "No response."
+        self.feedback = "Brak odpowiedzi."
         self.correct = False
         self.response_time = -1 # Default value if no response
 
@@ -19,7 +19,7 @@ class ResponseHandler:
         # Create feedback text
         feedback_message = visual.TextStim(
             self.win, text=self.feedback, color="black", 
-            height=feedback_font_size * scale
+            height=feedback_font_size
         )
         # Create instruction to continue
         continue_prompt = visual.TextStim(
