@@ -40,7 +40,7 @@ class ExperimentView:
             self.stims.append(img_pair)
             
             # Create a border for each orbit (to be moved to circle 0 or 1 when needed)
-            border = visual.Circle(win, radius=(image_radius+5)*scale, fillColor=None, 
+            border = visual.Circle(win, radius=(image_radius+5)*scale, fillColor=None,  # type: ignore
                                    lineColor=self.color, lineWidth=6)
             self.borders.append(border)
 

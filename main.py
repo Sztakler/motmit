@@ -1,16 +1,18 @@
 from psychopy import visual, core, event
-from ExperimentView import ExperimentView
+from experiment_view import ExperimentView
 from scenarios_generator import generate_base_pool, get_full_experiment
 from config import *
 from response_manager import handle_response
+from eyetracker import eyetracker
+from form import Form
 import os
 import re
 
 class FixationCross:
     def __init__(self, win, size):
         self.lines = [
-            visual.Line(win, start=(-size, 0), end=(size, 0), lineColor='black', lineWidth=2),
-            visual.Line(win, start=(0, -size), end=(0, size), lineColor='black', lineWidth=2)
+            visual.Line(win, start=(-size, 0), end=(size, 0), lineColor='black', lineWidth=2), # type: ignore
+            visual.Line(win, start=(0, -size), end=(0, size), lineColor='black', lineWidth=2) # type: ignore
         ]
     
     def draw(self):
@@ -40,7 +42,7 @@ def get_images(folder_path="images/"):
     
     # Sort numerically based on the number part first, then the letter
     # This ensures: 0a, 0b, 1a, 1b ... 10a, 10b
-    files.sort(key=lambda x: (int(pattern.match(x).group(1)), x))
+    files.sort(key=lambda x: (int(pattern.match(x).group(1)), x)) # type: ignore
     
     return [os.path.join(folder_path, f) for f in files]
 
@@ -63,7 +65,7 @@ def run_trial(win, trial_config):
     clock = core.Clock()
 
     # --- PHASE 0: Instruction Text ---
-    color_name = "blue" if trial_config.trial_type.name == "MOT" else "pink"
+    color_name = mot_target_color if trial_config.trial_type.name == "MOT" else mit_target_color
     color_val = mot_target_color if trial_config.trial_type.name == "MOT" else mit_target_color
     instr_msg = visual.TextStim(win, text=f"Please track the {color_name} objects", 
                                 color=color_val, height=30, units='pix')
@@ -82,6 +84,9 @@ def run_trial(win, trial_config):
     # --- PHASE 2: Cue (Static targets highlighted) ---
     clock.reset()
     while clock.getTime() < TIME_CUE:
+        if not (eyetracker.check_position() and eyetracker.check_blink()):
+            return True, None
+        
         view.update(t=0, show_targets=True)
         fixation.draw()
         win.flip()
@@ -90,14 +95,18 @@ def run_trial(win, trial_config):
     clock.reset()
     while clock.getTime() < TIME_MOVEMENT_TOTAL:
         t = clock.getTime()
+
+        if not (eyetracker.check_position() and eyetracker.check_blink()):
+            return True, None
+        
         view.update(t=t, show_targets=False)
         fixation.draw()
         win.flip()
-        if 'escape' in event.getKeys(): return 'exit'
+        if 'escape' in event.getKeys(): core.quit()
 
     # --- PHASE 4: Stop (Static images before probe) ---
     clock.reset()
-    while clock.getTime() < TIME_STOP:
+    while clock.getTime() < TIME_STOP:      
         view.update(t=TIME_MOVEMENT_TOTAL, show_targets=False)
         fixation.draw()
         win.flip()
@@ -135,13 +144,31 @@ if __name__ == "__main__":
     images = get_images()
     base_pool = generate_base_pool()
     experiment_structure = get_full_experiment(base_pool, n_blocks)
+
+    form = Form()
+    if form_on:
+        form.show_form()
+
+    eyetracker.config(win, experiment_name, form.id)
     
+    interrupted_trials = []
+
     for b_idx, block in enumerate(experiment_structure, 1):
-        
+        # Calibrate eyetracker at the beginning of each block
+        eyetracker.calibrate_and_start_recording()
+
         # Iterate through trials in the current block
         for trial in block:
-            result = run_trial(win, trial)
+            # Reset eyetracker state before each trial to flush data
+            eyetracker.start_recording()
+        
+            interrupted, result = run_trial(win, trial)
             
+            if interrupted:
+                interrupted_trials.append(trial)
+
+            eyetracker.stop_recording()
+
             if result == 'exit':
                 win.close()
                 core.quit()
