@@ -163,14 +163,18 @@ def run_trial(win, trial_config, is_practice=False):
     return False, results
 
 if __name__ == "__main__":
+
+    form = Form()
+    if form_on:
+        form.show_form()
+
     win = visual.Window([1920, 1080], fullscr=True, units='pix')
     images = get_images()
     base_pool = generate_base_pool()
     experiment_structure = get_full_experiment(base_pool, n_blocks)
 
-    form = Form()
-    if form_on:
-        form.show_form()
+    print(f"length: {len(experiment_structure[0])}")
+    core.quit()
 
     eyetracker.config(win, experiment_name, form.id)
     
@@ -179,7 +183,7 @@ if __name__ == "__main__":
 
     # --- Practice Phase ---
     if training_on:
-        practice_trials = experiment_structure[0][:4]
+        practice_trials = experiment_structure[0]
         eyetracker.calibrate_and_start_recording()
         display_feedback(win, f"Zaczynasz blok testowy. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
 
@@ -218,7 +222,6 @@ if __name__ == "__main__":
                 win.close()
                 core.quit()
                 
-            # data_log.save_trial_data(trial, result_dict)
 
         # Handle break after each block except the last one
         if b_idx < n_blocks:
@@ -232,8 +235,8 @@ if __name__ == "__main__":
         display_feedback(win, "Zaczynasz blok powtórzeniowy. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
 
 
-        while interrupted_trials:
-            trial = interrupted_trials.pop(0)
+        for trial in interrupted_trials[:len(interrupted_trials)//2]:
+            # trial = interrupted_trials.pop(0)
             
             eyetracker.start_recording()
             interrupted, result = run_trial(win, trial)

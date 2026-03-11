@@ -36,7 +36,7 @@ def generate_base_pool():
                                         image_pairs=selected_images
                                     ))
 
-    return pool
+    return pool * 2
 
 def get_full_experiment(base_pool, num_blocks):
     """
