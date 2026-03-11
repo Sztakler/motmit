@@ -1,6 +1,7 @@
 from constants import Side, TrialType, Layout
 from models import TrialConfig
 import random
+import copy
 
 def generate_base_pool():
     pool = []
@@ -44,7 +45,7 @@ def get_full_experiment(base_pool, num_blocks):
     full_experiment = []
 
     for block_index in range(1, num_blocks + 1):
-        block_trials = list(base_pool)
+        block_trials = copy.deepcopy(base_pool)
         random.shuffle(block_trials)
 
         for trial_index, trial in enumerate(block_trials, 1):

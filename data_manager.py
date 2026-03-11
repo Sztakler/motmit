@@ -49,6 +49,11 @@ class DataManager:
             # For MOT text information will suffice
             correct_val = "target" if trial_config.probe_is_target else "distractor"
 
+        probe_orbit_id = trial_config.probe_orbit.orbit_id
+        probe_item_idx = trial_config.probe_index
+        clicked_orbit_id = result_data.get('clicked_orbit_id', 'N/A')
+        clicked_item_idx = result_data.get('clicked_item_idx', 'N/A')
+
         with open(self.filename, mode='a', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=self.fieldnames)
             
@@ -66,6 +71,11 @@ class DataManager:
                     'Trial Type': trial_config.trial_type.name,
                     'Target Set Size': trial_config.target_set_size,
                     'Target Side': side_map.get(trial_config.target_side, 'N/A'),
+                    'Probe_Orbit_ID': probe_orbit_id,
+                    'Probe_Item_Idx': probe_item_idx,
+                    'Clicked_Orbit_ID': clicked_orbit_id,
+                    'Clicked_Item_Idx': clicked_item_idx,
+                    
                     'Layout': trial_config.layout, 
                     'Highlighted Target': trial_config.probe_is_target,
                     'Response': result_data['clicked_object'], 

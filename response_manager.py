@@ -8,6 +8,9 @@ def handle_response(win, trial_config, is_practice=False):
     Manages the response phase and returns trial results.
     """
     win.mouseVisible = True # Ensure cursor is visible for selection
+
+    clicked_orbit_id = "N/A"
+    clicked_item_idx = "N/A"
     
     if trial_config.trial_type.name == "MOT":
         handler = MOTResponseHandler(win)
@@ -17,6 +20,9 @@ def handle_response(win, trial_config, is_practice=False):
         is_correct = handler.check_correctness(
             is_target_probed=trial_config.probe_is_target
         )
+
+        clicked_orbit_id = getattr(handler, 'clicked_orbit_id', "N/A")
+        clicked_item_idx = getattr(handler, 'clicked_item_idx', "N/A")
     else:
         handler = MITResponseHandler(win)
         handler.get_response(trial_config.all_orbits)
@@ -31,6 +37,9 @@ def handle_response(win, trial_config, is_practice=False):
             is_practice=is_practice
         )
 
+        clicked_orbit_id = handler.clicked_orbit_id
+        clicked_item_idx = handler.clicked_item_idx
+
     response_time = handler.response_time
     clicked_val = handler.clicked_object
 
@@ -42,4 +51,4 @@ def handle_response(win, trial_config, is_practice=False):
     wait_for_input(win)
 
     
-    return is_correct, clicked_val, response_time
+    return is_correct, clicked_val, response_time, clicked_orbit_id, clicked_item_idx

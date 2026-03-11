@@ -49,9 +49,9 @@ class MOTResponseHandler(ResponseHandler):
         """
         Validates if the participant clicked the circle corresponding to the probe type.
         """
-        if self.clicked_object == "target_color":
+        if self.clicked_object == "target":
             self.correct = is_target_probed
-        elif self.clicked_object == "mirror_color":
+        elif self.clicked_object == "distractor":
             self.correct = not is_target_probed
             
         self.feedback = "Dobrze." if self.correct else "Źle."

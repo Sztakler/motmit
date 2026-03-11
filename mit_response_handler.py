@@ -8,6 +8,8 @@ class MITResponseHandler(ResponseHandler):
         super().__init__(win)
         self.carousel_radius = 350 * scale
         self.items = [] # List of ImageStim objects in the carousel
+        self.clicked_orbit_id = "N/A"
+        self.clicked_item_idx = "N/A"
 
     def construct_carousel(self, all_objects_data):
         """
@@ -78,6 +80,24 @@ class MITResponseHandler(ResponseHandler):
                         self.win.flip()
                     
                         self.clicked_object = item.image # This is the file path
+
+                        if item.image == "images/0a.png":
+                            self.clicked_orbit_id = "distractor_icon"
+                            self.clicked_item_idx = "distractor_icon"
+                        else:
+                            for orbit in all_objects_data:
+                                # Simplified Orbit IDs to 0-2 (Top, Middle, Bottom) using modulo 3.
+                                # Since the carousel displays unique images from both columns, we only track 
+                                # the logical position. Side information is already stored in 'Target Side'.
+                                if item.image == orbit.image_pair[orbit.target_idx]:
+                                    self.clicked_orbit_id = orbit.orbit_id % 3
+                                    self.clicked_item_idx = orbit.target_idx
+                                    break
+                                elif item.image == orbit.image_pair[orbit.distractor_idx]:
+                                    self.clicked_orbit_id = orbit.orbit_id % 3
+                                    self.clicked_item_idx = orbit.distractor_idx
+                                    break
+                        
                         core.wait(0.3)
                         break
             self.win.flip()
