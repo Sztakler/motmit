@@ -173,9 +173,6 @@ if __name__ == "__main__":
     base_pool = generate_base_pool()
     experiment_structure = get_full_experiment(base_pool, n_blocks)
 
-    print(f"length: {len(experiment_structure[0])}")
-    core.quit()
-
     eyetracker.config(win, experiment_name, form.id)
     
     csv_filename = f"data/participants/{form.id}_results.csv"
