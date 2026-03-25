@@ -2,7 +2,7 @@ from math import pi
 
 experiment_name = "MOT_MIT_EEG"
 participants_path = "data/participants"
-fieldnames = ['UserID', 'First Name', 'Last Name', 'Age', 'Sex', 'Handedness', 'E-mail', 'Trial Number', 'Block number', 'Trial Type','Target Set Size', 'Target Side', "Layout", "Highlighted Target", "Response", "Response Time", "Correct Response", "Correctness", "TrialID", "ConditionID", "Images", "Targets", "Clicked_Orbit_ID", "Clicked_Item_Idx", "Probe_Orbit_ID", "Probe_Item_Idx"]
+fieldnames = ['UserID', 'Age', 'Sex', 'Handedness', 'Trial Number', 'Block number', 'Trial Type','Target Set Size', 'Target Side', "Layout", "Highlighted Target", "Response", "Response Time", "Status", "Correct Response", "Correctness", "TrialID", "ConditionID", "Images", "Targets", "Clicked_Orbit_ID", "Clicked_Item_Idx", "Probe_Orbit_ID", "Probe_Item_Idx"]
 scale = 1
 target_color="blue"
 mirror_color="yellow"
@@ -31,7 +31,7 @@ max_response_time_mit = 5.0  # seconds
 n_blocks = 4
 n_selected_combinations = None
 
-training_on = True
-eyetracker_on = True
+training_on = False
+eyetracker_on = False
 form_on = True
 

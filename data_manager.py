@@ -53,6 +53,7 @@ class DataManager:
         probe_item_idx = trial_config.probe_index
         clicked_orbit_id = result_data.get('clicked_orbit_id', 'N/A')
         clicked_item_idx = result_data.get('clicked_item_idx', 'N/A')
+        status = result_data.get('status', 'unknown')
 
         with open(self.filename, mode='a', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=self.fieldnames)
@@ -60,12 +61,9 @@ class DataManager:
             # Prepare the row dictionary matching fieldnames exactly
             row_data = {
                     'UserID': self.user_form.id,
-                    'First Name': self.user_form.first_name,
-                    'Last Name': self.user_form.last_name,
                     'Age': self.user_form.age,
                     'Sex': self.user_form.sex,
                     'Handedness': self.user_form.handedness,
-                    'E-mail': self.user_form.email,
                     'Trial Number': trial_config.trial_number,
                     'Block number': trial_config.block_number,
                     'Trial Type': trial_config.trial_type.name,
@@ -82,6 +80,7 @@ class DataManager:
                     'Correct Response': correct_val,
                     'Correctness': 1 if result_data['is_correct'] else 0,
                     'Response Time': f"{result_data['response_time']:.3f}",
+                    'Status': status,
                     'TrialID': trial_config.id,
                     'ConditionID': trial_config.condition_id,
                     'Images': "|".join(all_images),

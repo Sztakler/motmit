@@ -85,6 +85,17 @@ def run_trial(win, trial_config, is_practice=False):
     # --- PHASE 0: Instruction Text ---
     color_name = "niebieskie" if trial_config.trial_type.name == "MOT" else "różowe"
     color_val = mot_target_color if trial_config.trial_type.name == "MOT" else mit_target_color
+
+    # Initial results dict state
+    results = {
+        'clicked_object': None,
+        'correct_answer': trial_config.correct_answer,
+        'is_correct': None,
+        'response_time': -1.0, # If no response
+        'clicked_orbit_id': None,
+        'clicked_item_idx': None,
+        'status': 'completed' # Trial successful by default
+    }
     
     # Hide mouse cursor
     win.mouseVisible = False
@@ -105,7 +116,8 @@ def run_trial(win, trial_config, is_practice=False):
     while clock.getTime() < TIME_CUE:
         if not (eyetracker.check_position() and eyetracker.check_blink()):
             display_look_at_center_message(win)
-            return True, None
+            results['status'] = 'interrupted'
+            return True, results
         
         view.update(t=0, show_targets=True)
         fixation.draw()
@@ -118,12 +130,14 @@ def run_trial(win, trial_config, is_practice=False):
 
         if not (eyetracker.check_position() and eyetracker.check_blink()):
             display_look_at_center_message(win)
-            return True, None
+            results['status'] = 'interrupted'
+            return True, results
         
         view.update(t=t, show_targets=False)
         fixation.draw()
         win.flip()
-        if 'escape' in event.getKeys(): core.quit()
+        if 'escape' in event.getKeys():
+            core.quit()
 
     # --- PHASE 4: Stop (Static images before probe) ---
     clock.reset()
@@ -158,7 +172,9 @@ def run_trial(win, trial_config, is_practice=False):
         'clicked_item_idx': c_item_idx
     }
 
-    if 'escape' in event.getKeys(): return True, results
+    if 'escape' in event.getKeys():
+        results['status'] = 'escaped'
+        return True, results
 
     return False, results
 
@@ -195,13 +211,13 @@ if __name__ == "__main__":
     interrupted_trials = []
 
     # --- Main Phase ---
-    for b_idx, block in enumerate(experiment_structure, 1):
+    for b_idx, block in enumerate(experiment_structure[:2], 1):
         # Calibrate eyetracker at the beginning of each block
         eyetracker.calibrate_and_start_recording()
         display_feedback(win, f"Zaczynasz blok {b_idx}. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
 
         # Iterate through trials in the current block
-        for trial in block:
+        for trial in block[:2]:
             # Reset eyetracker state before each trial to flush data
             eyetracker.start_recording()
         
@@ -209,11 +225,10 @@ if __name__ == "__main__":
 
             eyetracker.stop_recording()
             
+            data_saver.save_trial_data(trial, result)
+
             if interrupted:
                 interrupted_trials.append(trial)
-            else:
-                data_saver.save_trial_data(trial, result)
-                continue
 
             if 'escape' in event.getKeys():
                 win.close()
@@ -233,18 +248,12 @@ if __name__ == "__main__":
 
 
         for trial in interrupted_trials[:len(interrupted_trials)//2]:
-            # trial = interrupted_trials.pop(0)
-            
             eyetracker.start_recording()
             interrupted, result = run_trial(win, trial)
             eyetracker.stop_recording()
 
-            if interrupted:
-                # interrupted_trials.append(trial)
-                continue
-            else:
-                data_saver.save_trial_data(trial, result)
-                continue
+            result['status'] = 'completed_recovery' if not interrupted else 'interrupted_again'
+            data_saver.save_trial_data(trial, result)
 
     display_feedback(win, "Koniec eksperymentu. Dziękujemy za udział.")
 
