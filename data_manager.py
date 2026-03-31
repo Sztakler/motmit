@@ -34,9 +34,13 @@ class DataManager:
         # Consolidate stimulus information into pipe-separated strings
         # to avoid breaking CSV columns with commas
         all_images = []
-        for pair in trial_config.images_paths:
-            all_images.append(os.path.basename(pair[0]))
-            all_images.append(os.path.basename(pair[1]))
+        if trial_config.trial_type.name == "MIT":
+            for pair in trial_config.images_paths:
+                all_images.append(os.path.basename(pair[0]))
+                all_images.append(os.path.basename(pair[1]))
+        # Only one path for MOT, since all images are identical in this task
+        else:
+            all_images.append(os.path.basename(trial_config.images_paths[0][0]))
 
         target_info = [f"Orb:{o.orbit_id}_Tidx:{o.target_idx}" for o in trial_config.active_orbits]
 
@@ -54,6 +58,8 @@ class DataManager:
         clicked_orbit_id = result_data.get('clicked_orbit_id', 'N/A')
         clicked_item_idx = result_data.get('clicked_item_idx', 'N/A')
         status = result_data.get('status', 'unknown')
+        raw_res = result_data.get('clicked_object')
+        response = raw_res if raw_res else "N/A"
 
         with open(self.filename, mode='a', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=self.fieldnames)
@@ -76,7 +82,7 @@ class DataManager:
                     
                     'Layout': trial_config.layout, 
                     'Highlighted Target': trial_config.probe_is_target,
-                    'Response': result_data['clicked_object'], 
+                    'Response': response,
                     'Correct Response': correct_val,
                     'Correctness': 1 if result_data['is_correct'] else 0,
                     'Response Time': f"{result_data['response_time']:.3f}",
