@@ -1,0 +1,2 @@
+UserID,First Name,Last Name,Age,Sex,Handedness,E-mail,Trial Number,Block number,Trial Type,Target Set Size,Target Side,Layout,Highlighted Target,Response,Correct Response,Correctness,TrialID,ConditionID,Images,Targets
+ca63b10e-3ddf-4a38-8bf3-da42dd79257a,,,0,,,,1,1,mot,3,r,"[0, 1, 2]",True,,"(3, 1)",,a9afc94c-e182-4c21-ba74-87138e283f5f,01110,"['2a.png', '2a.png', '2a.png', '2a.png', '2a.png', '2a.png']","[[3, 0, 1], [4, 1, 1], [5, 2, 0]]"

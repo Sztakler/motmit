@@ -1,75 +1,58 @@
-from psychopy import core, event, visual
+from psychopy import visual, event, core
 from response_handler import ResponseHandler
 from config import scale, response_circle_radius, response_circle_target_color, response_circle_mirror_color, max_response_time_mot
 
 class MOTResponseHandler(ResponseHandler):
     def __init__(self, win):
-        """
-        Initialize the ResponseHandler instance.
-        """
         super().__init__(win)
-        self.green_circle = visual.Circle(self.win, radius=response_circle_radius * scale, fillColor=response_circle_target_color, pos=(-0.2 * scale, 0))
-        self.red_circle = visual.Circle(self.win, radius=response_circle_radius * scale, fillColor=response_circle_mirror_color, pos=(0.2 * scale, 0))
+        # Position two choice circles on the screen
+        self.target_circle = visual.Circle(
+            self.win, radius=response_circle_radius * scale, 
+            fillColor=response_circle_target_color, pos=(-200 * scale, 0)
+        )
+        self.distractor_circle = visual.Circle(
+            self.win, radius=response_circle_radius * scale, 
+            fillColor=response_circle_mirror_color, pos=(200 * scale, 0)
+        )
 
     def get_response(self):
-        self.green_circle.draw()
-        self.red_circle.draw()
-        self.win.flip()
+        """
+        Waits for a mouse click on one of the two circles.
+        """
         mouse = event.Mouse(win=self.win)
-
+        mouse.setPos((0, 0))
         timer = core.Clock()
-        mouse.setPos((0, 0))  # Reset mouse position
-        while not self.clicked_object and timer.getTime() < max_response_time_mot:
-            if mouse.isPressedIn(self.green_circle):
-                self.clicked_object = response_circle_target_color
-            elif mouse.isPressedIn(self.red_circle):
-                self.clicked_object = response_circle_mirror_color
-    
-    def check_correctness(self, is_target_highlighted):
-        """
-        Check the correctness of the response.
+        timeout = max_response_time_mot
 
-        Returns:
-            bool: True if the response is correct, False otherwise.
-        """
-        # Checking the correctness of the response
-        if self.clicked_object == response_circle_target_color:
-            if is_target_highlighted:
-                self.feedback = "Dobrze."
-                self.correct = True
-            else:
-                self.feedback = "Źle."
-                self.correct = False
-        elif self.clicked_object == response_circle_mirror_color:
-            if not is_target_highlighted:
-                self.feedback = "Dobrze."
-                self.correct = True
-            else:
-                self.feedback = "Źle."
-                self.correct = False
+        # Draw and immediately start timer
+        self.target_circle.draw()
+        self.distractor_circle.draw()
+        self.win.flip()
+        start_time = core.getTime()
         
-        return self.correct
+        while timer.getTime() < timeout:
+            self.target_circle.draw()
+            self.distractor_circle.draw()
+            self.win.flip()
 
-    def check_correctness_training(self, is_target_highlighted):
+            if mouse.getPressed()[0]:
+                if mouse.isPressedIn(self.target_circle):
+                    self.clicked_object = "target"
+                    self.response_time = core.getTime() - start_time
+                    break
+                elif mouse.isPressedIn(self.distractor_circle):
+                    self.clicked_object = "distractor"
+                    self.response_time = core.getTime() - start_time
+                    break
+        
+    def check_correctness(self, is_target_probed):
         """
-        Check the correctness of the response. And provide verbose feedback.
-
-        Returns:
-            bool: True if the response is correct, False otherwise.
+        Validates if the participant clicked the circle corresponding to the probe type.
         """
-        # Checking the correctness of the response
-        if self.clicked_object == response_circle_target_color:
-            if is_target_highlighted:
-                self.feedback = "Dobrze."
-                self.correct = True
-            else:
-                self.feedback = "Źle."
-                self.correct = False
-        elif self.clicked_object == response_circle_mirror_color:
-            if not is_target_highlighted:
-                self.feedback = "Dobrze."
-                self.correct = True
-            else:
-                self.feedback = "Źle."
-                self.correct = False
+        if self.clicked_object == "target":
+            self.correct = is_target_probed
+        elif self.clicked_object == "distractor":
+            self.correct = not is_target_probed
+            
+        self.feedback = "Dobrze." if self.correct else "Źle."
         return self.correct

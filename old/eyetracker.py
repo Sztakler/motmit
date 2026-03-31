@@ -120,18 +120,18 @@ class Eyetracker:
 
         if gpos is None:
             self.blink_counter += 1
-            logger.info(f"No gaze position (blink_counter={self.blink_counter})")
+            logger.info(f"brak pozycji wzroku (blink_counter={self.blink_counter})")
 
             if self.blink_counter >= self.blink_threshold:
-                logger.warning("To much blinking / losing gase")
+                logger.warning("dużo mrugania / zgubienia wzroku")
                 self.blink_counter = 0
                 return False
             
             core.wait(0.01)
-            return True  # that's not large enough to classify as blinking
+            return True  # jeszcze nie uznajemy za 'duży blink'
         
         else:
-            self.blink_counter = 0  # reset blink counter because we have eye contact
+            self.blink_counter = 0  # resetujemy licznik blinków bo mamy wzrok
             # logger.info("not blinking")
             return True
 

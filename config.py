@@ -1,21 +1,22 @@
 from math import pi
 
+experiment_name = "MOT_MIT_EEG"
 participants_path = "data/participants"
-fieldnames = ['UserID', 'First Name', 'Last Name', 'Age', 'Sex', 'Handedness', 'E-mail', 'Trial Number', 'Block number', 'Trial Type','Target Set Size', 'Target Side', "Layout", "Highlighted Target", "Response", "Correct Response", "Correctness", "TrialID", "ConditionID", "Images", "Targets"]
-scale = 1080
+fieldnames = ['UserID', 'Age', 'Sex', 'Handedness', 'Trial Number', 'Block number', 'Trial Type','Target Set Size', 'Target Side', "Layout", "Highlighted Target", "Response", "Response Time", "Status", "Correct Response", "Correctness", "TrialID", "ConditionID", "Images", "Targets", "Clicked_Orbit_ID", "Clicked_Item_Idx", "Probe_Orbit_ID", "Probe_Item_Idx"]
+scale = 1
 target_color="blue"
 mirror_color="yellow"
-response_circle_radius = 0.1
+response_circle_radius = 108
 response_circle_target_color = "green"
 response_circle_mirror_color = "red"
 feedback_color = "black"
-feedback_font_size = 0.05
+feedback_font_size = 54
 
-orbit_radius = 0.06
-images_orbit_radius = 0.08
-image_radius = 0.08
-image_cover_radius = 0.05
-image_highlight_radius = 0.07
+orbit_radius = 64.8
+images_orbit_radius = 86.4
+image_radius = 86.4
+image_cover_radius = 54
+image_highlight_radius = 75.6
 orbiting_speed = 3/2 * pi # 3/2 * pi = 270 deg/s
 
 cue_time = 1.5 # seconds
@@ -30,6 +31,7 @@ max_response_time_mit = 5.0  # seconds
 n_blocks = 4
 n_selected_combinations = None
 
-training_on = False
+training_on = True
 eyetracker_on = True
-form_on = False
+form_on = True
+
