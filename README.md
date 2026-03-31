@@ -77,15 +77,15 @@ Generally most of the configuration variables **shouldn't be changed**. There ar
 | **Target Side** | On which side of the screen the targets for tracking are displayed (**L**eft / **R**ight). | `R` |
 | **Layout** | Objects' layout on the screen (e.g. top-bottom, all). | `Layout.TOP_BOT` |
 | **Highlighted Target** | True if in this trial one of the targets was highlighted, False otherwise. | `False` |
-| **Response** | Type of the user's response (target/distractor (MOT) or image path (MIT). | `target` |
-| **Response Time** | Response time in seconds (value `-1.000` means no reaction/timeout). | `2.172` |
-| **Status** | Trial status (`unknown` by default). | `unknown` |
+| **Response** | Type of the user's response (target/distractor (MOT) or image path (MIT). N/A if no response.| `target` |
+| **Response Time** | Time from probe onset to user click in seconds (value `-1.000` means no reaction/timeout). | `2.172` |
+| **Status** | Trial status. `completed`: completed trial, `interrupted`: interrupted by eyetracker, `escaped`: exited by `Esc` key, `completed_recovery`: trial completed in `interrupted` block. | `unknown` |
 | **Correct Response** | What is the correct response. | `distractor` |
 | **Correctness** | Was user's response correct: `1` (correct), `0` (incorrect). | `0` |
 | **TrialID** | Unique trial ID (hash) | `fdc017b6` |
 | **ConditionID** | Trial parameters encoded into a numeric string. Mapping: TrialType (MOT:0, MIT:1), Side (L:0, R:1), SetSize (2:0, 3:1), Layout (specific: 0-3)| `0103` |
-| **Images** | List of images selected for the trial. | `11a.png|11b.png|9a.png|9b.png|5a.png|5b.png|11a.png|11b.png|9a.png|9b.png|5a.png|5b.png` |
-| **Targets** | Coordinates of the target objects on the screen. 'Orb' is the orbit index (top to bottom) and 'Tidx' is the target index inside the orbit.) | `Orb:3_Tidx:1` |
+| **Images** | List of images selected for the trial. A single file for MOT. | `11a.png|11b.png|9a.png|9b.png|5a.png|5b.png|11a.png|11b.png|9a.png|9b.png|5a.png|5b.png` |
+| **Targets** | Logic identifiers of target objects. Format: Orb:[ID] (orbit index) and Tidx:[ID] (item index within orbit). | `Orb:3_Tidx:1` |
 | **Clicked_Orbit_ID** | Index of the orbit with the object selected by user. | `2` |
 | **Clicked_Item_Idx** | Index of the item selected by the user inside the orbit. | `1` |
 | **Probe_Orbit_ID** | Index of the orbit with the highlighted item. | `1` |
