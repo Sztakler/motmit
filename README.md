@@ -36,7 +36,7 @@ Generally most of the configuration variables **shouldn't be changed**. There ar
 | :--- | :--- | :--- |
 | `experiment_name` | Name used for data logging and eye-tracking sessions. | `"MOT_MIT_EEG"` |
 | `participants_path` | Directory path for saving output CSV files. | `"data/participants"` |
-| `fieldnames` | List of headers for the output data file. | *(See Table 1)* |
+| `fieldnames` | List of headers for the output data file. | *(See Table 2 (CSV file structure))* |
 | `scale` | General scaling factor for the experiment view. | `1` |
 | `target_color` | Color for primary target objects. | `"blue"` |
 | `mirror_color` | Color for mirror objects (non-targets on opposite side). | `"yellow"` |
@@ -84,7 +84,7 @@ Generally most of the configuration variables **shouldn't be changed**. There ar
 | **Correctness** | Was user's response correct: `1` (correct), `0` (incorrect). | `0` |
 | **TrialID** | Unique trial ID (hash) | `fdc017b6` |
 | **ConditionID** | Trial parameters encoded into a numeric string. Mapping: TrialType (MOT:0, MIT:1), Side (L:0, R:1), SetSize (2:0, 3:1), Layout (specific: 0-3)| `0103` |
-| **Images** | List of images selected for the trial. A single file for MOT. | `11a.png|11b.png|9a.png|9b.png|5a.png|5b.png|11a.png|11b.png|9a.png|9b.png|5a.png|5b.png` |
+| **Images** | List of images selected for the trial. A single file for MOT. | `11a.png\|11b.png\|9a.png\|9b.png\|5a.png\|5b.png` |
 | **Targets** | Logic identifiers of target objects. Format: Orb:[ID] (orbit index) and Tidx:[ID] (item index within orbit). | `Orb:3_Tidx:1` |
 | **Clicked_Orbit_ID** | Index of the orbit with the object selected by user. | `2` |
 | **Clicked_Item_Idx** | Index of the item selected by the user inside the orbit. | `1` |
