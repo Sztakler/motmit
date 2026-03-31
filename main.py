@@ -163,14 +163,14 @@ def run_trial(win, trial_config, is_practice=False):
     is_correct, response_val, response_time, c_orbit_id, c_item_idx = handle_response(win, trial_config, is_practice)
     print(f"Result: {is_correct}, Selected: {response_val}, Response Time: {response_time}")
     
-    results = {
+    results.update({
         'clicked_object': response_val,
         'correct_answer': trial_config.correct_answer, # should be different answer in MOT (target/distractor) and MIT (image path)
         'is_correct': is_correct,
         'response_time': response_time,
         'clicked_orbit_id': c_orbit_id,
         'clicked_item_idx': c_item_idx
-    }
+    })
 
     if 'escape' in event.getKeys():
         results['status'] = 'escaped'
@@ -217,7 +217,7 @@ if __name__ == "__main__":
         display_feedback(win, f"Zaczynasz blok {b_idx}. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
 
         # Iterate through trials in the current block
-        for trial in block[:2]:
+        for trial in block[:4]:
             # Reset eyetracker state before each trial to flush data
             eyetracker.start_recording()
         
