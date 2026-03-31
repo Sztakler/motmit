@@ -211,13 +211,13 @@ if __name__ == "__main__":
     interrupted_trials = []
 
     # --- Main Phase ---
-    for b_idx, block in enumerate(experiment_structure[:2], 1):
+    for b_idx, block in enumerate(experiment_structure, 1):
         # Calibrate eyetracker at the beginning of each block
         eyetracker.calibrate_and_start_recording()
         display_feedback(win, f"Zaczynasz blok {b_idx}. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
 
         # Iterate through trials in the current block
-        for trial in block[:4]:
+        for trial in block:
             # Reset eyetracker state before each trial to flush data
             eyetracker.start_recording()
         
