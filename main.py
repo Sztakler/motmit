@@ -77,6 +77,13 @@ TIME_PROBE = probe_time
 # Total movement duration for the loop
 TIME_MOVEMENT_TOTAL = TIME_MOVEMENT_START + TIME_MOVEMENT_JITTER + TIME_MOVEMENT_END
 
+def get_trial_trigger_code(trial_config):
+    digit1 = 1 if trial_config.trial_type.name == "MOT" else 2
+    digit2 = int(trial_config.target_side) + 1
+    digit3 = len(trial_config.active_orbits)
+
+    return int(f"{digit1}{digit2}{digit3}")
+
 def run_trial(win, trial_config, is_practice=False):
     view = ExperimentView(win, trial_config, base_switch_time=TIME_MOVEMENT_START)
     fixation = FixationCross(win, size=54) # Assuming FixationCross is defined
@@ -85,6 +92,10 @@ def run_trial(win, trial_config, is_practice=False):
     # --- PHASE 0: Instruction Text ---
     color_name = "niebieskie" if trial_config.trial_type.name == "MOT" else "różowe"
     color_val = mot_target_color if trial_config.trial_type.name == "MOT" else mit_target_color
+
+    trial_code = get_trial_trigger_code(trial_config)
+    if is_practice:
+        trial_code = 6
 
     # Initial results dict state
     results = {
@@ -112,6 +123,9 @@ def run_trial(win, trial_config, is_practice=False):
         win.flip()
 
     # --- PHASE 2: Cue (Static targets highlighted) ---
+    win.callOnFlip(eyetracker.send_trigger, trial_code)
+    win.flip()
+    
     clock.reset()
     while clock.getTime() < TIME_CUE:
         if not (eyetracker.check_position() and eyetracker.check_blink()):
@@ -160,6 +174,9 @@ def run_trial(win, trial_config, is_practice=False):
     # win.mouseVisible = True
     # print(f"Correct answer: {trial_config.correct_answer}")
     # keys = event.waitKeys(keyList=['t', 'n', 'escape'])
+
+    eyetracker.send_trigger(7)
+    
     is_correct, response_val, response_time, c_orbit_id, c_item_idx = handle_response(win, trial_config, is_practice)
     print(f"Result: {is_correct}, Selected: {response_val}, Response Time: {response_time}")
     
@@ -193,8 +210,10 @@ if __name__ == "__main__":
     
     csv_filename = f"data/participants/{form.id}_results.csv"
     data_saver = DataManager(csv_filename, form)
-
+    
     # --- Practice Phase ---
+    eyetracker.send_trigger(100)
+
     if training_on:
         practice_trials = experiment_structure[0]
         eyetracker.calibrate_and_start_recording()
@@ -254,6 +273,8 @@ if __name__ == "__main__":
 
             result['status'] = 'completed_recovery' if not interrupted else 'interrupted_again'
             data_saver.save_trial_data(trial, result)
+
+    eyetracker.send_trigger(200)
 
     display_feedback(win, "Koniec eksperymentu. Dziękujemy za udział.")
 

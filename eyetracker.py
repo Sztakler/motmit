@@ -1,4 +1,4 @@
-from psychopy import hardware, visual, core
+from psychopy import hardware, visual, core, parallel
 import psychopy.iohub as io
 import os
 from logger import logger
@@ -20,6 +20,17 @@ class Eyetracker:
     }
         self.blink_threshold = 3
         self.blink_counter = 0
+        self.isPort = False
+
+        if eyetracker_on:
+            try:
+                parallel.setPortAddress(0x378)
+                self.isPort = True
+                parallel.setData(0)
+                print("EEG Port initialized successfully.")
+            except Exception as e:
+                print(f"EEG Port not found: {e}")
+                self.isPort = False
     
     def config(self, win, experimentName, id):
         if not eyetracker_on:
@@ -93,6 +104,26 @@ class Eyetracker:
         if not eyetracker_on:
             return
         logger.info(f"Getting data from eyetracker")
+
+    def send_trigger(self, code):
+        # if not eyetracker_on:
+        #     return
+
+        try:
+            self.ioServer.sendMessageEvent(f"SYNCH {code}")
+        except:
+            pass
+
+        if self.isPort:
+            try:
+                parallel.setData(code)
+                core.wait(0.005)
+                parallel.setData(0)
+            except Exception as e:
+                logger.error(f"Parallel port error: {e}")
+        else:
+            print(f"[EEG DUMMY] Trigger sent: {code}")
+
 
     def check_position(self):
         if not eyetracker_on:
