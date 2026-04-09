@@ -31,6 +31,8 @@ max_response_time_mit = 5.0  # seconds
 n_blocks = 4
 n_selected_combinations = None
 
+lpt_address = 0x378 # standard LPT1 addres (hex)
+
 training_on = True
 eyetracker_on = True
 form_on = True

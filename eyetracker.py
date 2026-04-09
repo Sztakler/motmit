@@ -2,7 +2,7 @@ from psychopy import hardware, visual, core, parallel
 import psychopy.iohub as io
 import os
 from logger import logger
-from config import eyetracker_on
+from config import eyetracker_on, lpt_address
 from datetime import datetime
 
 class Eyetracker:
@@ -24,13 +24,15 @@ class Eyetracker:
 
         if eyetracker_on:
             try:
-                parallel.setPortAddress(0x378)
+                parallel.setPortAddress(lpt_address)
                 self.isPort = True
                 parallel.setData(0)
-                print("EEG Port initialized successfully.")
+                print(f"EEG Port initialized at address {hex(lpt_address)}")
+                logger.info(f"EEG Port initialized at address {hex(lpt_address)}")
             except Exception as e:
-                print(f"EEG Port not found: {e}")
+                print(f"EEG Port not found at {hex(lpt_address)}: {e}. Simulation mode ON.")
                 self.isPort = False
+                logger.warning(f"Could not initialize EEG port at {hex(lpt_address)}. Simulation mode on.")
     
     def config(self, win, experimentName, id):
         if not eyetracker_on:
