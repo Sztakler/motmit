@@ -53,9 +53,6 @@ class TrialConfig:
         self.active_orbits = [o for o in self.all_orbits if o.has_target]
         self.probe_orbit = random.choice(self.active_orbits)
 
-        for o in self.active_orbits:
-            print(o.target_idx)
-
         if self.probe_is_target:
             self.probe_index = self.probe_orbit.target_idx
             self.correct_answer = "target"

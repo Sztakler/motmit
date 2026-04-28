@@ -108,8 +108,8 @@ class Eyetracker:
         logger.info(f"Getting data from eyetracker")
 
     def send_trigger(self, code):
-        # if not eyetracker_on:
-        #     return
+        if not eyetracker_on:
+            return
 
         try:
             self.ioServer.sendMessageEvent(f"SYNCH {code}")

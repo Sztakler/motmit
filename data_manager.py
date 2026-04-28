@@ -61,6 +61,10 @@ class DataManager:
         raw_res = result_data.get('clicked_object')
         response = raw_res if raw_res else "N/A"
 
+        def fmt(key):
+            val = result_data.get(key)
+            return f"{val:.3f}" if val is not None else "N/A"
+
         with open(self.filename, mode='a', newline='', encoding='utf-8') as f:
             writer = csv.DictWriter(f, fieldnames=self.fieldnames)
             
@@ -85,17 +89,17 @@ class DataManager:
                     'Response': response,
                     'Correct Response': correct_val,
                     'Correctness': 1 if result_data['is_correct'] else 0,
-                    'Response Time': f"{result_data['response_time']:.3f}",
+                    'Response Time': fmt('response_time'),
                     'Status': status,
                     'TrialID': trial_config.id,
                     'ConditionID': trial_config.condition_id,
                     'Images': "|".join(all_images),
                     'Targets': "|".join(target_info),
-                    't_cue_start': result_data.get('t_cue_start'),
-                    't2_movement_start': result_data.get('t2_movement_start'),
-                    't3_movement_stop': result_data.get('t3_movement_stop'),
-                    't4_aoi_disappear': result_data.get('t4_aoi_disappear'),
-                    't7_response_start': result_data.get('t7_response_start')
+                    't_cue_start': fmt('t_cue_start'),
+                    't2_movement_start': fmt('t2_movement_start'),
+                    't3_movement_stop': fmt('t3_movement_stop'),
+                    't4_aoi_disappear': fmt('t4_aoi_disappear'),
+                    't7_response_start': fmt('t7_response_start')
                 }
             
             filtered_row = {k: v for k, v in row_data.items() if k in self.fieldnames}
