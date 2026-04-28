@@ -10,7 +10,7 @@ import os
 import re
 import random
 from utils.input import wait_for_input
-from constants import MOVEMENT_START_CODE, MOVEMENT_STOP_CODE
+from constants import MOVEMENT_START_CODE, MOVEMENT_STOP_CODE, END_CODE, START_CODE, TRIAL_END_CODE
 
 class FixationCross:
     def __init__(self, win, size):
@@ -192,7 +192,7 @@ def run_trial(win, trial_config, is_practice=False):
     # print(f"Correct answer: {trial_config.correct_answer}")
     # keys = event.waitKeys(keyList=['t', 'n', 'escape'])
 
-    eyetracker.send_trigger(7)
+    eyetracker.send_trigger(TRIAL_END_CODE)
     results['t7_response_start'] = trial_clock.getTime()
     
     is_correct, response_val, response_time, c_orbit_id, c_item_idx = handle_response(win, trial_config, is_practice)
@@ -230,7 +230,7 @@ if __name__ == "__main__":
     data_saver = DataManager(csv_filename, form)
     
     # --- Practice Phase ---
-    eyetracker.send_trigger(100)
+    eyetracker.send_trigger(START_CODE)
 
     if training_on:
         practice_trials = experiment_structure[0][:len(experiment_structure[0]) // 2]
@@ -310,7 +310,7 @@ if __name__ == "__main__":
                 display_feedback(win, "Koniec bloku powtórzeniowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby kontynuować.")
 
 
-    eyetracker.send_trigger(200)
+    eyetracker.send_trigger(END_CODE)
 
     display_feedback(win, "Koniec eksperymentu. Dziękujemy za udział.")
 
