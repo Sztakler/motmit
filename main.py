@@ -8,6 +8,7 @@ from data_manager import DataManager
 from form import Form
 import os
 import re
+import random
 from utils.input import wait_for_input
 
 class FixationCross:
@@ -227,7 +228,7 @@ if __name__ == "__main__":
         display_feedback(win, "Koniec bloku testowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby przejść do badania.")
 
 
-    interrupted_trials = []
+    interrupted_trials_pool = []
 
     # --- Main Phase ---
     for b_idx, block in enumerate(experiment_structure, 1):
@@ -235,6 +236,8 @@ if __name__ == "__main__":
         eyetracker.calibrate_and_start_recording()
         display_feedback(win, f"Zaczynasz blok {b_idx}. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
 
+        block_interrupted = []
+        
         # Iterate through trials in the current block
         for trial in block:
             # Reset eyetracker state before each trial to flush data
@@ -247,12 +250,17 @@ if __name__ == "__main__":
             data_saver.save_trial_data(trial, result)
 
             if interrupted:
-                interrupted_trials.append(trial)
+                block_interrupted.append(trial)
 
             if 'escape' in event.getKeys():
                 win.close()
                 core.quit()
                 
+        if len(block_interrupted) > 48:
+            random.shuffle(block_interrupted)
+            interrupted_trials_pool.extend(block_interrupted[:48])
+        else:
+            interrupted_trials_pool.extend(block_interrupted)
 
         # Handle break after each block except the last one
         if b_idx < n_blocks:
@@ -260,19 +268,29 @@ if __name__ == "__main__":
 
     
     # --- Interrupted Trials Phase ---
-    if interrupted_trials:
+    if interrupted_trials_pool:
+
+        recovery_blocks = [interrupted_trials_pool[i:i + 96] for i in range(0, len(interrupted_trials_pool), 96)]
+        
         display_feedback(win, "Niektóre próby zostały przerwane. Naciśnij dowolny przycisk myszy, aby je powtórzyć.")
-        eyetracker.calibrate_and_start_recording()
-        display_feedback(win, "Zaczynasz blok powtórzeniowy. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
+
+        for rb_index, r_block in enumerate(recovery_blocks, 1):
+            eyetracker.calibrate_and_start_recording()
+            display_feedback(win, f"Zaczynasz blok powtórzeniowy {rb_index} z {len(recovery_blocks)}. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
+
+            for trial in r_block:
+                eyetracker.start_recording()
+                interrupted, result = run_trial(win, trial)
+                eyetracker.stop_recording()
 
 
-        for trial in interrupted_trials[:len(interrupted_trials)//2]:
-            eyetracker.start_recording()
-            interrupted, result = run_trial(win, trial)
-            eyetracker.stop_recording()
 
-            result['status'] = 'completed_recovery' if not interrupted else 'interrupted_again'
-            data_saver.save_trial_data(trial, result)
+                result['status'] = 'completed_recovery' if not interrupted else 'interrupted_again'
+                data_saver.save_trial_data(trial, result)
+
+            if rb_index < len(recovery_blocks):
+                display_feedback(win, "Koniec bloku powtórzeniowego. Zrób sobie przerwę. Naciśnij dowolny przycisk myszy, aby kontynuować.")
+
 
     eyetracker.send_trigger(200)
 
