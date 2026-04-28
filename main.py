@@ -216,7 +216,8 @@ if __name__ == "__main__":
     eyetracker.send_trigger(100)
 
     if training_on:
-        practice_trials = experiment_structure[0]
+        practice_trials = experiment_structure[0][:len(experiment_structure[0]) // 2]
+
         eyetracker.calibrate_and_start_recording()
         display_feedback(win, f"Zaczynasz blok testowy. Naciśnij dowolny przycisk myszy, aby rozpocząć.")
 
