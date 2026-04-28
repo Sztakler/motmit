@@ -33,7 +33,7 @@ n_selected_combinations = None
 
 lpt_address = 0x3efc # standard LPT1 addres (hex)
 
-training_on = False
-eyetracker_on = False
-form_on = False
+training_on = True
+eyetracker_on = True
+form_on = True
 
