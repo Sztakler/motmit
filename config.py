@@ -2,7 +2,7 @@ from math import pi
 
 experiment_name = "MOT_MIT_EEG"
 participants_path = "data/participants"
-fieldnames = ['UserID', 'Age', 'Sex', 'Handedness', 'Trial Number', 'Block number', 'Trial Type','Target Set Size', 'Target Side', "Layout", "Highlighted Target", "Response", "Response Time", "Status", "Correct Response", "Correctness", "TrialID", "ConditionID", "Images", "Targets", "Clicked_Orbit_ID", "Clicked_Item_Idx", "Probe_Orbit_ID", "Probe_Item_Idx", 't_cue_start', 't2_movement_start', 't3_movement_stop', 't4_aoi_disappear', 't7_response_start']
+fieldnames = ['UserID', 'Age', 'Sex', 'Handedness', 'Trial Number', 'Block number', 'Trial Type','Target Set Size', 'Target Side', "Layout", "Highlighted Target", "Response", "Response Time", "Status", "Correct Response", "Correctness", "TrialID", "ConditionID", "Images", "Targets", "Clicked_Orbit_ID", "Clicked_Item_Idx", "Probe_Orbit_ID", "Probe_Item_Idx", 't_cue_start', 't2_movement_start', 't3_movement_stop', 't7_response_start']
 scale = 1
 target_color="blue"
 mirror_color="yellow"
@@ -33,7 +33,7 @@ n_selected_combinations = None
 
 lpt_address = 0x3efc # standard LPT1 addres (hex)
 
-training_on = True
-eyetracker_on = True
-form_on = True
+training_on = False
+eyetracker_on = False
+form_on = False
 

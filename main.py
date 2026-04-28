@@ -10,7 +10,7 @@ import os
 import re
 import random
 from utils.input import wait_for_input
-from constants import AOI_DISAPPEAR_CODE, MOVEMENT_START_CODE, MOVEMENT_STOP_CODE
+from constants import MOVEMENT_START_CODE, MOVEMENT_STOP_CODE
 
 class FixationCross:
     def __init__(self, win, size):
@@ -113,7 +113,6 @@ def run_trial(win, trial_config, is_practice=False):
         't_cue_start': None,
         't2_movement_start': None,
         't3_movement_stop': None,
-        't4_aoi_disappear': None,
         't7_response_start': None
     }
     
@@ -184,9 +183,6 @@ def run_trial(win, trial_config, is_practice=False):
         view.update(t=TIME_MOVEMENT_TOTAL, probe_only=True)
         fixation.draw()
         win.flip()
-
-    eyetracker.send_trigger(AOI_DISAPPEAR_CODE)
-    results['t4_aoi_disappear'] = trial_clock.getTime()
 
     # Show mouse cursor
     win.mouseVisible = True

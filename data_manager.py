@@ -98,7 +98,6 @@ class DataManager:
                     't_cue_start': fmt('t_cue_start'),
                     't2_movement_start': fmt('t2_movement_start'),
                     't3_movement_stop': fmt('t3_movement_stop'),
-                    't4_aoi_disappear': fmt('t4_aoi_disappear'),
                     't7_response_start': fmt('t7_response_start')
                 }
             
