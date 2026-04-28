@@ -19,3 +19,7 @@ class Layout(Enum):
     TOP_MID = ((OrbitPosition.TOP, OrbitPosition.MIDDLE), 1)
     MID_BOT = ((OrbitPosition.MIDDLE, OrbitPosition.BOTTOM), 1)
     TOP_BOT = ((OrbitPosition.TOP, OrbitPosition.BOTTOM), 1)
+
+MOVEMENT_START_CODE = 2
+MOVEMENT_STOP_CODE = 3
+AOI_DISAPPEAR_CODE = 4

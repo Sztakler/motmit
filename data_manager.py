@@ -90,7 +90,12 @@ class DataManager:
                     'TrialID': trial_config.id,
                     'ConditionID': trial_config.condition_id,
                     'Images': "|".join(all_images),
-                    'Targets': "|".join(target_info)
+                    'Targets': "|".join(target_info),
+                    't_cue_start': result_data.get('t_cue_start'),
+                    't2_movement_start': result_data.get('t2_movement_start'),
+                    't3_movement_stop': result_data.get('t3_movement_stop'),
+                    't4_aoi_disappear': result_data.get('t4_aoi_disappear'),
+                    't7_response_start': result_data.get('t7_response_start')
                 }
             
             filtered_row = {k: v for k, v in row_data.items() if k in self.fieldnames}

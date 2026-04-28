@@ -10,6 +10,7 @@ import os
 import re
 import random
 from utils.input import wait_for_input
+from constants import AOI_DISAPPEAR_CODE, MOVEMENT_START_CODE, MOVEMENT_STOP_CODE
 
 class FixationCross:
     def __init__(self, win, size):
@@ -89,6 +90,8 @@ def run_trial(win, trial_config, is_practice=False):
     view = ExperimentView(win, trial_config, base_switch_time=TIME_MOVEMENT_START)
     fixation = FixationCross(win, size=54) # Assuming FixationCross is defined
     clock = core.Clock()
+    trial_clock = core.Clock()
+    trial_clock.reset()
 
     # --- PHASE 0: Instruction Text ---
     color_name = "niebieskie" if trial_config.trial_type.name == "MOT" else "różowe"
@@ -106,7 +109,12 @@ def run_trial(win, trial_config, is_practice=False):
         'response_time': -1.0, # If no response
         'clicked_orbit_id': None,
         'clicked_item_idx': None,
-        'status': 'completed' # Trial successful by default
+        'status': 'completed', # Trial successful by default
+        't_cue_start': None,
+        't2_movement_start': None,
+        't3_movement_stop': None,
+        't4_aoi_disappear': None,
+        't7_response_start': None
     }
     
     # Hide mouse cursor
@@ -126,6 +134,7 @@ def run_trial(win, trial_config, is_practice=False):
     # --- PHASE 2: Cue (Static targets highlighted) ---
     win.callOnFlip(eyetracker.send_trigger, trial_code)
     win.flip()
+    results['t_cue_start'] = trial_clock.getTime()
     
     clock.reset()
     while clock.getTime() < TIME_CUE:
@@ -139,6 +148,10 @@ def run_trial(win, trial_config, is_practice=False):
         win.flip()
 
     # --- PHASE 3: Tracking (Motion with direction change) ---
+    win.callOnFlip(eyetracker.send_trigger, MOVEMENT_START_CODE)
+    win.flip()
+    results['t2_movement_start'] = trial_clock.getTime()
+    
     clock.reset()
     while clock.getTime() < TIME_MOVEMENT_TOTAL:
         t = clock.getTime()
@@ -154,6 +167,10 @@ def run_trial(win, trial_config, is_practice=False):
         if 'escape' in event.getKeys():
             core.quit()
 
+    eyetracker.send_trigger(MOVEMENT_STOP_CODE)
+    results['t3_movement_stop'] = trial_clock.getTime()
+    win.flip()
+
     # --- PHASE 4: Stop (Static images before probe) ---
     clock.reset()
     while clock.getTime() < TIME_STOP:      
@@ -168,6 +185,9 @@ def run_trial(win, trial_config, is_practice=False):
         fixation.draw()
         win.flip()
 
+    eyetracker.send_trigger(AOI_DISAPPEAR_CODE)
+    results['t4_aoi_disappear'] = trial_clock.getTime()
+
     # Show mouse cursor
     win.mouseVisible = True
 
@@ -177,6 +197,7 @@ def run_trial(win, trial_config, is_practice=False):
     # keys = event.waitKeys(keyList=['t', 'n', 'escape'])
 
     eyetracker.send_trigger(7)
+    results['t7_response_start'] = trial_clock.getTime()
     
     is_correct, response_val, response_time, c_orbit_id, c_item_idx = handle_response(win, trial_config, is_practice)
     print(f"Result: {is_correct}, Selected: {response_val}, Response Time: {response_time}")
